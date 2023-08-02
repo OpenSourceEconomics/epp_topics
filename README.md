@@ -1,28 +1,57 @@
 # Effective Programming Practices for Economists: Topics
 
-1. Background (theory)
+1. CS Background
+   - Operating systems
+   - Filesystem 
    - Graphs
+   - Floating point numbers
 1. Tools
    - Shell
    - Installation
-   - Teamwork
+   - Editors
+   - Using LLMs effectively [long run]
+   - Using copilot effectively [long run]
    - Regex
-1. Git
+   - Communicating effectively (emails vs zoom vs in-person vs zulip)
+1. Git and GitHub
    - Basics
    - Troubleshooting
    - Merging
-   - Collaboration
-1. Python
-   - Basics
+   - Collaboration and Teamwork
+1. Python basics
+   - Assigning variables
+   - Builtin types
    - Reading tracebacks
-   - Comprehensions
+   - Importing, Modules, Namespaces
    - Decorators
+   - Executing .py files
+1. Best practices (any language)
+   - Avoid code duplication (iteration, functions)
+   - Pure and testable functions
+   - Comments should be function names
+   - Avoid nested if conditions
+   - Naming conventions / formatting / pre-commits
+   - dags [long run]
+   - pytrees [long run]
+   - Don't be too smart (https://hackernoon.com/why-senior-devs-write-dumb-code-and-how-to-spot-a-junior-from-a-mile-away-27fa263b101a)
+1. Ensure Correctness
+   - Testing
+   - Debugging
+   - Error handling
 1. Workflow management
-   - Pytask overview
-   - ...
-1. Data management
+   - Definition of "reproducible"
+   - Pytask overviewPytask overview
+   - Tiny Pytask example
+   - Generating many tasks at once
+   - Templates
 1. Scientific computing
-   - Optimisaton
+   - Numpy/scipy
+   - Optimisation
    - Estimagic
    - Speedup
-   - Scikit-learn
+1. Data Science
+   - Data Management
+   - Plotting
+   - Machine learning with Scikit-learn
+   - (Econometrics with ...)
+
