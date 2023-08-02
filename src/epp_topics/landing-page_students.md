@@ -1,4 +1,4 @@
-# COURSE_TITLE
+# Effective Programming Practices for Economists
 
 Universität Bonn, Department of Economics
 

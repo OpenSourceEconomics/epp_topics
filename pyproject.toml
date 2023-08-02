@@ -2,11 +2,10 @@
 requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
 
 [tool.setuptools_scm]
-write_to = "src/epp/_version.py"
+write_to = "src/epp_topics/_version.py"
 
 [tool.pytask.ini_options]
-paths = ["./src/epp", "./paper"]
-infer_latex_dependencies = true
+paths = ["./src/epp_topics"]
 
 [tool.ruff]
 target-version = "py311"

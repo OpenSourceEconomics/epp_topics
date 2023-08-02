@@ -1,15 +1,16 @@
 ---
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
-title: COURSE_TITLE
+title: 'Effective Programming Practices for Economists: Topics'
 author: Janoś Gabler and Hans-Martin von Gaudecker
 logo: uni-bonn-blue.jpg
 
 # Short description about the book
 description: >-
-  Basic Python, reproducible research workflows, Autumn 2023
+  Background on topics covering Python and reproducible research workflows
 # HTML-specific settings
 html:
+  google_analytics_id: G-JNV9WF0QCS
   home_page_in_navbar: false
   # Add GitHub buttons to your book
   # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -18,17 +19,23 @@ html:
   extra_footer: |
     <p>
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-    <img alt="Creative Commons License" style="border-width:0"
-    src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-    </a><br />This work is licensed under a
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+      <img alt="Creative Commons License" style="border-width:0"
+        src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /
+      >
+    </a>
+    <br />
+    This work is licensed under a <a
+      rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+    </a>.
     </p>
 # Interact link settings
 notebook_interface: notebook
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/OpenSourceEconomics/epp.git
+  url: https://github.com/OpenSourceEconomics/epp_topics.git
+# launch_buttons:
+#   jupyterhub_url: https://jupyterhub.hrz.uni-bonn.de
   path_to_book: student_book
 # LaTeX settings
 bibtex_bibfiles: [references.bib]
@@ -45,8 +52,4 @@ sphinx:
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     bibtex_reference_style: author_year
     exclude_patterns: ['**/slides.md']
-    html_theme_options:
-      repository_url: https://github.com/OpenSourceEconomics/epp.git
-      # launch_buttons:
-      #   jupyterhub_url: https://jupyterhub.hrz.uni-bonn.de
   extra_extensions: [sphinx.ext.todo]

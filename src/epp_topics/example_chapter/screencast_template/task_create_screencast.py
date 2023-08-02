@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytask
 
-from epp.config import BOOK_SOURCE_DIR, SRC
+from epp_topics.config import BOOK_SOURCE_DIR, SRC
 
 THIS_DIR = Path(__file__).parent.resolve()
 OUT_DIRS = {

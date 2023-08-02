@@ -1,6 +1,6 @@
-@Unpublished{epp,
-    Title  = {COURSE_TITLE},
+@Unpublished{epp_topics,
+    Title  = {Effective Programming Practices for Economists: Topics},
     Author = {Janoś Gabler and Hans-Martin von Gaudecker},
-    Year   = {Autumn 2023},
-    Url    = {https://www.wiwi.uni-bonn.de/gaudecker/_static/epp_berlin/landing-page.html}
+    Year   = {2023},
+    Url    = {https://www.wiwi.uni-bonn.de/gaudecker/_static/epp_topics/index.html}
 }

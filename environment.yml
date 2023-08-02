@@ -1,5 +1,5 @@
 ---
-name: epp
+name: epp_topics
 channels: [conda-forge, nodefaults]
 dependencies:
   - conda-lock
