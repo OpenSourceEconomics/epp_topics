@@ -166,7 +166,7 @@ for s_o_t, all_chapters in sources_both_books.items():
                 "depends_on": SRC / f,
                 "produces": BOOK_SOURCE_DIR / s_o_t / f,
             }
-            for f in ["_config.yml", "uni-bonn-blue.jpg", "references.bib"]
+            for f in ["_config.yml", "ose-logo.png", "references.bib"]
         ],
     ]
     all_orig_sources.extend(
