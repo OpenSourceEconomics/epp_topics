@@ -1,0 +1,6 @@
+@Unpublished{COURSE_SLUG,
+    Title  = {COURSE_TITLE},
+    Author = {TEACHER_NAMES},
+    Year   = {COURSE_DATE},
+    Url    = {COURSE_URL}
+}

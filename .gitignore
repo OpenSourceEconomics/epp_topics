@@ -1,0 +1,47 @@
+# python
+*.egg-info
+*_version.py
+*.pyc
+*__pycache__
+.mypy_cache
+
+# pytask
+.pytask*.sqlite3
+.pytask
+
+# bld
+bld*
+
+# latex
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.vscode
+
+# slidev
+node_modules
+package-lock.json
+.DS_Store
+dist
+*.local
+index.html
+.remote-assets
+components.d.ts
+
+# nonsense
+desktop.ini
+*.bak
+*.tmp
+
+# jupyter-book
+book_*
+
+# videos
+*.mp4

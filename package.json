@@ -1,0 +1,10 @@
+{
+  "name": "COURSE_SLUG",
+  "version": "0.0.1",
+  "dependencies": {
+    "@slidev/cli": "*",
+    "@slidev/theme-default": "*",
+    "@mrdrogdrog/optional": "*",
+    "playwright-chromium": "*"
+  }
+}
