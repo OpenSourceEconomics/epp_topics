@@ -2,10 +2,10 @@
 requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
 
 [tool.setuptools_scm]
-write_to = "src/COURSE_SLUG/_version.py"
+write_to = "src/epp/_version.py"
 
 [tool.pytask.ini_options]
-paths = ["./src/COURSE_SLUG", "./paper"]
+paths = ["./src/epp", "./paper"]
 infer_latex_dependencies = true
 
 [tool.ruff]

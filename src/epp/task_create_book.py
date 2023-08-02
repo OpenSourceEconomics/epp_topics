@@ -9,7 +9,7 @@ import pytask
 import yaml
 from pybaum.tree_util import tree_just_flatten
 
-from COURSE_SLUG.config import (
+from epp.config import (
     BOOK_DIR,
     BOOK_SOURCE_DIR,
     CHAPTER_NAMES,
@@ -19,7 +19,7 @@ from COURSE_SLUG.config import (
     get_chapter_title,
     get_sources_for_chapter,
 )
-from COURSE_SLUG.process_notebook import process_notebook
+from epp.process_notebook import process_notebook
 
 # Filter relevant materials
 sources_both_books = {

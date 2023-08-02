@@ -4,7 +4,7 @@
 
 ```{todo}
 Setup
-- Copy and paste `./scr/COURSE_SLUG/chapter_template`, and rename according to `CHAPTER_NAMES` in `src/COURSE_SLUG/config.py`.
+- Copy and paste `./scr/epp/chapter_template`, and rename according to `CHAPTER_NAMES` in `src/epp/config.py`.
 
 Contents
 - Fill the existing .md and .ipynb files and/or add new ones.
@@ -20,8 +20,8 @@ Screencasts
 
 Config book
 - Edit `config.py` in current chapter folder (screencast slides named after screencast folder; do not forget script.md).
-- If not yet done, append folder name to `CHAPTER_NAMES` in `src/COURSE_SLUG/config.py`.
-- Specify materials to include in the book in `MOST_RECENT_MATERIALS` in `src/COURSE_SLUG/config.py`.
+- If not yet done, append folder name to `CHAPTER_NAMES` in `src/epp/config.py`.
+- Specify materials to include in the book in `MOST_RECENT_MATERIALS` in `src/epp/config.py`.
 
 Test
 - Run `pytask`.

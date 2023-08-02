@@ -10,7 +10,7 @@ highlighter: shiki
 lineNumbers: false
 # some information about the slides, markdown enabled
 info: |
-  ## COURSE_NAME, COURSE_DATE
+  ## Effective Programming Practices for Economists, Autumn 2023
 # persist drawings in exports and build
 drawings:
   persist: false
@@ -24,9 +24,9 @@ defaults:
 
 # Some Topic
 
-## COURSE_NAME
+## Effective Programming Practices for Economists
 
-TEACHER_NAMES
+Janoś Gabler and Hans-Martin von Gaudecker
 
 
 ---

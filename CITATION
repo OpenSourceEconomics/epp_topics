@@ -1,6 +1,6 @@
-@Unpublished{COURSE_SLUG,
+@Unpublished{epp,
     Title  = {COURSE_TITLE},
-    Author = {TEACHER_NAMES},
-    Year   = {COURSE_DATE},
-    Url    = {COURSE_URL}
+    Author = {Janoś Gabler and Hans-Martin von Gaudecker},
+    Year   = {Autumn 2023},
+    Url    = {https://www.wiwi.uni-bonn.de/gaudecker/_static/epp_berlin/landing-page.html}
 }

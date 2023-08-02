@@ -2,4 +2,4 @@
 
 Universität Bonn, Department of Economics
 
-TEACHER_NAMES
+Janoś Gabler and Hans-Martin von Gaudecker

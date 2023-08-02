@@ -2,12 +2,12 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 title: COURSE_TITLE
-author: TEACHER_NAMES
+author: Janoś Gabler and Hans-Martin von Gaudecker
 logo: uni-bonn-blue.jpg
 
 # Short description about the book
 description: >-
-  COURSE_DESCRIPTION, COURSE_DATE
+  Basic Python, reproducible research workflows, Autumn 2023
 # HTML-specific settings
 html:
   home_page_in_navbar: false
@@ -28,7 +28,7 @@ html:
 notebook_interface: notebook
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/iame-uni-bonn/course_jb_template.git
+  url: https://github.com/OpenSourceEconomics/epp.git
   path_to_book: student_book
 # LaTeX settings
 bibtex_bibfiles: [references.bib]
@@ -46,7 +46,7 @@ sphinx:
     bibtex_reference_style: author_year
     exclude_patterns: ['**/slides.md']
     html_theme_options:
-      repository_url: https://github.com/iame-uni-bonn/course_jb_template.git
+      repository_url: https://github.com/OpenSourceEconomics/epp.git
       # launch_buttons:
       #   jupyterhub_url: https://jupyterhub.hrz.uni-bonn.de
   extra_extensions: [sphinx.ext.todo]
