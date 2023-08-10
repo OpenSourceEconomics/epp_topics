@@ -9,8 +9,6 @@ from pybaum.tree_util import tree_just_flatten, tree_map
 # Type aliases
 OrigSourceOrBookSource = Literal["orig_source", "book_source"]
 StudentsOrTeachers = Literal["students", "teachers"]
-StudentMaterialTypes = Literal["prep", "class", "post", "exam_prep"]
-StudentMaterialTypesStrings = dict[StudentMaterialTypes, list[str]]
 
 
 class StudentMaterialInts(NamedTuple):
