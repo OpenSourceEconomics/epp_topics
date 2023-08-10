@@ -10,14 +10,14 @@ BOOK_CONTENTS = {
             # "All .md or .ipynb files",
             # "for preparation phase",
         ),
-        "class": (
+        "in_class": (
             "in_class_exercise.ipynb",
             # "All .md or .ipynb files",
-            # "for in-class",
+            # "for in-in_class",
         ),
         "post": (
             # "All .md or .ipynb files",
-            # "for post-class phase",
+            # "for post-in_class phase",
         ),
     },
     "teachers": (

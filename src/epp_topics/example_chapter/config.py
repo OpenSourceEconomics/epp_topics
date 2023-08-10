@@ -1,25 +1,26 @@
 """Definitions of source files for the current chapter."""
 
+from epp_topics.config import StudentMaterialStrings
 
 BOOK_CONTENTS = {
     "chapter_title": "Placeholder: Title as displayed in book",
-    "students": {
-        "prep": (
+    "students": StudentMaterialStrings(
+        prep=(
             "objectives.md",
             "preparation.md",
             # "All .md or .ipynb files",
             # "for preparation phase",
         ),
-        "class": (
+        in_class=(
             "in_class_exercise.ipynb",
             # "All .md or .ipynb files",
             # "for in-class",
         ),
-        "post": (
+        post=(
             # "All .md or .ipynb files",
             # "for post-class phase",
         ),
-    },
+    ),
     "teachers": (
         "contents.md",
         "objectives.md",

@@ -2,7 +2,7 @@
 
 import importlib
 from pathlib import Path
-from typing import Literal
+from typing import Literal, NamedTuple
 
 from pybaum.tree_util import tree_just_flatten, tree_map
 
@@ -10,18 +10,30 @@ from pybaum.tree_util import tree_just_flatten, tree_map
 OrigSourceOrBookSource = Literal["orig_source", "book_source"]
 StudentsOrTeachers = Literal["students", "teachers"]
 StudentMaterialTypes = Literal["prep", "class", "post", "exam_prep"]
-StudentMaterialTypesInts = dict[StudentMaterialTypes, int]
 StudentMaterialTypesStrings = dict[StudentMaterialTypes, list[str]]
-StudentMaterialTypesPaths = dict[StudentMaterialTypes, tuple[Path]]
+
+
+class StudentMaterialInts(NamedTuple):
+    prep: int
+    in_class: int
+    post: int
+    exam_prep: int
+
+
+class StudentMaterialStrings(NamedTuple):
+    prep: tuple[str]
+    in_class: tuple[str]
+    post: tuple[str]
+    exam_prep: tuple[str] = ()
 
 
 # Specify the most recent materials (see CHAPTER_NAMES below) to include in the book
-MOST_RECENT_MATERIALS: StudentMaterialTypesInts = {
-    "prep": 0,
-    "class": 0,
-    "post": 0,
-    "exam_prep": 0,
-}
+MOST_RECENT_MATERIALS = StudentMaterialInts(
+    prep=0,
+    in_class=1,
+    post=2,
+    exam_prep=3,
+)
 
 
 # Add the chapter names here in the order they should appear in the book
@@ -71,11 +83,13 @@ def filter_student_lectures(n: int) -> bool:
 
 def filter_student_contents(
     n: int,
-    contents: StudentMaterialTypesStrings,
+    contents: StudentMaterialStrings,
 ) -> list[str]:
     """Filter the contents of a lecture (preparation, in-class, post, old exams)."""
     return {
-        typ: names for typ, names in contents.items() if n <= MOST_RECENT_MATERIALS[typ]
+        typ: names
+        for typ, names in contents._asdict().items()
+        if n <= getattr(MOST_RECENT_MATERIALS, typ)
     }
 
 
