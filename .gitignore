@@ -41,7 +41,7 @@ desktop.ini
 *.tmp
 
 # jupyter-book
-book_*
+site_*
 
 # videos
 *.mp4
