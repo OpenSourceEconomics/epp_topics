@@ -6,12 +6,12 @@ from pathlib import Path
 
 import pytask
 
-from epp_topics.config import BOOK_SOURCE_DIR, SRC
+from epp_topics.config import SITE_SOURCE_DIR, SRC
 
 THIS_DIR = Path(__file__).parent.resolve()
 OUT_DIRS = {
-    s_o_t: BOOK_SOURCE_DIR / s_o_t / THIS_DIR.parent.name / THIS_DIR.name
-    for s_o_t in ("students", "teachers")
+    p_o_i: SITE_SOURCE_DIR / p_o_i / THIS_DIR.parent.name / THIS_DIR.name
+    for p_o_i in ("public", "internal")
 }
 COPY_SCREENCAST_KWARGS = {
     "depends_on": {
@@ -20,15 +20,15 @@ COPY_SCREENCAST_KWARGS = {
         "style.css": SRC / "slidev_config" / "style.css",
     },
     "produces": {
-        "slides.md": OUT_DIRS["teachers"] / "slides.md",
-        "package.json": OUT_DIRS["teachers"] / "package.json",
-        "style.css": OUT_DIRS["teachers"] / "style.css",
+        "slides.md": OUT_DIRS["internal"] / "slides.md",
+        "package.json": OUT_DIRS["internal"] / "package.json",
+        "style.css": OUT_DIRS["internal"] / "style.css",
     },
 }
 SCREENCAST_DEPS = COPY_SCREENCAST_KWARGS["produces"]
 SCREENCAST_PDFS = {
-    s_o_t: BOOK_SOURCE_DIR / s_o_t / THIS_DIR.parent.name / f"{THIS_DIR.name}.pdf"
-    for s_o_t in ("students", "teachers")
+    p_o_i: SITE_SOURCE_DIR / p_o_i / THIS_DIR.parent.name / f"{THIS_DIR.name}.pdf"
+    for p_o_i in ("public", "internal")
 }
 
 
@@ -48,7 +48,7 @@ def task_copy_sources(depends_on, produces):
 
 @pytask.mark.skipif(THIS_DIR.name == "chapter_template", reason="Template chapter.")
 @pytask.mark.depends_on(SCREENCAST_DEPS)
-@pytask.mark.produces(SCREENCAST_PDFS["teachers"])
+@pytask.mark.produces(SCREENCAST_PDFS["internal"])
 def task_export_pdf(depends_on, produces):
     """Create slidev presentation and export to pdf."""
     subprocess.run(
@@ -65,8 +65,8 @@ def task_export_pdf(depends_on, produces):
 @pytask.mark.task(
     id=THIS_DIR.name,
     kwargs={
-        "depends_on": SCREENCAST_PDFS["teachers"],
-        "produces": SCREENCAST_PDFS["students"],
+        "depends_on": SCREENCAST_PDFS["internal"],
+        "produces": SCREENCAST_PDFS["public"],
     },
 )
 def task_copy_pdf_for_students(depends_on, produces):
