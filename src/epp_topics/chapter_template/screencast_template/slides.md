@@ -10,7 +10,7 @@ highlighter: shiki
 lineNumbers: false
 # some information about the slides, markdown enabled
 info: |
-  ## Effective Programming Practices for Economists, Autumn 2023
+  ## Effective Programming Practices for Economists
 # persist drawings in exports and build
 drawings:
   persist: false

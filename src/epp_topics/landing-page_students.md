@@ -1,4 +1,4 @@
-# Effective Programming Practices for Economists
+# Effective Programming Practices for Economists: Topics
 
 Universität Bonn, Department of Economics
 
