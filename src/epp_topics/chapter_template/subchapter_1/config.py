@@ -1,15 +1,13 @@
 """Definitions of source files for the current chapter."""
 
 SITE_CONTENTS = {
-    "chapter_title": "Placeholder: Title as displayed in book",
     "public": (
         "objectives.md",
-        "in_class_exercise.ipynb",
+        "exercise.ipynb",
     ),
     "internal": (
-        "internal_overview.md",
         "objectives.md",
-        "in_class_exercise.ipynb",
+        "exercise.ipynb",
         # "All files included in 'students'",
         # "key above, plus all files",
         # "that students should not see",

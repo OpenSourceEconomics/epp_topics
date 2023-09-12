@@ -10,16 +10,15 @@ import yaml
 from pybaum.tree_util import tree_just_flatten
 
 from epp_topics.config import (
-    SITE_DIR,
-    SITE_SOURCE_DIR,
     CHAPTER_NAMES,
     JUPYTERHUB_REPO_DIR,
+    SITE_DIR,
+    SITE_SOURCE_DIR,
     SRC,
     get_chapter_title,
     get_sources_for_chapter,
 )
 from epp_topics.process_notebook import process_notebook
-
 
 for p_o_i in ("public", "internal"):
     toc_chapters = []
@@ -80,7 +79,7 @@ for p_o_i in ("public", "internal"):
             if depends_on.suffix == ".ipynb":
 
                 @pytask.mark.task(
-                    id=f"{p_o_i}, {c}, {produces.name}",
+                    id=f"{p_o_i}, {c}, {produces.parent.name}/{produces.name}",
                     kwargs={
                         "depends_on": depends_on,
                         "produces": produces,
@@ -91,7 +90,7 @@ for p_o_i in ("public", "internal"):
                     nb_raw = nbformat.read(depends_on, as_version=nbformat.NO_CONVERT)
                     ex_o_sol = (
                         "solution"
-                        if produces.parent.parent.name == "internal"
+                        if produces.parent.parent.parent.name == "internal"
                         else "exercise"
                     )
 
@@ -233,10 +232,11 @@ for p_o_i in ("public", "internal"):
     )
     def task_compile_book(produces, depends_on, p_o_i):  # noqa: ARG001
         """Build the Jupyter book."""
-        subprocess.run(f"jb clean {SITE_SOURCE_DIR / p_o_i}", shell=True)
+        subprocess.run(f"jb clean {SITE_SOURCE_DIR / p_o_i}", shell=True, check=True)
         result = subprocess.run(
             f"jb build {SITE_SOURCE_DIR / p_o_i} --nitpick --warningiserror",
             shell=True,
+            check=True,
         )
         if result.returncode != 0:
             raise RuntimeError("Jupyter book compilation failed.")
