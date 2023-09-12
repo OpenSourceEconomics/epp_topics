@@ -263,7 +263,7 @@ for p_o_i in ("public", "internal"):
                     all_site_sources,
                     SITE_DIR[p_o_i] / "index.html",
                 ),
-                "produces": website / "_static" / "fsp" / "index.html",
+                "produces": website / "_static" / "epp_topics" / "index.html",
             },
         )
         def task_copy_book_to_website(depends_on, produces):
