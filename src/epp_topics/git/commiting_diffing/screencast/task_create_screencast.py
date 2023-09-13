@@ -40,7 +40,7 @@ SCREENCAST_PDFS = {
 
 
 @pytask.mark.skipif(
-    THIS_DIR.parent.name == "chapter_template",
+    THIS_DIR.parent.parent.name == "chapter_template",
     reason="Template chapter.",
 )
 @pytask.mark.task(id=THIS_DIR.name, kwargs=COPY_SCREENCAST_KWARGS)
@@ -54,7 +54,7 @@ def task_copy_sources(depends_on, produces):
 
 
 @pytask.mark.skipif(
-    THIS_DIR.parent.name == "chapter_template",
+    THIS_DIR.parent.parent.name == "chapter_template",
     reason="Template chapter.",
 )
 @pytask.mark.depends_on(SCREENCAST_DEPS)
@@ -73,7 +73,7 @@ def task_export_pdf(depends_on, produces):
 
 
 @pytask.mark.skipif(
-    THIS_DIR.parent.name == "chapter_template",
+    THIS_DIR.parent.parent.name == "chapter_template",
     reason="Template chapter.",
 )
 @pytask.mark.task(
