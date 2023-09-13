@@ -13,6 +13,7 @@ PublicOrInternal = Literal["public", "internal"]
 
 # Add the chapter names here in the order they should appear in the book
 CHAPTER_NAMES = [
+    "background",
     "git",
 ]
 

@@ -1,6 +1,6 @@
 # Effective Programming Practices for Economists: Topics
 
-1. CS Background
+1. Background
    - Operating systems _(Don't change, record)_
    - Graphs _(Don't change much, record)_
    - Filesystem _(Very short, Linux/MacOS vs. Windows)_
