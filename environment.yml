@@ -18,7 +18,7 @@ dependencies:
   - pygraphviz
   - pydata-sphinx-theme>=0.13.3
   - pytask
-  - pytask-parallel
+  # - pytask-parallel  # Do not use, slidev exports get mixed up.
   - pytest
   - pytest-cov
   - pytest-xdist
