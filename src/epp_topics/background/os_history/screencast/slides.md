@@ -121,8 +121,6 @@ layout: two-cols
 - Complex history of corporate collaborations between Microsoft / IBM.
 - Big break between MS-DOS / Windows 9x and Windows NT, XP, subsequent
   versions.
-- The standard Windows command shell still looks like what I remember
-  MS-DOS to look like in the early 1990s\...
 
 ::right::
 

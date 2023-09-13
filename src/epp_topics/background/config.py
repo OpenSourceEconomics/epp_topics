@@ -3,7 +3,7 @@
 from epp_topics.background.os_history import SITE_CONTENTS as OS_HISTORY
 
 SITE_CONTENTS = {
-    "chapter_title": "Placeholder: Title as displayed in book",
+    "chapter_title": "Some Background",
     "public": ("objectives.md",) + OS_HISTORY["public"],
     "internal": (
         "internal_overview.md",
