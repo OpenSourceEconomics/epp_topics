@@ -5,10 +5,12 @@ from epp_topics.git.motivation import SITE_CONTENTS as MOTIVATION
 
 SITE_CONTENTS = {
     "chapter_title": "Version Control and collaboration with Git and Github",
-    "public": ("objectives.md",) + MOTIVATION["public"] + COMMITING_DIFFING["public"],
+    "public": ("content_objectives.md",)
+    + MOTIVATION["public"]
+    + COMMITING_DIFFING["public"],
     "internal": (
         "internal_overview.md",
-        "objectives.md",
+        "content_objectives.md",
     )
     + MOTIVATION["internal"]
     + COMMITING_DIFFING["internal"],

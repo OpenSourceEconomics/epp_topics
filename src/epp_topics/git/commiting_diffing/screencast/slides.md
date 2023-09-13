@@ -22,9 +22,15 @@ defaults:
   layout: center
 ---
 
-# Some Topic
+### Effective Programming Practices for Economists
 
-## Effective Programming Practices for Economists
+<br>
+
+# Some Chapter
+
+### Some Subchapter
+
+<br>
 
 Janoś Gabler and Hans-Martin von Gaudecker
 

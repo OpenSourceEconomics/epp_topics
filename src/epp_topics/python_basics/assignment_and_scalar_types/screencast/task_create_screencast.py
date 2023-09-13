@@ -31,7 +31,7 @@ COPY_SCREENCAST_KWARGS = {
 }
 SCREENCAST_DEPS = COPY_SCREENCAST_KWARGS["produces"]
 SCREENCAST_PDFS = {
-    p_o_i: d / f"{d.parent.parent.name}-{d.parent.name}.pdf"
+    p_o_i: d.parent / f"{d.parent.parent.name}-{d.parent.name}.pdf"
     for p_o_i, d in OUT_DIRS.items()
 }
 

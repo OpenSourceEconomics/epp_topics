@@ -6,10 +6,10 @@ from epp_topics.python_basics.assignment_and_scalar_types import (
 
 SITE_CONTENTS = {
     "chapter_title": "Python Basics",
-    "public": ("objectives.md",) + ASSIGNMENT_AND_SCALAR_TYPES["public"],
+    "public": ("content_objectives.md",) + ASSIGNMENT_AND_SCALAR_TYPES["public"],
     "internal": (
         "internal_overview.md",
-        "objectives.md",
+        "content_objectives.md",
         # "All files included in 'students'",
         # "key above, plus all files",
         # "that students should not see",

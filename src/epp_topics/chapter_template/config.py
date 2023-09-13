@@ -4,10 +4,10 @@ from epp_topics.chapter_template.subchapter_1 import SITE_CONTENTS as SUBCHAPTER
 
 SITE_CONTENTS = {
     "chapter_title": "Placeholder: Title as displayed in book",
-    "public": ("objectives.md",) + SUBCHAPTER_1["public"],
+    "public": ("content_objectives.md",) + SUBCHAPTER_1["public"],
     "internal": (
         "internal_overview.md",
-        "objectives.md",
+        "content_objectives.md",
         # "All files included in 'students'",
         # "key above, plus all files",
         # "that students should not see",

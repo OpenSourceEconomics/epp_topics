@@ -2,15 +2,12 @@
 
 SITE_CONTENTS = {
     "public": (
-        "objectives.md",
+        "objectives_materials.md",
         "exercise.ipynb",
     ),
     "internal": (
-        "objectives.md",
+        "objectives_materials.md",
         "exercise.ipynb",
-        # "All files included in 'students'",
-        # "key above, plus all files",
-        # "that students should not see",
     ),
     "other": (
         "screencast/public/vt100.jpg",
@@ -19,8 +16,5 @@ SITE_CONTENTS = {
         "screencast/public/stevejobs-next.jpg",
         "screencast/public/windows-1-desktop.jpg",
     ),
-    "built": (
-        # "screencast slides etc.",
-        # "everything that is built",
-    ),
+    "built": ("background-os_history.pdf",),
 }

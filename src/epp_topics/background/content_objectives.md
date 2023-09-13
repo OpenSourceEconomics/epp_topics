@@ -1,8 +1,9 @@
-# Learning objectives
+# Content and Learning Objectives
 
-The topics in this chapter encompass background from the history of computing,
-underlying mathematical concepts, and computer science. After working through this
-chapter, you should be able to:
+The topics in this chapter encompass some helpful background from the history of
+computing, mathematical concepts, and computer science.
+
+After working through this chapter, you should be able to:
 
 - sketch the history of commonly used operating systems
 - explain intuitively what graphs are

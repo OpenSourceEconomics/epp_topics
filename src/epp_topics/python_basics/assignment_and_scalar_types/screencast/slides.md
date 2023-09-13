@@ -22,11 +22,16 @@ defaults:
   layout: center
 ---
 
+### Effective Programming Practices for Economists
+
+<br>
+
 # Basic Python
 
-# Assigning variables and built-in scalar types
+### Assigning variables and built-in scalar types
 
-## Effective Programming Practices for Economists
+<br>
+
 
 Janoś Gabler and Hans-Martin von Gaudecker
 

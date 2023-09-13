@@ -31,7 +31,7 @@ COPY_SCREENCAST_KWARGS = {
 }
 SCREENCAST_DEPS = COPY_SCREENCAST_KWARGS["produces"]
 SCREENCAST_PDFS = {
-    p_o_i: d / f"{d.parent.parent.name}-{d.parent.name}.pdf"
+    p_o_i: d.parent / f"{d.parent.parent.name}-{d.parent.name}.pdf"
     for p_o_i, d in OUT_DIRS.items()
 }
 
@@ -39,7 +39,6 @@ SCREENCAST_PDFS = {
 # Copy all sources for the screencast.
 
 
-@pytask.mark.skipif(THIS_DIR.name == "chapter_template", reason="Template chapter.")
 @pytask.mark.task(id=THIS_DIR.name, kwargs=COPY_SCREENCAST_KWARGS)
 def task_copy_sources(depends_on, produces):
     """Copy sources for slidev presentation."""
@@ -50,7 +49,6 @@ def task_copy_sources(depends_on, produces):
 # Export slides to pdf.
 
 
-@pytask.mark.skipif(THIS_DIR.name == "chapter_template", reason="Template chapter.")
 @pytask.mark.depends_on(SCREENCAST_DEPS)
 @pytask.mark.produces(SCREENCAST_PDFS["internal"])
 def task_export_pdf(depends_on, produces):
@@ -66,7 +64,6 @@ def task_export_pdf(depends_on, produces):
 # Copy pdf to students book.
 
 
-@pytask.mark.skipif(THIS_DIR.name == "chapter_template", reason="Template chapter.")
 @pytask.mark.task(
     id=THIS_DIR.name,
     kwargs={
