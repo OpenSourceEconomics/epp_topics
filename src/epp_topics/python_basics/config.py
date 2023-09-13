@@ -1,10 +1,12 @@
 """Definitions of source files for the current chapter."""
 
-from epp_topics.chapter_template.subchapter_1 import SITE_CONTENTS as SUBCHAPTER_1
+from epp_topics.python_basics.assignment_and_scalar_types import (
+    SITE_CONTENTS as ASSIGNMENT_AND_SCALAR_TYPES,
+)
 
 SITE_CONTENTS = {
-    "chapter_title": "Placeholder: Title as displayed in book",
-    "public": ("objectives.md",) + SUBCHAPTER_1["public"],
+    "chapter_title": "Python Basics",
+    "public": ("objectives.md",) + ASSIGNMENT_AND_SCALAR_TYPES["public"],
     "internal": (
         "internal_overview.md",
         "objectives.md",
@@ -12,7 +14,7 @@ SITE_CONTENTS = {
         # "key above, plus all files",
         # "that students should not see",
     )
-    + SUBCHAPTER_1["internal"],
+    + ASSIGNMENT_AND_SCALAR_TYPES["internal"],
     "other": (
         # "existing figures etc.",
     ),

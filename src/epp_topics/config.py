@@ -12,10 +12,7 @@ PublicOrInternal = Literal["public", "internal"]
 
 
 # Add the chapter names here in the order they should appear in the book
-CHAPTER_NAMES = [
-    "background",
-    "git",
-]
+CHAPTER_NAMES = ["background", "git", "python_basics"]
 
 
 SRC = Path(__file__).parent.resolve()
