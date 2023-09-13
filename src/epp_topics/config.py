@@ -2,9 +2,9 @@
 
 import importlib
 from pathlib import Path
-from typing import Literal, NamedTuple
+from typing import Literal
 
-from pybaum.tree_util import tree_just_flatten, tree_map
+from pybaum.tree_util import tree_map
 
 # Type aliases
 OrigSourceOrSiteSource = Literal["orig_source", "site_source"]
@@ -13,7 +13,7 @@ PublicOrInternal = Literal["public", "internal"]
 
 # Add the chapter names here in the order they should appear in the book
 CHAPTER_NAMES = [
-    "example_chapter",
+    "git",
 ]
 
 
@@ -23,7 +23,7 @@ SITE_DIR = {
     "public": SRC.parent.parent / "site_public",
     "internal": SRC.parent.parent / "site_internal",
 }
-JUPYTERHUB_REPO_DIR = SRC.parent.parent.parent / "fsp"
+JUPYTERHUB_REPO_DIR = SRC.parent.parent.parent / "epp_topics_notebooks"
 
 TEST_DIR = SRC.joinpath("..", "..", "tests").resolve()
 

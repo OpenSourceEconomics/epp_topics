@@ -1,4 +1,4 @@
-"""Create figure for this week's screencast."""
+"""Create figure for this subchapter's screencast."""
 
 import shutil
 import subprocess
@@ -55,6 +55,7 @@ def task_export_pdf(depends_on, produces):
         f"npx slidev export {depends_on['slides.md'].absolute()}"
         f" --output {produces.absolute()}",
         shell=True,
+        check=True,
     )
 
 
