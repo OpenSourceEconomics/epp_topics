@@ -15,8 +15,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": (
-        # "screencast slides etc.",
-        # "everything that is built",
-    ),
+    "built": ("chapter_template-subchapter_1.pdf",),
 }

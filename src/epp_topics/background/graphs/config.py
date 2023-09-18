@@ -19,8 +19,5 @@ SITE_CONTENTS = {
         "screencast/public/stevejobs-next.jpg",
         "screencast/public/windows-1-desktop.jpg",
     ),
-    "built": (
-        # "screencast slides etc.",
-        # "everything that is built",
-    ),
+    "built": ("background-graphs.pdf",),
 }

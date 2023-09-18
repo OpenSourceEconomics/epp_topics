@@ -1,3 +1,5 @@
+# Graphs
+
 ## Learning Objectives
 
 After working through this topic, you should be able to:

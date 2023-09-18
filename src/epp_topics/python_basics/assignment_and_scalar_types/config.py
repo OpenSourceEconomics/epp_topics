@@ -8,15 +8,9 @@ SITE_CONTENTS = {
     "internal": (
         "objectives_materials.md",
         "exercise.ipynb",
-        # "All files included in 'students'",
-        # "key above, plus all files",
-        # "that students should not see",
     ),
     "other": (
         # "existing figures etc.",
     ),
-    "built": (
-        # "screencast slides etc.",
-        # "everything that is built",
-    ),
+    "built": ("python_basics-assignment_and_scalar_types.pdf",),
 }
