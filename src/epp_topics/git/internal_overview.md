@@ -3,6 +3,10 @@
 ## To Do
 
 ```{todo}
+- Use a subset of the [learning git series](https://www.youtube.com/playlist?list=PLyuRouwmQCjmYaG21ijCw0KrFiFEG0Oh9) by Steve Griffith instead of our own screencasts.
+- Complement with one introductory screencast (almost unchanged from previous years)
+- Careful: there is also a [learning GitHub series](https://www.youtube.com/watch?v=M9uTajSRytE&list=PLyuRouwmQCjlxyO-45o53YCWjBCM-fA7L) by the same channel but it uses GUIs in too many places. The git series should cover enough of GitHub.
+
 Setup
 - Copy and paste `./src/epp_topics/chapter_template`, and rename according to `CHAPTER_NAMES` in `src/epp_topics/config.py`.
 
