@@ -12,9 +12,13 @@ defaults:
   layout: center
 ---
 
-# A Brief History of Operating Systems
-
 ### Effective Programming Practices for Economists
+
+<br>
+
+# Background
+
+### A Primer on Graphs
 
 <br>
 
@@ -22,109 +26,323 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 
 ---
-layout: two-cols
----
 
-# Two broad lines
+# Graph definition
 
-- Unix-based/inspired (Linux, MacOS X)
-- Windows
+A graph $G$ is a pair $(N, E)$ of sets, where $N$ are nodes and $E$ are edges:
 
-::right::
+$$G = (N, E)$$
 
-<center>
-<img src="vt100.jpg" width=350>
-</center>
-
-<br>
-<br>
-
----
-layout: two-cols
----
-
-# Unix
-
-- Developed at Bell labs starting 1969 ([some history](https://arstechnica.com/gadgets/2019/08/unix-at-50-it-starts-with-a-mainframe-a-gator-and-three-dedicated-researchers))
-- Quickly evolved to become the main OS for servers.
-- Became a commercial product in the early 1980s.
-- Early OSS spin-offs: Berkeley Software Distribution (BSD) and GNU's Not
-  Unix (GNU).
-
-::right::
-
-<center>
-<img src="bell-labs.jpg" width=350>
-</center>
-
----
-layout: two-cols
----
-
-# Linux
-
-- In 1991, Linus Torvalds wrote a new kernel inspired by the Unix
-  kernel from scratch — Linux.
-- Many flavours of Linux today: Debian, Ubuntu, Red Hat, Mint,
-  Android, ...
-
-::right::
-
-<center>
-<img src="linus.jpg" width=350>
-</center>
-
-
----
-layout: two-cols
----
-
-# MacOS X
-
-- After parting ways with Apple in the 1980s, Steve Jobs founded a
-  company called NeXT.
-- Developed the OS NeXTstep, which was based partly on the BSD.
-- NeXT was bought by Apple in 1996
-- Eventually brought back Jobs as CEO.
-- MacOS X, iOS, ... all based on NeXTstep and thus BSD, Unix.
-
-::right::
-
-<center>
-<img src="stevejobs-next.jpg" width=350>
-</center>
+Edges are
+- sets of two nodes (undirected graphs)
+- pairs of nodes (directed graphs)
 
 
 ---
 
-# POSIX
+# Chain (undirected)
 
-- Stands for Portable Operating System Interface
-- Aims to establish a standard for Unix derivatives.
+<div class="grid grid-cols-2 gap-45">
+<div>
+
+$$
+\begin{align*}
+N = & \{x_0, x_1, x_2, x_3\} \\[2ex]
+E = & \big\{ \\
+    & \quad \{x_0, x_1\}, \\
+    & \quad \{x_1, x_2\}, \\
+    & \quad \{x_2, x_3\} \\
+    & \big\}
+\end{align*}
+$$
+
+
+</div>
+<div>
+
+```mermaid {theme: 'dark', scale: 1}
+graph BT
+    x_0((x<sub>0</sub>))
+    x_1((x<sub>1</sub>))
+    x_2((x<sub>2</sub>))
+    x_3((x<sub>3</sub>))
+    x_0 --- x_1
+    x_1 --- x_2
+    x_2 --- x_3
+```
+
+</div>
+</div>
 
 
 ---
-layout: two-cols
+
+# Chain (undirected)
+
+<div class="grid grid-cols-2 gap-45">
+<div>
+
+$$
+\begin{align*}
+N = & \{x_0, x_1, x_2, x_3\} \\[2ex]
+E = & \big\{ \\
+    & \quad \{x_1, x_0\}, \\
+    & \quad \{x_1, x_2\}, \\
+    & \quad \{x_2, x_3\} \\
+    & \big\}
+\end{align*}
+$$
+
+
+</div>
+<div>
+
+```mermaid {theme: 'dark', scale: 1}
+graph BT
+    x_0((x<sub>0</sub>))
+    x_1((x<sub>1</sub>))
+    x_2((x<sub>2</sub>))
+    x_3((x<sub>3</sub>))
+    x_0 --- x_1
+    x_1 --- x_2
+    x_2 --- x_3
+```
+
+</div>
+</div>
+
+
 ---
 
+# Chain (directed)
 
-# Windows
+<div class="grid grid-cols-2 gap-45">
+<div>
 
-- Complex history of corporate collaborations between Microsoft / IBM.
-- Big break between MS-DOS / Windows 9x and Windows NT, XP, subsequent
-  versions.
+$$
+\begin{align*}
+N = & \{x_0, x_1, x_2, x_3\} \\[2ex]
+E = & \big\{ \\
+    & \quad (x_0, x_1), \\
+    & \quad (x_1, x_2), \\
+    & \quad (x_2, x_3) \\
+    & \big\}
+\end{align*}
+$$
 
-::right::
+</div>
+<div>
 
-<center>
-<img src="windows-1-desktop.jpg" width=350>
-</center>
+```mermaid {theme: 'dark', scale: 1}
+graph BT
+    x_0((x<sub>0</sub>))
+    x_1((x<sub>1</sub>))
+    x_2((x<sub>2</sub>))
+    x_3((x<sub>3</sub>))
+    x_0 --> x_1
+    x_1 --> x_2
+    x_2 --> x_3
+```
+
+</div>
+</div>
 
 
 ---
 
-# Signs of convergence
+# Tree (undirected)
 
-- Most of Microsoft's cloud services seem to be running Linux
-- Since version 10, Windows includes the [Windows Subsystem for Linux
-  (WSL)](https://docs.microsoft.com/en-us/windows/wsl)
+<div class="grid grid-cols-2 gap-20">
+<div>
+
+$$
+\begin{align*}
+N = & \{x_0, x_1, \ldots, x_8\} \\[2ex]
+E = & \big\{ \\
+    & \quad \{x_0, x_1\}, \{x_1, x_2\},  \{x_2, x_3\}, \\
+    & \quad \{x_2, x_4\}, \{x_1, x_5\}, \{x_5, x_6\}, \\
+    & \quad \{x_5, x_7\}, \{x_5, x_8\} \\
+    & \big\}
+\end{align*}
+$$
+
+</div>
+<div>
+
+```mermaid {theme: 'dark', scale: 1}
+graph BT
+    x_0((x<sub>0</sub>))
+    x_1((x<sub>1</sub>))
+    x_2((x<sub>2</sub>))
+    x_3((x<sub>3</sub>))
+    x_4((x<sub>4</sub>))
+    x_5((x<sub>5</sub>))
+    x_6((x<sub>6</sub>))
+    x_7((x<sub>7</sub>))
+    x_8((x<sub>8</sub>))
+    x_0 --- x_1
+    x_1 --- x_2
+    x_2 --- x_3
+    x_2 --- x_4
+    x_1 --- x_5
+    x_5 --- x_6
+    x_5 --- x_7
+    x_5 --- x_8
+```
+
+</div>
+</div>
+
+
+---
+
+# Tree (directed, "arborescence")
+
+<div class="grid grid-cols-2 gap-20">
+<div>
+
+$$
+\begin{align*}
+N = & \{x_0, x_1, \ldots, x_8\} \\[2ex]
+E = & \big\{ \\
+    & \quad (x_0, x_1), (x_1, x_2),  (x_2, x_3), \\
+    & \quad (x_2, x_4), (x_1, x_5), (x_5, x_6), \\
+    & \quad (x_5, x_7), (x_5, x_8) \\
+    & \big\}
+\end{align*}
+$$
+
+</div>
+<div>
+
+```mermaid {theme: 'dark', scale: 1}
+graph BT
+    x_0((x<sub>0</sub>))
+    x_1((x<sub>1</sub>))
+    x_2((x<sub>2</sub>))
+    x_3((x<sub>3</sub>))
+    x_4((x<sub>4</sub>))
+    x_5((x<sub>5</sub>))
+    x_6((x<sub>6</sub>))
+    x_7((x<sub>7</sub>))
+    x_8((x<sub>8</sub>))
+    x_0 --> x_1
+    x_1 --> x_2
+    x_2 --> x_3
+    x_2 --> x_4
+    x_1 --> x_5
+    x_5 --> x_6
+    x_5 --> x_7
+    x_5 --> x_8
+```
+
+</div>
+</div>
+
+
+---
+
+# Directed Acyclic Graph (DAG)
+
+<div class="grid grid-cols-2 gap-20">
+<div>
+
+$$
+\begin{align*}
+N = & \{x_0, x_1, \ldots, x_8\} \\[2ex]
+E = & \big\{ \\
+    & \quad (x_0, x_1), (x_1, x_2),  (x_2, x_3), \\
+    & \quad (x_2, x_4), (x_1, x_5), (x_5, x_6), \\
+    & \quad (x_5, x_7), (x_5, x_8), (x_4, x_6) \\
+    & \big\}
+\end{align*}
+$$
+
+</div>
+<div>
+
+```mermaid {theme: 'dark', scale: 1}
+graph BT
+    x_0((x<sub>0</sub>))
+    x_1((x<sub>1</sub>))
+    x_2((x<sub>2</sub>))
+    x_3((x<sub>3</sub>))
+    x_4((x<sub>4</sub>))
+    x_5((x<sub>5</sub>))
+    x_6((x<sub>6</sub>))
+    x_7((x<sub>7</sub>))
+    x_8((x<sub>8</sub>))
+    x_0 --> x_1
+    x_1 --> x_2
+    x_2 --> x_3
+    x_2 --> x_4
+    x_1 --> x_5
+    x_5 --> x_6
+    x_5 --> x_7
+    x_5 --> x_8
+    x_4 --> x_6
+```
+
+</div>
+</div>
+
+
+---
+
+# Directed ~~Acyclic~~ Graph
+
+<div class="grid grid-cols-2 gap-20">
+<div>
+
+$$
+\begin{align*}
+N = & \{x_0, x_1, \ldots, x_8\} \\[2ex]
+E = & \big\{ \\
+    & \quad (x_0, x_1), (x_1, x_2),  (x_2, x_3), \\
+    & \quad (x_2, x_4), (x_1, x_5), (x_5, x_6), \\
+    & \quad (x_5, x_7), (x_5, x_8), (x_4, x_6), \\
+    & \quad (x_5, x_0) \\
+    & \big\}
+\end{align*}
+$$
+
+</div>
+<div>
+
+```mermaid {theme: 'dark', scale: 1}
+graph BT
+    x_0((x<sub>0</sub>))
+    x_1((x<sub>1</sub>))
+    x_2((x<sub>2</sub>))
+    x_3((x<sub>3</sub>))
+    x_4((x<sub>4</sub>))
+    x_5((x<sub>5</sub>))
+    x_6((x<sub>6</sub>))
+    x_7((x<sub>7</sub>))
+    x_8((x<sub>8</sub>))
+    x_0 --> x_1
+    x_1 --> x_2
+    x_2 --> x_3
+    x_2 --> x_4
+    x_1 --> x_5
+    x_5 --> x_6
+    x_5 --> x_7
+    x_5 --> x_8
+    x_4 --> x_6
+    x_5 --> x_0
+```
+
+</div>
+</div>
+
+
+---
+
+# Graph Use Cases
+
+- The file system
+- Git
+- Reproducible research
+- Causal theory
+- Behavioural economics
+- ...
