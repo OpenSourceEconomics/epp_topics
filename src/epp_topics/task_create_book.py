@@ -173,9 +173,8 @@ for p_o_i in ("public", "internal"):
             if depends_on.name == "_config.yml":
                 config_nb_exec = {
                     "execute": {
-                        "execute_notebooks": "force"
-                        if produces.parent.name == "internal"
-                        else "off",
+                        "execute_notebooks": "force",
+                        # Execute all if produces.parent.name == "internal" else "off",
                         "only_build_toc_files": True,
                         "timeout": -1,
                     },
