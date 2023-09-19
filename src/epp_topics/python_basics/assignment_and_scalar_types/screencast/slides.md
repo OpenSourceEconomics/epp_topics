@@ -1,6 +1,6 @@
 ---
 # try also 'default' to start simple
-theme: default
+theme: academic
 # background: https://source.unsplash.com/collection/94734566/1920x1080
 # apply any windi css classes to the current slide
 class: text-center
