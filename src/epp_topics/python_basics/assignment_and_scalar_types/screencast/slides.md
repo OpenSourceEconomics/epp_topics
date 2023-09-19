@@ -33,10 +33,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Representing numbers: integers and floats
 - Using Python like a calculator
 - Comparing variables
-- Representing True and False: booleans
-- Representing text: Strings
-- Converting between types
-- More string methods
+- Representing True and False: Booleans
 
 ---
 
@@ -46,23 +43,15 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 ```python
-a = 3
-a
-```
-```txt
+>>> a = 3
+>>> a
 3
-```
-```python
-type(a)
-```
-```txt
+
+>>> type(a)
 int
-```
-```python
-a = 5
-a
-```
-```txt
+
+>>> a = 5
+>>> a
 5
 ```
 
@@ -90,23 +79,15 @@ a
 <div>
 
 ```python
-b = 3.1415
-b
-```
-```txt
+>>> b = 3.1415
+>>> b
 3.1415
-```
-```python
-type(b)
-```
-```txt
+
+>>> type(b)
 float
-```
-```python
-c = 0.1 + 0.2
-c
-```
-```txt
+
+>>> c = 0.1 + 0.2
+>>> c
 0.30000000000000004
 ```
 
@@ -132,23 +113,15 @@ c
 <div>
 
 ```python
-a = 3
-b = 3.1415
-(a + b) * 3
-```
-```txt
+>>> a = 3
+>>> b = 3.1415
+>>> (a + b) * 3
 18.424500000000002
-```
-```python
-a**b
-```
-```txt
+
+>>> a**b
 31.54106995953402
-```
-```python
-b / a
-```
-```txt
+
+>>> b / a
 1.0471666666666668
 ```
 
@@ -171,15 +144,10 @@ b / a
 <div>
 
 ```python
-b // a
-```
-```txt
+>>> b // a
 1.0
-```
-```python
-b % a
-```
-```txt
+
+>>> b % a
 0.14150000000000018
 ```
 
@@ -203,23 +171,15 @@ b % a
 <div>
 
 ```python
-a = 3
-b = 3
-a == b
-```
-```txt
+>>> a = 3
+>>> b = 3
+>>> a == b
 True
-```
-```python
-a < b
-```
-```txt
+
+>>> a < b
 False
-```
-```python
-a >= b
-```
-```txt
+
+>>> a >= b
 True
 ```
 
@@ -228,7 +188,7 @@ True
 
 - Comparison operators are `==`, `<`, `>`, `<=`, `>=`
 - Remember: `=` is used for assignment, not comparison
-- The result of a comparison is a boolean
+- The result of a comparison is a Boolean
 - Booleans can be `True` or `False`
 
 
@@ -244,29 +204,18 @@ True
 <div>
 
 ```python
-a = True
-b = False
-type(a)
-```
-```txt
+>>> a = True
+>>> b = False
+>>> type(a)
 bool
-```
-```python
-a and b
-```
-```txt
+
+>>> a and b
 False
-```
-```python
-a or b
-```
-```txt
+
+>>> a or b
 True
-```
-```python
-not b
-```
-```txt
+
+>>> not b
 True
 ```
 
