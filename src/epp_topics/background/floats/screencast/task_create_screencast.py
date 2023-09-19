@@ -20,12 +20,10 @@ OUT_DIRS = {
 COPY_SCREENCAST_KWARGS = {
     "depends_on": {
         "slides.md": THIS_DIR / "slides.md",
-        "package.json": SRC / "slidev_config" / "package.json",
         "style.css": SRC / "slidev_config" / "style.css",
     },
     "produces": {
         "slides.md": OUT_DIRS["internal"] / "slides.md",
-        "package.json": OUT_DIRS["internal"] / "package.json",
         "style.css": OUT_DIRS["internal"] / "style.css",
     },
 }
