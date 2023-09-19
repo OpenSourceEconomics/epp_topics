@@ -5,6 +5,9 @@ import itertools
 from epp_topics.python_basics.assignment_and_scalar_types import (
     SITE_CONTENTS as ASSIGNMENT_AND_SCALAR_TYPES,
 )
+from epp_topics.python_basics.strings import (
+    SITE_CONTENTS as STRINGS,
+)
 
 SITE_CONTENTS = {
     "chapter_title": "Python Basics",
@@ -12,6 +15,7 @@ SITE_CONTENTS = {
         itertools.chain(
             ("content_objectives.md",),
             ASSIGNMENT_AND_SCALAR_TYPES["public"],
+            STRINGS["public"],
         ),
     ),
     "internal": tuple(
@@ -24,18 +28,21 @@ SITE_CONTENTS = {
                 "content_objectives.md",
             ),
             ASSIGNMENT_AND_SCALAR_TYPES["internal"],
+            STRINGS["internal"],
         ),
     ),
     "other": tuple(
         # "existing figures etc.",
         itertools.chain(
             ASSIGNMENT_AND_SCALAR_TYPES["other"],
+            STRINGS["other"],
         ),
     ),
     "built": tuple(
         # "screencasts etc.",
         itertools.chain(
             ASSIGNMENT_AND_SCALAR_TYPES["built"],
+            STRINGS["built"],
         ),
     ),
 }
