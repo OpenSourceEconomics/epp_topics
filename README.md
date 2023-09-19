@@ -69,3 +69,10 @@
    - Plotting
    - Machine learning with Scikit-learn
    - (Econometrics with ...)
+
+## Installation
+
+- Create the conda environment
+- do `pip install jupyterquiz`
+
+(Adding jupyterquiz directly in environment.yml leads to problems)
