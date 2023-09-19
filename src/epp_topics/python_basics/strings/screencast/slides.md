@@ -43,27 +43,20 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 ```python
-a = "Hello"
-type(a)
-```
-```python
-b = 'single quote string with embedded "double" quotes'
-c = "double quote string with embedded 'single' quotes"
-```
-```python
-not_an_int = "123"
-type(not_an_int)
-```
-```txt
+>>> a = "Hello"
+>>> type(a)
 str
-```
-```python
-not_an_int * 2
-```
-```txt
+
+>>> b = 'single quote string with embedded "double" quotes'
+>>> c = "double quote string with embedded 'single' quotes"
+
+>>> not_an_int = "123"
+>>> type(not_an_int)
+str
+
+>>> not_an_int * 2
 '123123'
 ```
-
 
 </div>
 <div>
@@ -97,22 +90,14 @@ not_an_int * 2
 <div>
 
 ```python
-a = "Hello World!"
-a.lower()
-```
-```txt
+>>> a = "Hello World!"
+>>> a.lower()
 'hello world!'
-```
-```python
-a.replace("!", ".")
-```
-```txt
+
+>>> a.replace("!", ".")
 "Hello World."
-```
-```python
-a.startswith("Hello")
-```
-```txt
+
+>>> a.startswith("Hello")
 True
 ```
 
@@ -135,13 +120,10 @@ True
 <div>
 
 ```python
-a = "Hello"
-b = "3"
-c = 3
-f"{a} {b}"
-```
-
-```txt
+>>> a = "Hello"
+>>> b = "3"
+>>> c = 3
+>>> f"{a} {b}"
 'Hello 3'
 ```
 
@@ -167,28 +149,17 @@ f"{a} {b}"
 <div>
 
 ```python
-a = "Hello World!"
-len(a)
-```
-```txt
+>>> a = "Hello World!"
+>>> len(a)
 12
-```
-```python
-a[0]
-```
-```txt
+
+>>> a[0]
 'H'
-```
-```python
-a[1]
-```
-```txt
+
+>>> a[1]
 'e'
-```
-```python
-a[:5]
-```
-```txt
+
+>>> a[:5]
 'Hello'
 ```
 
