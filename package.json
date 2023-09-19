@@ -5,6 +5,6 @@
     "@slidev/cli": "*",
     "@slidev/theme-default": "*",
     "playwright-chromium": "*",
-    "slidev-theme-academic": "*"
+    "slidev-theme-academic": "^1.1.3"
   }
 }

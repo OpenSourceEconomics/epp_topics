@@ -151,6 +151,25 @@ b / a
 ```txt
 1.0471666666666668
 ```
+
+</div>
+<div>
+
+- Arithmetic works as you would expect
+- Brackets work as expected
+- Mixing ints and floats converts everything to floats
+
+</div>
+</div>
+
+
+---
+
+# Some things you need to know
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
 ```python
 b // a
 ```
@@ -164,16 +183,13 @@ b % a
 0.14150000000000018
 ```
 
-
 </div>
 <div>
 
-- Arithmetic works as you would expect
-- Brackets work as expected
-- Mixing ints and floats converts everything to floats
 - `**` is exponentiation (not `^`)
 - `//` is floored quotient division
 - `%` yields the remainder of a division
+
 
 </div>
 </div>
@@ -310,7 +326,7 @@ not_an_int * 2
 
 # Everything is an object == Everything has methods
 
-- Any language has `int`, `float` and `string`
+- Any language has `int`, `float`, `bool` and `string`
 - C, Fortran, ...:
   - low level types to store data efficiently and do fast calculations
 - Python: Everything is an object
