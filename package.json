@@ -4,7 +4,7 @@
   "dependencies": {
     "@slidev/cli": "*",
     "@slidev/theme-default": "*",
-    "@mrdrogdrog/optional": "*",
-    "playwright-chromium": "*"
+    "playwright-chromium": "*",
+    "slidev-theme-academic": "*"
   }
 }
