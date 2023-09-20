@@ -12,13 +12,19 @@ defaults:
   layout: center
 ---
 
-# A Brief History of Operating Systems
-
 ### Effective Programming Practices for Economists
 
 <br>
 
+# Background
+
+### Floating Point Numbers
+
+<br>
+
 Janoś Gabler and Hans-Martin von Gaudecker
+
+
 
 
 ---
