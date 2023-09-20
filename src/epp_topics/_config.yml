@@ -52,4 +52,4 @@ sphinx:
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     bibtex_reference_style: author_year
     exclude_patterns: ['**/slides.md']
-  extra_extensions: [sphinx.ext.todo]
+  extra_extensions: [sphinx.ext.todo, sphinxcontrib.mermaid]

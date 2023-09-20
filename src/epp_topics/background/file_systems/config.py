@@ -5,9 +5,6 @@ SITE_CONTENTS = {
     "internal": (
         "objectives_materials.md",
         "screencast/script.md",
-        # "All files included in 'students'",
-        # "key above, plus all files",
-        # "that students should not see",
     ),
     "other": (
         "screencast/public/unix_path_mambaforge.png",

@@ -1,13 +1,10 @@
 """Definitions of source files for the current chapter."""
 
 SITE_CONTENTS = {
-    "public": (
-        "objectives_materials.md",
-        "exercise.ipynb",
-    ),
+    "public": ("objectives_materials.md",),
     "internal": (
         "objectives_materials.md",
-        "exercise.ipynb",
+        "screencast/script.md",
     ),
     "other": (
         "screencast/public/vt100.jpg",
