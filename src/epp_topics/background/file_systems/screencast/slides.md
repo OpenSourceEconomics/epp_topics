@@ -26,109 +26,165 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 
 ---
-layout: two-cols
+
+# Unix File System
+
+<div class="grid grid-cols-2 gap-45">
+<div>
+
+```mermaid {theme: 'dark', scale: 1}
+graph LR
+    classDef highlight fill:#FF4500;
+    A["/"] --- B["etc"]
+    A["/"] --- C["usr"]
+    C["usr"] --- D["bin"]
+    C["usr"] --- E["lib"]
+    A["/"] --- F["var"]
+    F["var"] --- G["log"]
+    A["/"] --- H["home"]
+    H["home"] --- I["user_1"]
+    I["user_1"] --- J["Documents"]
+    I["user_1"] --- K["Downloads"]
+    I["user_1"] --- L["mambaforge"]
+```
+</div>
+<div>
+
+</div>
+</div>
+
+
 ---
 
-# Two broad lines
+# Unix File System
 
-- Unix-based/inspired (Linux, MacOS X)
-- Windows
+<div class="grid grid-cols-2 gap-45">
+<div>
 
-::right::
+```mermaid {theme: 'dark', scale: 1}
+graph LR
+    classDef highlight fill:#FF4500;
+    A["/"] --- B["etc"]
+    A["/"] --- C["usr"]
+    C["usr"] --- D["bin"]
+    C["usr"] --- E["lib"]
+    A["/"] --- F["var"]
+    F["var"] --- G["log"]
+    A["/"] --- H["home"]
+    H["home"] --- I["user_1"]
+    I["user_1"] --- J["Documents"]
+    I["user_1"] --- K["Downloads"]
+    I["user_1"] --- L["mambaforge"]
+    class A highlight
+    class H highlight
+    class I highlight
+    class L highlight
+```
+</div>
+<div>
+
+<div v-click>
+
+### GUI representation
 
 <center>
-<img src="vt100.jpg" width=350>
+<img src="unix_path_mambaforge.png" width=450>
 </center>
 
+</div>
+
+<div v-click>
+
+### Shell representation
+
+/home/user_1/mambaforge
+
+</div>
+</div>
+</div>
+
+
+---
+
+# Windows File System
+
+<div class="grid grid-cols-2 gap-45">
+<div>
+
+```mermaid {theme: 'dark', scale: 0.8}
+graph LR
+    A[C:]
+    A --> B["Program Files"]
+    B --> C["Microsoft"]
+    B --> D["Adobe"]
+    A --> E["Users"]
+    E --> F["user_1"]
+    F --> H["Documents"]
+    F --> I["Downloads"]
+    F --> P["mambaforge"]
+    A --> M["Windows"]
+    M --> N["System32"]
+    A --> O["ProgramData"]
+    X["I:"] --> Z["Second Drive"]
+```
 <br>
 <br>
+</div>
+<div>
+
+</div>
+</div>
+
 
 ---
-layout: two-cols
----
 
-# Unix
+# Windows File System
 
-- Developed at Bell labs starting 1969 ([some history](https://arstechnica.com/gadgets/2019/08/unix-at-50-it-starts-with-a-mainframe-a-gator-and-three-dedicated-researchers))
-- Quickly evolved to become the main OS for servers.
-- Became a commercial product in the early 1980s.
-- Early OSS spin-offs: Berkeley Software Distribution (BSD) and GNU's Not
-  Unix (GNU).
+<div class="grid grid-cols-2 gap-45">
+<div>
 
-::right::
+```mermaid {theme: 'dark', scale: 0.8}
+graph LR
+    classDef highlight fill:#FF4500;
+    A[C:]
+    A --> B["Program Files"]
+    B --> C["Microsoft"]
+    B --> D["Adobe"]
+    A --> E["Users"]
+    E --> F["user_1"]
+    F --> H["Documents"]
+    F --> I["Downloads"]
+    F --> P["mambaforge"]
+    A --> M["Windows"]
+    M --> N["System32"]
+    A --> O["ProgramData"]
+    X["I:"] --> Z["Second Drive"]
+    class A highlight
+    class E highlight
+    class F highlight
+    class P highlight
+```
+<br>
+<br>
+</div>
+<div>
+
+<div v-click>
+
+### GUI representation
 
 <center>
-<img src="bell-labs.jpg" width=350>
+<img src="windows_path_mambaforge.png" width=250>
 </center>
 
----
-layout: two-cols
----
+</div>
 
-# Linux
+<div v-click>
 
-- In 1991, Linus Torvalds wrote a new kernel inspired by the Unix
-  kernel from scratch — Linux.
-- Many flavours of Linux today: Debian, Ubuntu, Red Hat, Mint,
-  Android, ...
+### Shell representation
 
-::right::
+C:\Users\user_1\mambaforge
 
-<center>
-<img src="linus.jpg" width=350>
-</center>
-
-
----
-layout: two-cols
----
-
-# MacOS X
-
-- After parting ways with Apple in the 1980s, Steve Jobs founded a
-  company called NeXT.
-- Developed the OS NeXTstep, which was based partly on the BSD.
-- NeXT was bought by Apple in 1996
-- Eventually brought back Jobs as CEO.
-- MacOS X, iOS, ... all based on NeXTstep and thus BSD, Unix.
-
-::right::
-
-<center>
-<img src="stevejobs-next.jpg" width=350>
-</center>
-
-
----
-
-# POSIX
-
-- Stands for Portable Operating System Interface
-- Aims to establish a standard for Unix derivatives.
-
-
----
-layout: two-cols
----
-
-
-# Windows
-
-- Complex history of corporate collaborations between Microsoft / IBM.
-- Big break between MS-DOS / Windows 9x and Windows NT, XP, subsequent
-  versions.
-
-::right::
-
-<center>
-<img src="windows-1-desktop.jpg" width=350>
-</center>
-
-
----
-
-# Signs of convergence
-
-- Most of Microsoft's cloud services seem to be running Linux
-- Since version 10, Windows includes the [Windows Subsystem for Linux
-  (WSL)](https://docs.microsoft.com/en-us/windows/wsl)
+</div>
+</div>
+</div>

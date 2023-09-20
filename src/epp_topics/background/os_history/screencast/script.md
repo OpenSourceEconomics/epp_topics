@@ -17,12 +17,11 @@
     market
   - So licensed to many companies for free in 1970s
   - Changed after monopoly was broken up
--
+- GNU tools still in wide use (only utilities, not the kernel itself)
 
-## Unix-inspired
+## Linux
 
-- GNU tools still in wide use
-- Importantly, these were , only utilities, not the kernel itself
+Obvious
 
 ## MacOS X
 

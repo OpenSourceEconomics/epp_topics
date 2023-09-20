@@ -30,6 +30,7 @@ dependencies:
   - sphinx
   - sphinx-automodapi
   - sphinx-copybutton
+  - sphinxcontrib-mermaid
   - statsmodels
   - toml
   - xlrd>=1.0

@@ -26,15 +26,22 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 
 ---
-layout: two-cols
----
 
 # Two broad lines
 
-- Unix-based/inspired (Linux, MacOS X)
-- Windows
 
-::right::
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+1. Unix-based/inspired (Linux, MacOS X)
+<br>
+
+1. Windows
+
+
+
+</div>
+<div>
 
 <center>
 <img src="vt100.jpg" width=350>
@@ -43,11 +50,15 @@ layout: two-cols
 <br>
 <br>
 
----
-layout: two-cols
+</div>
+</div>
+
 ---
 
 # Unix
+
+<div class="grid grid-cols-2 gap-4">
+<div>
 
 - Developed at Bell labs starting 1969 ([some history](https://arstechnica.com/gadgets/2019/08/unix-at-50-it-starts-with-a-mainframe-a-gator-and-three-dedicated-researchers))
 - Quickly evolved to become the main OS for servers.
@@ -55,35 +66,45 @@ layout: two-cols
 - Early OSS spin-offs: Berkeley Software Distribution (BSD) and GNU's Not
   Unix (GNU).
 
-::right::
+</div>
+<div>
 
 <center>
 <img src="bell-labs.jpg" width=350>
 </center>
 
----
-layout: two-cols
+</div>
+</div>
+
 ---
 
 # Linux
 
+<div class="grid grid-cols-2 gap-4">
+<div>
+
 - In 1991, Linus Torvalds wrote a new kernel inspired by the Unix
-  kernel from scratch — Linux.
+  kernel from scratch.
 - Many flavours of Linux today: Debian, Ubuntu, Red Hat, Mint,
   Android, ...
 
-::right::
+</div>
+<div>
 
 <center>
 <img src="linus.jpg" width=350>
 </center>
 
+</div>
+</div>
 
----
-layout: two-cols
+
 ---
 
 # MacOS X
+
+<div class="grid grid-cols-2 gap-4">
+<div>
 
 - After parting ways with Apple in the 1980s, Steve Jobs founded a
   company called NeXT.
@@ -92,11 +113,15 @@ layout: two-cols
 - Eventually brought back Jobs as CEO.
 - MacOS X, iOS, ... all based on NeXTstep and thus BSD, Unix.
 
-::right::
+</div>
+<div>
 
 <center>
-<img src="stevejobs-next.jpg" width=350>
+<img src="stevejobs-next.jpg" width=300>
 </center>
+
+</div>
+</div>
 
 
 ---
@@ -108,21 +133,26 @@ layout: two-cols
 
 
 ---
-layout: two-cols
----
 
 
 # Windows
+
+<div class="grid grid-cols-2 gap-4">
+<div>
 
 - Complex history of corporate collaborations between Microsoft / IBM.
 - Big break between MS-DOS / Windows 9x and Windows NT, XP, subsequent
   versions.
 
-::right::
+</div>
+<div>
 
 <center>
 <img src="windows-1-desktop.jpg" width=350>
 </center>
+
+</div>
+</div>
 
 
 ---
