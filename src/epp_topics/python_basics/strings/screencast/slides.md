@@ -170,6 +170,8 @@ True
 - They are actually containers
     - Have a length
     - Can be sliced
+- Indexing starts at 0
+- Upper index of slice is not included
 - More on containers in the next screencast!
 
 </div>

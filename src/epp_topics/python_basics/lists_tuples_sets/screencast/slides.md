@@ -30,4 +30,207 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Topics
 
--
+- Unlabeled containers
+  - Lists
+  - Tuples
+  - Sets
+- Selecting elements
+- When to use each container
+
+---
+
+
+# Lists
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+```python
+>>> a = [1, 2, 3]
+>>> type(a)
+list
+
+>>> a.append(4)
+>>> a
+[1, 2, 3, 4]
+
+>>> a[0] = "bla"
+>>> a
+['bla', 2, 3, 4]
+
+>>> len(a)
+4
+```
+
+
+</div>
+<div>
+
+- Created with square brackets
+- Definition: Mutable sequence of objects
+  - **mutable**: Can change it after creation
+  - **sequence**: An ordered collection
+  - **of objects**: Items can consist of anything
+- Lists are used a lot!
+- Highly optimized for fast appending!
+- `len` works for all containers
+
+
+</div>
+</div>
+
+
+---
+
+# Tuples
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+```python
+>>> a = (1, 2, 3)
+>>> type(a)
+tuple
+
+>>> b = (1)
+>>> type(b)
+int
+
+>>> c = (1,)
+>>> type(c)
+tuple
+
+
+
+
+```
+
+</div>
+<div>
+
+- Created with round brackets
+- Definition: Immutable sequence of objects
+  - **immutable**: Cannot change after creation
+- Single element tuples need a comma
+- Used less often than lists:
+    - if immutability and hashability are important
+    - if memory usage is important
+
+</div>
+</div>
+
+---
+
+
+# Selecting elements
+
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+```python
+>>> a = [1, 2, 3, 4, 5]
+>>> a[1]
+2
+
+>>> a[1: 2]
+[2]
+
+>>> a[:2]
+[1, 2]
+
+>>> a[2:]
+[3, 4, 5]
+
+>>> a[-1]
+[5]
+```
+
+</div>
+<div>
+
+- Selecting elements is the same for lists, tuples and other sequences
+- Indexing starts at 0
+- Upper index of slices is not included
+- lower and upper index can be left implicit
+- negative indices start from other side
+
+</div>
+</div>
+
+
+---
+
+# Sets
+
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+```python
+>>> a = {3, 2, 1, 3}
+>>> a
+{1, 2, 3}
+
+
+>>> b = {}
+>>> type(b)
+dict
+
+>>> c = set()
+>>> type(c)
+set
+```
+
+</div>
+<div>
+
+- Created with curly braces
+- Definition: Mutable unordered container of unique hashable items
+  - **unordered**: order is undefined and can change
+  - **unique**: duplicates are dropped at creation
+  - **hashable**: $\approx$ immutable
+- Empty set can not be created with curly braces
+
+</div>
+</div>
+
+
+---
+
+# Set operations
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+```python
+
+>>> a = {1, 2, 3}
+>>> b = {1, 5}
+
+# membership checking
+>>> 2 in a
+True
+
+# union
+>>> a | b
+{1, 2, 3, 5}
+
+# intersection
+>>> a & b
+{1}
+
+```
+
+</div>
+<div>
+
+- Sets are highly optimized for:
+  - membership checking
+  - union
+  - intersection
+- Lists and tuples would be much slower
+
+</div>
+</div>
+---
