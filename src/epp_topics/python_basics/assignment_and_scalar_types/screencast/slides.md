@@ -189,8 +189,6 @@ True
 - Comparison operators are `==`, `<`, `>`, `<=`, `>=`
 - Remember: `=` is used for assignment, not comparison
 - The result of a comparison is a Boolean
-- Booleans can be `True` or `False`
-
 
 </div>
 </div>

@@ -35,7 +35,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
   - Tuples
   - Sets
 - Selecting elements
-- When to use each container
+- When to use unlabeled containers
+- Which one to use
 
 ---
 
@@ -112,9 +113,10 @@ tuple
 - Definition: Immutable sequence of objects
   - **immutable**: Cannot change after creation
 - Single element tuples need a comma
-- Used less often than lists:
-    - if immutability and hashability are important
-    - if memory usage is important
+- Less flexible than lists, less common
+- Somewhat unfair:
+  - immutable: often helps to prevent bugs
+  - hashable: can use in more locations
 
 </div>
 </div>
@@ -149,11 +151,11 @@ tuple
 </div>
 <div>
 
-- Selecting elements is the same for lists, tuples and other sequences
+- Selecting elements is the same for lists, tuples, and other sequences
 - Indexing starts at 0
 - Upper index of slices is not included
 - lower and upper index can be left implicit
-- negative indices start from other side
+- negative indices start from the end
 
 </div>
 </div>
@@ -186,7 +188,7 @@ set
 <div>
 
 - Created with curly braces
-- Definition: Mutable unordered container of unique hashable items
+- Definition: Mutable unordered collection of unique hashable items
   - **unordered**: order is undefined and can change
   - **unique**: duplicates are dropped at creation
   - **hashable**: $\approx$ immutable
