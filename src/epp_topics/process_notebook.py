@@ -9,7 +9,7 @@ import nbformat
 def process_notebook(
     nb_raw: nbformat.notebooknode.NotebookNode,
     ex_o_sol: Literal["exercise", "solution"] = "exercise",
-    solution_title_suffix: str = " (solution)",
+    solution_title_suffix: str = "",
 ):
     """Process an internal notebook into an exercise or solution notebook.
 
