@@ -8,6 +8,21 @@ from epp_topics.python_basics.assignment_and_scalar_types import (
 from epp_topics.python_basics.dicts import (
     SITE_CONTENTS as DICTS,
 )
+from epp_topics.python_basics.executing_notebook_browser import (
+    SITE_CONTENTS as EXECUTING_NOTEBOOK_BROWSER,
+)
+from epp_topics.python_basics.executing_notebook_vscode import (
+    SITE_CONTENTS as EXECUTING_NOTEBOOK_VSCODE,
+)
+from epp_topics.python_basics.executing_py_shell import (
+    SITE_CONTENTS as EXECUTING_PY_SHELL,
+)
+from epp_topics.python_basics.executing_py_vscode import (
+    SITE_CONTENTS as EXECUTING_PY_VSCODE,
+)
+from epp_topics.python_basics.executing_pytask_pytest_pdb import (
+    SITE_CONTENTS as EXECUTING_PYTASK_PYTEST_PDB,
+)
 from epp_topics.python_basics.for_loops import (
     SITE_CONTENTS as FOR_LOOPS,
 )
@@ -44,6 +59,11 @@ TOPICS = [
     TRACEBACKS,
     IMPORTING,
     PATHLIB,
+    EXECUTING_NOTEBOOK_BROWSER,
+    EXECUTING_NOTEBOOK_VSCODE,
+    EXECUTING_PY_SHELL,
+    EXECUTING_PY_VSCODE,
+    EXECUTING_PYTASK_PYTEST_PDB,
 ]
 
 SITE_CONTENTS = {
