@@ -5,6 +5,11 @@ SITE_CONTENTS = {
     "internal": ("objectives_materials.ipynb",),
     "other": (
         # "existing figures etc.",
+        "screencast/public/activate_and_info.png",
+        "screencast/public/blocked_terminal.png",
+        "screencast/public/folder.png",
+        "screencast/public/notebook.png",
+        "screencast/public/starting_page.png",
     ),
     "built": ("python_basics-executing_notebook_browser.pdf",),
 }
