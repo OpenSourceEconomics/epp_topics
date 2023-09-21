@@ -5,6 +5,8 @@ SITE_CONTENTS = {
     "internal": ("objectives_materials.ipynb",),
     "other": (
         # "existing figures etc.",
+        "screencast/public/activate_and_info.png",
+        "screencast/public/run.png",
     ),
     "built": ("python_basics-executing_py_shell.pdf",),
 }
