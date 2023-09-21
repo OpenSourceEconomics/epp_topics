@@ -33,3 +33,6 @@ p, li {
 li {
   margin-bottom: .35rem !important;
 }
+code {
+  font-size: 1.25rem !important;
+}
