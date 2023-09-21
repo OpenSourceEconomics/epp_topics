@@ -2,11 +2,11 @@
 
 SITE_CONTENTS = {
     "public": (
-        "objectives_materials.md",
+        "objectives_materials.ipynb",
         "exercise.ipynb",
     ),
     "internal": (
-        "objectives_materials.md",
+        "objectives_materials.ipynb",
         "exercise.ipynb",
         # "All files included in 'students'",
         # "key above, plus all files",
