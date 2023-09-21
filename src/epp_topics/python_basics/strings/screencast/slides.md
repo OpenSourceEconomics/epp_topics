@@ -142,7 +142,7 @@ True
 
 ---
 
-# Strings are actually containers
+# Strings are a sequence type
 
 
 <div class="grid grid-cols-2 gap-4">
@@ -159,20 +159,21 @@ True
 >>> a[1]
 'e'
 
->>> a[:5]
-'Hello'
+>>> a[-1]
+'o'
 ```
 
 </div>
 <div>
 
 - Most of the time, you can think of strings as scalar variables
-- They are actually containers
+- They are actually sequences of characters
     - Have a length
-    - Can be sliced
+    - Can be indexed
+    - *Can be sliced*
+    - *Can be iterated over*
 - Indexing starts at 0
-- Upper index of slice is not included
-- More on containers in the next screencast!
+- Negative indices start from the end
 
 </div>
 </div>
