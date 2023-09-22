@@ -21,8 +21,6 @@ SITE_DIR = {
     "public": SRC.parent.parent / "site_public",
     "internal": SRC.parent.parent / "site_internal",
 }
-JUPYTERHUB_REPO_DIR = SRC.parent.parent.parent / "epp_topics_notebooks"
-
 TEST_DIR = SRC.joinpath("..", "..", "tests").resolve()
 
 
