@@ -2,7 +2,6 @@
 
 import shutil
 import subprocess
-from pathlib import Path
 
 import nbformat
 import pytask
@@ -11,7 +10,6 @@ from pybaum.tree_util import tree_just_flatten
 
 from epp_topics.config import (
     CHAPTER_NAMES,
-    JUPYTERHUB_REPO_DIR,
     SITE_DIR,
     SITE_SOURCE_DIR,
     SRC,
@@ -97,20 +95,6 @@ for p_o_i in ("public", "internal"):
                     nb_processed = process_notebook(nb_raw=nb_raw, ex_o_sol=ex_o_sol)
 
                     nbformat.write(nb_processed, produces)
-
-                if p_o_i == "public":
-                    # Use the product of previous task as dependency for copying to
-                    # Jupyterhub repo.
-                    @pytask.mark.task(
-                        id=f"{c}, {produces.name}",
-                        kwargs={
-                            "depends_on": produces,
-                            "produces": JUPYTERHUB_REPO_DIR / c / produces.name,
-                        },
-                    )
-                    def task_copy_notebook_jupyterhub(depends_on, produces):
-                        """Copy some file to Jupyterhub repo."""
-                        shutil.copy(depends_on, produces)
 
             else:
 
@@ -251,20 +235,3 @@ for p_o_i in ("public", "internal"):
     def task_copy_book(produces, depends_on):
         """Copy the Jupyter book so it is easily accessible."""
         shutil.copytree(depends_on[0].parent, produces.parent, dirs_exist_ok=True)
-
-    if p_o_i == "public" and (website := Path("/home/hmg/admin/website")).exists():
-
-        @pytask.mark.task(
-            id="copy_locally_to_website",
-            kwargs={
-                "depends_on": (
-                    site_index,
-                    all_site_sources,
-                    SITE_DIR[p_o_i] / "index.html",
-                ),
-                "produces": website / "_static" / "epp_topics" / "index.html",
-            },
-        )
-        def task_copy_book_to_website(depends_on, produces):
-            """Copy the Jupyter book (locally) to website."""
-            shutil.copytree(depends_on[0].parent, produces.parent, dirs_exist_ok=True)
