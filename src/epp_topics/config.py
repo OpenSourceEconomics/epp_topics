@@ -18,7 +18,7 @@ CHAPTER_NAMES = ["background", "git", "python_basics"]
 SRC = Path(__file__).parent.resolve()
 SITE_SOURCE_DIR = SRC.parent.parent / "site_source"
 SITE_DIR = {
-    "public": SRC.parent.parent / "site_public",
+    "public": SRC.parent.parent.parent / "epp_materials",
     "internal": SRC.parent.parent / "site_internal",
 }
 TEST_DIR = SRC.joinpath("..", "..", "tests").resolve()

@@ -2,7 +2,6 @@
 
 import shutil
 import subprocess
-from pathlib import Path
 
 import nbformat
 import pytask
@@ -236,20 +235,3 @@ for p_o_i in ("public", "internal"):
     def task_copy_book(produces, depends_on):
         """Copy the Jupyter book so it is easily accessible."""
         shutil.copytree(depends_on[0].parent, produces.parent, dirs_exist_ok=True)
-
-    if p_o_i == "public" and (website := Path("/home/hmg/admin/website")).exists():
-
-        @pytask.mark.task(
-            id="copy_locally_to_website",
-            kwargs={
-                "depends_on": (
-                    site_index,
-                    all_site_sources,
-                    SITE_DIR[p_o_i] / "index.html",
-                ),
-                "produces": website / "_static" / "epp_topics" / "index.html",
-            },
-        )
-        def task_copy_book_to_website(depends_on, produces):
-            """Copy the Jupyter book (locally) to website."""
-            shutil.copytree(depends_on[0].parent, produces.parent, dirs_exist_ok=True)
