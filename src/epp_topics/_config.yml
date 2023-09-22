@@ -34,8 +34,6 @@ notebook_interface: notebook
 # Information about where the book exists on the web
 repository:
   url: https://github.com/OpenSourceEconomics/epp_topics.git
-# launch_buttons:
-#   jupyterhub_url: https://jupyterhub.hrz.uni-bonn.de
   path_to_book: student_book
 # LaTeX settings
 bibtex_bibfiles: [references.bib]
