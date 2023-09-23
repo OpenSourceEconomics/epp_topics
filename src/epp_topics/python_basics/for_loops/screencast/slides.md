@@ -19,7 +19,7 @@ defaults:
 
 # Basic Python
 
-### `for` loops
+### "for" loops
 
 <br>
 
@@ -31,7 +31,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Contents
 
 - **D**on't **R**epeat **Y**ourself
-- for loop syntax
+- Syntax of for loops
 - Are for loops bad?
 - Looping over lists and tuples
 - Looping over dicts
@@ -46,20 +46,20 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 ```python
->>> names = ["Guido", "Raymond", "Tim"]
+>>> names = ["Guy", "Ray", "Tim"]
 >>> lower_names = [
 >>>   names[0].lower(),
 >>>   names[1].lower(),
 >>>   names[2].lower(),
 >>> ]
 >>> lower_names
-['guido', 'raymond', 'tim']
+['guy', 'ray', 'tim']
 ```
 
 </div>
 <div>
 
-- The code on the left has problematic code repetition
+- This code repetition is problematic
   - If we have a typo, we need to fix it multiple times
   - Cumbersome if list becomes longer
 - In many situations we want to do similar things multiple times
@@ -89,9 +89,9 @@ Janoś Gabler and Hans-Martin von Gaudecker
 ```
 ```python
 # general pattern
-for running_variable in iterable:
-    do_something(running_variable)
-    and_something_else(running_variable)
+for running_var in iterable:
+    do_someth(running_var)
+    and_someth_else(running_var)
 ```
 
 </div>
@@ -110,7 +110,7 @@ for running_variable in iterable:
 
 ---
 
-# Are for loops bad
+# Are for loops bad ?
 
 - For loops have a bad reputation for being slow and inelegant, but:
   - Having unnecessary code repetition is worse than a for loop!
@@ -131,19 +131,19 @@ for running_variable in iterable:
 <div>
 
 ```python
->>> names = ["Guido", "Raymond", "Tim"]
+>>> names = ["Guy", "Ray", "Tim"]
 >>> for name in names:
 ...     print(name.lower())
-'guido'
-'raymond'
+'guy'
+'ray'
 'tim'
 ```
 
 </div>
 <div>
 
-- Looping over lists and tuples works the same
-- Running variable is iteratively bound to the list elemnts
+- Looping over lists and tuples works in the same way
+- Running variable is iteratively bound to the iterable's elements
 - Try to choose a good name for the running variable!
 
 </div>
@@ -154,37 +154,45 @@ for running_variable in iterable:
 
 # Looping over dictionaries
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-3">
 
 ```python
->>> letter_to_position = {
+>>> let_to_pos = {
 ...     "a": 0,
 ...     "b": 1,
 ...     "c": 2,
 ... }
 
->>> for key in letter_to_position:
-...     print(key)
+>>> for let in let_to_pos:
+...     print(let)
 a
 b
 c
 
->>> for key, pos in letter_to_position.items():
-...     print(key, pos)
+>>> for let, pos in let_to_pos.items():
+...     print(let, pos)
 a 0
 b 1
 c 2
 ```
 
 </div>
-<div>
+<div class="col-span-2">
 
 - By default you loop over dictionary keys
-- Use `.items` for looping over keys and values at the same time
+- Use `.items()` for looping over key/value pairs
 
 </div>
 </div>
+
+---
+
+# Looping patterns
+
+- Mapping loops
+- Reduction loops
+- *(Filtering loops)*
 
 
 ---
@@ -192,32 +200,36 @@ c 2
 # Mapping loops
 
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-3">
 
 ```python
->>> names = ["Guido", "Raymond", "Tim"]
+>>> names = ["Guy", "Ray", "Tim"]
 >>> lower_names = []
->>> for name in names:
-...     lower_names.append(names.lower())
+>>> for n in names:
+...     lower_names.append(n.lower())
 >>> lower_names
-['guido', 'raymond', 'tim']
+['guy', 'ray', 'tim']
 
 >>> name_to_lower = {}
->>> for name in names:
-...     name_to_lower[name] = name.lower()
+>>> for n in names:
+...     name_to_lower[n] = n.lower()
 >>> name_to_lower
-{'Guido': 'guido', 'Raymond': 'raymond', 'Tim': 'tim'}
+{
+  'Guy': 'guy',
+  'Ray': 'ray',
+  'Tim': 'tim'
+}
 ```
 
 </div>
-<div>
+<div class="col-span-2">
 
-- Create a new container by applying some transformation to each element in another container
-- Transformations can be arbitrarily complex
-- Often you will define a custom function to do the transformation
+- Create a new container by transforming each element of another container
+  - Arbitrarily complex transformations
+  - Often custom functions
 - Examples:
-  - Create dict of results from dict of model specifications
+  - dict of results from dict of model specifications
   - Apply mathematical functions to lists of inputs
 
 </div>
@@ -234,8 +246,8 @@ c 2
 ```python
 >>> numbers = [1, 2, 3]
 >>> mean = 0.0
->>> for number in numbers:
-...     mean += number / len(numbers)
+>>> for n in numbers:
+...     mean += n / len(numbers)
 ```
 
 </div>
