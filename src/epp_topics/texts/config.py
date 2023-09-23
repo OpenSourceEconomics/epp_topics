@@ -2,7 +2,7 @@
 
 import itertools
 
-from epp_topics.texts.assignment_and_scalar_types import (
+from epp_topics.texts.markup_languages import (
     SITE_CONTENTS as ASSIGNMENT_AND_SCALAR_TYPES,
 )
 
@@ -11,7 +11,7 @@ TOPICS = [
 ]
 
 SITE_CONTENTS = {
-    "chapter_title": "Python Basics",
+    "chapter_title": "Texts, typesetting and text data",
     "public": tuple(
         itertools.chain(
             ("content_objectives.md",),
