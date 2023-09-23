@@ -111,18 +111,37 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # A better way (for a hypothetical task)
 
+In the task where we should use Python to calculate the output value of a cobb douglas
+production function (assignment 1, exercise 2) the following line gives me a type error:
+
+```python
+cobb_douglas(labor, capital, alpha)
+```
+
 In the task where we should query the iris dataset (exercise 2, Task 8), the following line gives me a KeyError:
 
 ```python
-iris.query("sepal_lenght <= 5")
+TypeError: unsupported operand type(s) for ** or pow(): 'tuple' and 'float'
 ```
 
-The message was
+I don't understand the error because I'm just passing in numbers.
+
+---
+
+# A better way (continued)
+
+Here is a minimal example to reproduce the error:
 
 ```python
-KeyError: 'sepal_lenght'
-```
+labor = 2.5,
+capital = 4.5
+alpha = 0.33
 
-I tried to run the query with different variables and it works, but with sepal_length it doesn't.
+def cobb_douglas(labor, capital, alpha):
+    return labor**alpha * capital**(1 - alpha)
+
+
+cobb_douglas(labor, capital, alpha)
+```
 
 I attach the entire traceback as `txt` file ...
