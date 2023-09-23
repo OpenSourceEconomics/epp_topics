@@ -28,7 +28,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Topics
+# Contents
 
 - Anatomy of functions
 - Examples of functions

@@ -28,7 +28,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Topics
+# Contents
 
 - if, elif and else
 - More on Booleans

@@ -28,7 +28,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Topics
+# Contents
 
 - What are Exceptions and Tracebacks?
 - The Anatomy of a Python Traceback

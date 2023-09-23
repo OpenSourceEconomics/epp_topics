@@ -28,7 +28,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Topics
+# Contents
 
 - Representing numbers: integers and floats
 - Using Python like a calculator
@@ -48,7 +48,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 3
 
 >>> type(a)
-int
+<class 'int'>
+
+>>> type(3)
+<class 'int'>
 
 >>> a = 5
 >>> a
@@ -84,7 +87,7 @@ int
 3.1415
 
 >>> type(b)
-float
+<class 'float'>
 
 >>> c = 0.1 + 0.2
 >>> c
@@ -115,14 +118,13 @@ float
 ```python
 >>> a = 3
 >>> b = 3.1415
->>> (a + b) * 3
-18.424500000000002
-
->>> a**b
-31.54106995953402
 
 >>> b / a
 1.0471666666666668
+
+>>> (a + b) * 3
+18.424500000000002
+
 ```
 
 </div>
@@ -143,7 +145,11 @@ float
 <div class="grid grid-cols-2 gap-4">
 <div>
 
+
 ```python
+>>> a**b
+31.54106995953402
+
 >>> b // a
 1.0
 
@@ -205,7 +211,7 @@ True
 >>> a = True
 >>> b = False
 >>> type(a)
-bool
+<class 'bool'>
 
 >>> a and b
 False

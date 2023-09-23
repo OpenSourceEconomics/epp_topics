@@ -28,7 +28,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Topics
+# Contents
 
 - How to get a path to the current directory
 - Working with pathlib `Path`s

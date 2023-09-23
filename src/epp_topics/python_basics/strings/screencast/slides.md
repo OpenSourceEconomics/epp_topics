@@ -28,11 +28,12 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Topics
+# Contents
 
 - Representing text: Strings
 - Methods to manipulate strings
 - String formatting
+- Strings as sequences
 
 ---
 
@@ -47,8 +48,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 >>> type(a)
 str
 
->>> b = 'single quote string with embedded "double" quotes'
->>> c = "double quote string with embedded 'single' quotes"
+>>> b = 'embed "double" quotes'
+>>> c = "embed 'single' quotes"
 
 >>> not_an_int = "123"
 >>> type(not_an_int)
@@ -122,19 +123,24 @@ True
 ```python
 >>> a = "Hello"
 >>> b = "3"
->>> c = 3
 >>> f"{a} {b}"
 'Hello 3'
+
+>>> c = 3.145
+>>> f"{a} {c}"
+'Hello 3.145'
+
 ```
 
 </div>
 <div>
 
-- `f-strings` allow you to puzzle together different strings
+- "f-strings" allow you to puzzle together different strings
+- Variables used in formatting are automatically converted to strings
 - Many useful applications:
   - Embed results of calculations in messages
   - Write good error messages
-- Variables used in formatting are automatically converted to strings
+  - Format numbers in tables
 
 </div>
 </div>

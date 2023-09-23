@@ -28,7 +28,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Topics
+# Contents
 
 - Unlabeled containers
   - Lists
@@ -49,7 +49,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 ```python
 >>> a = [1, 2, 3]
 >>> type(a)
-list
+<class 'list'>
 
 >>> a.append(4)
 >>> a
@@ -74,7 +74,7 @@ list
   - **of objects**: Items can consist of anything
 - Lists are used a lot!
 - Highly optimized for fast appending!
-- `len` works for all containers
+- `len` works for all collections
 
 
 </div>
@@ -91,17 +91,19 @@ list
 ```python
 >>> a = (1, 2, 3)
 >>> type(a)
-tuple
+<class 'tuple'>
 
 >>> b = (1)
 >>> type(b)
-int
+<class 'int'>
 
 >>> c = (1,)
 >>> type(c)
-tuple
+<class 'tuple'>
 
-
+>>> d = 2,
+>>> type(d)
+<class 'tuple'>
 
 
 ```
@@ -113,6 +115,7 @@ tuple
 - Definition: Immutable sequence of objects
   - **immutable**: Cannot change after creation
 - Single element tuples need a comma
+- But sometimes you don't need the brackets!
 - Less flexible than lists, less common
 - Somewhat unfair:
   - immutable: often helps to prevent bugs
@@ -177,11 +180,11 @@ tuple
 
 >>> b = {}
 >>> type(b)
-dict
+<class 'dict'>
 
 >>> c = set()
 >>> type(c)
-set
+<class 'set'>
 ```
 
 </div>
@@ -235,4 +238,5 @@ True
 
 </div>
 </div>
+
 ---

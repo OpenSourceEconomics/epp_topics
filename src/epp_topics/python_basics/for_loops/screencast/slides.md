@@ -28,7 +28,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Topics
+# Contents
 
 - **D**on't **R**epeat **Y**ourself
 - for loop syntax
