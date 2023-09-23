@@ -11,8 +11,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": (
-        # "screencast slides etc.",
-        # "everything that is built",
-    ),
+    "built": ("git-introduction.pdf",),
 }
