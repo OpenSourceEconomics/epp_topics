@@ -1,8 +1,14 @@
 # Script: Markup languages
 
-## Contents
+Say for each markup language where it is used:
 
-- It might look like these scalar types are not relevant for economics but they form the
-  basis for many things that come later
-- All we do here is very intuitive; We do it to establish a precise vocabulary for
-  talking about Python variables
+- HTML: Webpages (but you don't have to write it manually nowadays)
+- LaTeX: Beamer slides, papers (but looks like we can finally switch)
+- Markdown: GitHub, Zulip, this webpage, slides, ...
+
+## Why use markup languages
+
+- Need to make examples what is meant by easy automation:
+  - Automatic generation of regression tables
+  - Very easy to add figures that update automatically when you re-run your code
+  - ...
