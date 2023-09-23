@@ -32,7 +32,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - What are Exceptions and Tracebacks?
 - The Anatomy of a Python Traceback
-- Reading long tracebacks
+- Reading tracebacks
 - Asking for help
 
 
@@ -82,13 +82,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Common sources of errors
 
-- `ValueError`: You called a function with something invalid
-- `KeyError`: You have a typo in a variable name or a dictionary key
-- `TypeError`: You called the function with something that has the wrong type
-- `ImportError`: You have a typo in an import
-- `ModuleNotFoundError`: You did not activate the environment or need to install a
-  package
-
+- `ValueError`: Called a function with something invalid
+- `KeyError`: Typo in a variable name or a dictionary key
+- `TypeError`: Called a function with something that has the wrong type
+- `ImportError`: Typo in an import
 
 ---
 
