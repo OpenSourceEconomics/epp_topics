@@ -1,9 +1,12 @@
 """Definitions of source files for the current chapter."""
 import itertools
 
+from epp_topics.git.committing import SITE_CONTENTS as COMMITTING
+from epp_topics.git.creating_repos import SITE_CONTENTS as CREATING_REPOS
 from epp_topics.git.how_git_works import SITE_CONTENTS as HOW_GIT_WORKS
 from epp_topics.git.installing_git import SITE_CONTENTS as INSTALLING_GIT
 from epp_topics.git.motivation import SITE_CONTENTS as MOTIVATION
+from epp_topics.git.staging import SITE_CONTENTS as STAGING
 from epp_topics.git.why_git import SITE_CONTENTS as WHY_GIT
 
 TOPICS = [
@@ -11,6 +14,9 @@ TOPICS = [
     WHY_GIT,
     INSTALLING_GIT,
     HOW_GIT_WORKS,
+    CREATING_REPOS,
+    STAGING,
+    COMMITTING,
 ]
 
 SITE_CONTENTS = {
