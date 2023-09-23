@@ -47,7 +47,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 ```python
 >>> a = {"a": 1, "b": 2, "c": 3}
 >>> type(a)
-dict
+<class 'dict'>
+
 
 >>> a["b"]
 2
@@ -66,7 +67,7 @@ dict
 - Map a set of keys to a set of values
 - Creation by curly braces and `:` to separate keys and values
 - **mutable**: Can add or overwrite entries
-- Order is preserved since Python 3.6
+- Order is preserved *(since Python 3.6)*
 
 
 </div>
@@ -75,10 +76,10 @@ dict
 
 ---
 
-# Fun facts
+# Fun facts about dicts in Python
 
-- Dicts are the absolute workhorse datastructure in Python
-- In Python, everything is an object and every object is just a dictionary under the hood!
+- Dicts are the absolute workhorse datastructure
+- Everything is an object and every object is just a dictionary under the hood!
 - Highly optimized for fast lookup!
 
 
@@ -93,7 +94,7 @@ dict
 ```python
 >>> nested = {
 >>>   1: {"bla": "blubb"},
->>>   "string_key": {"foo": "bar"},
+>>>   "two": {"foo": "bar"},
 >>> }
 ```
 
@@ -119,9 +120,9 @@ dict
 
 ```python
 >>> flat = {"bla": "blubb"}
-
 >>> nested = {
->>>   1: flat, "string_key": {"foo": "bar"}
+>>>   1: flat,
+      "two": {"foo": "bar"}
 >>> }
 
 >>> flat["bla"]
@@ -156,9 +157,9 @@ dict
 
 ```python
 >>> flat = {"bla": "blubb"}
-
 >>> nested = {
->>>   1: flat, "string_key": {"foo": "bar"}
+>>>   1: flat,
+      "two": {"foo": "bar"}
 >>> }
 
 
