@@ -25,7 +25,3 @@ defaults:
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
-
----
-
-# Topics
