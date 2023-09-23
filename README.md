@@ -38,6 +38,7 @@
    - Decorators _(record anew, further material: Harrison)_
    - Custom data containers
    - Reading object-oriented code _\[long run\]_
+   - More on f-strings (could also do as an exercise)
 1. Best practices (any language)
    - Avoid code duplication (iteration, functions) _(record anew)_
      - Objective: Understand Concept. Do stuff, see patterns that come out
