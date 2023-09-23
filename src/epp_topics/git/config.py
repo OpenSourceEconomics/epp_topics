@@ -1,6 +1,7 @@
 """Definitions of source files for the current chapter."""
 import itertools
 
+from epp_topics.git.how_git_works import SITE_CONTENTS as HOW_GIT_WORKS
 from epp_topics.git.installing_git import SITE_CONTENTS as INSTALLING_GIT
 from epp_topics.git.motivation import SITE_CONTENTS as MOTIVATION
 from epp_topics.git.why_git import SITE_CONTENTS as WHY_GIT
@@ -9,6 +10,7 @@ TOPICS = [
     MOTIVATION,
     WHY_GIT,
     INSTALLING_GIT,
+    HOW_GIT_WORKS,
 ]
 
 SITE_CONTENTS = {
