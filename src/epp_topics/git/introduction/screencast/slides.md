@@ -16,7 +16,7 @@ defaults:
 
 <br>
 
-# Git
+# Version Control and collaboration with Git and Github
 
 ### Introduction and Overview
 
@@ -85,5 +85,5 @@ To quote John von Neumann:
   - Works the same for any other plain text file
 - A few things have changed since they were recorded
   - `master` has been renamed to `main`
-  - The Atom editor has been replaced by vscode
-  - Powershell is good enough that you don't need commander
+  - The Atom editor has been replaced by VS Code
+  - On Windows, the Powershell has seen improvements, so forget about commander
