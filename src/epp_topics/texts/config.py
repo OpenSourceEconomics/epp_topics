@@ -2,16 +2,24 @@
 
 import itertools
 
+from epp_topics.texts.markdown_applications import (
+    SITE_CONTENTS as MARKDOWN_APPLICATIONS,
+)
+from epp_topics.texts.markdown_syntax import (
+    SITE_CONTENTS as MARKDOWN_SYNTAX,
+)
 from epp_topics.texts.markup_languages import (
-    SITE_CONTENTS as ASSIGNMENT_AND_SCALAR_TYPES,
+    SITE_CONTENTS as MARKUP_LANGUAGES,
 )
 
 TOPICS = [
-    ASSIGNMENT_AND_SCALAR_TYPES,
+    MARKUP_LANGUAGES,
+    MARKDOWN_SYNTAX,
+    MARKDOWN_APPLICATIONS,
 ]
 
 SITE_CONTENTS = {
-    "chapter_title": "Texts, typesetting and text data",
+    "chapter_title": "Texts and typesetting",
     "public": tuple(
         itertools.chain(
             ("content_objectives.md",),
