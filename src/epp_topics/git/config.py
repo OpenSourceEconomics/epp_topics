@@ -2,8 +2,10 @@
 import itertools
 
 from epp_topics.git.branches import SITE_CONTENTS as BRANCHES
+from epp_topics.git.collaboration import SITE_CONTENTS as COLLABORATION
 from epp_topics.git.committing import SITE_CONTENTS as COMMITTING
 from epp_topics.git.creating_repos import SITE_CONTENTS as CREATING_REPOS
+from epp_topics.git.github import SITE_CONTENTS as GITHUB
 from epp_topics.git.how_git_works import SITE_CONTENTS as HOW_GIT_WORKS
 from epp_topics.git.installing_git import SITE_CONTENTS as INSTALLING_GIT
 from epp_topics.git.merging_and_conflicts import SITE_CONTENTS as MERGING_AND_CONFLICTS
@@ -23,6 +25,8 @@ TOPICS = [
     UNDOING_THINGS,
     BRANCHES,
     MERGING_AND_CONFLICTS,
+    GITHUB,
+    COLLABORATION,
 ]
 
 SITE_CONTENTS = {
