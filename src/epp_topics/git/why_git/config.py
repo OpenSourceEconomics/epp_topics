@@ -2,12 +2,7 @@
 
 SITE_CONTENTS = {
     "public": ("objectives_materials.ipynb",),
-    "internal": (
-        "objectives_materials.ipynb",
-        # "All files included in 'students'",
-        # "key above, plus all files",
-        # "that students should not see",
-    ),
+    "internal": ("objectives_materials.ipynb",),
     "other": (
         # "existing figures etc.",
     ),

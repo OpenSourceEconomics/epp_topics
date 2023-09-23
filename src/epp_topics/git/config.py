@@ -1,16 +1,20 @@
 """Definitions of source files for the current chapter."""
 import itertools
 
-from epp_topics.git.committing_diffing import SITE_CONTENTS as COMMITTING_DIFFING
 from epp_topics.git.motivation import SITE_CONTENTS as MOTIVATION
+from epp_topics.git.why_git import SITE_CONTENTS as WHY_GIT
+
+TOPICS = [
+    MOTIVATION,
+    WHY_GIT,
+]
 
 SITE_CONTENTS = {
-    "chapter_title": "Version Control and collaboration with Git and Github",
+    "chapter_title": "Git and Github",
     "public": tuple(
         itertools.chain(
             ("content_objectives.md",),
-            MOTIVATION["public"],
-            COMMITTING_DIFFING["public"],
+            *[topic["public"] for topic in TOPICS],
         ),
     ),
     "internal": tuple(
@@ -22,22 +26,19 @@ SITE_CONTENTS = {
                 "internal_overview.md",
                 "content_objectives.md",
             ),
-            MOTIVATION["internal"],
-            COMMITTING_DIFFING["internal"],
+            *[topic["internal"] for topic in TOPICS],
         ),
     ),
     "other": tuple(
         # "existing figures etc.",
         itertools.chain(
-            MOTIVATION["other"],
-            COMMITTING_DIFFING["other"],
+            *[topic["other"] for topic in TOPICS],
         ),
     ),
     "built": tuple(
         # "screencasts etc.",
         itertools.chain(
-            MOTIVATION["built"],
-            COMMITTING_DIFFING["built"],
+            *[topic["built"] for topic in TOPICS],
         ),
     ),
 }
