@@ -17,7 +17,7 @@ defaults:
 
 <br>
 
-# Texts, typesetting and text data
+# Texts, Typesetting, and Text Data
 
 ### Markdown syntax
 
@@ -27,30 +27,32 @@ defaults:
 Janoś Gabler and Hans-Martin von Gaudecker
 
 
-
 ---
 
-# Syntax (Headings)
+# Headings
 
 <br/>
 
-
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-2 gap-30">
 <div>
 
 <br/>
 
 ```
-# The largest heading
+# Title
 
 
 
 
-## The second largest heading
+
+
+## Subtitle
 
 
 
-###### The smallest heading
+
+
+###### Smallest level
 ```
 
 </div>
@@ -58,16 +60,16 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <br/>
 
-# The Title
+# Title
 
 <br/>
 
-## The second largest heading
+## Subtitle
 
 <br/>
 <br/>
 
-###### The smallest heading
+###### Smallest level
 
 </div>
 </div>
@@ -118,18 +120,22 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 ```
-
 - This is
-- a
+- a bulleted
 - list
-
-
 
 
 
 1. This is
 2. an
 3. enumeration
+
+
+
+1. This is
+1. another
+1. enumeration
+
 ```
 
 
@@ -137,16 +143,20 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 - This is
-- a
+- a bulleted
 - list
 
-<br/>
 <br/>
 
 1. This is
 2. an
 3. enumeration
 
+<br/>
+
+1. This is
+1. another
+1. enumeration
 
 </div>
 </div>
@@ -160,30 +170,30 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <br/>
 <br/>
 
-<div class="grid grid-cols-2 gap-30">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-3">
 
 ```
 
-[This will be a link](www.google.com)
+[This is a link](www.google.com)
 
 
 
-> This will be a
+> This is a
 > multi-line quote
 ```
 
 
 </div>
-<div>
+<div class="col-span-2">
 
-[This will be a link](www.google.com)
+[This is a link](www.google.com)
 
 <br/>
 <br/>
 
 
-> This will be a
+> This is a
 > multi-line quote
 
 
@@ -195,7 +205,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Code Snippets
 
-This is the most important one for communication on zulip!!!
+This is the most important one for communication on Zulip!!!
 
 <div class="grid grid-cols-2 gap-30">
 <div>

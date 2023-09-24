@@ -2,19 +2,6 @@
 
 There is only a title slide. Just do a live demo:
 
-## GitHub demo
-
-- Open [epp_topics github](https://github.com/OpenSourceEconomics/epp_topics) and create
-  an issue in Markdown. The isse content could be something:
-
-We should urgently add the following screencasts on the shell:
-
-- A short history of computer interfaces
-- Shell navigation on linux and mac
-- Shell navigation on windows
-
-@janosg can you do this?
-
 ## Zulip demo: Write the following message
 
 ````markdown
@@ -23,11 +10,11 @@ production function (assignment 1, exercise 2) the following line:
 
 ```python
 cobb_douglas(labor, capital, alpha)
-````
+```
 
 gives me a type error:
 
-```python
+```pytb
 TypeError: unsupported operand type(s) for ** or pow(): 'tuple' and 'float'
 ```
 
@@ -46,4 +33,23 @@ def cobb_douglas(labor, capital, alpha):
 
 
 cobb_douglas(labor, capital, alpha)
+```
+
+I attach the entire traceback as `txt` file ...
+
+````
+
+## GitHub demo
+
+- Open [epp_topics github](https://github.com/OpenSourceEconomics/epp_topics) and create
+  an issue in Markdown. The issue content could be something:
+
+```markdown
+We should add the following screencasts on the shell soon:
+
+- A short history of computer interfaces
+- Shell navigation on linux and mac
+- Shell navigation on windows
+
+@janosg, can you come up with a first draft?
 ```

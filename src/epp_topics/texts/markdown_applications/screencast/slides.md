@@ -17,7 +17,7 @@ defaults:
 
 <br>
 
-# Texts, typesetting and text data
+# Texts, Typesetting, and Text Data
 
 ### Markdown applications
 

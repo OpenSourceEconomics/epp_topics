@@ -17,7 +17,7 @@ defaults:
 
 <br>
 
-# Texts, typesetting and text data
+# Texts, Typesetting, and Text Data
 
 ### Markup languages
 
@@ -30,17 +30,19 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # What are markup languages?
 
-
-
-
 <br/>
 <br/>
 
-> A markup language is a text-encoding system consisting of a set of symbols inserted in a text document to control its structure, formatting, or the relationship between its parts. (Wikipedia)
+> A markup language is a text-encoding system consisting of a set of symbols inserted in a text document to control its structure, formatting, or the relationship between its parts.
+>
+<div style="text-align:right">
+
+> _(Wikipedia)_
+
+</div>
 
 <br/>
 <br/>
-
 
 In short: Markup languages let us write pretty documents in plain text files!
 
@@ -157,12 +159,13 @@ My first paragraph.
 ---
 
 
-# Why use markup languages (and not word)?
+# Why use Markup Languages?
 
 <br/>
 
 Markup languages can create pretty documents in plain text files
 
 - Better version control
-- Powerful editors like vscode
+- Powerful editors like VS Code (getting close to WYSIWYG)
 - Easy automation
+- Focus on structure and content, not on formatting
