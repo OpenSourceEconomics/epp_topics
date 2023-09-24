@@ -23,5 +23,6 @@ Make one example for each point:
 
 ## Pass all variables slide
 
-- Mention that both alternatives to global variables are ok. Which one to use depends on
-  whether the variable is just needed in one place or in multiple places.
+- Mention that both alternatives to global variables are ok.
+- Which one to use depends on whether the variable is just needed in one place or in
+  multiple places.

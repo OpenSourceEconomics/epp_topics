@@ -38,6 +38,15 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# Example: CRRA Utility function
+
+$$
+u(c, γ) = \frac{c ^{(1 - γ)}}{1 - γ}
+$$
+
+
+---
+
 # Anatomy of Python functions
 
 <br/>
@@ -70,26 +79,25 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Example: CRRA Utility function
 
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-3">
 
 ```python
->>> def utility_crra(c, gamma=1.5):
-...     out = c ** (1 - gamma) / (1 - gamma)
-...     return out
+>>> def utility_crra(c, γ=1.5):
+...     return c ** (1 - γ) / (1 - γ)
 
 >>> utility_crra(1.0)
 -2.0
 
->>> utility_crra(c=1.0, gamma=1.5)
+>>> utility_crra(c=1.0, γ=1.5)
 -2
 
->>> utility_crra(c=1.0, gamma=0.0)
+>>> utility_crra(c=1.0, γ=0.0)
 1.0
 ```
 
 </div>
-<div>
+<div class="col-span-2">
 
 - You can assign default values for arguments
 - Function calls work with positional and keyword arguments
@@ -128,41 +136,42 @@ layout: fact
 
 # Pass all variables you want to use inside
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-3">
 
 ```python
 # bad example
->>> global_message = "Hello {}!"
+>>> global_msg = "Hello {}!"
 
 >>> def greet_with_global(name):
-...     print(global_message.format(name))
+...     print(global_msg.format(name))
 
 >>> greet_with_global("Guido")
 Hello Guido!
 
 # solution 1: define inside function
 >>> def greet(name):
-...     message = "Hello {}!
-...     print(message.format(name))
+...     msg = "Hello {}!
+...     print(msg.format(name))
 >>> greet("Guido")
 Hello Guido!
 
 # solution 2: pass as argument
->>> def greet_explicit(name, message):
-...     print(message.format(name))
+>>> def greet_explicit(name, msg):
+...     print(msg.format(name))
 
 >>> greet_explicit("Guido", "Hello {}!")
 ```
 
 </div>
-<div>
+<div class="col-span-2">
 
 <br/>
 <br/>
 
 - Inside a function you have access to variables in the enclosing scope
-- This is dangerous because the behavior of the function now depends on global variables
+- This is dangerous because the behaviour of the function now depends on global
+  variables
 - Do not use this in your code!
 
 </div>
@@ -199,7 +208,7 @@ Hello Guido!
 <div>
 
 - Arguments are passed by reference, i.e. without making a copy
-- Make sure, functions do not modify mutable arguments!
+- Make sure that functions do not modify mutable arguments!
     - Make copies
     - Avoid changing objects in the first place
 
