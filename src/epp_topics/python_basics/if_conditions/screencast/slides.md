@@ -159,9 +159,9 @@ True
 ```python
 >>> names = ["Guy", "Ray", "Tim"]
 >>> names_with_i = []
->>> for name in names:
->>>     if "i" in name:
->>>       names_with_i.append(name)
+>>> for n in names:
+>>>     if "i" in n:
+>>>       names_with_i.append(n)
 >>> names_with_i
 ['Tim']
 ```
