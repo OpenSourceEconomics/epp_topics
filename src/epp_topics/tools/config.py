@@ -2,12 +2,12 @@
 
 import itertools
 
-from epp_topics.tools.assignment_and_scalar_types import (
-    SITE_CONTENTS as ASSIGNMENT_AND_SCALAR_TYPES,
+from epp_topics.tools.shell_history import (
+    SITE_CONTENTS as SHELL_HISTORY,
 )
 
 TOPICS = [
-    ASSIGNMENT_AND_SCALAR_TYPES,
+    SHELL_HISTORY,
 ]
 
 SITE_CONTENTS = {

@@ -6,5 +6,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("tools-assignment_and_scalar_types.pdf",),
+    "built": ("tools-shell_history.pdf",),
 }
