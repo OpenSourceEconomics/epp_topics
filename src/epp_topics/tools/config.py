@@ -5,9 +5,17 @@ import itertools
 from epp_topics.tools.shell_history import (
     SITE_CONTENTS as SHELL_HISTORY,
 )
+from epp_topics.tools.unix_navigation import (
+    SITE_CONTENTS as UNIX_NAVIGATION,
+)
+from epp_topics.tools.windows_navigation import (
+    SITE_CONTENTS as WINDOWS_NAVIGATION,
+)
 
 TOPICS = [
     SHELL_HISTORY,
+    UNIX_NAVIGATION,
+    WINDOWS_NAVIGATION,
 ]
 
 SITE_CONTENTS = {
