@@ -19,7 +19,7 @@ TOPICS = [
 ]
 
 SITE_CONTENTS = {
-    "chapter_title": "Tools and installation",
+    "chapter_title": "Tools",
     "public": tuple(
         itertools.chain(
             ("content_objectives.md",),

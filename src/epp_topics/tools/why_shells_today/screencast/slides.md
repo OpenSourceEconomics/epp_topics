@@ -19,7 +19,7 @@ defaults:
 
 # Basic Python
 
-### History of computer interfaces
+### Why use shells today?
 
 <br>
 

@@ -6,5 +6,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": (),
+    "built": ("tools-why_shells_today.pdf",),
 }
