@@ -8,13 +8,8 @@ SITE_CONTENTS = {
     "internal": (
         "objectives_materials.ipynb",
         "exercise.ipynb",
-        # "All files included in 'students'",
-        # "key above, plus all files",
-        # "that students should not see",
     ),
-    "other": (
-        # "existing figures etc.",
-    ),
+    "other": (),
     "built": (
         # "screencast slides etc.",
         # "everything that is built",
