@@ -45,25 +45,6 @@ Janoś Gabler and Hans-Martin von Gaudecker
   - ...
 - This is what if-conditions are for
 
----
-
-# Conditional statements
-
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-```python
-
-```
-
-</div>
-<div>
-
-
-
-</div>
-</div>
 
 
 ---
@@ -71,13 +52,13 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Example: clipping a number
 
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-2">
 
 ```python
 >>> number = -3.1
 
->>> if number < - 3:
+>>> if number < -3:
 ...     clipped = -3.0
 ... elif number > 3:
 ...     clipped = 3.0
@@ -89,14 +70,14 @@ Janoś Gabler and Hans-Martin von Gaudecker
 ```
 
 </div>
-<div>
+<div class="col-span-3">
 
 - `if`, `elif`, and `else` are special keywords
 - End each condition with a `:`
 - What happens if that condition is `True` needs to be indented by 4 spaces and can span
   one or multiple lines
-- The code related to `False` conditions is skipped
-- `elif x:` is the same as `else:` + nested `if x:`
+- Code following `False` conditions is skipped
+- `elif x:` is the same as <br> `else:` + nested `if x:`
 
 </div>
 </div>
@@ -172,7 +153,9 @@ True
 - Can filter lists based on properties of items
 - Can filter dictionaries based on properties of keys and/or values
 - Example usecases:
-
+  - Find elements above a cutoff
+  - Extract female names
+  - Exclude invalid data
 
 </div>
 </div>
