@@ -19,7 +19,7 @@ defaults:
 
 # Basic Python
 
-### `if` conditions
+### if conditions
 
 <br>
 
@@ -30,7 +30,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Contents
 
-- if, elif and else
+- `if`, `elif`, and `else`
 - More on Booleans
 - Filtering loops
 
@@ -40,10 +40,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - So far, all of our instructions in Python were very explicit
 - There was no way of reacting to different situations:
-  - Collecting elements of a list that fulfill a condition
+  - Collecting elements of a list that fulfil a condition
   - Doing different things for different types of variables
   - ...
-- This is what if conditions are for
+- This is what if-conditions are for
 
 ---
 
@@ -78,11 +78,12 @@ Janoś Gabler and Hans-Martin von Gaudecker
 >>> number = -3.1
 
 >>> if number < - 3:
-...     clipped = -3.
+...     clipped = -3.0
 ... elif number > 3:
-...     clipped = 3.
+...     clipped = 3.0
 ... else:
 ...     clipped = number
+
 >>> clipped
 -3.0
 ```
@@ -90,11 +91,12 @@ Janoś Gabler and Hans-Martin von Gaudecker
 </div>
 <div>
 
-- `if`, `elif` and `else` are special keywords
+- `if`, `elif`, and `else` are special keywords
 - End each condition with a `:`
-- What happens if that condition is True needs to be indented by 4 spaces and can span one or multiple lines
-- The code related to False conditions is skipped
-- elif means else-if
+- What happens if that condition is `True` needs to be indented by 4 spaces and can span
+  one or multiple lines
+- The code related to `False` conditions is skipped
+- `elif x:` is the same as `else:` + nested `if x:`
 
 </div>
 </div>
@@ -111,16 +113,22 @@ Janoś Gabler and Hans-Martin von Gaudecker
 ```python
 >>> bool(0)
 False
+
 >>> bool(-1)
 True
+
 >>> bool(1)
 True
+
 >>> bool([])
 False
+
 >>> bool([1, 2, 3])
 True
+
 >>> bool("")
 False
+
 >>> bool("abc")
 True
 ```
@@ -129,12 +137,13 @@ True
 <div>
 
 - What is not a boolean can be converted to a boolean
-- This conversion happens implicitly after if and elif
-- Can be useful but and elegant but might compromise readability
+- This conversion happens implicitly after `if` and `elif`
+- Can be useful and elegant but might compromise readability
 - Rules of thumb:
-  - 0 is False-ish, other number are True-ish
-  - Empty containers are False-ish
-  - Non-empty containers are True-ish
+  - 0 is `False`-ish
+  - Other numbers are `True`-ish
+  - Len-0 collections are `False`-ish
+  - Len>0 collections are `True`-ish
 
 </div>
 </div>
@@ -148,13 +157,13 @@ True
 <div>
 
 ```python
->>> names = ["Guido", "Raymond", "Tim"]
+>>> names = ["Guy", "Ray", "Tim"]
 >>> names_with_i = []
 >>> for name in names:
 >>>     if "i" in name:
 >>>       names_with_i.append(name)
 >>> names_with_i
-['Guido', 'Tim']
+['Tim']
 ```
 
 </div>
