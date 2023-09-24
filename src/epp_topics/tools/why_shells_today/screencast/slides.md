@@ -17,12 +17,11 @@ defaults:
 
 <br>
 
-# Basic Python
+# Miscellaneous Tools
 
 ### Why use shells today?
 
 <br>
-
 
 Janoś Gabler and Hans-Martin von Gaudecker
 
@@ -61,25 +60,23 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# What can you do with a shell?
-
-| **Task**                                   | **Alternative**       | **Recommendation** |
-|--------------------------------------------|-----------------------|--------------------|
-| Install packages and manage environments   | -                     | shell              |
-| Version control with git                   | git GUI, vscode       | shell              |
-| Run tests for your Python project          | vscode                | shell              |
-| Run your fully automated research pipeline | vscode (experimental) | shell              |
-| Debug your python code with a debugger     | vscode                | you decide         |
-| Create, copy and delete files              | file explorer         | you decide         |
-| Try out things in a Python repl            | jupyter notebook      | you decide         |
-| Edit files in vim                          | modern editors        | modern editors     |
+| **Task that can be done in a Shell**       | **Alternative**        | **Recommendation** |
+| ------------------------------------------ | ---------------------- | ------------------ |
+| Install packages and manage environments   | -                      | Shell              |
+| Version control with git                   | Git GUI, VS Code       | Shell              |
+| Run tests for your Python project          | VS Code                | Shell              |
+| Run your fully automated research pipeline | VS Code (experimental) | Shell              |
+| Debug your python code with a debugger     | VS Code                | You decide         |
+| Create, copy and delete files              | File Explorer          | You decide         |
+| Try out things in a Python REPL            | Jupyter Notebook       | You decide         |
+| Edit files in vim                          | Modern Editor          | Modern Editor      |
 
 ---
 
-# Aside: learn typing
+# Aside: Learn typing
 
 - You won't be fast in the command line if you cannot touch-type
 - After one or two days of practice you will be as fast as before
 - Huge payoffs in the long run!
 - Many free apps to learn it!
-- No single person has ever regretted to learn it
+- No single person has ever regretted to have learned it

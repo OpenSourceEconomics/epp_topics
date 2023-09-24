@@ -17,7 +17,7 @@ defaults:
 
 <br>
 
-# Basic Python
+# Miscellaneous Tools
 
 ### Navigation in the unix shell
 
