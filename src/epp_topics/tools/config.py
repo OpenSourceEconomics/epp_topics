@@ -8,12 +8,16 @@ from epp_topics.tools.shell_history import (
 from epp_topics.tools.unix_navigation import (
     SITE_CONTENTS as UNIX_NAVIGATION,
 )
+from epp_topics.tools.why_shells_today import (
+    SITE_CONTENTS as WHY_SHELLS_TODAY,
+)
 from epp_topics.tools.windows_navigation import (
     SITE_CONTENTS as WINDOWS_NAVIGATION,
 )
 
 TOPICS = [
     SHELL_HISTORY,
+    WHY_SHELLS_TODAY,
     UNIX_NAVIGATION,
     WINDOWS_NAVIGATION,
 ]
