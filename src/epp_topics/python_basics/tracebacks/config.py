@@ -3,8 +3,6 @@
 SITE_CONTENTS = {
     "public": ("objectives_materials.ipynb",),
     "internal": ("objectives_materials.ipynb",),
-    "other": (
-        # "existing figures etc.",
-    ),
+    "other": ("screencast/public/simple_traceback.png",),
     "built": ("python_basics-tracebacks.pdf",),
 }

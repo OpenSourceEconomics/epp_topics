@@ -75,9 +75,6 @@ SITE_CONTENTS = {
         ),
     ),
     "internal": tuple(
-        # "All files included in 'students'",
-        # "key above, plus all files",
-        # "that students should not see",
         itertools.chain(
             (
                 "internal_overview.md",
@@ -87,13 +84,11 @@ SITE_CONTENTS = {
         ),
     ),
     "other": tuple(
-        # "existing figures etc.",
         itertools.chain(
             *[topic["other"] for topic in TOPICS],
         ),
     ),
     "built": tuple(
-        # "screencasts etc.",
         itertools.chain(
             *[topic["built"] for topic in TOPICS],
         ),

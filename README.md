@@ -16,7 +16,6 @@
      - In the end, VS Code encompasses most features of IDE + same for all languages
    - Using LLMs effectively _\[long run\]_
    - Using copilot effectively _\[long run\]_
-   - Regex _\[long run\]_
    - Communicating effectively (emails vs zoom vs in-person vs zulip) _(Video)_
    - Licenses _(Look up stuff)_
 1. Git and GitHub
@@ -70,6 +69,17 @@
    - Plotting
    - Machine learning with Scikit-learn
    - (Econometrics with ...)
+1. Text data and texts
+   - Encodings
+   - Regexes _\[long run\]_
+   - Simple Markdown
+   - MystMD
+   - Slidev
+   - LaTeX
+   - Detour: How to read a paper
+   - Detour: How to structure a paper
+   - Tables
+   - Figures
 
 ## Installation
 
