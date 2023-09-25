@@ -85,7 +85,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# More on booleans
+# More on Booleans
 
 
 <div class="grid grid-cols-2 gap-4">
@@ -117,7 +117,7 @@ True
 </div>
 <div>
 
-- What is not a boolean can be converted to a boolean
+- What is not a Boolean can be converted to a Boolean
 - This conversion happens implicitly after `if` and `elif`
 - Can be useful and elegant but might compromise readability
 - Rules of thumb:
@@ -128,6 +128,23 @@ True
 
 </div>
 </div>
+
+---
+
+# More complex conditions
+
+- Remember from "Assignments and Scalar Types"
+  - `and`
+  - `or` (inclusive)
+  - `not`
+- Example:
+
+```python
+if a > b and b > some_cutoff:
+    do_something()
+else:
+    do_something_else()
+```
 
 
 ---
