@@ -6,9 +6,6 @@ SITE_CONTENTS = {
         "objectives_materials.ipynb",
         "screencast/script.md",
     ),
-    "other": (
-        "screencast/public/function_anatomy.png",
-        # "existing figures etc.",
-    ),
-    "built": ("python_basics-functions.pdf",),
+    "other": ("screencast/public/function_anatomy.png",),
+    "built": ("python_basics-functions_basics.pdf",),
 }

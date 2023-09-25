@@ -26,8 +26,11 @@ from epp_topics.python_basics.executing_pytask_pytest_pdb import (
 from epp_topics.python_basics.for_loops import (
     SITE_CONTENTS as FOR_LOOPS,
 )
-from epp_topics.python_basics.functions import (
-    SITE_CONTENTS as FUNCTIONS,
+from epp_topics.python_basics.functions_basics import (
+    SITE_CONTENTS as FUNCTIONS_BASICS,
+)
+from epp_topics.python_basics.functions_principles import (
+    SITE_CONTENTS as FUNCTIONS_PRINCIPLES,
 )
 from epp_topics.python_basics.if_conditions import (
     SITE_CONTENTS as IF_CONDITIONS,
@@ -55,7 +58,8 @@ TOPICS = [
     DICTS,
     FOR_LOOPS,
     IF_CONDITIONS,
-    FUNCTIONS,
+    FUNCTIONS_BASICS,
+    FUNCTIONS_PRINCIPLES,
     TRACEBACKS,
     IMPORTING,
     PATHLIB,
