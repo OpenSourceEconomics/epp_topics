@@ -32,6 +32,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - `if`, `elif`, and `else`
 - More on Booleans
+- More complex conditions
 - Filtering loops
 
 ---
@@ -133,11 +134,16 @@ True
 
 # More complex conditions
 
-- Remember from "Assignments and Scalar Types"
+- Remember operators from "Assignments and Scalar Types":
   - `and`
   - `or` (inclusive)
   - `not`
+
+<br>
+
 - Example:
+
+<br>
 
 ```python
 if a > b and b > some_cutoff:
