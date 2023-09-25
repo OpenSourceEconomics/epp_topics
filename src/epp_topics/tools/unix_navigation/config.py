@@ -6,8 +6,6 @@ SITE_CONTENTS = {
         "objectives_materials.ipynb",
         "screencast/script.md",
     ),
-    "other": (
-        # "existing figures etc.",
-    ),
+    "other": ("screencast/public/unix_path_mambaforge.png",),
     "built": ("tools-unix_navigation.pdf",),
 }

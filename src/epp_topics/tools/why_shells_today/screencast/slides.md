@@ -27,12 +27,12 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Command line vs. GUIs
+# Command line interfaces vs. GUIs
 
 <br/>
 
-<div class="grid grid-cols-2 gap-12">
-<div>
+<div class="grid grid-cols-5 gap-12">
+<div class="col-span-2">
 
 ## CLI
 
@@ -44,7 +44,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Multiple steps can be chained and automated to become one
 
 </div>
-<div>
+<div class="col-span-2">
 
 ## GUI
 
@@ -56,20 +56,22 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - No potential for automation or command chaining
 
 </div>
+<div>
+</div>
 </div>
 
 ---
 
-| **Task that can be done in a Shell**       | **Alternative**        | **Recommendation** |
-| ------------------------------------------ | ---------------------- | ------------------ |
-| Install packages and manage environments   | -                      | Shell              |
-| Version control with git                   | Git GUI, VS Code       | Shell              |
-| Run tests for your Python project          | VS Code                | Shell              |
-| Run your fully automated research pipeline | VS Code (experimental) | Shell              |
-| Debug your python code with a debugger     | VS Code                | You decide         |
-| Create, copy and delete files              | File Explorer          | You decide         |
-| Try out things in a Python REPL            | Jupyter Notebook       | You decide         |
-| Edit files in vim                          | Modern Editor          | Modern Editor      |
+| **Task that can be done in a Shell**       | **Alternative**  | **Recommendation** |
+| ------------------------------------------ | ---------------- | ------------------ |
+| Install packages and manage environments   | -                | Shell              |
+| Version control with git                   | Git GUI, VS Code | Shell              |
+| Run tests for your Python project          | VS Code          | Shell              |
+| Run your fully automated research pipeline | VS Code          | Shell              |
+| Debug your python code with a debugger     | VS Code          | You decide         |
+| Create, copy and delete files              | File Explorer    | You decide         |
+| Try out things in a Python REPL            | Jupyter Notebook | You decide         |
+| Edit files in vim                          | Modern Editor    | Modern Editor      |
 
 ---
 

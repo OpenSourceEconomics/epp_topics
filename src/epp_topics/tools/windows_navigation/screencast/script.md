@@ -12,17 +12,15 @@ might seem optional now but once we learn more advanced tools it becomes essenti
 
 ## Stay on the motivation slide and do a live demo
 
-- Use pwd
+- Use Get-Location
 - Show how to navigate into some folder
   - use pwd again to verify
-  - use ls
+  - use Get-ChildItem
 - Show how to navigate out of the folder
-  - use pwd to verify
+  - use Get-Location to verify
 - Show how to create a folder and navigate into it
 
 ## Where to store your programming projects
 
 - Mention that it pays off to think about a directory structure that saves typing and is
   easy to memorize
-- Maybe mention my setup: `/home/janos/Dropbox/Projects` for an extra layer of safety
-  when I forget to commit or push

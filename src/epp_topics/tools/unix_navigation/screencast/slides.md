@@ -19,7 +19,7 @@ defaults:
 
 # Miscellaneous Tools
 
-### Navigation in the unix shell
+### Navigation in the Unix shell
 
 <br>
 
@@ -37,24 +37,64 @@ Janoś Gabler and Hans-Martin von Gaudecker
   - Can use `cd`
 - Optionally, you can also create, copy and delete files in the shell
 
+---
+
+# Unix File System
+
+<div class="grid grid-cols-2 gap-45">
+<div>
+
+```mermaid {theme: 'dark', scale: 1}
+graph LR
+    classDef highlight fill:#FF4500;
+    A["/"] --- B["etc"]
+    A["/"] --- C["usr"]
+    C["usr"] --- D["bin"]
+    C["usr"] --- E["lib"]
+    A["/"] --- F["var"]
+    F["var"] --- G["log"]
+    A["/"] --- H["home"]
+    H["home"] --- I["user_1"]
+    I["user_1"] --- J["Documents"]
+    I["user_1"] --- K["Downloads"]
+    I["user_1"] --- L["mambaforge"]
+    class A highlight
+    class H highlight
+    class I highlight
+    class L highlight
+```
+</div>
+<div>
+
+### GUI representation
+
+<center>
+<img src="unix_path_mambaforge.png" width=450>
+</center>
+
+### Shell representation
+
+/home/user_1/mambaforge
+
+</div>
+</div>
 
 
 ---
 
-# Where to store your programming projects
+# Where to store your projects
 
 - Good idea to store all git repositories somewhere close to home directory
 - Example:
 
-```txt
-/home/user_name/
-  projects/
-    master_thesis/
-    epp
-      exercises/
-      assignments/
-      final_project/
-
+```mermaid {theme: 'dark', scale: 1}
+graph LR
+    A["/home/user_1"] --- B["projects"]
+    B["projects"] --- C["master_thesis"]
+    B["projects"] --- D["epp"]
+    D["epp"] --- E["exercises"]
+    D["epp"] --- F["assignments"]
+    D["epp"] --- G["final_project"]
 ```
 
 ---
@@ -66,4 +106,4 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Gets better the more you use it!
 - Installation:
   - For [bash](https://github.com/rupa/z)
-  - For [zhs](https://github.com/agkozak/zsh-z)
+  - For [zsh](https://github.com/agkozak/zsh-z)
