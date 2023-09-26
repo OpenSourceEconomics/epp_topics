@@ -1,6 +1,6 @@
-# Script: Executing `.py` files from shell
+# Script: Executing notebooks in a browser
 
-## In action: start notebook
+## 1. Start Notebook
 
 - Say that they should not close the terminal while the notebook is running
 - Mention that in principle a notebook could be started via the anaconda navigator but

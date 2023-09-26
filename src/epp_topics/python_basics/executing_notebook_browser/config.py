@@ -2,9 +2,11 @@
 
 SITE_CONTENTS = {
     "public": ("objectives_materials.ipynb",),
-    "internal": ("objectives_materials.ipynb",),
+    "internal": (
+        "objectives_materials.ipynb",
+        "screencast/script.md",
+    ),
     "other": (
-        # "existing figures etc.",
         "screencast/public/activate_and_info.png",
         "screencast/public/blocked_terminal.png",
         "screencast/public/folder.png",

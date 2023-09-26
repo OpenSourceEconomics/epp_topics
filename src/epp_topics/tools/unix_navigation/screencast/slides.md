@@ -102,7 +102,7 @@ graph LR
 # The z command
 
 - Only type rough names of files to jump to them
-- Similar to fuzzy matching in vscode!
+- Similar to fuzzy matching in VS Code!
 - Gets better the more you use it!
 - Installation:
   - For [bash](https://github.com/rupa/z)

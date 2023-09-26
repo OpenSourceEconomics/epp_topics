@@ -15,13 +15,13 @@ defaults:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Basic Python
 
-### Importing, Modules, Namespaces
+### Importing, Namespaces, Modules
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
@@ -42,7 +42,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Third party libraries
 
 - Python is a general purpose programming language
-- The base language you have seen so far is extended by labraries
+- The base language you have seen so far is extended by libraries
   - Standard library (e.g. pathlib, functools)
   - Third party libraries (e.g. numpy, pandas, scipy)
 - Libraries need to be imported to use them
@@ -54,38 +54,37 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # The example
 
 - We will use the numpy library as example
-- Numpy is a library that provides efficient data structures and functions for working with matrices and higher dimensional arrays
-- You can watch the numpy screencast for details but otherwise just ignore the numpy specific details for now
+- Numpy provides efficient data structures and functions for working with n-dimensional
+  arrays
+- Feel free to watch the numpy screencast for details but otherwise just ignore any
+  numpy-specific details for now
 
 
 ---
 
 # Different ways to import
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-3">
 
-Import one function / object
 ```python
+# Import one function / object
 from numpy import array
-```
-Import an entire library
-```python
+
+# Import an entire library
 import numpy
-```
-Import entire library and rename it
-```python
+
+# Import entire library and rename it
 import numpy as np
-```
-Import everything from a library
-```python
+
+# Import everything from a library
 from numpy import *
 ```
 
 </div>
-<div>
+<div class="col-span-2">
 
-- Use single import if you need one thing
+- Use single import if you need one-three specific things
 - Use library import if you need many functions
 - Use shorthand if there is a convention, e.g. numpy (np), pandas (pd), seaborn (sns)
 - Never ever use `import *`
@@ -95,7 +94,7 @@ from numpy import *
 
 ---
 
-# Namespaces or why not use `import *`
+# Namespaces *(why not to use "import \*")*
 
 
 <div class="grid grid-cols-2 gap-4">
@@ -111,6 +110,10 @@ from numpy import *
 >>> import math
 >>> math.log(2.718281828459045)
 1.0
+
+>>> import numpy as np
+>>> np.log(2.718281828459045)
+1.0
 ```
 
 </div>
@@ -119,8 +122,9 @@ from numpy import *
 - Multiple libraries could implement `log`
   - math library: The natural logarithm
   - web development library: Write a log file
-- Importing an entire library makes it very explicit from which namespace you use a function
-- Namespaces are one of the reasons why Python can succeed in so many different areas!
+- Importing an entire library makes it very explicit from which namespace you use a
+  function
+- Namespaces are one of the reasons why Python has succeeded in so many different areas!
 
 </div>
 </div>
@@ -131,10 +135,10 @@ from numpy import *
 
 # Modules
 
-- So far we imported from packages or the standad library
+- So far we imported from the standard library or from packages
 - You can import from any module (a module is a `.py` file)
-- In larger projects you will split code across multiple modules and import from them
-
+- In larger projects you will split code across multiple modules and import them
+- Think of a package as a structured collection of modules
 
 ---
 
@@ -142,8 +146,8 @@ from numpy import *
 
 ```python
 >>> from numpai import array
----------------------------------------------------------------------------
-ModuleNotFoundError                       Traceback (most recent call last)
+--------------------------------------------------------------------
+ModuleNotFoundError                Traceback (most recent call last)
 Cell In[32], line 1
 ----> 1 from nampai import array
 
@@ -155,6 +159,7 @@ ModuleNotFoundError: No module named 'nampai'
 - Is the library installed in your environment?
 - **Is the correct environment activated?**
 
+<br/>
 
 ---
 
@@ -162,14 +167,17 @@ ModuleNotFoundError: No module named 'nampai'
 
 ```python
 from numpy import arrrrray
----------------------------------------------------------------------------
-ImportError                               Traceback (most recent call last)
+--------------------------------------------------------------------
+ImportError                        Traceback (most recent call last)
 Cell In[33], line 1
 ----> 1 from numpy import arrrrray
 
-ImportError: cannot import name 'arrrrray' from 'numpy' (/home/janos/miniconda3/
-envs/dl_intro/lib/python3.11/site-packages/numpy/__init__.py)
+ImportError: cannot import name 'arrrrray' from 'numpy'
+(/home/user_1/mambaforge/envs/epp_topics/lib/python3.11/
+   site-packages/numpy/__init__.py)
 ```
+
+<br/>
 
 - Something went wrong during import
 - Do you have typos in what you want to import?

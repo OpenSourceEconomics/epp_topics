@@ -19,7 +19,7 @@ defaults:
 
 # Basic Python
 
-### Executing `.py` files from vscode
+### Executing ".py"-files from VS Code
 
 <br/>
 
@@ -30,56 +30,54 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Preparation
 
-- We assume you have:
-  - Installed anaconda and created the course environment
-  - Installed vscode with all relevant Python extensions
-- Open the root directory of your project in vscode
+We assume you have:
+- Installed anaconda and created the course environment
+- Installed VS Code with all relevant Python extensions
+- Opened the root directory of your project in VS Code
 
 ---
 
 # Example project structure
 
 
-```bash
-epp_project/
-  exercises/
-    exercise_1.py
-    exercise_2.ipynb
-
-  datasets/
-    data.csv
+```mermaid {theme: 'dark', scale: 0.8}
+graph LR
+    classDef highlight fill:#FF4500;
+    A["epp_project"] --- B["exercises"]
+    B["exercises"] --- C["exercise_1.ipynb"]
+    B["exercises"] --- D["exercise_2.py"]
+    A["epp_project"] --- E["datasets"]
+    E["datasets"] --- F["data.csv"]
 ```
 
-- Our shell is in the `epp_project` directory
-- We want to run `exercise_1.py` in vscode
+<br/>
+
+- We want to run `exercise_1.py` in VS Code
 
 
 ---
 
-# In action: Open file
+# 1. Open the file
 
 <img src="py_file.png" class="rounded" width="600"/>
 
 
-
 ---
 
-# In action: Command palette (ctrl + shift + p)
+# 2. Command palette (ctrl + shift + p)
 
 <img src="command_select_interpreter.png" class="rounded" width="600"/>
 
 
-
-
 ---
 
-# In action: Select the epp environment
+# 3. Select the epp environment
 
 <img src="selecting_epp_env.png" class="rounded" width="600"/>
 
 
 ---
 
-# In action: Run the file
+# 4. Run the file
 
 <img src="click_run.png" class="rounded" width="600"/>
