@@ -15,13 +15,13 @@ defaults:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Basic Python
 
 ### Other forms of running Python
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker

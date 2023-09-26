@@ -15,13 +15,13 @@ defaults:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Basic Python
 
 ### if conditions
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
@@ -78,7 +78,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - What happens if that condition is `True` needs to be indented by 4 spaces and can span
   one or multiple lines
 - Code following `False` conditions is skipped
-- `elif x:` is the same as <br> `else:` + nested `if x:`
+- `elif x:` is the same as <br/> `else:` + nested `if x:`
 
 </div>
 </div>
@@ -139,11 +139,11 @@ True
   - `or` (inclusive)
   - `not`
 
-<br>
+<br/>
 
 - Example:
 
-<br>
+<br/>
 
 ```python
 if a > b and b > some_cutoff:

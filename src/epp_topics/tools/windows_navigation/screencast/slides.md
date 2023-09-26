@@ -15,13 +15,13 @@ defaults:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Miscellaneous Tools
 
 ### Navigation in the Windows shell
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
@@ -66,8 +66,8 @@ graph LR
     class F highlight
     class P highlight
 ```
-<br>
-<br>
+<br/>
+<br/>
 </div>
 <div>
 

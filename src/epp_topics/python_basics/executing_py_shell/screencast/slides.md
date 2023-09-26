@@ -15,13 +15,13 @@ defaults:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Basic Python
 
 ### Executing `.py` files from the shell
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker

@@ -15,13 +15,13 @@ defaults:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Miscellaneous Tools
 
 ### Navigation in the Unix shell
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
