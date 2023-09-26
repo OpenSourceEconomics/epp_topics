@@ -16,13 +16,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Background
 
 ### A Brief History of Operating Systems
 
-<br>
+<br/>
 
 Janoś Gabler and Hans-Martin von Gaudecker
 
@@ -36,7 +36,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 1. Unix-based/inspired (Linux, MacOS X)
-<br>
+<br/>
 
 1. Windows
 
@@ -49,8 +49,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <img src="vt100.jpg" width=350>
 </center>
 
-<br>
-<br>
+<br/>
+<br/>
 
 </div>
 </div>

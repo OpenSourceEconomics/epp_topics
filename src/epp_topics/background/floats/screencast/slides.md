@@ -16,13 +16,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Background
 
 ### Floating Point Numbers
 
-<br>
+<br/>
 
 Janoś Gabler and Hans-Martin von Gaudecker
 
@@ -44,8 +44,8 @@ layout: two-cols
 <img src="vt100.jpg" width=350>
 </center>
 
-<br>
-<br>
+<br/>
+<br/>
 
 ---
 layout: two-cols

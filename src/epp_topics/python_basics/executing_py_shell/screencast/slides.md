@@ -17,13 +17,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Basic Python
 
-### Executing `.py` files from the shell
+### Executing ".py"-files from the shell
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
@@ -39,20 +39,30 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Activate the environment using `conda activate epp`
 - Confirm the activation worked using `conda info`
 
+
 ---
 
-# Example project structure
+# 0: Activate and Info
+
+<img src="activate_and_info.png" class="rounded" width="600"/>
 
 
-```bash
-epp_project/
-  exercises/
-    exercise_1.py
-    exercise_2.ipynb
+---
 
-  datasets/
-    data.csv
+# Example Project Structure
+
+
+```mermaid {theme: 'dark', scale: 0.8}
+graph LR
+    classDef highlight fill:#FF4500;
+    A["epp_project"] --- B["exercises"]
+    B["exercises"] --- C["exercise_1.ipynb"]
+    B["exercises"] --- D["exercise_2.py"]
+    A["epp_project"] --- E["datasets"]
+    E["datasets"] --- F["data.csv"]
 ```
+
+<br/>
 
 - Our shell is in the `epp_project` directory
 - We want to run `exercise_1.py`
@@ -61,13 +71,7 @@ epp_project/
 
 ---
 
-# In action: activate and info
-
-<img src="activate_and_info.png" class="rounded" width="600"/>
-
----
-
-# In action: execute
+# 1: Execute
 
 
 <img src="run.png" class="rounded" width="600"/>

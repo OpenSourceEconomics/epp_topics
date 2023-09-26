@@ -17,13 +17,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Basic Python
 
 ### File paths with pathlib
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
@@ -32,7 +32,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Contents
 
-- How to get a path to the current directory
+- How to get a path to the current directory in Python
 - Working with pathlib `Path`s
 - Rules for working with file paths
 
@@ -49,40 +49,40 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # An example
 
-- Consider the following directory structure
-
-```bash
-epp_project/
-  exercises/
-    exercise_1.py
-    exercise_2.ipynb
-
-  datasets/
-    data.csv
+```mermaid {theme: 'dark', scale: 0.8}
+graph LR
+    classDef highlight fill:#FF4500;
+    A["epp_project"] --- B["exercises"]
+    B["exercises"] --- C["exercise_1.ipynb"]
+    B["exercises"] --- D["exercise_2.py"]
+    A["epp_project"] --- E["datasets"]
+    E["datasets"] --- F["data.csv"]
 ```
 
+<br/>
+
 - `epp_project`, `exercises` and `datasets` are directories
-- `exercise_1.py`, `exercise_2.ipynb` and `data.csv` are files
+- `exercise_1.ipynb`, `exercise_2.py`, and `data.csv` are files
 - Want to load `data.csv` in two different scenarios:
-  - from `exercise_1.py`
-  - from `exercise_2.ipynb`
+  - from `exercise_1.ipynb`
+  - from `exercise_2.py`
 
 
 ---
 
 # How not to do it
 
-
 ```python
-# don't do this!
 import pandas as pd
-path = `"C:\Users\MyName\Documents\epp_projects\datasets\data.csv"`
+path = "C:\Users\MyName\epp_project\datasets\data.csv"
 data = pd.read_csv(path)
 ```
 
+<br/>
+
 - This only works on one Computer
-- Backslashes (`\`) only work on windows
-- Warning: This is what you get when you copy a path from your file explorer
+- Backslashes (`\`) only work on Windows
+- **Warning:** This is what you get when you copy a path from your file explorer
 
 ---
 
@@ -96,28 +96,39 @@ data = pd.read_csv(path)
 
 ---
 
-# Get a path to the project root: In a notebook
+# Get a path to the project root
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+### In a notebook
 
-The following is in `exercise_2.ipynb`
+<br/>
+
+The following is in `exercise_1.ipynb`
+
+
+---
+
+# Get a path to the project root
+
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-3">
 
 ```python
 from pathlib import Path
 
 # get a path to the current directory
-this_dir = Path()
+this_dir = Path(".")
 print(this_dir)
 
 # make it absolute for readability
-this_dir = this_file.resolve()
-print(this_file)
+this_dir = this_dir.resolve()
+print(this_dir)
 
 # move up to epp_project/
-root = this_file.parent
+root = this_dir.parent
 print(root)
 ```
+
+<br/>
 
 ```txt
 ---
@@ -127,10 +138,10 @@ print(root)
 ```
 
 </div>
-<div>
+<div class="col-span-2">
 
-- `Path()` gives a relative path to current directory
-- `resolve` makes it absolute for readability
+- `Path(".")` gives a relative path to current directory
+- `resolve()` makes it absolute for readability
 - `.parent` moves up one file/directory
 - The output differs on every computer!
 - No assumptions made on usernames or folders outside the project
@@ -141,12 +152,21 @@ print(root)
 
 ---
 
-# Get a path to the project root: In a `.py` file
+# Get a path to the project root
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+### In a `.py` file
 
-The following is in `exercise_1.py`
+<br/>
+
+The following is in `exercise_2.py`
+
+---
+
+# Get a path to the project root
+
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-3">
+
 
 ```python
 from pathlib import Path
@@ -159,18 +179,21 @@ print(this_file)
 root = this_file.parent.parent
 print(root)
 ```
+
+<br/>
+
 ```txt
 ---
 
-/home/janos/Dropbox/epp_project/exercises
+/home/janos/Dropbox/epp_project/exercises/exercise_2.py
 /home/janos/Dropbox/epp_project
-
 ```
 
 </div>
-<div>
+<div class="col-span-2">
 
-- In a `.py` file `Path()` would lead us to the current directory of the shell from which the file was executed
+- In a `.py` file `Path()` would lead us to the current directory of the shell from
+  which the file was executed
 - The `__file__` variable is a magic variable with the path to the current file
 - Have to use `.parent` twice!
 
@@ -182,34 +205,31 @@ print(root)
 
 # From the project root to the data file
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+<div class="grid grid-cols-3 gap-4">
+<div class="col-span-2">
 
 
 ```python
-from pathlib import Path
-# redo the .py file version in one line
-root = Path(__file__).parent.parent
-print(root)
-
-# go to data file
-data_path = root / "datasets" / "data.csv"
-print(data_path)
-print(data_path.exists())
-```
-```txt
----
+>>> from pathlib import Path
+>>> # .py-file version in one line
+>>> root = Path(__file__).parent.parent
+>>> print(root)
 /home/janos/Dropbox/epp_project
-/home/janos/Dropbox/epp_project/datasets/data.csv
-True
 
+>>> # go to data file
+>>> data_path = root / "datasets" / "data.csv"
+>>> print(data_path)
+/home/janos/Dropbox/epp_project/datasets/data.csv
+
+>>> print(data_path.exists())
+True
 ```
 
 </div>
-<div>
+<div class="col-span-1">
 
 - Once `root` is defined, the rest works the same in notebooks and `.py` files
-- Different path snippets are defined using `/`
+- Concatenate different path snippets with `/`
 - Resulting path works on all platforms!
 
 
@@ -221,11 +241,8 @@ True
 
 # Debugging tips
 
-
-
-
-- Use `path.resolve` to get full information about your path
-- Use `list(path.iterdir())` to list all files in your current directory
+- Use `path.resolve()` to get full information about your path
+- Use `list(path.iterdir())` to list everything in in `path`
 - Build up paths one folder at a time and use `path.exists()` to catch typos
 
 
@@ -233,9 +250,12 @@ True
 
 # File path rules
 
-  1. Always use pathlib Paths instead of strings
-  2. Do not hardcode Paths outside of shared folders
+  1. Always use pathlib `Path` objects instead of strings
+  2. Do not hardcode any parts of a path outside of the project's directory
   3. Always concatenate paths with `/`
 
+<br/>
 
-**Remember**: If you copy paste a path from your windows file explorer, all three rules are violated!
+**Remember:**
+
+If you copy paste a path from your Windows File Explorer, all three rules are violated!

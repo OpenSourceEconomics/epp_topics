@@ -17,13 +17,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Basic Python
 
 ### Tracebacks
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker

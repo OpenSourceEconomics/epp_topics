@@ -17,13 +17,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Basic Python
 
 ### Executing notebooks in a browser
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
@@ -36,24 +36,32 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - We assume you have installed anaconda and created the course environment
 - Open a shell in the root directory of your project
     - On Windows, use the anaconda prompt or the powershell
-    - If conda is not recognized in the powershell, check out this [stackoverflow post](https://stackoverflow.com/a/65160772/21900143)
+    - If conda is not recognized in the powershell, check out this [stackoverflow
+      post](https://stackoverflow.com/a/65160772/21900143)
 - Activate the environment using `conda activate epp`
 - Confirm the activation worked using `conda info`
+---
+
+# 0. Activate and Info
+
+<img src="activate_and_info.png" class="rounded" width="600"/>
 
 ---
 
 # Example project structure
 
 
-```bash
-epp_project/
-  exercises/
-    exercise_1.py
-    exercise_2.ipynb
-
-  datasets/
-    data.csv
+```mermaid {theme: 'dark', scale: 0.8}
+graph LR
+    classDef highlight fill:#FF4500;
+    A["epp_project"] --- B["exercises"]
+    B["exercises"] --- C["exercise_1.ipynb"]
+    B["exercises"] --- D["exercise_2.py"]
+    A["epp_project"] --- E["datasets"]
+    E["datasets"] --- F["data.csv"]
 ```
+
+<br/>
 
 - Our shell is in the `epp_project` directory
 - We want to run `exercise_2.ipynb` in the browser
@@ -62,35 +70,27 @@ epp_project/
 
 ---
 
-# In action: activate and info
-
-<img src="activate_and_info.png" class="rounded" width="600"/>
-
----
-
-# In action: start notebook
-
+# 1. Start Notebook
 
 <img src="blocked_terminal.png" class="rounded" width="600"/>
 
+
 ---
 
-# In action: landing page
-
+# 2. Landing Page
 
 <img src="starting_page.png" class="rounded" width="600"/>
 
+
 ---
 
-# In action: click on folder
-
+# 3. Click on Folder
 
 <img src="folder.png" class="rounded" width="600"/>
 
 
 ---
 
-# In action: work in the notebook
-
+# 4. Work in the Notebook
 
 <img src="notebook.png" class="rounded" width="600"/>

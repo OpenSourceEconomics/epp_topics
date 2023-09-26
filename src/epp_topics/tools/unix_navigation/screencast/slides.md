@@ -17,13 +17,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Miscellaneous Tools
 
 ### Navigation in the Unix shell
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
@@ -104,7 +104,7 @@ graph LR
 # The z command
 
 - Only type rough names of files to jump to them
-- Similar to fuzzy matching in vscode!
+- Similar to fuzzy matching in VS Code!
 - Gets better the more you use it!
 - Installation:
   - For [bash](https://github.com/rupa/z)

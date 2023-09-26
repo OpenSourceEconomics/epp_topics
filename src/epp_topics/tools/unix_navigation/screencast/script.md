@@ -29,7 +29,7 @@ might seem optional now but once we learn more advanced tools it becomes essenti
 
 ## The z command
 
-- Also use this to remind them about fuzzy matching in vscode
+- Also use this to remind them about fuzzy matching in VS Code
 
 ## Stay on the z command slide and do a live demo
 

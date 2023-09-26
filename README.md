@@ -9,7 +9,7 @@ https://github.com/OpenSourceEconomics/effective-programming-practices
 
 - Run `npm install`
 
-- Run `pip install jupyterquiz`
+- Run `pip install jupyterquiz jupytercards`
 
   (Adding jupyterquiz directly in environment.yml leads to problems)
 

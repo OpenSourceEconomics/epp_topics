@@ -16,13 +16,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Background
 
 ### A Primer on Graphs
 
-<br>
+<br/>
 
 Janoś Gabler and Hans-Martin von Gaudecker
 

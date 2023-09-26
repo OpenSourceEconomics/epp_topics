@@ -16,13 +16,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Background
 
 ### File Systems
 
-<br>
+<br/>
 
 Janoś Gabler and Hans-Martin von Gaudecker
 
@@ -129,8 +129,8 @@ graph LR
     A --> O["ProgramData"]
     X["I:"] --> Z["Second Drive"]
 ```
-<br>
-<br>
+<br/>
+<br/>
 </div>
 <div>
 
@@ -166,8 +166,8 @@ graph LR
     class F highlight
     class P highlight
 ```
-<br>
-<br>
+<br/>
+<br/>
 </div>
 <div>
 

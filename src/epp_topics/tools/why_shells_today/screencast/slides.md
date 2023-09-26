@@ -17,13 +17,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Miscellaneous Tools
 
 ### Why use shells today?
 
-<br>
+<br/>
 
 Janoś Gabler and Hans-Martin von Gaudecker
 

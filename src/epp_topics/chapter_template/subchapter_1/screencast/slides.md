@@ -16,13 +16,13 @@ themeConfig:
 
 ### Effective Programming Practices for Economists
 
-<br>
+<br/>
 
 # Some Chapter
 
 ### Some Subchapter
 
-<br>
+<br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
