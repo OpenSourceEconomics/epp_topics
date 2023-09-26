@@ -3,7 +3,9 @@
 SITE_CONTENTS = {
     "public": ("objectives_materials.ipynb",),
     "internal": ("objectives_materials.ipynb",),
-    "other": (),
+    "other": (
+        # "existing figures etc.",
+    ),
     "built": (
         # "screencast slides etc.",
         # "everything that is built",
