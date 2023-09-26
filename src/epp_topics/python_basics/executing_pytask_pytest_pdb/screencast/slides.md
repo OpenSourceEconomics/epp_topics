@@ -11,6 +11,8 @@ transition: fade
 title: Effective Programming Practices for Economists
 defaults:
   layout: center
+themeConfig:
+  paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
