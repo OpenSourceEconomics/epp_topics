@@ -2,6 +2,7 @@
 import itertools
 
 from epp_topics.git.branches import SITE_CONTENTS as BRANCHES
+from epp_topics.git.cloning_repos import SITE_CONTENTS as CLONING_REPOS
 from epp_topics.git.collaboration import SITE_CONTENTS as COLLABORATION
 from epp_topics.git.committing import SITE_CONTENTS as COMMITTING
 from epp_topics.git.creating_repos import SITE_CONTENTS as CREATING_REPOS
@@ -20,6 +21,7 @@ TOPICS = [
     INSTALLING_GIT,
     HOW_GIT_WORKS,
     CREATING_REPOS,
+    CLONING_REPOS,
     STAGING,
     COMMITTING,
     UNDOING_THINGS,
