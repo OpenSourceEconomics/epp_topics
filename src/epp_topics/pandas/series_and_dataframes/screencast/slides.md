@@ -19,7 +19,7 @@ defaults:
 
 # Data management with pandas
 
-### What is (modern) pandas
+### Series and DataFrames
 
 <br>
 

@@ -19,7 +19,7 @@ defaults:
 
 # Data management with pandas
 
-### What is (modern) pandas
+### Loading and saving data
 
 <br>
 
