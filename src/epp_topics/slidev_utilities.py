@@ -44,11 +44,15 @@ def get_html(df, scale=0.8):
             "props": [("background-color", "#fff")],
         },
         # cell spacing
-        {"selector": "td", "props": [("padding", "0em .5em")]},
+        {"selector": "td", "props": [("padding", "0em")]},
         # header cell properties
         {
             "selector": "th",
-            "props": [("font-weight", "bold"), ("text-align", "center")],
+            "props": [
+                ("font-weight", "bold"),
+                ("text-align", "left"),
+                ("padding", "0em"),
+            ],
         },
         # caption placement
         {"selector": "caption", "props": [("caption-side", "bottom")]},
