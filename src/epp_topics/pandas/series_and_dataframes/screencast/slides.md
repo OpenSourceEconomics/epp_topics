@@ -30,7 +30,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # What is a DataFrame
 
-<div class="grid grid-cols-2 gap-12">
+<div class="flex gap-8">
 <div>
 
 ```python
@@ -251,7 +251,9 @@ Name: country, dtype: string
 
 
 ```python
->>> sr = pd.Series([2.71, 3.14], index=["b", "a"])
+>>> sr = pd.Series(
+...     [2.71, 3.14], index=["b", "a"],
+... )
 >>> sr
 ```
 ```txt
@@ -290,7 +292,10 @@ We continue using df from before
 
 
 ```python
->>> sr = pd.Series([2.71, 3.14], index=["b", "a"])
+>>> sr = pd.Series(
+...   [2.71, 3.14],
+...   index=["b", "a"],
+... )
 >>> df["new_col"] = sr
 ```
 

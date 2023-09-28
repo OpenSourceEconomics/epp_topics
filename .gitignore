@@ -45,3 +45,5 @@ site_*
 
 # videos
 *.mp4
+
+**/screencast/style.css

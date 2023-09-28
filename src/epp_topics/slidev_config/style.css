@@ -34,5 +34,9 @@ li {
   margin-bottom: .35rem !important;
 }
 code {
-  font-size: 1.25rem !important;
+  font-size: 1.0rem !important;
+}
+
+td {
+  padding: 0.2rem !important;
 }
