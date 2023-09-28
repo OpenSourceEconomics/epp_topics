@@ -2,12 +2,6 @@
 
 SITE_CONTENTS = {
     "public": ("objectives_materials.md",),
-    "internal": (
-        "objectives_materials.md",
-        # "All files included in 'students'",
-        # "key above, plus all files",
-        # "that students should not see",
-    ),
     "other": (
         # "existing figures etc.",
     ),

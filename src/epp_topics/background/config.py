@@ -16,17 +16,6 @@ SITE_CONTENTS = {
             FILE_SYSTEMS["public"],
         ),
     ),
-    "internal": tuple(
-        itertools.chain(
-            (
-                "internal_overview.md",
-                "content_objectives.md",
-            ),
-            OS_HISTORY["internal"],
-            GRAPHS["internal"],
-            FILE_SYSTEMS["internal"],
-        ),
-    ),
     "other": tuple(
         itertools.chain(
             OS_HISTORY["other"],

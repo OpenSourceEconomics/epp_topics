@@ -2,7 +2,6 @@
 
 SITE_CONTENTS = {
     "public": ("objectives_materials.ipynb",),
-    "internal": ("objectives_materials.ipynb",),
     "other": (
         # "existing figures etc.",
         "screencast/public/activate_and_info.png",
