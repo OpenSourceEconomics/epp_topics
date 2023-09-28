@@ -39,18 +39,6 @@ SITE_CONTENTS = {
             *[topic["public"] for topic in TOPICS],
         ),
     ),
-    "internal": tuple(
-        # "All files included in 'students'",
-        # "key above, plus all files",
-        # "that students should not see",
-        itertools.chain(
-            (
-                "internal_overview.md",
-                "content_objectives.md",
-            ),
-            *[topic["internal"] for topic in TOPICS],
-        ),
-    ),
     "other": tuple(
         # "existing figures etc.",
         itertools.chain(

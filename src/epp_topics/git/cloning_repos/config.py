@@ -2,7 +2,6 @@
 
 SITE_CONTENTS = {
     "public": ("instructions.md",),
-    "internal": ("instructions.md",),
     "other": (
         # "existing figures etc.",
         "0_get_link.png",

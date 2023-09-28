@@ -5,7 +5,8 @@ import subprocess
 from pathlib import Path
 from typing import Annotated
 
-from pytask import Product
+from pytask import Product, task
+
 from epp_topics.config import SITE_SOURCE_DIR, SRC
 
 
@@ -27,6 +28,7 @@ for orig_screencast in find_orig_screencasts():
     topic_name = orig_dir.parent.name
     screencast_pdf = screencast_dir.parent / f"{chapter_name}-{topic_name}.pdf"
 
+    @task(id=f"{chapter_name}, {topic_name}")
     def task_copy_style_css(
         orig: Path = SRC / "slidev_config" / "style.css",
         prod: Annotated[Path, Product] = screencast_dir / "style.css",
@@ -34,6 +36,7 @@ for orig_screencast in find_orig_screencasts():
         """Copy style.css for slidev presentation."""
         shutil.copy(orig, prod)
 
+    @task(id=f"{chapter_name}, {topic_name}")
     def task_copy_slides_md(
         orig: Path = orig_screencast,
         prod: Annotated[Path, Product] = screencast_md,
@@ -41,6 +44,7 @@ for orig_screencast in find_orig_screencasts():
         """Copy slides.md for slidev presentation."""
         shutil.copy(orig, prod)
 
+    @task(id=f"{chapter_name}, {topic_name}")
     def task_export_pdf(
         screencast_md: Path = screencast_md,
         screencast_pdf: Annotated[Path, Product] = screencast_pdf,

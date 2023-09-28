@@ -3,6 +3,7 @@ name: epp_topics
 channels: [conda-forge, nodefaults, conda-forge/label/pytask_rc]
 dependencies:
   - conda-lock
+  - deepdiff
   - gitpython
   - ipykernel
   - ipywidgets

@@ -26,15 +26,6 @@ SITE_CONTENTS = {
             *[topic["public"] for topic in TOPICS],
         ),
     ),
-    "internal": tuple(
-        itertools.chain(
-            (
-                "internal_overview.md",
-                "content_objectives.md",
-            ),
-            *[topic["internal"] for topic in TOPICS],
-        ),
-    ),
     "other": tuple(
         itertools.chain(
             *[topic["other"] for topic in TOPICS],

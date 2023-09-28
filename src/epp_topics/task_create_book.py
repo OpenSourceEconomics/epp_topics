@@ -3,12 +3,12 @@
 import shutil
 import subprocess
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Any
 
-import pytask
-from pytask import PythonNode, Product
 import yaml
+from deepdiff import DeepHash
 from pybaum.tree_util import tree_just_flatten
+from pytask import Product, PythonNode, task
 
 from epp_topics.config import (
     CHAPTER_NAMES,
@@ -45,10 +45,11 @@ for c in CHAPTER_NAMES:
 
         all_orig_sources.append(orig_sources)
 
+    @task(id=c)
     def task_create_chapter_toc(
         title: Annotated[str, PythonNode(value=get_chapter_title(c), hash=True)],
         index_file: Annotated[Path, Product] = chapter_index_file,
-        ):
+    ):
         """Create the toc file for the book."""
         index_file.write_text(
             f"""# {title}
@@ -59,24 +60,21 @@ for c in CHAPTER_NAMES:
             encoding="utf-8",
         )
 
-    for depends_on, produces in zip(
+    for orig, prod in zip(
         tree_just_flatten(orig_sources),
         tree_just_flatten(
             {k: v for k, v in site_sources.items() if k != "built"},
         ),
         strict=True,
     ):
-        breakpoint()
-        @pytask.mark.task(
-            id=f"{c}, {depends_on.relative_to(SRC)}",
-            kwargs={
-                "depends_on": depends_on,
-                "produces": produces,
-            },
-        )
-        def task_copy_chapter_source(depends_on, produces):
-            """Copy the source files for the book."""
-            shutil.copy(depends_on, produces)
+
+        @task(id=f"{orig.relative_to(SRC)}")
+        def task_copy_chapter_source(
+            orig: Path = orig,
+            prod: Annotated[Path, Product] = prod,
+        ):
+            """Copy a source file for the book."""
+            shutil.copy(orig, prod)
 
     all_site_sources.append(site_sources)
 
@@ -97,27 +95,17 @@ for c in CHAPTER_NAMES:
         },
     )
 
-# Background files at the book level
-all_kwargs = [
-    {
-        "depends_on": SRC / f,
-        "produces": SITE_SOURCE_DIR / f,
-    }
-    for f in ["landing-page.md", "_config.yml", "ose-logo.png", "references.bib"]
-]
-all_orig_sources.extend(
-    [v for kv in all_kwargs for k, v in kv.items() if k == "depends_on"],
-)
-all_site_sources.extend(
-    [v for kv in all_kwargs for k, v in kv.items() if k == "produces"],
-)
+for fn in ["_config.yml", "landing-page.md", "ose-logo.png", "references.bib"]:
+    all_orig_sources.append(orig := SRC / fn)
+    all_site_sources.append(prod := SITE_SOURCE_DIR / fn)
 
-for kwargs in all_kwargs:
-
-    @pytask.mark.task(id=f"{kwargs['produces'].name}", kwargs=kwargs)
-    def task_copy_site_source(depends_on, produces):
+    @task(id=fn)
+    def task_copy_site_source(
+        orig: Path = orig,
+        prod: Annotated[Path, Product] = prod,
+    ):
         """Copy the source files for the book."""
-        if depends_on.name == "_config.yml":
+        if orig.name == "_config.yml":
             config_nb_exec = {
                 "execute": {
                     "execute_notebooks": "force",
@@ -128,19 +116,19 @@ for kwargs in all_kwargs:
             config_sphinx = {
                 "todo_include_todos": False,
             }
-            with depends_on.open(mode="r", encoding="utf-8") as d:
+            with orig.open(mode="r", encoding="utf-8") as d:
                 config_file = yaml.safe_load(d)
             config_file.update(config_nb_exec)
             config_file["sphinx"]["config"].update(config_sphinx)
-            with produces.open(mode="w", encoding="utf-8") as produces:
+            with prod.open(mode="w", encoding="utf-8") as prod:
                 yaml.safe_dump(
                     config_file,
-                    stream=produces,
+                    stream=prod,
                     default_flow_style=False,
                     sort_keys=False,
                 )
         else:
-            shutil.copy(depends_on, produces)
+            shutil.copy(orig, prod)
 
 
 # Main table of contents.
@@ -153,33 +141,26 @@ toc_file = SITE_SOURCE_DIR / "_toc.yml"
 all_site_sources.append(toc_file)
 
 
-@pytask.mark.task(
-    id="create_toc",
-    kwargs={
-        "depends_on": all_orig_sources,
-        "produces": toc_file,
-        "toc": toc,
-    },
-)
-def task_create_toc(depends_on, produces, toc):  # noqa: ARG001
+def task_create_toc(
+    toc: Annotated[dict[str, Any], PythonNode(value=toc, hash=DeepHash)],
+    toc_file: Annotated[Path, Product] = toc_file,
+):
     """Main table of contents."""
-    with produces.open(mode="w", encoding="utf-8") as f:
+    with toc_file.open(mode="w", encoding="utf-8") as f:
         yaml.dump(toc, stream=f, default_flow_style=False, sort_keys=False)
 
 
-# Compile the book.
-site_index = SITE_SOURCE_DIR / "_build" / "html" / "index.html"
+def task_compile_book(
+    deps: list[Path] = all_site_sources,  # noqa: ARG001
+    site_index: Path = SITE_SOURCE_DIR  # noqa: ARG001
+    / "_build"
+    / "html"
+    / "index.html",
+):
+    """Build the Jupyter book.
 
-
-@pytask.mark.task(
-    id="compile_book",
-    kwargs={
-        "depends_on": all_site_sources,
-        "produces": site_index,
-    },
-)
-def task_compile_book(produces, depends_on):  # noqa: ARG001
-    """Build the Jupyter book."""
+    Arguments are needed to make sure that the task is executed correctly.
+    """
     subprocess.run(f"jb clean {SITE_SOURCE_DIR}", shell=True, check=True)
     result = subprocess.run(
         f"jb build {SITE_SOURCE_DIR} --nitpick --warningiserror",
@@ -190,14 +171,18 @@ def task_compile_book(produces, depends_on):  # noqa: ARG001
         raise RuntimeError("Jupyter book compilation failed.")
 
 
-# Copy the site to relevant locations.
-@pytask.mark.task(
-    id="copy_book",
-    kwargs={
-        "depends_on": (site_index, all_site_sources),
-        "produces": SITE_DIR / "index.html",
-    },
-)
-def task_copy_book(produces, depends_on):
-    """Copy the Jupyter book so it is easily accessible."""
-    shutil.copytree(depends_on[0].parent, produces.parent, dirs_exist_ok=True)
+def task_copy_book(
+    site_index_local: Path = SITE_SOURCE_DIR / "_build" / "html" / "index.html",
+    all_site_sources: list[Path] = all_site_sources,  # noqa: ARG001
+    site_index_public: Path = SITE_DIR / "index.html",
+):
+    """Copy the Jupyter book to location from where it is published.
+
+    The arguments `all_site_sources` is needed to make sure that the task is executed
+    correctly.
+    """
+    shutil.copytree(
+        site_index_local.parent,
+        site_index_public.parent,
+        dirs_exist_ok=True,
+    )

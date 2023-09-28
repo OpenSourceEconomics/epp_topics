@@ -24,7 +24,6 @@ def load_sources(chapter_name):
     spec = importlib.util.spec_from_file_location(path.name, path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-
     return {
         "chapter_name": chapter_name,
         "site_contents": module.SITE_CONTENTS,
@@ -47,8 +46,7 @@ def get_sources_for_chapter(
     os_o_ss: OrigSourceOrSiteSource,
 ) -> dict:
     """Get the original sources for a chapter of the site."""
-    _r = _RAW_SOURCES[chapter_name]["site_contents"]
-    breakpoint()
+    _r = _RAW_SOURCES[chapter_name]["site_contents"]["public"]
     out_root = SRC if os_o_ss == "orig_source" else SITE_SOURCE_DIR
     raw = {
         "toc_sources": _r,
