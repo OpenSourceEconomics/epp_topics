@@ -1,4 +1,8 @@
-"""Utilities for creating slidev compatible snippets."""
+"""Utilities for creating slidev compatible snippets.
+
+Most of the code is taken from https://stackoverflow.com/q/49324569/21900143
+
+"""
 
 import pyperclip
 from pandas.api.types import is_float_dtype

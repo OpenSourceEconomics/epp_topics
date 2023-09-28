@@ -28,81 +28,137 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Example
+# What is pandas
 
-<div class="grid grid-cols-2 gap-4">
+- Industry standard DataFrame library in Python
+- Covers all you need for data management
+  - Loading datasets in many formats
+  - Cleaning data
+  - Generating variables
+  - Reshaping datasets
+- Compatible with all plotting and statistics libraries
+
+---
+
+# What is a DataFrame
+
+<br/>
+
+<div class="grid grid-cols-2 gap-12">
 <div>
 
+<br/>
+
+- Tabular data format
+- Variables are columns
+- Observations are rows
+- Can be manipulated in Python
+
+
+</div>
+<div>
 
 <style type="text/css">
-#T_e66aa   {
+#T_6641e   {
   margin: 0;
   font-family: "Helvetica", "Helvetica", sans-serif;
   border-collapse: collapse;
   border: none;
-  font-size: 70%;
+  font-size: 80%;
 }
-#T_e66aa thead {
+#T_6641e thead {
   background-color: #D3D3D3;
 }
-#T_e66aa tbody tr:nth-child(even) {
+#T_6641e tbody tr:nth-child(even) {
   background-color: #f1f1f1;
 }
-#T_e66aa tbody tr:nth-child(odd) {
+#T_6641e tbody tr:nth-child(odd) {
   background-color: #fff;
 }
-#T_e66aa td {
+#T_6641e td {
   padding: 0em .5em;
 }
-#T_e66aa th {
+#T_6641e th {
   font-weight: bold;
   text-align: center;
 }
-#T_e66aa caption {
+#T_6641e caption {
   caption-side: bottom;
 }
 </style>
-<table id="T_e66aa">
+<table id="T_6641e">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_e66aa_level0_col0" class="col_heading level0 col0" >a</th>
-      <th id="T_e66aa_level0_col1" class="col_heading level0 col1" >b</th>
-      <th id="T_e66aa_level0_col2" class="col_heading level0 col2" >c</th>
-      <th id="T_e66aa_level0_col3" class="col_heading level0 col3" >d</th>
+      <th id="T_6641e_level0_col0" class="col_heading level0 col0" >country</th>
+      <th id="T_6641e_level0_col1" class="col_heading level0 col1" >continent</th>
+      <th id="T_6641e_level0_col2" class="col_heading level0 col2" >year</th>
+      <th id="T_6641e_level0_col3" class="col_heading level0 col3" >life_exp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_e66aa_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_e66aa_row0_col0" class="data row0 col0" >1.00</td>
-      <td id="T_e66aa_row0_col1" class="data row0 col1" >2</td>
-      <td id="T_e66aa_row0_col2" class="data row0 col2" >bla</td>
-      <td id="T_e66aa_row0_col3" class="data row0 col3" >1.00</td>
+      <th id="T_6641e_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_6641e_row0_col0" class="data row0 col0" >Cuba</td>
+      <td id="T_6641e_row0_col1" class="data row0 col1" >Americas</td>
+      <td id="T_6641e_row0_col2" class="data row0 col2" >2002</td>
+      <td id="T_6641e_row0_col3" class="data row0 col3" >77.16</td>
     </tr>
     <tr>
-      <th id="T_e66aa_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_e66aa_row1_col0" class="data row1 col0" >1.00</td>
-      <td id="T_e66aa_row1_col1" class="data row1 col1" >2</td>
-      <td id="T_e66aa_row1_col2" class="data row1 col2" >blubb</td>
-      <td id="T_e66aa_row1_col3" class="data row1 col3" >1.00</td>
+      <th id="T_6641e_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_6641e_row1_col0" class="data row1 col0" >Cuba</td>
+      <td id="T_6641e_row1_col1" class="data row1 col1" >Americas</td>
+      <td id="T_6641e_row1_col2" class="data row1 col2" >2007</td>
+      <td id="T_6641e_row1_col3" class="data row1 col3" >78.27</td>
     </tr>
     <tr>
-      <th id="T_e66aa_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_e66aa_row2_col0" class="data row2 col0" >1.00</td>
-      <td id="T_e66aa_row2_col1" class="data row2 col1" >2</td>
-      <td id="T_e66aa_row2_col2" class="data row2 col2" >foo</td>
-      <td id="T_e66aa_row2_col3" class="data row2 col3" >1.00</td>
+      <th id="T_6641e_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_6641e_row2_col0" class="data row2 col0" >Spain</td>
+      <td id="T_6641e_row2_col1" class="data row2 col1" >Europe</td>
+      <td id="T_6641e_row2_col2" class="data row2 col2" >2002</td>
+      <td id="T_6641e_row2_col3" class="data row2 col3" >79.78</td>
+    </tr>
+    <tr>
+      <th id="T_6641e_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_6641e_row3_col0" class="data row3 col0" >Spain</td>
+      <td id="T_6641e_row3_col1" class="data row3 col1" >Europe</td>
+      <td id="T_6641e_row3_col2" class="data row3 col2" >2007</td>
+      <td id="T_6641e_row3_col3" class="data row3 col3" >80.94</td>
     </tr>
   </tbody>
 </table>
 
 
-
-</div>
-<div>
-
-
-
 </div>
 </div>
+
+
+---
+
+# What is **modern** pandas?
+
+- Pandas was created in 2008 and has some baggage
+- With version 3.0 many things will improve
+- Those features can already be enabled now:
+  - More speed and less memory usage through better dtypes
+  - Less confusion through copy-on-write
+  - Better handling of missing values
+  - Removal of the `inplace` argument
+
+
+---
+
+# How to use modern pandas
+
+- Install version 2.1 or higher of pandas
+- Install version 13.0 or higher of pyarrow
+- Set some options after import
+
+```python
+import pandas as pd
+
+pd.options.mode.copy_on_write = True
+pd.options.future.infer_string = True
+```
+
+- Use the engine keyword when loading datasets
