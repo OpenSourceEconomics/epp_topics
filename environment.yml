@@ -11,7 +11,8 @@ dependencies:
   - nodejs
   - numba
   - openpyxl
-  - pandas
+  - pandas >= 2.1
+  - pyarrow >= 13.0
   - pdbpp
   - pip
   - plotly
@@ -35,4 +36,5 @@ dependencies:
   - statsmodels
   - toml
   - xlrd>=1.0
-  - pip: [-e ., kaleido, jupyter-book]
+  - pybaum
+  - pip: [-e ., kaleido, jupyter-book, pyperclip]
