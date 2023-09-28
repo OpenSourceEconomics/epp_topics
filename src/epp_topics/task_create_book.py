@@ -152,7 +152,7 @@ def task_create_toc(
 
 def task_compile_book(
     deps: list[Path] = all_site_sources,  # noqa: ARG001
-    site_index: Path = SITE_SOURCE_DIR  # noqa: ARG001
+    site_index: Annotated[Path, Product] = SITE_SOURCE_DIR  # noqa: ARG001
     / "_build"
     / "html"
     / "index.html",
@@ -174,7 +174,7 @@ def task_compile_book(
 def task_copy_book(
     site_index_local: Path = SITE_SOURCE_DIR / "_build" / "html" / "index.html",
     all_site_sources: list[Path] = all_site_sources,  # noqa: ARG001
-    site_index_public: Path = SITE_DIR / "index.html",
+    site_index_public: Annotated[Path, Product] = SITE_DIR / "index.html",
 ):
     """Copy the Jupyter book to location from where it is published.
 

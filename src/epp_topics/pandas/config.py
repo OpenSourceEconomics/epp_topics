@@ -35,22 +35,12 @@ TOPICS = [
     GROUPBY,
     FUNCTIONAL_DATA_MANAGEMENT,
 ]
-
 SITE_CONTENTS = {
     "chapter_title": "Data management with pandas",
     "public": tuple(
         itertools.chain(
             ("content_objectives.md",),
             *[topic["public"] for topic in TOPICS],
-        ),
-    ),
-    "internal": tuple(
-        itertools.chain(
-            (
-                "internal_overview.md",
-                "content_objectives.md",
-            ),
-            *[topic["internal"] for topic in TOPICS],
         ),
     ),
     "other": tuple(
