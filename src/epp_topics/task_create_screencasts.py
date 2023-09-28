@@ -15,7 +15,7 @@ def find_orig_screencasts():
     return [
         sc
         for sc in SRC.glob("**/screencast/slides.md")
-        if sc.parent.parent.parent.name != "chapter_template"
+        if SRC / "chapter_template" not in sc.parents
     ]
 
 
