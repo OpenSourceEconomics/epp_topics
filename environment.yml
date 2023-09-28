@@ -1,6 +1,6 @@
 ---
 name: epp_topics
-channels: [conda-forge, nodefaults]
+channels: [conda-forge, nodefaults, conda-forge/label/pytask_rc]
 dependencies:
   - conda-lock
   - gitpython
@@ -17,7 +17,7 @@ dependencies:
   - pre-commit
   - pygraphviz
   - pydata-sphinx-theme>=0.13.3
-  - pytask
+  - pytask >= 0.4.0rc2
   # - pytask-parallel  # Do not use, slidev exports get mixed up.
   - pytest
   - pytest-cov
