@@ -46,7 +46,7 @@ def get_sources_for_chapter(
     os_o_ss: OrigSourceOrSiteSource,
 ) -> dict:
     """Get the original sources for a chapter of the site."""
-    _r = _RAW_SOURCES[chapter_name]["site_contents"]["public"]
+    _r = _RAW_SOURCES[chapter_name]["site_contents"]["pages"]
     out_root = SRC if os_o_ss == "orig_source" else SITE_SOURCE_DIR
     raw = {
         "toc_sources": _r,

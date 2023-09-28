@@ -1,7 +1,7 @@
 """Definitions of source files for the current chapter."""
 
 SITE_CONTENTS = {
-    "public": ("objectives_materials.ipynb",),
+    "pages": ("objectives_materials.ipynb",),
     "other": (
         # "existing figures etc.",
         "screencast/public/click_run.png",

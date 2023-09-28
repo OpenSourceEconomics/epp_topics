@@ -8,12 +8,12 @@ from epp_topics.background.os_history import SITE_CONTENTS as OS_HISTORY
 
 SITE_CONTENTS = {
     "chapter_title": "Some Background",
-    "public": tuple(
+    "pages": tuple(
         itertools.chain(
             ("content_objectives.md",),
-            OS_HISTORY["public"],
-            GRAPHS["public"],
-            FILE_SYSTEMS["public"],
+            OS_HISTORY["pages"],
+            GRAPHS["pages"],
+            FILE_SYSTEMS["pages"],
         ),
     ),
     "other": tuple(

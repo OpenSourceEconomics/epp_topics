@@ -5,10 +5,10 @@ from epp_topics.chapter_template.subchapter_1 import SITE_CONTENTS as SUBCHAPTER
 
 SITE_CONTENTS = {
     "chapter_title": "Placeholder: Title as displayed in book",
-    "public": tuple(
+    "pages": tuple(
         itertools.chain(
             ("content_objectives.md",),
-            SUBCHAPTER_1["public"],
+            SUBCHAPTER_1["pages"],
         ),
     ),
     "other": tuple(

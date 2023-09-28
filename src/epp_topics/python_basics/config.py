@@ -72,10 +72,10 @@ TOPICS = [
 
 SITE_CONTENTS = {
     "chapter_title": "Python Basics",
-    "public": tuple(
+    "pages": tuple(
         itertools.chain(
             ("content_objectives.md",),
-            *[topic["public"] for topic in TOPICS],
+            *[topic["pages"] for topic in TOPICS],
         ),
     ),
     "other": tuple(

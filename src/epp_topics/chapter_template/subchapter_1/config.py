@@ -1,7 +1,7 @@
 """Definitions of source files for the current chapter."""
 
 SITE_CONTENTS = {
-    "public": ("objectives_materials.md",),
+    "pages": ("objectives_materials.md",),
     "other": (
         # "existing figures etc.",
     ),
