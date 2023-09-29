@@ -30,18 +30,19 @@ def get_html(df, scale=0.8):
                 ("border-collapse", "collapse"),
                 ("border", "none"),
                 ("font-size", font_percent),
+                ("color", "#fff"),
             ],
         },
         # header color - optional
-        {"selector": "thead", "props": [("background-color", "#D3D3D3")]},
+        {"selector": "thead", "props": [("background-color", "#3d3d3d")]},
         # background shading
         {
             "selector": "tbody tr:nth-child(even)",
-            "props": [("background-color", "#f1f1f1")],
+            "props": [("background-color", "#3d3d3d")],
         },
         {
             "selector": "tbody tr:nth-child(odd)",
-            "props": [("background-color", "#fff")],
+            "props": [("background-color", "#565656")],
         },
         # cell spacing
         {"selector": "td", "props": [("padding", "0em")]},
@@ -59,11 +60,6 @@ def get_html(df, scale=0.8):
     ]
     html = df.style.set_table_styles(styles)
 
-    try:
-        pyperclip.copy(html.to_html())
-    except (KeyboardInterrupt, SystemExit):
-        raise
-    except Exception:
-        pass
+    pyperclip.copy(html.to_html())
 
     return html

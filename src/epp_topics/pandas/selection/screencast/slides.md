@@ -50,65 +50,67 @@ Name: country, dtype: string
 ```
 
 <style type="text/css">
-#T_e5626   {
+#T_ab645   {
   margin: 0;
   font-family: "Helvetica", "Helvetica", sans-serif;
   border-collapse: collapse;
   border: none;
   font-size: 80%;
+  color: #fff;
 }
-#T_e5626 thead {
-  background-color: #D3D3D3;
+#T_ab645 thead {
+  background-color: #3d3d3d;
 }
-#T_e5626 tbody tr:nth-child(even) {
-  background-color: #f1f1f1;
+#T_ab645 tbody tr:nth-child(even) {
+  background-color: #3d3d3d;
 }
-#T_e5626 tbody tr:nth-child(odd) {
-  background-color: #fff;
+#T_ab645 tbody tr:nth-child(odd) {
+  background-color: #565656;
 }
-#T_e5626 td {
+#T_ab645 td {
   padding: 0em;
 }
-#T_e5626 th {
+#T_ab645 th {
   font-weight: bold;
   text-align: left;
   padding: 0em;
 }
-#T_e5626 caption {
+#T_ab645 caption {
   caption-side: bottom;
 }
 </style>
-<table id="T_e5626">
+<table id="T_ab645">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_e5626_level0_col0" class="col_heading level0 col0" >country</th>
-      <th id="T_e5626_level0_col1" class="col_heading level0 col1" >continent</th>
+      <th id="T_ab645_level0_col0" class="col_heading level0 col0" >country</th>
+      <th id="T_ab645_level0_col1" class="col_heading level0 col1" >continent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_e5626_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_e5626_row0_col0" class="data row0 col0" >Cuba</td>
-      <td id="T_e5626_row0_col1" class="data row0 col1" >Americas</td>
+      <th id="T_ab645_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_ab645_row0_col0" class="data row0 col0" >Cuba</td>
+      <td id="T_ab645_row0_col1" class="data row0 col1" >Americas</td>
     </tr>
     <tr>
-      <th id="T_e5626_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_e5626_row1_col0" class="data row1 col0" >Cuba</td>
-      <td id="T_e5626_row1_col1" class="data row1 col1" >Americas</td>
+      <th id="T_ab645_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_ab645_row1_col0" class="data row1 col0" >Cuba</td>
+      <td id="T_ab645_row1_col1" class="data row1 col1" >Americas</td>
     </tr>
     <tr>
-      <th id="T_e5626_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_e5626_row2_col0" class="data row2 col0" >Spain</td>
-      <td id="T_e5626_row2_col1" class="data row2 col1" >Europe</td>
+      <th id="T_ab645_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_ab645_row2_col0" class="data row2 col0" >Spain</td>
+      <td id="T_ab645_row2_col1" class="data row2 col1" >Europe</td>
     </tr>
     <tr>
-      <th id="T_e5626_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_e5626_row3_col0" class="data row3 col0" >Spain</td>
-      <td id="T_e5626_row3_col1" class="data row3 col1" >Europe</td>
+      <th id="T_ab645_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_ab645_row3_col0" class="data row3 col0" >Spain</td>
+      <td id="T_ab645_row3_col1" class="data row3 col1" >Europe</td>
     </tr>
   </tbody>
 </table>
+
 
 
 
@@ -154,60 +156,62 @@ Name: 1, dtype: object
 ```
 
 <style type="text/css">
-#T_81181   {
+#T_8b273   {
   margin: 0;
   font-family: "Helvetica", "Helvetica", sans-serif;
   border-collapse: collapse;
   border: none;
   font-size: 80%;
+  color: #fff;
 }
-#T_81181 thead {
-  background-color: #D3D3D3;
+#T_8b273 thead {
+  background-color: #3d3d3d;
 }
-#T_81181 tbody tr:nth-child(even) {
-  background-color: #f1f1f1;
+#T_8b273 tbody tr:nth-child(even) {
+  background-color: #3d3d3d;
 }
-#T_81181 tbody tr:nth-child(odd) {
-  background-color: #fff;
+#T_8b273 tbody tr:nth-child(odd) {
+  background-color: #565656;
 }
-#T_81181 td {
+#T_8b273 td {
   padding: 0em;
 }
-#T_81181 th {
+#T_8b273 th {
   font-weight: bold;
   text-align: left;
   padding: 0em;
 }
-#T_81181 caption {
+#T_8b273 caption {
   caption-side: bottom;
 }
 </style>
-<table id="T_81181">
+<table id="T_8b273">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_81181_level0_col0" class="col_heading level0 col0" >continent</th>
-      <th id="T_81181_level0_col1" class="col_heading level0 col1" >life_exp</th>
+      <th id="T_8b273_level0_col0" class="col_heading level0 col0" >year</th>
+      <th id="T_8b273_level0_col1" class="col_heading level0 col1" >life_exp</th>
     </tr>
     <tr>
-      <th class="index_name level0" >year</th>
+      <th class="index_name level0" >continent</th>
       <th class="blank col0" >&nbsp;</th>
       <th class="blank col1" >&nbsp;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_81181_level0_row0" class="row_heading level0 row0" >2002</th>
-      <td id="T_81181_row0_col0" class="data row0 col0" >Americas</td>
-      <td id="T_81181_row0_col1" class="data row0 col1" >77.16</td>
+      <th id="T_8b273_level0_row0" class="row_heading level0 row0" >Americas</th>
+      <td id="T_8b273_row0_col0" class="data row0 col0" >2002</td>
+      <td id="T_8b273_row0_col1" class="data row0 col1" >77.16</td>
     </tr>
     <tr>
-      <th id="T_81181_level0_row1" class="row_heading level0 row1" >2007</th>
-      <td id="T_81181_row1_col0" class="data row1 col0" >Americas</td>
-      <td id="T_81181_row1_col1" class="data row1 col1" >78.27</td>
+      <th id="T_8b273_level0_row1" class="row_heading level0 row1" >Americas</th>
+      <td id="T_8b273_row1_col0" class="data row1 col0" >2007</td>
+      <td id="T_8b273_row1_col1" class="data row1 col1" >78.27</td>
     </tr>
   </tbody>
 </table>
+
 
 
 </div>
@@ -248,55 +252,57 @@ assume that `df` is the gapminder example
 ```
 
 <style type="text/css">
-#T_697dc   {
+#T_734fb   {
   margin: 0;
   font-family: "Helvetica", "Helvetica", sans-serif;
   border-collapse: collapse;
   border: none;
   font-size: 80%;
+  color: #fff;
 }
-#T_697dc thead {
-  background-color: #D3D3D3;
+#T_734fb thead {
+  background-color: #3d3d3d;
 }
-#T_697dc tbody tr:nth-child(even) {
-  background-color: #f1f1f1;
+#T_734fb tbody tr:nth-child(even) {
+  background-color: #3d3d3d;
 }
-#T_697dc tbody tr:nth-child(odd) {
-  background-color: #fff;
+#T_734fb tbody tr:nth-child(odd) {
+  background-color: #565656;
 }
-#T_697dc td {
+#T_734fb td {
   padding: 0em;
 }
-#T_697dc th {
+#T_734fb th {
   font-weight: bold;
   text-align: left;
   padding: 0em;
 }
-#T_697dc caption {
+#T_734fb caption {
   caption-side: bottom;
 }
 </style>
-<table id="T_697dc">
+<table id="T_734fb">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_697dc_level0_col0" class="col_heading level0 col0" >country</th>
-      <th id="T_697dc_level0_col1" class="col_heading level0 col1" >year</th>
+      <th id="T_734fb_level0_col0" class="col_heading level0 col0" >country</th>
+      <th id="T_734fb_level0_col1" class="col_heading level0 col1" >year</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_697dc_level0_row0" class="row_heading level0 row0" >1</th>
-      <td id="T_697dc_row0_col0" class="data row0 col0" >Cuba</td>
-      <td id="T_697dc_row0_col1" class="data row0 col1" >2007</td>
+      <th id="T_734fb_level0_row0" class="row_heading level0 row0" >1</th>
+      <td id="T_734fb_row0_col0" class="data row0 col0" >Cuba</td>
+      <td id="T_734fb_row0_col1" class="data row0 col1" >2007</td>
     </tr>
     <tr>
-      <th id="T_697dc_level0_row1" class="row_heading level0 row1" >3</th>
-      <td id="T_697dc_row1_col0" class="data row1 col0" >Spain</td>
-      <td id="T_697dc_row1_col1" class="data row1 col1" >2007</td>
+      <th id="T_734fb_level0_row1" class="row_heading level0 row1" >3</th>
+      <td id="T_734fb_row1_col0" class="data row1 col0" >Spain</td>
+      <td id="T_734fb_row1_col1" class="data row1 col1" >2007</td>
     </tr>
   </tbody>
 </table>
+
 
 
 
@@ -334,61 +340,63 @@ Name: year, dtype: bool
 ```
 
 <style type="text/css">
-#T_f3dd2   {
+#T_2e723   {
   margin: 0;
   font-family: "Helvetica", "Helvetica", sans-serif;
   border-collapse: collapse;
   border: none;
   font-size: 80%;
+  color: #fff;
 }
-#T_f3dd2 thead {
-  background-color: #D3D3D3;
+#T_2e723 thead {
+  background-color: #3d3d3d;
 }
-#T_f3dd2 tbody tr:nth-child(even) {
-  background-color: #f1f1f1;
+#T_2e723 tbody tr:nth-child(even) {
+  background-color: #3d3d3d;
 }
-#T_f3dd2 tbody tr:nth-child(odd) {
-  background-color: #fff;
+#T_2e723 tbody tr:nth-child(odd) {
+  background-color: #565656;
 }
-#T_f3dd2 td {
+#T_2e723 td {
   padding: 0em;
 }
-#T_f3dd2 th {
+#T_2e723 th {
   font-weight: bold;
   text-align: left;
   padding: 0em;
 }
-#T_f3dd2 caption {
+#T_2e723 caption {
   caption-side: bottom;
 }
 </style>
-<table id="T_f3dd2">
+<table id="T_2e723">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_f3dd2_level0_col0" class="col_heading level0 col0" >country</th>
-      <th id="T_f3dd2_level0_col1" class="col_heading level0 col1" >continent</th>
-      <th id="T_f3dd2_level0_col2" class="col_heading level0 col2" >year</th>
-      <th id="T_f3dd2_level0_col3" class="col_heading level0 col3" >life_exp</th>
+      <th id="T_2e723_level0_col0" class="col_heading level0 col0" >country</th>
+      <th id="T_2e723_level0_col1" class="col_heading level0 col1" >continent</th>
+      <th id="T_2e723_level0_col2" class="col_heading level0 col2" >year</th>
+      <th id="T_2e723_level0_col3" class="col_heading level0 col3" >life_exp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_f3dd2_level0_row0" class="row_heading level0 row0" >1</th>
-      <td id="T_f3dd2_row0_col0" class="data row0 col0" >Cuba</td>
-      <td id="T_f3dd2_row0_col1" class="data row0 col1" >Americas</td>
-      <td id="T_f3dd2_row0_col2" class="data row0 col2" >2007</td>
-      <td id="T_f3dd2_row0_col3" class="data row0 col3" >78.27</td>
+      <th id="T_2e723_level0_row0" class="row_heading level0 row0" >1</th>
+      <td id="T_2e723_row0_col0" class="data row0 col0" >Cuba</td>
+      <td id="T_2e723_row0_col1" class="data row0 col1" >Americas</td>
+      <td id="T_2e723_row0_col2" class="data row0 col2" >2007</td>
+      <td id="T_2e723_row0_col3" class="data row0 col3" >78.27</td>
     </tr>
     <tr>
-      <th id="T_f3dd2_level0_row1" class="row_heading level0 row1" >3</th>
-      <td id="T_f3dd2_row1_col0" class="data row1 col0" >Spain</td>
-      <td id="T_f3dd2_row1_col1" class="data row1 col1" >Europe</td>
-      <td id="T_f3dd2_row1_col2" class="data row1 col2" >2007</td>
-      <td id="T_f3dd2_row1_col3" class="data row1 col3" >80.94</td>
+      <th id="T_2e723_level0_row1" class="row_heading level0 row1" >3</th>
+      <td id="T_2e723_row1_col0" class="data row1 col0" >Spain</td>
+      <td id="T_2e723_row1_col1" class="data row1 col1" >Europe</td>
+      <td id="T_2e723_row1_col2" class="data row1 col2" >2007</td>
+      <td id="T_2e723_row1_col3" class="data row1 col3" >80.94</td>
     </tr>
   </tbody>
 </table>
+
 
 
 </div>
@@ -419,61 +427,63 @@ assume that `df` is the gapminder example
 ```
 
 <style type="text/css">
-#T_b43ab   {
+#T_2e723   {
   margin: 0;
   font-family: "Helvetica", "Helvetica", sans-serif;
   border-collapse: collapse;
   border: none;
   font-size: 80%;
+  color: #fff;
 }
-#T_b43ab thead {
-  background-color: #D3D3D3;
+#T_2e723 thead {
+  background-color: #3d3d3d;
 }
-#T_b43ab tbody tr:nth-child(even) {
-  background-color: #f1f1f1;
+#T_2e723 tbody tr:nth-child(even) {
+  background-color: #3d3d3d;
 }
-#T_b43ab tbody tr:nth-child(odd) {
-  background-color: #fff;
+#T_2e723 tbody tr:nth-child(odd) {
+  background-color: #565656;
 }
-#T_b43ab td {
+#T_2e723 td {
   padding: 0em;
 }
-#T_b43ab th {
+#T_2e723 th {
   font-weight: bold;
   text-align: left;
   padding: 0em;
 }
-#T_b43ab caption {
+#T_2e723 caption {
   caption-side: bottom;
 }
 </style>
-<table id="T_b43ab">
+<table id="T_2e723">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_b43ab_level0_col0" class="col_heading level0 col0" >country</th>
-      <th id="T_b43ab_level0_col1" class="col_heading level0 col1" >continent</th>
-      <th id="T_b43ab_level0_col2" class="col_heading level0 col2" >year</th>
-      <th id="T_b43ab_level0_col3" class="col_heading level0 col3" >life_exp</th>
+      <th id="T_2e723_level0_col0" class="col_heading level0 col0" >country</th>
+      <th id="T_2e723_level0_col1" class="col_heading level0 col1" >continent</th>
+      <th id="T_2e723_level0_col2" class="col_heading level0 col2" >year</th>
+      <th id="T_2e723_level0_col3" class="col_heading level0 col3" >life_exp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_b43ab_level0_row0" class="row_heading level0 row0" >1</th>
-      <td id="T_b43ab_row0_col0" class="data row0 col0" >Cuba</td>
-      <td id="T_b43ab_row0_col1" class="data row0 col1" >Americas</td>
-      <td id="T_b43ab_row0_col2" class="data row0 col2" >2007</td>
-      <td id="T_b43ab_row0_col3" class="data row0 col3" >78.27</td>
+      <th id="T_2e723_level0_row0" class="row_heading level0 row0" >1</th>
+      <td id="T_2e723_row0_col0" class="data row0 col0" >Cuba</td>
+      <td id="T_2e723_row0_col1" class="data row0 col1" >Americas</td>
+      <td id="T_2e723_row0_col2" class="data row0 col2" >2007</td>
+      <td id="T_2e723_row0_col3" class="data row0 col3" >78.27</td>
     </tr>
     <tr>
-      <th id="T_b43ab_level0_row1" class="row_heading level0 row1" >3</th>
-      <td id="T_b43ab_row1_col0" class="data row1 col0" >Spain</td>
-      <td id="T_b43ab_row1_col1" class="data row1 col1" >Europe</td>
-      <td id="T_b43ab_row1_col2" class="data row1 col2" >2007</td>
-      <td id="T_b43ab_row1_col3" class="data row1 col3" >80.94</td>
+      <th id="T_2e723_level0_row1" class="row_heading level0 row1" >3</th>
+      <td id="T_2e723_row1_col0" class="data row1 col0" >Spain</td>
+      <td id="T_2e723_row1_col1" class="data row1 col1" >Europe</td>
+      <td id="T_2e723_row1_col2" class="data row1 col2" >2007</td>
+      <td id="T_2e723_row1_col3" class="data row1 col3" >80.94</td>
     </tr>
   </tbody>
 </table>
+
 
 <br/>
 
@@ -483,55 +493,55 @@ assume that `df` is the gapminder example
 ```
 
 <style type="text/css">
-#T_6b8dc   {
+#T_45af3   {
   margin: 0;
   font-family: "Helvetica", "Helvetica", sans-serif;
   border-collapse: collapse;
   border: none;
   font-size: 80%;
+  color: #fff;
 }
-#T_6b8dc thead {
-  background-color: #D3D3D3;
+#T_45af3 thead {
+  background-color: #3d3d3d;
 }
-#T_6b8dc tbody tr:nth-child(even) {
-  background-color: #f1f1f1;
+#T_45af3 tbody tr:nth-child(even) {
+  background-color: #3d3d3d;
 }
-#T_6b8dc tbody tr:nth-child(odd) {
-  background-color: #fff;
+#T_45af3 tbody tr:nth-child(odd) {
+  background-color: #565656;
 }
-#T_6b8dc td {
+#T_45af3 td {
   padding: 0em;
 }
-#T_6b8dc th {
+#T_45af3 th {
   font-weight: bold;
   text-align: left;
   padding: 0em;
 }
-#T_6b8dc caption {
+#T_45af3 caption {
   caption-side: bottom;
 }
 </style>
-<table id="T_6b8dc">
+<table id="T_45af3">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_6b8dc_level0_col0" class="col_heading level0 col0" >country</th>
-      <th id="T_6b8dc_level0_col1" class="col_heading level0 col1" >continent</th>
-      <th id="T_6b8dc_level0_col2" class="col_heading level0 col2" >year</th>
-      <th id="T_6b8dc_level0_col3" class="col_heading level0 col3" >life_exp</th>
+      <th id="T_45af3_level0_col0" class="col_heading level0 col0" >country</th>
+      <th id="T_45af3_level0_col1" class="col_heading level0 col1" >continent</th>
+      <th id="T_45af3_level0_col2" class="col_heading level0 col2" >year</th>
+      <th id="T_45af3_level0_col3" class="col_heading level0 col3" >life_exp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_6b8dc_level0_row0" class="row_heading level0 row0" >3</th>
-      <td id="T_6b8dc_row0_col0" class="data row0 col0" >Spain</td>
-      <td id="T_6b8dc_row0_col1" class="data row0 col1" >Europe</td>
-      <td id="T_6b8dc_row0_col2" class="data row0 col2" >2007</td>
-      <td id="T_6b8dc_row0_col3" class="data row0 col3" >80.94</td>
+      <th id="T_45af3_level0_row0" class="row_heading level0 row0" >3</th>
+      <td id="T_45af3_row0_col0" class="data row0 col0" >Spain</td>
+      <td id="T_45af3_row0_col1" class="data row0 col1" >Europe</td>
+      <td id="T_45af3_row0_col2" class="data row0 col2" >2007</td>
+      <td id="T_45af3_row0_col3" class="data row0 col3" >80.94</td>
     </tr>
   </tbody>
 </table>
-
 
 </div>
 <div>
