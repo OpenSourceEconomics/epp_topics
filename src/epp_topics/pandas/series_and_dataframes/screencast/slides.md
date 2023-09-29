@@ -299,7 +299,7 @@ We continue using df from before
 ```python
 >>> sr = pd.Series(
 ...   [2.71, 3.14],
-...   index=["b", "a"],
+...   index=["d", "c"],
 ... )
 >>> df["new_col"] = sr
 ```
