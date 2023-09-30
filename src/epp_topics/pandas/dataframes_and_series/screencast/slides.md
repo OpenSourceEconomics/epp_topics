@@ -142,7 +142,7 @@ RangeIndex(start=0, stop=4, step=1)
 
 ---
 
-# What is a Series
+# What is a Series?
 
 <br/>
 
