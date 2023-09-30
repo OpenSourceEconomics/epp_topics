@@ -28,12 +28,21 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# Overview
+
+- Selecting columns
+- Selecting individual rows
+- Selecting rows and columns
+- Selecting rows using Boolean Series
+- Selecting rows with queries
+
+---
+
 # Selecting columns
 
 
 <div class="grid grid-cols-2 gap-12">
 <div>
-assume that `df` is the gapminder example
 
 ```python
 >>> df["country"]
@@ -136,9 +145,8 @@ Name: country, dtype: string
 # Selecting individual rows
 
 
-<div class="grid grid-cols-2 gap-12">
+<div class="flex gap-12">
 <div>
-assume that `df` is the gapminder example
 
 ```python
 >>> df.loc[1]
@@ -189,30 +197,28 @@ Name: 1, dtype: object
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_8b273_level0_col0" class="col_heading level0 col0" >year</th>
+      <th id="T_8b273_level0_col0" class="col_heading level0 col0" >continent</th>
       <th id="T_8b273_level0_col1" class="col_heading level0 col1" >life_exp</th>
     </tr>
     <tr>
-      <th class="index_name level0" >continent</th>
+      <th class="index_name level0" >year</th>
       <th class="blank col0" >&nbsp;</th>
       <th class="blank col1" >&nbsp;</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_8b273_level0_row0" class="row_heading level0 row0" >Americas</th>
-      <td id="T_8b273_row0_col0" class="data row0 col0" >2002</td>
+      <th id="T_8b273_level0_row0" class="row_heading level0 row0" >2002</th>
+      <td id="T_8b273_row0_col0" class="data row0 col0" >Americas</td>
       <td id="T_8b273_row0_col1" class="data row0 col1" >77.16</td>
     </tr>
     <tr>
-      <th id="T_8b273_level0_row1" class="row_heading level0 row1" >Americas</th>
-      <td id="T_8b273_row1_col0" class="data row1 col0" >2007</td>
+      <th id="T_8b273_level0_row1" class="row_heading level0 row1" >2007</th>
+      <td id="T_8b273_row1_col0" class="data row1 col0" >Americas</td>
       <td id="T_8b273_row1_col1" class="data row1 col1" >78.27</td>
     </tr>
   </tbody>
 </table>
-
-
 
 </div>
 <div>
@@ -242,7 +248,6 @@ Name: (Cuba, 2002), dtype: object
 
 <div class="grid grid-cols-2 gap-4">
 <div>
-assume that `df` is the gapminder example
 
 ```python
 >>> df.loc[1, "country"]
@@ -319,11 +324,10 @@ assume that `df` is the gapminder example
 
 ---
 
-# Selecting rows based on boolean Series
+# Selecting rows using Boolean Series
 
 <div class="grid grid-cols-2 gap-4">
 <div>
-assume that `df` is the gapminder example
 
 ```python
 df["year"] >= 2005
@@ -420,10 +424,9 @@ Name: year, dtype: bool
 
 <div class="flex gap-12">
 <div>
-assume that `df` is the gapminder example
 
 ```python
->>>df.query("year >= 2005")
+>>> df.query("year >= 2005")
 ```
 
 <style type="text/css">
@@ -547,8 +550,9 @@ assume that `df` is the gapminder example
 <div>
 
 - `.query` selects rows based on strings with conditions
+- Can use index names just as column names
 - Use single quotes (`'`) for string value inside the query
-- More readable than selection via boolean Series
+- More readable than selection via Boolean Series
 
 </div>
 </div>

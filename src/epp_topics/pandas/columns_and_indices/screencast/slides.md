@@ -238,7 +238,8 @@ RangeIndex(start=0, stop=4, step=1)
 
 - `set_index` and `reset_index` are inverse functions
 - `set_index` can take any column or list of columns
-- Optional argument `drop=True` or `drop=False` determines what happens with the old index in `set_index`
+- Optional argument `drop=True` or `drop=False` determines what happens with the old
+  index in `set_index`
 
 </div>
 </div>
@@ -285,7 +286,7 @@ Index(['country name', 'continent name',
 
 - Dict can contain only the subset of variables that is actually renamed
 - Renaming the index works the same way but is rarely needed
-- Instead of a dict, you can provide a function that converts the old name to the new name!
+- Instead of a dict, you can provide a function that converts old names to new names!
 
 
 </div>
