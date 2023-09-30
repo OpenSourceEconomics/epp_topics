@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("python_basics-executing_pytask_pytest_pdb.pdf",),
+    "built": ("python_basics-executing_pytask_pytest.pdf",),
 }

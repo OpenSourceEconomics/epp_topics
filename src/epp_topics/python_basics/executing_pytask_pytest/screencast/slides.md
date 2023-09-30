@@ -21,7 +21,7 @@ themeConfig:
 
 # Basic Python
 
-### Other forms of running Python
+### Running Python code via pytask or pytest
 
 <br/>
 

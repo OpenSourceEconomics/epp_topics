@@ -20,8 +20,8 @@ from epp_topics.python_basics.executing_py_shell import (
 from epp_topics.python_basics.executing_py_vscode import (
     SITE_CONTENTS as EXECUTING_PY_VSCODE,
 )
-from epp_topics.python_basics.executing_pytask_pytest_pdb import (
-    SITE_CONTENTS as EXECUTING_PYTASK_PYTEST_PDB,
+from epp_topics.python_basics.executing_pytask_pytest import (
+    SITE_CONTENTS as EXECUTING_PYTASK_PYTEST,
 )
 from epp_topics.python_basics.for_loops import (
     SITE_CONTENTS as FOR_LOOPS,
@@ -67,7 +67,7 @@ TOPICS = [
     EXECUTING_NOTEBOOK_VSCODE,
     EXECUTING_PY_SHELL,
     EXECUTING_PY_VSCODE,
-    EXECUTING_PYTASK_PYTEST_PDB,
+    EXECUTING_PYTASK_PYTEST,
 ]
 
 SITE_CONTENTS = {

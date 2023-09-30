@@ -162,6 +162,7 @@ def task_compile_book(
     Arguments are needed to make sure that the task is executed correctly.
     """
     subprocess.run(f"jb clean {SITE_SOURCE_DIR}", shell=True, check=True)
+
     result = subprocess.run(
         f"jb build {SITE_SOURCE_DIR} --nitpick --warningiserror",
         shell=True,
