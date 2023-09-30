@@ -19,7 +19,7 @@ defaults:
 
 # Data management with pandas
 
-### Series and DataFrames
+### DataFrames and Series
 
 <br>
 
@@ -34,7 +34,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 ```python
->>> df = pd.read_csv(path)
+>>> df = pd.read_csv(path, engine="pyarrow")
 >>> df
 ```
 
@@ -110,10 +110,6 @@ Janoś Gabler and Hans-Martin von Gaudecker
   </tbody>
 </table>
 
-
-
-
-
 ```python
 >>> df.columns
 ```
@@ -137,8 +133,8 @@ RangeIndex(start=0, stop=4, step=1)
 
 - Tabular dataset, typically loaded from a file
 - Two mental models:
-  - Matrix/Array with labels
-  - Dictionary of columns
+  1. Matrix/Array with labels
+  1. Dictionary of columns
 - Can inspect index and column names
 
 </div>
@@ -150,7 +146,7 @@ RangeIndex(start=0, stop=4, step=1)
 
 <br/>
 
-<div class="grid grid-cols-2 gap-4">
+<div class="flex gap-8">
 <div>
 
 ```python
@@ -174,7 +170,7 @@ Name: country, dtype: string
 <br/>
 <br/>
 
-- Each columnn of a DataFrame is a Series
+- Each column of a DataFrame is a Series
 - Mental model: Vector with an index
 - All entries in a Series have the same dtype
 
@@ -183,7 +179,7 @@ Name: country, dtype: string
 
 ---
 
-# Creating Series and DataFrames
+# Creating DataFrames and Series
 
 <div class="grid grid-cols-2 gap-4">
 <div>
@@ -256,14 +252,13 @@ Name: country, dtype: string
 
 
 ```python
->>> sr = pd.Series(
-...     [2.71, 3.14], index=["b", "a"],
+>>> pd.Series(
+...     [3.0, 4.5], index=["x", "y"],
 ... )
->>> sr
 ```
 ```txt
-b    2.71
-a    3.14
+x    3.0
+y    4.5
 dtype: float64
 ```
 

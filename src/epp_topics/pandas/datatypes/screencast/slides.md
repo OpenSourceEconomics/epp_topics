@@ -19,7 +19,7 @@ defaults:
 
 # Data management with pandas
 
-### Datatypes
+### Data types
 
 <br>
 
@@ -28,7 +28,18 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# The need for different datatypes
+# Overview
+
+- Why different data types?
+- Converting to efficient dtypes
+- Overview of numeric dtypes
+- String vs. Categorical
+- Working with strings and categoricals
+
+
+---
+
+# The need for different data types
 
 <div class="grid grid-cols-2 gap-12">
 <div>
@@ -181,21 +192,6 @@ dtype: object
 
 ---
 
-# String vs. Categorical
-
-- `pd.CategoricalDtype()` is for data that takes values in a fixed and relatively
-small set of categories
-    - Internally stored as small integers
-    - Very fast relabeling or resorting of categories
-- `pd.StringDtype()` is for actual text data
-    - Internally stored as `pyarrow` array
-    - Fast string functions similar to methods of Python strings
-
-
----
-
-
-
 # Overview of numeric dtypes
 
 | Type                | Properties                                             |
@@ -211,6 +207,21 @@ small set of categories
 | `pd.float64Dtype()` |	Double precision float                                 |
 
 ---
+
+# String vs. Categorical
+
+- `pd.CategoricalDtype()` is for data that takes values in a fixed and relatively
+small set of categories
+    - Internally stored as small integers
+    - Very fast relabeling or resorting of categories
+- `pd.StringDtype()` is for actual text data
+    - Internally stored as `pyarrow` array
+    - Fast string functions similar to methods of Python strings
+
+
+---
+
+
 
 # Working with strings
 

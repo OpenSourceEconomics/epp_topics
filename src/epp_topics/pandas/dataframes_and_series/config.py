@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("pandas-series_and_dataframes.pdf",),
+    "built": ("pandas-dataframes_and_series.pdf",),
 }

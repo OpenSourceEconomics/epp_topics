@@ -19,7 +19,7 @@ defaults:
 
 # Data management with pandas
 
-### What is (modern) pandas
+### What is (modern) pandas?
 
 <br>
 
@@ -28,7 +28,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# What is pandas
+# What is pandas?
 
 - Industry standard DataFrame library in Python
 - Covers all you need for data management
@@ -40,27 +40,16 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# What is a DataFrame
+# What is a DataFrame?
 
 <br/>
 
 <div class="grid grid-cols-2 gap-12">
 <div>
 
-<br/>
-
-- Tabular data format
-- Variables are columns
-- Observations are rows
-- Can be manipulated in Python
-
-
-</div>
-<div>
-
 <style type="text/css">
-#T_0534c   {
-  margin: 0;
+  #T_0534c   {
+    margin: 0;
   font-family: "Helvetica", "Helvetica", sans-serif;
   border-collapse: collapse;
   border: none;
@@ -130,6 +119,14 @@ Janoś Gabler and Hans-Martin von Gaudecker
   </tbody>
 </table>
 
+</div>
+
+<div>
+
+- Tabular data format
+- Variables are columns
+- Observations are rows
+- Can be manipulated in Python
 
 
 </div>
@@ -164,4 +161,4 @@ pd.options.mode.copy_on_write = True
 pd.options.future.infer_string = True
 ```
 
-- Use the engine keyword when loading datasets
+- When loading datasets, use `engine="pyarrow"` if available

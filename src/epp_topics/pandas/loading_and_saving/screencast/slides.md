@@ -23,12 +23,7 @@ defaults:
 
 <br>
 
-
 Janoś Gabler and Hans-Martin von Gaudecker
-
-
-
-
 
 
 ---
@@ -37,7 +32,6 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <div class="grid grid-cols-2 gap-12">
 <div>
-
 
 ```python
 >>> df = pd.read_csv(
@@ -120,9 +114,6 @@ Janoś Gabler and Hans-Martin von Gaudecker
   </tbody>
 </table>
 
-
-
-
 </div>
 <div>
 
@@ -145,46 +136,40 @@ Spain,Europe,2007,80.941
 </div>
 </div>
 
-
-
 ---
 
 # Other read functions
 
-| reader           | extension  | comment                                               |
-| -----------------|------------|-------------------------------------------------------|
-| `pd.read_csv`    | `.csv`     | Often need to use optional arguments to make it work  |
-| `pd.read_pickle` | `.pkl`     | Good for intermediate files; Python specific          |
-| `pd.read_stata`  | `.dta`     | Statas proprietary format. Avoid if you can           |
-| `pd.read_parquet`| `.parquet` | Very modern and powerful file format                  |
-| `pd.read_fwf`    | `.fwf`     | Avoid this whenever you can!                          |
+| reader            | extension | comment                                              |
+| ----------------- | --------- | ---------------------------------------------------- |
+| `pd.read_csv`     | `.csv`    | Often need to use optional arguments to make it work |
+| `pd.read_pickle`  | `.pkl`    | Good for intermediate files; Python specific         |
+| `pd.read_stata`   | `.dta`    | Statas proprietary format. Avoid if you can          |
+| `pd.read_feather` | `.arrow`  | Very modern and powerful file format                 |
+| `pd.read_fwf`     | `.fwf`    | Avoid this whenever you can!                         |
 
 Each read function has a corresponding write function
 
 ---
 
-# Example: Write a parquet file
+# Example: Write an Apache Arrow file
 
 <div class="grid grid-cols-2 gap-4">
 <div>
 
 ```python
-df.to_parquet(
-    "gapminder.parquet",
-    index=False,
-)
+df.to_feather(path="gapminder.arrow")
 ```
 
 </div>
 <div>
 
 - First argument is a file path
-- `index=False` means that the index will be discarded
-
+- More keyword arguments would allow for specifying compression level, format version
+- Methods for other file formats tend to require more options
 
 </div>
 </div>
-
 
 ---
 
@@ -193,6 +178,7 @@ df.to_parquet(
 - Use `.pkl` format for processed datasets that you do not share with others
   - Very fast to read and write
   - Preserves every aspect of your DataFrame (e.g. dtypes)
-- Use `.parquet` to save files you want to share with others
+- Use `.arrow` to save files you want to share with others
   - Can be read by many languages and programs
   - Efficient compression
+- Use `.dta` iff sharing with Stata users

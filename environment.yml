@@ -12,13 +12,14 @@ dependencies:
   - numba
   - openpyxl
   - pandas >= 2.1
-  - pyarrow >= 13.0
   - pdbpp
   - pip
   - plotly
   - pre-commit
-  - pygraphviz
+  - pyarrow >= 13.0
+  - pybaum
   - pydata-sphinx-theme>=0.13.3
+  - pygraphviz
   - pytask >= 0.4.0rc2
   # - pytask-parallel  # Do not use, slidev exports get mixed up.
   - pytest
@@ -27,8 +28,8 @@ dependencies:
   - python==3.11
   - pyyaml
   - scikit-learn
-  - snakeviz
   - setuptools_scm
+  - snakeviz
   - sphinx
   - sphinx-automodapi
   - sphinx-copybutton
@@ -36,5 +37,4 @@ dependencies:
   - statsmodels
   - toml
   - xlrd>=1.0
-  - pybaum
   - pip: [-e ., kaleido, jupyter-book, pyperclip]
