@@ -25,7 +25,6 @@ defaults:
 
 Janoś Gabler and Hans-Martin von Gaudecker
 
-
 ---
 
 # Example: Loading a csv file
@@ -143,9 +142,9 @@ Spain,Europe,2007,80.941
 | reader            | extension | comment                                              |
 | ----------------- | --------- | ---------------------------------------------------- |
 | `pd.read_csv`     | `.csv`    | Often need to use optional arguments to make it work |
-| `pd.read_pickle`  | `.pkl`    | Good for intermediate files; Python specific         |
-| `pd.read_stata`   | `.dta`    | Statas proprietary format. Avoid if you can          |
-| `pd.read_feather` | `.arrow`  | Very modern and powerful file format                 |
+| `pd.read_pickle`  | `.pkl`    | Good for intermediate files; Python specific.        |
+| `pd.read_feather` | `.arrow`  | Very modern and powerful file format.                |
+| `pd.read_stata`   | `.dta`    | Stata's proprietary format. Avoid if you can.        |
 | `pd.read_fwf`     | `.fwf`    | Avoid this whenever you can!                         |
 
 Each read function has a corresponding write function
