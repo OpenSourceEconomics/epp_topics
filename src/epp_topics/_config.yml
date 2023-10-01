@@ -31,6 +31,16 @@ html:
     </p>
 # Interact link settings
 notebook_interface: notebook
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - html_image
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - linkify
+    - smartquotes
 # Information about where the book exists on the web
 repository:
   url: https://github.com/OpenSourceEconomics/epp_topics

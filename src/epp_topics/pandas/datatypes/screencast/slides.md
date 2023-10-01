@@ -203,8 +203,8 @@ dtype: object
 | `pd.UInt8Dtype()` 	| Unsigned integer (0 to 255)                            |
 | `pd.UInt16Dtype()` 	| Unsigned integer (0 to 65535)                          |
 | `pd.UInt32Dtype()` 	| Unsigned integer (0 to 4294967295)                     |
-| `pd.uint64Dtype()` 	| Unsigned integer (0 to 18446744073709551615)           |
-| `pd.float64Dtype()` |	Double precision float                                 |
+| `pd.UInt64Dtype()` 	| Unsigned integer (0 to 18446744073709551615)           |
+| `pd.Float64Dtype()` |	Double precision float                                 |
 
 ---
 
