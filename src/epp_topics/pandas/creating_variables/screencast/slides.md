@@ -250,7 +250,7 @@ with columns `"gdp_per_cap"` and `"pop"`
 
 
 
-<div class="grid grid-cols-2 gap-4">
+<div class="flex gap-12">
 <div>
 
 Assume that `df` is the gapminder example
