@@ -32,3 +32,5 @@ ______________________________________________________________________
 Explain that this is a rule for doing data management. It might have to be violated for
 running regressions. But then the reshaping should happen in the last possible moment at
 the end of data management.
+
+There will be a screencast on converting between long and wide in the future.
