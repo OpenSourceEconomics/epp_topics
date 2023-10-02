@@ -10,7 +10,15 @@ from pybaum.tree_util import tree_map
 OrigSourceOrSiteSource = Literal["orig_source", "site_source"]
 
 # Add the chapter names here in the order they should appear in the book
-CHAPTER_NAMES = ["background", "tools", "git", "python_basics", "pandas", "texts"]
+CHAPTER_NAMES = [
+    "background",
+    "tools",
+    "git",
+    "python_basics",
+    "pandas",
+    "texts",
+    "projects",
+]
 
 
 SRC = Path(__file__).parent.resolve()
