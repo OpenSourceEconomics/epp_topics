@@ -146,9 +146,6 @@ assume that `df` is the gapminder example
 <div class="flex gap-12">
 <div>
 
-assume that `df` is a gapminder example
-with columns `"gdp_per_cap"` and `"pop"`
-
 ```python
 >>> df["gdp_billion"] = df["gdp_per_cap"] * df["pop"] / 1e9
 >>> df
@@ -252,8 +249,6 @@ with columns `"gdp_per_cap"` and `"pop"`
 
 <div class="flex gap-12">
 <div>
-
-Assume that `df` is the gapminder example
 
 ```python
 >>> df["country_code"] = df["country"].replace(
@@ -360,18 +355,16 @@ Assume that `df` is the gapminder example
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-assume that `df` is a gapminder example
-with columns `"gdp_per_cap"` and `"pop"`
-
 ```python
->>> income_status = pd.Series(
+>>> helper = pd.Series(
 ...     "rich",
 ...     index=df.index,
 ... )
 
 >>> df["income_status"] = helper.where(
-...     df["gdp_per_cap"] > 10000, "not rich",
-... )
+    cond=gapm_more["gdp_per_cap"] > 10000,
+    other="not rich",
+)
 ```
 
 <style type="text/css">
@@ -451,12 +444,9 @@ with columns `"gdp_per_cap"` and `"pop"`
 </div>
 <div>
 
-<br/>
-<br/>
-
 - `pd.Series.where` takes two Series as arguments:
-  1. A boolean Series that determines **where** values are replaced
-  2. Another Series with the **new values**
+  1. `cond`: Boolean Series determining **where** values are kept
+  2. `other`: Series with **values** to be used where `cond` is `False`
 - Can express general if conditions using nested where
 - Vectorized and fast
 
@@ -468,7 +458,7 @@ with columns `"gdp_per_cap"` and `"pop"`
 
 ---
 
-# When can you loop?
+# When is it okay to loop?
 
 <div class="grid grid-cols-2 gap-12">
 <div>
@@ -490,12 +480,10 @@ for var in varlist:
 ###  Over rows: ❌
 
 <br/>
-
-- We don't even show how to do it
-
 <br/>
 <br/>
 
+- Code example intentionally left blank
 - Use the vectorized functions from above instead of loops
 - List comprehensions, `df.apply`, `map`, etc. are just python loops in disguise and not
 faster in this case

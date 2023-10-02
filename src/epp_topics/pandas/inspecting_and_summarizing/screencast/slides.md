@@ -374,7 +374,7 @@ year
 - Standard summary statistics are implemented and named as expected:
   - `std`
   - `min` and `max`
-  - `median`
+  - `median` and `quantile`
 - Vectorized and really fast implementations
 
 
@@ -384,18 +384,16 @@ year
 
 ---
 
-# Quick plotting
+# Quick plotting: Series
 
 <div class="flex gap-12">
 <div>
-assume `:f` is the full gapminder data
 
 ```python
 >>> pd.options.plotting.backend = "plotly"
 >>> df.groupby("year")["life_exp"].mean().plot()
 ```
 <img src="lineplot.png" class="rounded" width="400"/>
-
 
 </div>
 <div>
@@ -409,25 +407,46 @@ assume `:f` is the full gapminder data
 
 ---
 
-# Statistics for categorical data
+# Quick plotting: DataFrames
 
-
-assume that `df` is the gapminder sample
+<div class="flex gap-12">
+<div>
 
 ```python
->>> df["country"].unique().tolist()
+>>> pd.options.plotting.backend = "plotly"
+>>> df.plot.scatter(x="year", y="life_exp",
+                    color="country")
+```
+<img src="scatterplot.png" class="rounded" width="400"/>
+
+</div>
+<div>
+
+- Any DataFrame has a `.plot` method
+- Defaults to line plot, can access `.scatter` and many more
+- Notebook gives you interactive plots
+
+</div>
+</div>
+
+---
+
+# Statistics for categorical data
+
+```python
+>>> df["country"].unique()[:2]
 ```
 ```txt
 <ArrowStringArrayNumpySemantics>
-['Cuba', 'Spain']
+['Afghanistan', 'Albania']
 Length: 2, dtype: string
 ```
 ```python
->>> df["country"].value_counts()
+>>> df["country"].value_counts().sort_index()[:2]
 ```
 ```txt
 country
-Cuba     2
-Spain    2
+Afghanistan    12
+Albania        12
 Name: count, dtype: int64
 ```

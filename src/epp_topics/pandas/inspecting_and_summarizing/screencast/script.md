@@ -27,3 +27,7 @@ than statas browse.
 - I just show plotting in combination with groupby because that makes sense for my data.
   Important thing is that any Series has a `.plot` and `.hist` method and looking at the
   distribution that way can be very helpful!
+
+- Plot is ugly, but gives you hover information in notebook -- three outliers are
+  Cambodia and twice Rwanda, would conclude that unfortunately data is correct, not
+  erroneous

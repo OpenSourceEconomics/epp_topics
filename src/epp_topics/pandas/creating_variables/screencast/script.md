@@ -1,5 +1,18 @@
 # Script: Creating variables
 
+## Intro
+
+- By creating variables we mean applying transformations to existing columns in a
+  DataFrame
+
+Outline:
+
+- Using numpy math functions
+- Arithmetic with Series
+- Recoding values
+- Vectorized if conditions
+- When is it okay to loop?
+
 ## Arithmetic with Series:
 
 About the last bullet point: I have observed that people store even intermediate series
