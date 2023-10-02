@@ -42,7 +42,7 @@ repos:
       - id: black
         language_version: python3.11
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.0.288
+    rev: v0.0.291
     hooks:
       - id: ruff
       #   args:
@@ -60,8 +60,8 @@ repos:
       - id: nbqa-black
         additional_dependencies: [black==23.9.1]
       - id: nbqa-ruff
-        additional_dependencies: [ruff==v0.0.288]
-        args: ['--ignore=B018,T201']
+        additional_dependencies: [ruff==v0.0.291]
+        args: ['--ignore=B018,T201,E402,PLR2004']
   - repo: https://github.com/executablebooks/mdformat
     rev: 0.7.17
     hooks:

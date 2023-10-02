@@ -45,3 +45,7 @@ site_*
 
 # videos
 *.mp4
+
+gapminder.arrow
+
+**/screencast/style.css

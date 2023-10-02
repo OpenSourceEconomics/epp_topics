@@ -8,23 +8,12 @@ from epp_topics.background.os_history import SITE_CONTENTS as OS_HISTORY
 
 SITE_CONTENTS = {
     "chapter_title": "Some Background",
-    "public": tuple(
+    "pages": tuple(
         itertools.chain(
             ("content_objectives.md",),
-            OS_HISTORY["public"],
-            GRAPHS["public"],
-            FILE_SYSTEMS["public"],
-        ),
-    ),
-    "internal": tuple(
-        itertools.chain(
-            (
-                "internal_overview.md",
-                "content_objectives.md",
-            ),
-            OS_HISTORY["internal"],
-            GRAPHS["internal"],
-            FILE_SYSTEMS["internal"],
+            OS_HISTORY["pages"],
+            GRAPHS["pages"],
+            FILE_SYSTEMS["pages"],
         ),
     ),
     "other": tuple(

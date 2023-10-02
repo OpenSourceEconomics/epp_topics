@@ -20,19 +20,10 @@ TOPICS = [
 
 SITE_CONTENTS = {
     "chapter_title": "Texts, Typesetting, and Text Data",
-    "public": tuple(
+    "pages": tuple(
         itertools.chain(
             ("content_objectives.md",),
-            *[topic["public"] for topic in TOPICS],
-        ),
-    ),
-    "internal": tuple(
-        itertools.chain(
-            (
-                "internal_overview.md",
-                "content_objectives.md",
-            ),
-            *[topic["internal"] for topic in TOPICS],
+            *[topic["pages"] for topic in TOPICS],
         ),
     ),
     "other": tuple(

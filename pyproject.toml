@@ -23,6 +23,10 @@ extend-ignore = [
     "FBT001",
     "N999", # capitalized module name
     "S602", # `subprocess` call with `shell=True`
+    "S110",
+    "BLE001",
+    "PD901", # `df` used a lot as example variable name
+    "D103", # lots of small functions missing docstrings
 ]
 
 

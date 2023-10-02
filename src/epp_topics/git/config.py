@@ -33,22 +33,10 @@ TOPICS = [
 
 SITE_CONTENTS = {
     "chapter_title": "Git and Github",
-    "public": tuple(
+    "pages": tuple(
         itertools.chain(
             ("content_objectives.md",),
-            *[topic["public"] for topic in TOPICS],
-        ),
-    ),
-    "internal": tuple(
-        # "All files included in 'students'",
-        # "key above, plus all files",
-        # "that students should not see",
-        itertools.chain(
-            (
-                "internal_overview.md",
-                "content_objectives.md",
-            ),
-            *[topic["internal"] for topic in TOPICS],
+            *[topic["pages"] for topic in TOPICS],
         ),
     ),
     "other": tuple(

@@ -21,7 +21,7 @@ themeConfig:
 
 # Basic Python
 
-### if conditions
+### If conditions
 
 <br/>
 
@@ -46,7 +46,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
   - Collecting elements of a list that fulfil a condition
   - Doing different things for different types of variables
   - ...
-- This is what if-conditions are for
+- This is what if conditions are for
 
 
 
