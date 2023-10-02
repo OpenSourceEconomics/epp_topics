@@ -20,7 +20,7 @@ from epp_topics.python_basics.executing_py_shell import (
 from epp_topics.python_basics.executing_py_vscode import (
     SITE_CONTENTS as EXECUTING_PY_VSCODE,
 )
-from epp_topics.python_basics.executing_pytask_pytest import (
+from epp_topics.python_basics.executing_pytask import (
     SITE_CONTENTS as EXECUTING_PYTASK_PYTEST,
 )
 from epp_topics.python_basics.for_loops import (
