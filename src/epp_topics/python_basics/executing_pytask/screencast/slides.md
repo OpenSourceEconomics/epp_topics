@@ -11,8 +11,8 @@ transition: fade
 title: Effective Programming Practices for Economists
 defaults:
   layout: center
-themeConfig:
-  paginationPagesDisabled: true
+# themeConfig:
+#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
@@ -35,7 +35,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - We assume you have installed anaconda and created the course environment
 - Open a shell in the root directory of your project
     - On Windows, use the anaconda prompt or the powershell
-    - If conda is not recognized in the powershell, check out this [stackoverflow post](https://stackoverflow.com/a/65160772/21900143)
+    - If conda is not recognized in the powershell, check out this
+      [stackoverflow post](https://stackoverflow.com/a/65160772/21900143)
 - Activate the environment using `conda activate epp`
 - Confirm the activation worked using `conda info`
 
@@ -66,7 +67,6 @@ graph LR
     classDef highlight fill:#FF4500;
     A["example"] --- B["task_hello.py"]
     A["example"] --- C["task_world.py"]
-    A["example"] --- D["pyproject.toml"]
 ```
 
 <br/>
@@ -74,4 +74,11 @@ graph LR
 - Our shell is in the `example` directory
 - We want to run all functions that start with `task_` in both `.py` files
 - Command is `pytask`
-- Ignore `pyproject.toml` for now
+
+# 1: Execute
+
+<img src="run_1.png" class="rounded" width="600"/>
+
+# 1: Execute again
+
+<img src="run_2.png" class="rounded" width="600"/>
