@@ -17,9 +17,9 @@ defaults:
 
 <br>
 
-# Data management with pandas
+# Pytask and Project Templates
 
-### Selecting rows and columns
+### What does pytask do?
 
 <br>
 

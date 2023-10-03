@@ -33,6 +33,7 @@ extend-ignore = [
     "PD901", # `df` used a lot as example variable name
     "D103", # lots of small functions missing docstrings
     "INP001", # implicit namespace packages; clashes with our pytask examples.
+    "S301",
 ]
 
 
