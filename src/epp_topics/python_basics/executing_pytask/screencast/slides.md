@@ -49,7 +49,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# How does pytask execute code
+# How does pytask execute code?
 
 - Executing .py files: Run the entire file
 - Executing notebooks: Run individual cells
@@ -75,9 +75,15 @@ graph LR
 - We want to run all functions that start with `task_` in both `.py` files
 - Command is `pytask`
 
+
+---
+
 # 1: Execute
 
 <img src="run_1.png" class="rounded" width="600"/>
+
+
+---
 
 # 1: Execute again
 
