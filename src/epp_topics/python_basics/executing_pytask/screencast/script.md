@@ -5,10 +5,14 @@
 - I would leave it at these few points and purely focus on the mechanics for the rest of
   the screencast. Then mention, that the details will be in `what does pytask do`
 
+## Example project structure
+
+- Walk them through the directory structure
+
 Then switch to a live demo:
 
-- Go to `epp_topics/src/python_basics/executing_pytask/screencast/example/`
 - Show the contents of the two task files
+- Go to `epp_topics/src/python_basics/executing_pytask/screencast/example/`
 - Run pytask (2 tasks should run)
 - Run pytask again (no tasks should run)
   - Talk about how this can be useful in a project if you imagine the fist task is data

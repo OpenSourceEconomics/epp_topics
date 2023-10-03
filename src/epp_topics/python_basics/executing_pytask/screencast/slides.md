@@ -46,7 +46,6 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="activate_and_info.png" class="rounded" width="600"/>
 
-
 ---
 
 # How does pytask execute code
@@ -56,3 +55,23 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Pytask: Run individual functions in multiple .py files
 
 Very useful for automating research pipelines
+
+---
+
+# Example Project Structure
+
+
+```mermaid {theme: 'dark', scale: 0.8}
+graph LR
+    classDef highlight fill:#FF4500;
+    A["example"] --- B["task_hello.py"]
+    A["example"] --- C["task_world.py"]
+    A["example"] --- D["pyproject.toml"]
+```
+
+<br/>
+
+- Our shell is in the `example` directory
+- We want to run all functions that start with `task_` in both `.py` files
+- Command is `pytask`
+- Ignore `pyproject.toml` for now
