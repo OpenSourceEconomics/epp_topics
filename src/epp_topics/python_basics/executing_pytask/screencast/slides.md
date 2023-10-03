@@ -21,7 +21,7 @@ defaults:
 
 # Basic Python
 
-### Executing ".py"-files from the shell
+### Running Python code via pytask
 
 <br/>
 
@@ -47,6 +47,15 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="activate_and_info.png" class="rounded" width="600"/>
 
+---
+
+# How does pytask execute code?
+
+- Executing .py files: Run the entire file
+- Executing notebooks: Run individual cells
+- Pytask: Run individual functions in multiple .py files
+
+Very useful for automating research pipelines
 
 ---
 
@@ -56,23 +65,26 @@ Janoś Gabler and Hans-Martin von Gaudecker
 ```mermaid {theme: 'dark', scale: 0.8}
 graph LR
     classDef highlight fill:#FF4500;
-    A["epp_project"] --- B["exercises"]
-    B["exercises"] --- C["exercise_1.ipynb"]
-    B["exercises"] --- D["exercise_2.py"]
-    A["epp_project"] --- E["datasets"]
-    E["datasets"] --- F["data.csv"]
+    A["example"] --- B["task_hello.py"]
+    A["example"] --- C["task_world.py"]
 ```
 
 <br/>
 
-- Our shell is in the `epp_project` directory
-- We want to run `exercise_1.py`
-- Command is `python exercises/exercise_1.py`
+- Our shell is in the `example` directory
+- We want to run all functions that start with `task_` in both `.py` files
+- Command is `pytask`
 
 
 ---
 
 # 1: Execute
 
+<img src="run_1.png" class="rounded" width="600"/>
 
-<img src="run.png" class="rounded" width="600"/>
+
+---
+
+# 1: Execute again
+
+<img src="run_2.png" class="rounded" width="600"/>
