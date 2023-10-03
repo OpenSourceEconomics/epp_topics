@@ -113,16 +113,11 @@ structure (topological sort)
 
 # Can you see the DAG?
 
-<div class="grid grid-cols-2 gap-30">
-<div>
-
-<img src="collect_nodes.png" class="rounded" width="350"/>
-
-</div>
+<div class="grid grid-cols-2 gap-4">
 <div>
 
 
-```mermaid {theme: 'dark', scale: 0.7}
+```mermaid {theme: 'dark', scale: 0.6}
 graph TD
     classDef highlight fill:#FF4500;
     X["example/gapminder.arrow"] ---> A["task_clean_data.py::task_clean_data"]
@@ -131,6 +126,11 @@ graph TD
     C["task_plot_life_expectancy.py::task_plot_life_expectancy"] ---> D["example/bld/life_expectancy.svg"]
 
 ```
+
+</div>
+<div>
+
+<img src="collect_nodes.png" class="rounded" width="350"/>
 
 </div>
 </div>
@@ -149,7 +149,7 @@ graph TD
 
 ---
 
-# Run the first time
+# Run for the first time
 
 <img src="run_1.png" class="rounded" width="700"/>
 
