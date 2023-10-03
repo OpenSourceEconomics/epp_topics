@@ -9,7 +9,7 @@ BLD = Path(__file__).parent / "bld"
 
 def task_plot_life_expectancy(
     data=BLD / "data.pkl",
-    produces=BLD / "life_expectancy.html",
+    produces=BLD / "life_expectancy.png",
 ):
     df = pd.read_pickle(data)
     fig = df.plot(
@@ -18,4 +18,4 @@ def task_plot_life_expectancy(
         color="country",
         title="Life Expectancy",
     )
-    fig.write_html(produces)
+    fig.write_image(produces)

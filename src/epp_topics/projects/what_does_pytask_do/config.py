@@ -4,6 +4,11 @@ SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
     "other": (
         # "existing figures etc.",
+        "screencast/public/collect.png",
+        "screencast/public/collect_nodes.png",
+        "screencast/public/run_1.png",
+        "screencast/public/run_2_after_deleting_plot.png",
+        "screencast/public/run_3_after_deleting_data.png",
     ),
     "built": ("projects-what_does_pytask_do.pdf",),
 }
