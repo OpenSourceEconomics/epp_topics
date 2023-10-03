@@ -28,4 +28,134 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Overview
+# A tiny example project
+
+
+
+<div class="flex gap-12">
+<div>
+
+```mermaid {theme: 'dark', scale: 0.8}
+graph LR
+    classDef highlight fill:#FF4500;
+    A["example"] --- B["task_clean_data.py"]
+    A["example"] --- C["task_plot_life_expectancy.py"]
+```
+
+
+</div>
+<div>
+
+- `task_clean_data.py`
+  - Contains the function `task_clean_data`
+  - If called, the function produces `example/bld/data.pkl`
+- `task_plot_life_expectancy.py`
+  - Contains the function `task_plot_life_expectancy`
+  - If called, the function produces `example/bld/life_expectancy.png`
+
+
+</div>
+</div>
+
+---
+
+# Step 1: collection
+
+<div class="grid grid-cols-2 gap-12">
+<div>
+
+<br/>
+
+- Go through all folders in working directory
+- Collect all files with name `task_XXX.py`
+- Go through those files and collect all functions that start with `task_`
+- Store the default values of arguments alongside the function
+
+</div>
+<div>
+
+<img src="collect.png" class="rounded" width="350"/>
+
+
+</div>
+</div>
+
+
+---
+
+# Step 2: Dependency graph (DAG)
+
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+- Inspect function signatures to build a dependency graph
+- `produces` describes function output
+- Other arguments are function dependencies
+- DAG structure enables to determine an order of execution that respects dependency
+structure (topological sort)
+
+</div>
+<div>
+
+<img src="collect_nodes.png" class="rounded" width="350"/>
+
+
+</div>
+</div>
+
+
+---
+
+# Can you see the dag?
+
+<div class="grid grid-cols-2 gap-12">
+<div>
+
+<img src="collect_nodes.png" class="rounded" width="350"/>
+
+</div>
+<div>
+
+
+```mermaid {theme: 'dark', scale: 0.8}
+graph TD
+    classDef highlight fill:#FF4500;
+    A["task_clean_data.py::task_clean_data"] ---> B["example/bld/data.pkl"]
+    B["example/bld/data.pkl"] ---> C["task_plot_life_expectancy.py::task_plot_life_expectancy"]
+    C["task_plot_life_expectancy.py::task_plot_life_expectancy"] ---> D["example/bld/life_expectancy.png"]
+
+```
+
+</div>
+</div>
+
+---
+
+# Step 3: Track changes and execute
+
+- Pytask knows which files should need to be generated
+- Also keeps track on when code or products have changed
+- Functions are only run if:
+    - They have changed
+    - A dependency has changed
+- Huge time savings in large empirical projects!
+
+
+---
+
+# Run the first time
+
+<img src="run_1.png" class="rounded" width="700"/>
+
+---
+
+# Delete plot and run again
+
+<img src="run_2_after_deleting_plot.png" class="rounded" width="700"/>
+
+---
+
+# Delete data and run again
+
+<img src="run_3_after_deleting_data.png" class="rounded" width="700"/>
