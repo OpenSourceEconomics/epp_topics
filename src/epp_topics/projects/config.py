@@ -8,7 +8,7 @@ TOPICS = [
     WHAT_DOES_PYTASK_DO,
 ]
 SITE_CONTENTS = {
-    "chapter_title": "Pytask and Project Templates",
+    "chapter_title": "Reproducible Research",
     "pages": tuple(
         itertools.chain(
             ("content_objectives.md",),
