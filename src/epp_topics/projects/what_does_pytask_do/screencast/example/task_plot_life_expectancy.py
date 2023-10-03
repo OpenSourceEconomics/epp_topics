@@ -9,7 +9,7 @@ BLD = Path(__file__).parent / "bld"
 
 def task_plot_life_expectancy(
     data=BLD / "data.pkl",
-    produces=BLD / "life_expectancy.png",
+    produces=BLD / "life_expectancy.svg",
 ):
     df = pd.read_pickle(data)
     fig = df.plot(

@@ -1,18 +1,18 @@
 from pathlib import Path
 
-import plotly.express as px
+import pandas as pd
 
 BLD = Path(__file__).parent / "bld"
 
 
-def task_clean_data(produces=BLD / "data.pkl"):
-    df = px.data.gapminder()
-    df = df.rename(
+def task_clean_data(data=Path("gapminder.arrow"), produces=BLD / "data.pkl"):
+    data = pd.read_feather(data)
+    data = data.rename(
         columns={
             "lifeExp": "life_exp",
             "gdpPercap": "gdp_per_cap",
         },
     )
+    data = data.query("continent == 'Asia'")
 
-    df = df.query("continent == 'Asia'")
-    df.to_pickle(produces)
+    data.to_pickle(produces)
