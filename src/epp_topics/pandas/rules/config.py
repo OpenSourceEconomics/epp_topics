@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("pandas-normal_forms.pdf",),
+    "built": ("pandas-rules.pdf",),
 }
