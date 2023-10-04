@@ -29,4 +29,12 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# content
+
+# Guiding principles
+
+- Clear separation of inputs and outputs
+  - need separate `src` and `bld` folder
+- Group files in directories by step of the analysis
+  - need `data_management`, `analysis`, `model_specs`, `final` inside `src`
+- Separation of long-running analysis tasks from fast visualizations
+  - need to separate `analysis` and `final`
