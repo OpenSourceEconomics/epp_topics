@@ -1,0 +1,1 @@
+# Script: Setting up projects
