@@ -32,20 +32,23 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Availability
 
 - Source data:
-  - If possible, include all datets in a common format
-  - Else, add a detailed description on how to obtain it and where to store it
+  - Always start from the data in the way you obtained it
+  - Add a detailed description how you got it
+  - If possible, include all datasets in a common format
 - Source code:
   - Include any code that is needed to produce your results
-- Programs:
-  - Document all programs that need to be installed to run your code
+- Programmes:
+  - Document all programmes that need to be installed to run your code
   - Automate the installation as much as possible with environments
-- More detailed guidelines: [https://datacodestandard.org/](https://datacodestandard.org/)
+  - When the project reaches a milestone (submission?), pin the versions
+- Essentially a version of
+  [https://datacodestandard.org/](https://datacodestandard.org/)
 
 ---
 
 # Version control
 
-- Source data and source code are under version control
+- Raw data and source code are under version control
 - Published results are created from the main branch with no uncommitted changes
 - Use tags / releases to mark submissions, revisions, etc.
 
@@ -54,18 +57,22 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Separation of source files and output
 
 - All generated files are in a separate folder that can be safely deleted
-- Generated files are not under version control
-  - Can easily be out of date
-  - Size of the GitHub repository explodes
+- Generated files are not under version control!
+  - Can easily become outdated
+  - GitHub repository size would explode
   - Does not help with reproducibility
-- You can make your results available separately from your source code, e.g. via
-Dropbox
+- Intermediate data could be added upon final publication
 
 ---
 
-# Automation
+# Theory / Automation
 
-There is one command that converts your source data into the paper
+- The workflow can be described by a directed acyclic graph
+  - Files are nodes
+  - Tasks operating on these files are nodes
+  - Edges describe the dependencies
+- There is one command that converts your source data into the paper with
+  figures and tables
 
 
 ---
@@ -77,4 +84,4 @@ There is one command that converts your source data into the paper
   - Your directory structure
   - How to install packages
   - How to run your code
-- Docstrins and comments explain the code where necessary
+- Docstrings and comments explain the code where necessary
