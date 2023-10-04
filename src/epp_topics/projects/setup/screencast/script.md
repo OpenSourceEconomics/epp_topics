@@ -16,6 +16,11 @@ We forgot to put cookiecutter in the environment, so we will have to install it.
 
 For speed reasons I think a pip install into the base env would be ok
 
+## Create a github repo
+
+- Create an empty github repo and copy the link
+- Explain that they should select to not have a license or readme
+
 ## Where to get help (show docs)
 
 [Documentation of the cookiecutter dialogue](https://econ-project-templates.readthedocs.io/en/stable/getting_started/index.html#customising-the-template-for-your-needs)
