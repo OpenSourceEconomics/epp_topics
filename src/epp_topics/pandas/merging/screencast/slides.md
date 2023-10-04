@@ -19,7 +19,7 @@ defaults:
 
 # Data management with pandas
 
-### Joining datasets
+### Merging datasets
 
 <br>
 
@@ -32,7 +32,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - Often when you download data, it comes in several files
 - While you might not like it, this is often because the data providers respected
-the normal forms!
+  the normal forms!
+- Or it comes from very different sources
 - In this screencast we show you how to merge or concatenate DataFrames
 
 
@@ -526,6 +527,251 @@ the normal forms!
 
 ---
 
+# Careful with non-meaningful indices
+
+
+<div class="flex gap-12">
+<div>
+
+```python
+>>> left
+```
+
+<style type="text/css">
+#T_13a7a   {
+  margin: 0;
+  font-family: "Helvetica", "Helvetica", sans-serif;
+  border-collapse: collapse;
+  border: none;
+  font-size: 80%;
+  color: #fff;
+}
+#T_13a7a thead {
+  background-color: #3d3d3d;
+}
+#T_13a7a tbody tr:nth-child(even) {
+  background-color: #3d3d3d;
+}
+#T_13a7a tbody tr:nth-child(odd) {
+  background-color: #565656;
+}
+#T_13a7a td {
+  padding: 0em;
+}
+#T_13a7a th {
+  font-weight: bold;
+  text-align: left;
+  padding: 0em;
+}
+#T_13a7a caption {
+  caption-side: bottom;
+}
+</style>
+<table id="T_13a7a">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_13a7a_level0_col0" class="col_heading level0 col0" >country</th>
+      <th id="T_13a7a_level0_col1" class="col_heading level0 col1" >continent</th>
+      <th id="T_13a7a_level0_col2" class="col_heading level0 col2" >year</th>
+      <th id="T_13a7a_level0_col3" class="col_heading level0 col3" >life_exp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_13a7a_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_13a7a_row0_col0" class="data row0 col0" >Cuba</td>
+      <td id="T_13a7a_row0_col1" class="data row0 col1" >Americas</td>
+      <td id="T_13a7a_row0_col2" class="data row0 col2" >2002</td>
+      <td id="T_13a7a_row0_col3" class="data row0 col3" >77.16</td>
+    </tr>
+    <tr>
+      <th id="T_13a7a_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_13a7a_row1_col0" class="data row1 col0" >Cuba</td>
+      <td id="T_13a7a_row1_col1" class="data row1 col1" >Americas</td>
+      <td id="T_13a7a_row1_col2" class="data row1 col2" >2007</td>
+      <td id="T_13a7a_row1_col3" class="data row1 col3" >78.27</td>
+    </tr>
+    <tr>
+      <th id="T_13a7a_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_13a7a_row2_col0" class="data row2 col0" >Spain</td>
+      <td id="T_13a7a_row2_col1" class="data row2 col1" >Europe</td>
+      <td id="T_13a7a_row2_col2" class="data row2 col2" >2002</td>
+      <td id="T_13a7a_row2_col3" class="data row2 col3" >79.78</td>
+    </tr>
+  </tbody>
+</table>
+
+
+```python
+>>> right
+```
+
+<style type="text/css">
+#T_c3897   {
+  margin: 0;
+  font-family: "Helvetica", "Helvetica", sans-serif;
+  border-collapse: collapse;
+  border: none;
+  font-size: 80%;
+  color: #fff;
+}
+#T_c3897 thead {
+  background-color: #3d3d3d;
+}
+#T_c3897 tbody tr:nth-child(even) {
+  background-color: #3d3d3d;
+}
+#T_c3897 tbody tr:nth-child(odd) {
+  background-color: #565656;
+}
+#T_c3897 td {
+  padding: 0em;
+}
+#T_c3897 th {
+  font-weight: bold;
+  text-align: left;
+  padding: 0em;
+}
+#T_c3897 caption {
+  caption-side: bottom;
+}
+</style>
+<table id="T_c3897">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_c3897_level0_col0" class="col_heading level0 col0" >country</th>
+      <th id="T_c3897_level0_col1" class="col_heading level0 col1" >year</th>
+      <th id="T_c3897_level0_col2" class="col_heading level0 col2" >gdp_per_cap</th>
+      <th id="T_c3897_level0_col3" class="col_heading level0 col3" >pop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_c3897_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_c3897_row0_col0" class="data row0 col0" >Cuba</td>
+      <td id="T_c3897_row0_col1" class="data row0 col1" >2007</td>
+      <td id="T_c3897_row0_col2" class="data row0 col2" >8948.10</td>
+      <td id="T_c3897_row0_col3" class="data row0 col3" >11416987</td>
+    </tr>
+    <tr>
+      <th id="T_c3897_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_c3897_row1_col0" class="data row1 col0" >Spain</td>
+      <td id="T_c3897_row1_col1" class="data row1 col1" >2002</td>
+      <td id="T_c3897_row1_col2" class="data row1 col2" >24835.47</td>
+      <td id="T_c3897_row1_col3" class="data row1 col3" >40152517</td>
+    </tr>
+    <tr>
+      <th id="T_c3897_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_c3897_row2_col0" class="data row2 col0" >Spain</td>
+      <td id="T_c3897_row2_col1" class="data row2 col1" >2007</td>
+      <td id="T_c3897_row2_col2" class="data row2 col2" >28821.06</td>
+      <td id="T_c3897_row2_col3" class="data row2 col3" >40448191</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+<div>
+
+```python
+>>> pd.concat([left, right], axis="columns")
+```
+
+
+<style type="text/css">
+#T_67b70   {
+  margin: 0;
+  font-family: "Helvetica", "Helvetica", sans-serif;
+  border-collapse: collapse;
+  border: none;
+  font-size: 80%;
+  color: #fff;
+}
+#T_67b70 thead {
+  background-color: #3d3d3d;
+}
+#T_67b70 tbody tr:nth-child(even) {
+  background-color: #3d3d3d;
+}
+#T_67b70 tbody tr:nth-child(odd) {
+  background-color: #565656;
+}
+#T_67b70 td {
+  padding: 0em;
+}
+#T_67b70 th {
+  font-weight: bold;
+  text-align: left;
+  padding: 0em;
+}
+#T_67b70 caption {
+  caption-side: bottom;
+}
+</style>
+<table id="T_67b70">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_67b70_level0_col0" class="col_heading level0 col0" >country</th>
+      <th id="T_67b70_level0_col1" class="col_heading level0 col1" >continent</th>
+      <th id="T_67b70_level0_col2" class="col_heading level0 col2" >year</th>
+      <th id="T_67b70_level0_col3" class="col_heading level0 col3" >life_exp</th>
+      <th id="T_67b70_level0_col4" class="col_heading level0 col4" >country</th>
+      <th id="T_67b70_level0_col5" class="col_heading level0 col5" >year</th>
+      <th id="T_67b70_level0_col6" class="col_heading level0 col6" >gdp_per_cap</th>
+      <th id="T_67b70_level0_col7" class="col_heading level0 col7" >pop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_67b70_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_67b70_row0_col0" class="data row0 col0" >Cuba</td>
+      <td id="T_67b70_row0_col1" class="data row0 col1" >Americas</td>
+      <td id="T_67b70_row0_col2" class="data row0 col2" >2002</td>
+      <td id="T_67b70_row0_col3" class="data row0 col3" >77.16</td>
+      <td id="T_67b70_row0_col4" class="data row0 col4" >Cuba</td>
+      <td id="T_67b70_row0_col5" class="data row0 col5" >2007</td>
+      <td id="T_67b70_row0_col6" class="data row0 col6" >8948.10</td>
+      <td id="T_67b70_row0_col7" class="data row0 col7" >11416987</td>
+    </tr>
+    <tr>
+      <th id="T_67b70_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_67b70_row1_col0" class="data row1 col0" >Cuba</td>
+      <td id="T_67b70_row1_col1" class="data row1 col1" >Americas</td>
+      <td id="T_67b70_row1_col2" class="data row1 col2" >2007</td>
+      <td id="T_67b70_row1_col3" class="data row1 col3" >78.27</td>
+      <td id="T_67b70_row1_col4" class="data row1 col4" >Spain</td>
+      <td id="T_67b70_row1_col5" class="data row1 col5" >2002</td>
+      <td id="T_67b70_row1_col6" class="data row1 col6" >24835.47</td>
+      <td id="T_67b70_row1_col7" class="data row1 col7" >40152517</td>
+    </tr>
+    <tr>
+      <th id="T_67b70_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_67b70_row2_col0" class="data row2 col0" >Spain</td>
+      <td id="T_67b70_row2_col1" class="data row2 col1" >Europe</td>
+      <td id="T_67b70_row2_col2" class="data row2 col2" >2002</td>
+      <td id="T_67b70_row2_col3" class="data row2 col3" >79.78</td>
+      <td id="T_67b70_row2_col4" class="data row2 col4" >Spain</td>
+      <td id="T_67b70_row2_col5" class="data row2 col5" >2007</td>
+      <td id="T_67b70_row2_col6" class="data row2 col6" >28821.06</td>
+      <td id="T_67b70_row2_col7" class="data row2 col7" >40448191</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br/>
+
+
+</div>
+</div>
+
+
+---
+
 # 1:1 merges
 
 
@@ -745,9 +991,10 @@ the normal forms!
 
 <br/>
 
-- merge does not align on index but on one or several merge keys
+- merge does not align on index by default
+- can change using arguments `left_index=True` and `right_index=True`
+- can also use `merge` method on DataFrame (becomes "left" frame)
 - by default, it does an inner join
-- Important: using concat would have been catastrophic in this case!
 
 
 </div>
@@ -1010,7 +1257,7 @@ the normal forms!
 
 ---
 
-# 1:m merges
+# m:1 merges
 
 <div class="grid grid-cols-2 gap-4">
 <div>
@@ -1226,8 +1473,7 @@ the normal forms!
 <br/>
 
 - The type of merge is determined by the data, not by calling a different function
-- 1:m means that one entry in `right` is matched to many items in `left`
-
+- m:1 means that many entries in `left` are matched to one entry in `right`
 
 </div>
 </div>
@@ -1237,7 +1483,7 @@ the normal forms!
 
 # Other merges
 
-- There are also "m:1" and "m:m" merges
+- There are also "1:m" and "m:m" merges
 - Check the pandas [tutorial](https://pandas.pydata.org/docs/user_guide/merging.html)
 for details
 
@@ -1246,10 +1492,12 @@ for details
 
 # Concat vs. merge
 
-- Use `concat` if you can
-  - 1:1 merging
-  - Index and columns are set properly
-- Use `merge` if you need more control
+- Use `concat` if it is safe to do
+  - Index / columns are compatible
+  - Only 1:1 merging
+- Use `merge`
+  - if you do anything outside of 1:1 merging
+  - if you need more control
 
 
 ---
