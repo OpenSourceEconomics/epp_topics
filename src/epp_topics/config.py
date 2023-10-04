@@ -18,6 +18,7 @@ CHAPTER_NAMES = [
     "pandas",
     "projects",
     "texts",
+    "software_engineering",
 ]
 
 
