@@ -1,4 +1,4 @@
-# Script: Normal forms
+# Script: Rules for data management
 
 ## Motivation
 
