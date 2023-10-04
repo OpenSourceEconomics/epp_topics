@@ -48,7 +48,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# 2. Separate data management and analysis
+# 2. Separate data mgm't and analysis
 
 - **Data management**: Converting source data to formats your analysis programs need
 - Separate data management code from analysis code
@@ -68,7 +68,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# 4. Tables do not contain redundant information
+# 4. No redundant information in tables
 
 - a.k.a. the **second normal form**
 - In a panel structure: Store time-constant characteristics in a
@@ -84,8 +84,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # 5. No structure in variable names
 
 - a.k.a. use long format if you can
-- There should not be different variables with similar content
-  referring to different time periods etc.
+- There should not be different variables with similar content referring to different
+  time periods etc.
 - If you need wide format for regressions, still do your data management in long format
 
 

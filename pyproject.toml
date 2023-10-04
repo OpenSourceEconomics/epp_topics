@@ -34,6 +34,8 @@ extend-ignore = [
     "D103", # lots of small functions missing docstrings
     "INP001", # implicit namespace packages; clashes with our pytask examples.
     "S301",
+    "PD010",
+    "PD015",
 ]
 
 

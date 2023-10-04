@@ -35,7 +35,7 @@ layout: two-cols
 
 # Two broad lines
 
-- Unix-based/inspired (Linux, MacOS X)
+- Unix-based/inspired (Linux, MacOS)
 - Windows
 
 ::right::
@@ -87,14 +87,14 @@ layout: two-cols
 layout: two-cols
 ---
 
-# MacOS X
+# MacOS
 
 - After parting ways with Apple in the 1980s, Steve Jobs founded a
   company called NeXT.
 - Developed the OS NeXTstep, which was based partly on the BSD.
 - NeXT was bought by Apple in 1996
 - Eventually brought back Jobs as CEO.
-- MacOS X, iOS, ... all based on NeXTstep and thus BSD, Unix.
+- MacOS, iOS, ... all based on NeXTstep and thus BSD, Unix.
 
 ::right::
 
