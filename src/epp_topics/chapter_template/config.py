@@ -3,24 +3,27 @@ import itertools
 
 from epp_topics.chapter_template.subchapter_1 import SITE_CONTENTS as SUBCHAPTER_1
 
+TOPICS = [
+    SUBCHAPTER_1,
+]
+
+
 SITE_CONTENTS = {
-    "chapter_title": "Placeholder: Title as displayed in book",
+    "chapter_title": "Python Basics",
     "pages": tuple(
         itertools.chain(
             ("content_objectives.md",),
-            SUBCHAPTER_1["pages"],
+            *[topic["pages"] for topic in TOPICS],
         ),
     ),
     "other": tuple(
-        # "existing figures etc.",
         itertools.chain(
-            SUBCHAPTER_1["other"],
+            *[topic["other"] for topic in TOPICS],
         ),
     ),
     "built": tuple(
-        # "screencasts etc.",
         itertools.chain(
-            SUBCHAPTER_1["built"],
+            *[topic["built"] for topic in TOPICS],
         ),
     ),
 }
