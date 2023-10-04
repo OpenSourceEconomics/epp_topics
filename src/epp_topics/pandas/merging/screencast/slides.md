@@ -1247,7 +1247,7 @@ for details
 # Concat vs. merge
 
 - Use `concat` if you can
-  - 1:1 joins
+  - 1:1 merging
   - Index and columns are set properly
 - Use `merge` if you need more control
 
