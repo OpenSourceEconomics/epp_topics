@@ -35,7 +35,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-1. Unix-based/inspired (Linux, MacOS X)
+1. Unix-based/inspired (Linux, MacOS)
 <br/>
 
 1. Windows
@@ -103,7 +103,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# MacOS X
+# MacOS X / MacOS
 
 <div class="grid grid-cols-2 gap-4">
 <div>
@@ -113,7 +113,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Developed the OS NeXTstep, which was based partly on the BSD.
 - NeXT was bought by Apple in 1996
 - Eventually brought back Jobs as CEO.
-- MacOS X, iOS, ... all based on NeXTstep and thus BSD, Unix.
+- MacOS, iOS, ... all based on NeXTstep and thus BSD, Unix.
 
 </div>
 <div>
