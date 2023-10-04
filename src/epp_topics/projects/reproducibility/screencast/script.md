@@ -39,3 +39,11 @@ Talk about the implications
 - There is no commenting out code and running again
 - There is no need to run multiple files in the correct order
 - ...
+
+# Summing up
+
+- Availability
+- Version Control
+- Separation of source and output
+- Automation
+- Documentation and readability
