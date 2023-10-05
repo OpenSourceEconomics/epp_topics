@@ -9,6 +9,9 @@ from epp_topics.projects.reproducibility import SITE_CONTENTS as REPRODUCIBILITY
 from epp_topics.projects.setup import SITE_CONTENTS as SETUP
 from epp_topics.projects.what_are_templates import SITE_CONTENTS as WHAT_ARE_TEMPLATES
 from epp_topics.projects.what_does_pytask_do import SITE_CONTENTS as WHAT_DOES_PYTASK_DO
+from epp_topics.projects.writing_pytasks_multiple_outputs import (
+    SITE_CONTENTS as WRITING_PYTASKS_MULTIPLE_OUTPUTS,
+)
 from epp_topics.projects.writing_simple_pytasks import (
     SITE_CONTENTS as WRITING_SIMPLE_PYTASKS,
 )
@@ -17,6 +20,7 @@ TOPICS = [
     REPRODUCIBILITY,
     WHAT_DOES_PYTASK_DO,
     WRITING_SIMPLE_PYTASKS,
+    WRITING_PYTASKS_MULTIPLE_OUTPUTS,
     PYTASK_DOCS,
     WHAT_ARE_TEMPLATES,
     SETUP,

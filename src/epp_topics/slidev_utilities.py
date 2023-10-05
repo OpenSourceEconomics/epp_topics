@@ -14,7 +14,7 @@ def get_html(df, scale=0.8):
     assert 0.1 <= scale <= 1  # noqa: PLR2004
     font_percent = f"{int(scale * 100)}%"
 
-    df = df.copy(deep=True)  # noqa: PD901
+    df = df.copy(deep=True)
 
     for col in df.columns:
         if is_float_dtype(df[col]):
