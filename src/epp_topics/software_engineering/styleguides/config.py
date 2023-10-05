@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("software_engineering-pep_eight.pdf",),
+    "built": ("software_engineering-styleguides.pdf",),
 }

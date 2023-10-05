@@ -1,10 +1,10 @@
 """Definitions of source files for the current chapter."""
 import itertools
 
-from epp_topics.software_engineering.pep_eight import SITE_CONTENTS as PEP_EIGHT
+from epp_topics.software_engineering.styleguides import SITE_CONTENTS as STYLEGUIDES
 
 TOPICS = [
-    PEP_EIGHT,
+    STYLEGUIDES,
 ]
 
 
