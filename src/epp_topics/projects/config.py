@@ -6,6 +6,9 @@ from epp_topics.projects.directory_structure import SITE_CONTENTS as DIRECTORY_S
 from epp_topics.projects.paths import SITE_CONTENTS as PATHS
 from epp_topics.projects.pytask_docs import SITE_CONTENTS as PYTASK_DOCS
 from epp_topics.projects.reproducibility import SITE_CONTENTS as REPRODUCIBILITY
+from epp_topics.projects.reusing_pytask_functions import (
+    SITE_CONTENTS as REUSING_PYTASK_FUNCTIONS,
+)
 from epp_topics.projects.setup import SITE_CONTENTS as SETUP
 from epp_topics.projects.what_are_templates import SITE_CONTENTS as WHAT_ARE_TEMPLATES
 from epp_topics.projects.what_does_pytask_do import SITE_CONTENTS as WHAT_DOES_PYTASK_DO
@@ -21,6 +24,7 @@ TOPICS = [
     WHAT_DOES_PYTASK_DO,
     WRITING_SIMPLE_PYTASKS,
     WRITING_PYTASKS_MULTIPLE_OUTPUTS,
+    REUSING_PYTASK_FUNCTIONS,
     PYTASK_DOCS,
     WHAT_ARE_TEMPLATES,
     SETUP,
