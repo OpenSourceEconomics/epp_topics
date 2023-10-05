@@ -1,5 +1,10 @@
 # Script: Styleguides
 
+## Main message
+
+Say that we want to focus on the bigger picture in this screencast. The detailed
+styleguides are all listed in Additional materials.
+
 ## Naming conventions
 
 - more detailed conventions are in PEP8 (link in additional materials) and that it is
