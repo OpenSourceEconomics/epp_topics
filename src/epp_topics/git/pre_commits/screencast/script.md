@@ -5,6 +5,7 @@ The example repo is inside screencast. If you need to re-do the screenshots:
 - Copy it outside of our repo
 - Run git init
 - Commit `.pre-commit-config.yaml`
+- Rename `example.py_` to `example.py` (is there to ignore all linters)
 
 ## What are pre-commit hooks
 
