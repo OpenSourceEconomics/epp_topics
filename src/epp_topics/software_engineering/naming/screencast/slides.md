@@ -67,7 +67,6 @@ qnew = q;
 yTix = repmat((1:ny)',[1 nd nw]);%yT = y(yTix);
 dix = repmat(1:nd,[ny 1 nw]);
 
-%Compute AUTARKY
 %note now everything is just ny by nw
 yTaix = repmat((1:ny)',[1 nw]);
 yhat_d0 = -0.35;
@@ -75,9 +74,8 @@ yhat_d1 = (1-yhat_d0)/2/max(y);
 yhat = y - max(0,yhat_d0*y+yhat_d1*y.^2);
 yTa = yhat(yTaix); %output  of tradables under bad standing
 cTa = yTa; %consumption of tradables under bad standing
-wfa =  (1-a) / a * (hbar^alfa./cTa).^(-1/xi) * alfa * hbar^(alfa-1); %full-employment real wage under autarky
+wfa =  (1-a) / a * (hbar^alfa./cTa).^(-1/xi) * alfa * hbar^(alfa-1);
 wba = repmat(wb',[ny 1]);
-wa = max(gama * wba,wfa); %real wage
 ```
 
 ---
