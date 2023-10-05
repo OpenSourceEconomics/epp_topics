@@ -23,7 +23,7 @@
 
 Obvious
 
-## MacOS X
+## MacOS X / MacOS
 
 - Apple Macintoshs had their own operating system, which went up to version 9
 - Personal history:
@@ -35,7 +35,7 @@ Obvious
   - At least we had a stack of T-Shirts with that logo on them floating around for
     years...
 - Anyhow, NeXT as a company did not last long, but NeXTstep is still alive and kicking
-  under the name Mac OS X
+  as it became MacOS X, now just MacOS
 
 ## Windows
 

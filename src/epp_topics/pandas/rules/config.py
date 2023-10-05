@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("pandas-joins.pdf",),
+    "built": ("pandas-rules.pdf",),
 }
