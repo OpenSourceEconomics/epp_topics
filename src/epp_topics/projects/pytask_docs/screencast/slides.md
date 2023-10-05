@@ -32,7 +32,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Motivation
 
 - Pytask is a powerful package
-- We have only seen the absolute basics in the course
+- We have only seen basics in the course
 - Examples of advanced features are:
   - Repeating the same task with different inputs
   - Execute your project in parallel
