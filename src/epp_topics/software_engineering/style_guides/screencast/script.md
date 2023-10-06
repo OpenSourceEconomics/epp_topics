@@ -1,9 +1,9 @@
-# Script: Styleguides
+# Script: Style guides
 
 ## Main message
 
-Say that we want to focus on the bigger picture in this screencast. The detailed
-styleguides are all listed in Additional materials.
+Say that we want to focus on the bigger picture in this screencast. The detailed style
+guides are all listed in Additional materials.
 
 ## Naming conventions
 
@@ -22,15 +22,15 @@ About "Reduce your mental load when deciding about variable names"
 Example: When deciding on a function name you can fully focus on content, not on whether
 you want to use CamelCase or lowercase_with_underscores for it
 
-## Why styleguides should be automated
+## Why style guides should be automated
 
 Tell them about the times where we spent days on formatting code!
 
 Mention that it is still a good idea to learn how to write roughly compliant code
 yourself.
 
-## How to automate styleguides
+## How to automate style guides
 
 Pre-commit hooks are the only way to do it consistently in large projects
 
-Linters can be a good help to learn about styleguides in the beginning
+Linters can be a good help to learn about style guides in the beginning

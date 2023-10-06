@@ -32,7 +32,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Naming is hard but important!
 
 
-> There are only two hard things in Computer Science: cache invalidation and naming things.
+> There are only two hard things in Computer Science: cache invalidation and naming
+> things.
 >
 > -- Phil Karlton
 
@@ -99,7 +100,6 @@ wba = repmat(wb',[ny 1]);
 
 # Variable names
 
-
 - Describe the variable, not what you want to do with it
 - Do not append the type to the variable name
   - Bad: `names_list`
@@ -117,7 +117,7 @@ wba = repmat(wb',[ny 1]);
 - Function names start with a verb in imperative mode
   - Good: `create_`, `calculate_`, `convert_`, `get_`
   - Bad: `return_`, `call_`
-- Describe what the function does at a sensible level of abtraction
+- Describe what the function does at a sensible level of abstraction
   - Good: `process_model_specification`
   - Bad: `convert_user_provided_model_dictionary_to_model_class_and_set_defaults`
 - If you want to use `and` you need to split your function in two!
@@ -126,8 +126,7 @@ wba = repmat(wb',[ny 1]);
 
 # The scope rules
 
-
-- The length of a variable name should be proportional to it's scope
+- The length of a variable name should be proportional to its scope
   - `i`, `j`, `sr` and `df` are acceptable names if their scope is a few lines
   - they are completely unacceptable if their usage extends over 20 or more lines
 - The length of a function name should be **inversely** proportional to it's scope

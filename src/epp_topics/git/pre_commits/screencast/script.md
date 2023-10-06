@@ -9,7 +9,7 @@ The example repo is inside screencast. If you need to re-do the screenshots:
 
 ## What are pre-commit hooks
 
-- Reference the styleguide screencast in software engineering
+- Reference the style guide screencast in software engineering
 
 ## Configuring pre-commit hooks
 

@@ -8,13 +8,13 @@ from epp_topics.software_engineering.naming import SITE_CONTENTS as NAMING
 from epp_topics.software_engineering.pure_functions import (
     SITE_CONTENTS as PURE_FUNCTIONS,
 )
-from epp_topics.software_engineering.styleguides import SITE_CONTENTS as STYLEGUIDES
+from epp_topics.software_engineering.style_guides import SITE_CONTENTS as STYLE_GUIDES
 from epp_topics.software_engineering.what_does_pytest_do import (
     SITE_CONTENTS as WHAT_DOES_PYTEST_DO,
 )
 
 TOPICS = [
-    STYLEGUIDES,
+    STYLE_GUIDES,
     NAMING,
     PURE_FUNCTIONS,
     IDEA_OF_TESTING,

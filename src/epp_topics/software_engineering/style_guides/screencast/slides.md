@@ -20,7 +20,7 @@ defaults:
 
 # Software engineering
 
-### Styleguides
+### Style guides
 
 <br/>
 
@@ -31,9 +31,9 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Main message
 
-- Styleguides are important
-- Styleguides do not automatically make code good
-- Styleguides should be automated!
+- Style guides are important
+- Style guides do not automatically make code good
+- Style guides should be automated!
 
 ---
 
@@ -41,7 +41,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - Functions and methods are `lowercase_with_underscores`
 - Local variables are `lowercase_with_underscores`
-- Global variables ar `UPPERCASE_WITH_UNDERSCORES`
+- Global ~~variables~~ constants are `UPPERCASE_WITH_UNDERSCORES`
 - Classes are `CamelCase`, instances are `lowercase_with_underscores`
 - Private functions start with `_underscores`
 
@@ -75,15 +75,17 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Why styleguides should be automated
+# Why style guides should be automated
 
 - Code style is important, so it has to be enforced
 - Formatting is boring, so it should be automated
+- Could never manage to be consistent enough to not get any fake changes in version
+  control
 - Manual formatting and discussions about it distract from important things
 
 ---
 
-# How to automate styleguides?
+# How to automate style guides?
 
 - Linters in your editor
 - Formatters in your editor
