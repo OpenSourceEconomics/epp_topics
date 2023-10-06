@@ -9,7 +9,6 @@ paths = ["./src/epp_topics"]
 ignore = [
     "src/epp_topics/python_basics/executing_pytask/screencast/example/",
     "src/epp_topics/projects/what_does_pytask_do/screencast/example/",
-
 ]
 
 [tool.ruff]
@@ -36,6 +35,7 @@ extend-ignore = [
     "S301",
     "PD010",
     "PD015",
+    "B008", # Do not perform function calls in argument defaults.
 ]
 
 
