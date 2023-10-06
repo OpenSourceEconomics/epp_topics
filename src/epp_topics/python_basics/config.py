@@ -5,6 +5,9 @@ import itertools
 from epp_topics.python_basics.assignment_and_scalar_types import (
     SITE_CONTENTS as ASSIGNMENT_AND_SCALAR_TYPES,
 )
+from epp_topics.python_basics.comprehensions import (
+    SITE_CONTENTS as COMPREHENSIONS,
+)
 from epp_topics.python_basics.dicts import (
     SITE_CONTENTS as DICTS,
 )
@@ -68,6 +71,7 @@ TOPICS = [
     EXECUTING_PY_SHELL,
     EXECUTING_PY_VSCODE,
     EXECUTING_PYTASK_PYTEST,
+    COMPREHENSIONS,
 ]
 
 SITE_CONTENTS = {
