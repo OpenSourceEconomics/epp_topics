@@ -1,0 +1,1 @@
+# Script: Pure functions
