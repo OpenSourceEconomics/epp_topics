@@ -20,7 +20,7 @@ dependencies:
   - pybaum
   - pydata-sphinx-theme>=0.13.3
   - pygraphviz
-  - pytask >= 0.4.0rc2
+  - pytask >= 0.4.0rc3
   # - pytask-parallel  # Do not use, slidev exports get mixed up.
   - pytest
   - pytest-cov
