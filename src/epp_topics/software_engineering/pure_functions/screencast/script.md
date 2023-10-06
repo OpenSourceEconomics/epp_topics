@@ -1,6 +1,6 @@
 # Script: Pure functions
 
-Anecdote: Radost once was there when I explained to someone how to define functions and
+Anecdote: R. once was there when I explained to someone how to define functions and
 said: "Since I am not writing packages, the good thing is I rarely have to write code in
 functions". Then I realized that for me it is the opposite. "Since I am mostly writing
 packages I have the luxury that most of my code can be in (pure) functions".
