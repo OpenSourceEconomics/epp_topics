@@ -28,12 +28,17 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Example: Survey from a course
+# Example
 
-<div class="grid grid-cols-2 gap-12">
+consider this hypothetical survey about a programming course
+
+<div class="grid grid-cols-2 gap-4">
 <div>
 
-<br/>
+```python
+>>> raw = pd.read_csv("survey.csv")
+>>> raw
+```
 
 <style type="text/css">
 #T_1750e   {
@@ -143,15 +148,16 @@ Janoś Gabler and Hans-Martin von Gaudecker
 </div>
 <div>
 
-### Metadata
-
 <br/>
+<br/>
+
+
+From the metadata you know
 
 - Q001: I am a coding genius
 - Q001: I learned a lot
 - Q003: What is your favourite language
 
-<br/>
 <br/>
 
 - -77 not readable
