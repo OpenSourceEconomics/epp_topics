@@ -79,9 +79,11 @@ AssertionError: This always fails
 def cobb_douglas(labor, capital, alpha):
     return labor ** alpha * capital ** (1 - alpha)
 
-assert cobb_douglas(1, 1, 2) == 1
-assert cobb_douglas(2, 1, 2) == 4
+assert cobb_douglas(1, 1, 0.5) == 1
+assert cobb_douglas(16, 1, 0.25) == 2
+assert cobb_douglas(1, 16, 0.75) == 2
 ```
+
 
 </div>
 <div>

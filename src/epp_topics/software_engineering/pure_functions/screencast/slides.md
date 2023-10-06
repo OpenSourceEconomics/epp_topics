@@ -36,10 +36,11 @@ Janoś Gabler and Hans-Martin von Gaudecker
 > properties:
 >
 > 1. the function return values are identical for identical arguments (no variation with
-> local static variables, non-local variables, mutable reference arguments or input
-> streams)
+>    local static variables, non-local variables, mutable reference arguments or input
+>    streams)
 >
-> 2. the function has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or input/output streams).
+> 2. the function has no side effects (no mutation of local static variables, non-local
+>    variables, mutable reference arguments or input/output streams).
 >
 > -- Wikipedia
 
@@ -48,11 +49,11 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Benefits of pure functions
 
 - **Explicit interfaces**: What is used in the function is passed in as argument
-- **Testability**: Control everything relevant while testing
+- **Testability**: While testing, control everything that is relevant
 - **Parallelization**: No worries when calling pure functions in parallel
 - **Reduced mental load**: No worries about side effects when calling pure functions
-- **Powerful tools**: Pure functions are compatible with powerful concepts from functional
-programming and some libraries expect them
+- **Powerful tools**: Pure functions are compatible with powerful concepts from
+  functional programming and some libraries expect them
 
 
 ---
@@ -79,7 +80,6 @@ def task_clean_data(
 - Functions that read or write files are impure, but unavoidable
 - Solution: Push impurities to the boundaries
 - We have covered examples in pytask
-
 
 </div>
 </div>

@@ -18,7 +18,7 @@
 
 ## This works for any project
 
-- I am paraphrasing a quote I have read before but could not find anymore. Take it out
+- I am paraphrasing a quote I have read before but could not find any more. Take it out
   if you don't like that.
 
 - If you cannot break your project into steps for which you know what they should do,
