@@ -11,5 +11,5 @@ There are two main messages here:
 
 ## When to use
 
-- Can also mention that lists and dicts themeselves are not good containers if you want
-  to do calculations with thousands or millions of numbers
+- Can also mention that lists and dicts themselves are not good containers in the first
+  place if you need to do calculations with thousands or millions of numbers

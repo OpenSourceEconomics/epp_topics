@@ -45,6 +45,7 @@ The mapping loop
 >>> squares
 [1, 4, 9, 16, 25]
 ```
+
 The filtering loop
 
 ```python
@@ -59,7 +60,6 @@ The filtering loop
 </div>
 <div>
 
-<br/>
 <br/>
 
 - Both initialize and append
@@ -83,7 +83,7 @@ Set notation
 $$
 \{x^2 | x \in \{1, 2, 3, 4, 5\}\} \\
 
-\{x | x \in \{1, ..., 10\}, x \mod 2 = 0 \}
+\{x | x \in \{0, 1, ..., 9\}, x \mod 2 = 0 \}
 $$
 
 List comprehension
@@ -105,6 +105,8 @@ List comprehension
 
 </div>
 <div>
+
+<br/>
 
 - List comprehensions are inspired by set notation
 - Can call arbitrary functions
