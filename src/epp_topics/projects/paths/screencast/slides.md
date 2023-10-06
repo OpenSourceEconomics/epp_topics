@@ -20,7 +20,7 @@ defaults:
 # Reproducible Research
 
 
-### Path handling in projects
+### Paths handling in projects
 
 <br>
 
