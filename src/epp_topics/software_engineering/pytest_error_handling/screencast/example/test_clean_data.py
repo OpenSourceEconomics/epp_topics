@@ -3,7 +3,7 @@ import pytest
 from clean_data import _clean_agreement_scale, _clean_favorite_language
 
 
-def test_clean_agreement_check_dtype():
+def test_clean_agreement_scale_check_dtype():
     # Test with a series that contains "-77" and "-99"
     categories = ["strongly disagree", "disagree", "neutral", "agree", "strongly agree"]
     dtype = pd.CategoricalDtype(categories=categories, ordered=True)
@@ -20,7 +20,7 @@ def test_clean_agreement_scale_known_missings():
 
 def test_clean_agreement_scale_invalid_data():
     with pytest.raises(ValueError):
-        _clean_agreement_scale(pd.Series([-77, "agree"]))
+        _clean_agreement_scale(pd.Series([-77, "typo"]))
 
 
 def test_clean_favorite_language_known_missings():

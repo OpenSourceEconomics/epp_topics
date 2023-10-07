@@ -10,5 +10,5 @@ SITE_CONTENTS = {
         "screencast/public/run_2_after_deleting_plot.png",
         "screencast/public/run_3_after_deleting_data.png",
     ),
-    "built": ("projects-what_does_pytest_do.pdf",),
+    "built": ("software_engineering-what_does_pytest_do.pdf",),
 }

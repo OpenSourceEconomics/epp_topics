@@ -2,7 +2,7 @@ import pandas as pd
 from clean_data import _clean_agreement_scale, _clean_favorite_language
 
 
-def test_clean_agreement_check_dtype():
+def test_clean_agreement_scale_check_dtype():
     categories = ["strongly disagree", "disagree", "neutral", "agree", "strongly agree"]
     dtype = pd.CategoricalDtype(categories=categories, ordered=True)
     result = _clean_agreement_scale(pd.Series([]))
