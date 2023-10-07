@@ -191,13 +191,16 @@ def _clean_favorite_language(sr):
 
 # New module: test_clean_data.py
 
+- 4 assertions whether actual results match our expectation
+- Will look at syntax in subsequent screencast
+
 
 ---
 
-# Step 1: collection
+# Step 1: Collection
 
-<div class="grid grid-cols-2 gap-12">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-2">
 
 <br/>
 
@@ -207,9 +210,9 @@ def _clean_favorite_language(sr):
 - All these test functions will be executed (fine-grained control possible)
 
 </div>
-<div>
+<div class="col-span-3">
 
-<img src="collect_only.png" class="rounded" width="350"/>
+<img src="collect_only.png" class="rounded" width="500"/>
 
 
 </div>
@@ -220,18 +223,16 @@ def _clean_favorite_language(sr):
 
 # Step 2: Execute the tests
 
-
-<div class="grid grid-cols-2 gap-4">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-2">
 
 - All test functions are executed
 - A report is printed to the screen
 
 </div>
-<div>
+<div class="col-span-3">
 
-<img src="run.png" class="rounded" width="350"/>
-
+<img src="run.png" class="rounded" width="500"/>
 
 </div>
 </div>
@@ -241,16 +242,16 @@ def _clean_favorite_language(sr):
 
 # Step 2: Execute the tests
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+<div class="grid grid-cols-5 gap-4">
+<div class="col-span-2">
 
 - `pytest -v` gives more detailed progress reports
 - Can be very helpful for long-running tests
 
 </div>
-<div>
+<div class="col-span-3">
 
-<img src="run_verbose.png" class="rounded" width="350"/>
+<img src="run_verbose.png" class="rounded" width="500"/>
 
 </div>
 </div>
