@@ -7,6 +7,7 @@ SITE_CONTENTS = {
         "screencast/public/run.png",
         "screencast/public/run_verbose.png",
         "screencast/public/run_failed.png",
+        "screencast/public/run_pdb.png",
     ),
     "built": ("software_engineering-what_does_pytest_do.pdf",),
 }

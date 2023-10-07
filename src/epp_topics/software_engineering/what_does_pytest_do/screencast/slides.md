@@ -244,7 +244,7 @@ def _clean_favorite_language(sr):
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-- More detailed progress reports
+- `pytest -v` gives more detailed progress reports
 - Can be very helpful for long-running tests
 
 </div>
@@ -259,9 +259,10 @@ def _clean_favorite_language(sr):
 
 # Step 3: Inspect failures
 
-<img src="run_failed.png" class="rounded" width="700"/>
+<img src="run_failed.png" class="rounded" width="600"/>
 
+---
 
 # Step 3: Inspect failures with pdb
 
-<img src="run_pdb.png" class="rounded" width="700"/>
+<img src="run_pdb.png" class="rounded" width="600"/>
