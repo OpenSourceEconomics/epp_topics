@@ -20,7 +20,7 @@ defaults:
 # Reproducible Research
 
 
-### What does pytest do?
+### Testing code that should raise errors
 
 <br>
 

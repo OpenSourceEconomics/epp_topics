@@ -36,6 +36,7 @@ extend-ignore = [
     "PD010",
     "PD015",
     "B008", # Do not perform function calls in argument defaults.
+    "PT011", # catching broad exceptions in tests is just fine
 ]
 
 
