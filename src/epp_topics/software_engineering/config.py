@@ -8,9 +8,15 @@ from epp_topics.software_engineering.naming import SITE_CONTENTS as NAMING
 from epp_topics.software_engineering.pure_functions import (
     SITE_CONTENTS as PURE_FUNCTIONS,
 )
+from epp_topics.software_engineering.pytest_error_handling import (
+    SITE_CONTENTS as PYTEST_ERROR_HANDLING,
+)
 from epp_topics.software_engineering.style_guides import SITE_CONTENTS as STYLE_GUIDES
 from epp_topics.software_engineering.what_does_pytest_do import (
     SITE_CONTENTS as WHAT_DOES_PYTEST_DO,
+)
+from epp_topics.software_engineering.writing_simple_pytests import (
+    SITE_CONTENTS as WRITING_SIMPLE_PYTESTS,
 )
 
 TOPICS = [
@@ -19,6 +25,8 @@ TOPICS = [
     PURE_FUNCTIONS,
     IDEA_OF_TESTING,
     WHAT_DOES_PYTEST_DO,
+    WRITING_SIMPLE_PYTESTS,
+    PYTEST_ERROR_HANDLING,
 ]
 
 

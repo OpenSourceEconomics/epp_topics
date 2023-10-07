@@ -2,6 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": ("screencast/public/run_1.png",),
-    "built": ("software_engineering-writing_simple_pytasks.pdf",),
+    "other": ("screencast/public/run_verbose.png",),
+    "built": ("software_engineering-writing_simple_pytests.pdf",),
 }
