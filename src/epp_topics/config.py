@@ -17,8 +17,8 @@ CHAPTER_NAMES = [
     "python_basics",
     "pandas",
     "projects",
-    "texts",
     "software_engineering",
+    "texts",
 ]
 
 

@@ -241,7 +241,7 @@ def test_clean_agreement_scale_known_missings():
 
 # Basic rules
 
-- Put tests in modules called `test_XXX.py`, with functions `test_YYY__ZZZ`, ...
+- Put tests in modules called `test_XXX.py`, with functions `test_YYY_ZZZ`, ...
   - `XXX` is the name of the module to be tested
   - `YYY` is the name of the function to be tested
   - `ZZZ` is a description of the behaviour being tested

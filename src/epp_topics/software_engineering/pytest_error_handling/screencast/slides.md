@@ -222,7 +222,7 @@ import pytest
 
 def test_clean_agreement_scale_invalid_data():
     with pytest.raises(ValueError):
-        _clean_agreement_scale(pd.Series([-88, "typo"]))
+        _clean_agreement_scale(pd.Series([-77, "typo"]))
 ```
 
 <br/>
@@ -271,16 +271,3 @@ def _clean_agreement_scale(sr):
 # Run pytest, again
 
 <img src="run_fixed.png" class="rounded" width="550"/>
-
-
----
-
-# What to test?
-
-- "All" exceptions
-- Typical input
-- Corner cases
-- Any bugs that you have encountered
-  - Pin down by finding minimal testcase
-  - Keep this in the test suite
-  - Any bug that came up once is likely to come back!

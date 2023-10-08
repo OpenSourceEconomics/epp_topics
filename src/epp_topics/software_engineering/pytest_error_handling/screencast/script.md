@@ -1,14 +1,13 @@
-# Script: What does pytest do
+# Script: Testing code that should raise errors
 
-## Step 1: Collection
+## Introduction
 
-Important: The figure shows the output of `pytest collect`, i.e. only tasks
+Mention that we will scratch on the surface a couple of important ideas here
 
-## Step 2: Dependency Graph
+- Tests pin down the interface of a function / its desired behaviour
+- Tests help you learn behaviour of programmes / libraries
 
-Important: The figure shows the output of `pytest collect --nodes`, i.e. also
-dependencies and products
+## Run pytest, again
 
-## Can you see the dag
-
-Show the equivalence of pytests output and the dag on the right.
+- Tests pass, all good?
+- No, see why in the screencast on what and how to test
