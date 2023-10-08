@@ -9,7 +9,12 @@ def clean_data(raw):
 
 def clean_agreement_scale(sr):
     sr = sr.replace({'-77': pd.NA,'-99':pd.NA})
-    categories = ['strongly disagree', 'disagree', 'neutral', 'agree', 'strongly agree']
+    categories = ['strongly disagree',
+
+ 'disagree',
+ 'neutral',
+        'agree',
+           'strongly agree']
     dtype = pd.CategoricalDtype(categories=categories, ordered=True)
     return sr.astype(dtype)
 
