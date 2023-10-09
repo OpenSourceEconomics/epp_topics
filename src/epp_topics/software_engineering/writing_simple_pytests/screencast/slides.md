@@ -17,7 +17,7 @@ defaults:
 
 <br>
 
-# Reproducible Research
+# Software engineering
 
 
 ### Writing simple (py)tests
