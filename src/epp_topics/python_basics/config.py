@@ -47,6 +47,12 @@ from epp_topics.python_basics.importing import (
 from epp_topics.python_basics.installation_linux import (
     SITE_CONTENTS as INSTALLATION_LINUX,
 )
+from epp_topics.python_basics.installation_mac import (
+    SITE_CONTENTS as INSTALLATION_MAC,
+)
+from epp_topics.python_basics.installation_windows import (
+    SITE_CONTENTS as INSTALLATION_WINDOWS,
+)
 from epp_topics.python_basics.lists_tuples_sets import (
     SITE_CONTENTS as LISTS_TUPLES_SETS,
 )
@@ -62,6 +68,8 @@ from epp_topics.python_basics.tracebacks import (
 
 TOPICS = [
     INSTALLATION_LINUX,
+    INSTALLATION_MAC,
+    INSTALLATION_WINDOWS,
     ASSIGNMENT_AND_SCALAR_TYPES,
     STRINGS,
     LISTS_TUPLES_SETS,
