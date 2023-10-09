@@ -36,8 +36,11 @@ extend-ignore = [
     "PD010",
     "PD015",
     "B008", # Do not perform function calls in argument defaults.
+    "PT011", # catching broad exceptions in tests is just fine
 ]
 
+[tool.ruff.per-file-ignores]
+"src/epp_topics/python_basics/executing_pytest/screencast/example/test_cobb_douglas.py" = ["PLR2004"]
 
 [tool.ruff.pydocstyle]
 convention = "google"

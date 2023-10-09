@@ -1,3 +1,3 @@
 # Example
 
-DRY: Use directly from `what_is_pytask`
+DRY: Use directly from `what_does_pytask_do`

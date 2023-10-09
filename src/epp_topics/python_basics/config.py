@@ -5,6 +5,9 @@ import itertools
 from epp_topics.python_basics.assignment_and_scalar_types import (
     SITE_CONTENTS as ASSIGNMENT_AND_SCALAR_TYPES,
 )
+from epp_topics.python_basics.comprehensions import (
+    SITE_CONTENTS as COMPREHENSIONS,
+)
 from epp_topics.python_basics.dicts import (
     SITE_CONTENTS as DICTS,
 )
@@ -21,7 +24,10 @@ from epp_topics.python_basics.executing_py_vscode import (
     SITE_CONTENTS as EXECUTING_PY_VSCODE,
 )
 from epp_topics.python_basics.executing_pytask import (
-    SITE_CONTENTS as EXECUTING_PYTASK_PYTEST,
+    SITE_CONTENTS as EXECUTING_PYTASK,
+)
+from epp_topics.python_basics.executing_pytest import (
+    SITE_CONTENTS as EXECUTING_PYTEST,
 )
 from epp_topics.python_basics.for_loops import (
     SITE_CONTENTS as FOR_LOOPS,
@@ -58,6 +64,7 @@ TOPICS = [
     DICTS,
     FOR_LOOPS,
     IF_CONDITIONS,
+    COMPREHENSIONS,
     FUNCTIONS_BASICS,
     FUNCTIONS_PRINCIPLES,
     TRACEBACKS,
@@ -67,7 +74,8 @@ TOPICS = [
     EXECUTING_NOTEBOOK_VSCODE,
     EXECUTING_PY_SHELL,
     EXECUTING_PY_VSCODE,
-    EXECUTING_PYTASK_PYTEST,
+    EXECUTING_PYTASK,
+    EXECUTING_PYTEST,
 ]
 
 SITE_CONTENTS = {
