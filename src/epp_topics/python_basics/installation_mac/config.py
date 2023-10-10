@@ -16,8 +16,6 @@ SITE_CONTENTS = {
         "9_create.png",
         "10_done.png",
         "11_activate.png",
-        "processor_apple.png",
-        "processor_intel.png",
     ),
     "built": (
         # "screencast slides etc.",

@@ -19,15 +19,10 @@ We will cover the following topics:
 
 ## Detecting your processor type
 
-Before continuing you must find out which processor is built into your Mac. For this
-click on the Apple logo at the top left and select the option "About this Mac". For
-Intel processors you will find that it says "Intel" in the Processor/Chip section
-
-![processor_intel](processor_intel.png)
-
-and for Apple processors you will find that it says "Apple M1" or "Apple M2":
-
-![processor_apple](processor_apple.png)
+Before continuing you must find out which processor is built into your Mac. You can find
+a list of Apple computers that have an Apple processor
+[here](https://support.apple.com/en-us/HT211814). If your computer is not on the list,
+you have an Intel processor.
 
 ## Installing mamba
 
