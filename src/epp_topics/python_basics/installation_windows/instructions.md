@@ -12,7 +12,7 @@ according to the instructions.
 We will cover the following topics:
 
 1. How to install **mamba**: Mamba is a fast package manager that will install the
-   everything else. We install it via miniforge.
+   everything else. We install it via Miniforge.
 1. How to create the **course environment**: The course environment is a collection of
    Python packages that we will need for the course.
 
@@ -24,7 +24,7 @@ and Download the Windows x86_64 version of the installer in your Downloads folde
 
 ![0_download](0_download.png)
 
-Navigate to the Dowloads folder and double click on the Miniforge3 installer
+Navigate to the Downloads folder and double click on the Miniforge3 installer
 
 ![1_cd.png](1_cd.png)
 
@@ -88,7 +88,7 @@ prompt. This is done by typing `cmd` in the console.
 ![14_cmd.png](14_cmd.png)
 
 Then you can activate the environment by typing `conda activate epp`. The console shows
-that the enviroment is active by showing the name of the enviroment in parenthesis
+that the environment is active by showing the name of the environment in parenthesis
 before the directory you are currently in.
 
 ![15_activate_epp.png](15_activate_epp.png)
