@@ -1,6 +1,6 @@
 # Installing Python on Linux
 
-There are many different ways to install the Python language and Python packages. Below, 
+There are many different ways to install the Python language and Python packages. Below,
 we provide one way that works well for everything we need in the class. Please stick
 exactly to the instructions unless you know what you are doing and are absolutely sure
 you will never need any help from us.
@@ -11,7 +11,7 @@ according to the instructions.
 
 We will cover the following topics:
 
-1. How to install **mamba**: Mamba is a fast package manager that will install 
+1. How to install **mamba**: Mamba is a fast package manager that will install
    everything else. We install it via miniforge.
 1. How to create the **course environment**: The course environment is a collection of
    Python packages that we will need for the course.
@@ -69,9 +69,7 @@ then, believe us they are a good idea.
 You start by downloading the
 
 ```{eval-rst}
----
-download:`course environment <../environment.yml>`
----
+:download:`course environment <../environment.yml>`
 ```
 
 As before, open your Terminal in the directory where you chose to save the course

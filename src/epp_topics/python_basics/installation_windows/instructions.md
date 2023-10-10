@@ -61,6 +61,10 @@ those packages are not included in the standard anaconda distribution.
 Later in the course you will learn many benefits of using virtual environments. Until
 then, believe us they are a good idea.
 
+```{eval-rst}
+:download:`course environment <../environment.yml>`
+```
+
 You start by downloading the environment file [here](../environment.yml).
 
 As before, open your Terminal in the directory where you chose to save the course
