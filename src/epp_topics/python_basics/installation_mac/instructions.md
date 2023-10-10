@@ -12,7 +12,7 @@ according to the instructions.
 We will cover the following topics:
 
 1. Detecting whether your computer has an Intel or an Apple processor.
-1. How to install **mamba**: Mamba is a fast package manager that will install the
+1. How to install **mamba**: Mamba is a fast package manager that will install
    everything else. We install it via miniforge.
 1. How to create the **course environment**: The course environment is a collection of
    Python packages that we will need for the course.
@@ -49,18 +49,18 @@ and for Apple processors you will find that it says "Apple M1" or "Apple M2":
 
    ![2_bash.png](2_bash.png)
 
-1. Then you will have to hit enter several times more until you get to the license
+1. Then, you will have to hit enter several times more until you get to the license
    agreement. Type `yes` and hit enter again.
 
    ![3_accept.png](3_accept.png)
 
-1. Next you can choose the location where miniforge should be installed. This should be
+1. Next, you can choose the location where miniforge should be installed. This should be
    a path with no spaces or special characters in it. As long as your username does not
    contain such characters, you should go with the default.
 
    ![4_location.png](4_location.png)
 
-1. Next you will be asked whether you want to run `conda init`. Type `yes` and hit
+1. Next, you will be asked whether you want to run `conda init`. Type `yes` and hit
    enter.
 
    ![5_conda_init.png](5_conda_init.png)
@@ -69,7 +69,7 @@ and for Apple processors you will find that it says "Apple M1" or "Apple M2":
 
    ![6_done.png](6_done.png)
 
-1. Before you can use mamba, **you need to restart your terminal!** After the restart
+1. Before you can use mamba, **you need to restart your terminal!** After the restart,
    you can type `mamba info` to quickly check your installation. If it worked, you will
    see the mamba logo.
 
