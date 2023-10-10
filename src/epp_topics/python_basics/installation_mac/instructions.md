@@ -1,6 +1,6 @@
 # Installing Python on Mac
 
-There are many different ways to install the Python language and Python packages. Below
+There are many different ways to install the Python language and Python packages. Below,
 we provide one way that works well for everything we need in the class. Please stick
 exactly to the instructions unless you know what you are doing and are absolutely sure
 you will never need any help from us.
@@ -25,7 +25,7 @@ Intel processors you will find that it says "Intel" in the Processor/Chip sectio
 
 ![processor_intel](processor_intel.png)
 
-and for Apple processors you will find that is says "Apple M1" or "Apple M2":
+and for Apple processors you will find that it says "Apple M1" or "Apple M2":
 
 ![processor_apple](processor_apple.png)
 
@@ -80,7 +80,7 @@ and for Apple processors you will find that is says "Apple M1" or "Apple M2":
 The course environment is a collection of packages that we need for the class. Some of
 those packages are not included in the standard anaconda distribution.
 
-Later in the course you will learn many benefits of using virtual environments. Until
+Later in the course, you will learn many benefits of using virtual environments. Until
 then, believe us they are a good idea.
 
 You start by downloading the
@@ -92,7 +92,7 @@ download:`course environment <../environment.yml>`
 ```
 
 1. As before, open your Terminal in the directory where you chose to save the course
-   environment. You can use `pwd` to find out where you are and `ls` verify that the
+   environment. You can use `pwd` to find out where you are and `ls` to verify that the
    file is where you expect it to be.
 
    ![8_show.png](8_show.png)
