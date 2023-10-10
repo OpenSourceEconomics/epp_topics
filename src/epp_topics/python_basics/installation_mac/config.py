@@ -6,7 +6,6 @@ SITE_CONTENTS = {
         # "existing figures etc.",
         "0_download.png",
         "1_cd.png",
-        "1_cd.png",
         "2_bash.png",
         "3_accept.png",
         "4_location.png",
