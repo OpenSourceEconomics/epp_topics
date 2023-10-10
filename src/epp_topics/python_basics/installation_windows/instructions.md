@@ -24,29 +24,30 @@ and Download the Windows x86_64 version of the installer in your Downloads folde
 
 ![0_download](0_download.png)
 
-Navigate to the dowload folder and double click on the Miniforge3 installer
+Navigate to the Dowloads folder and double click on the Miniforge3 installer
 
 ![1_cd.png](1_cd.png)
 
-In case Microsoft Defender tries to block the installation, click on "run anyway"
+In case Microsoft Defender tries to block the installation, click on "Run anyway"
 
 ![2_runanyway.png](2_runanyway.png)
 
-Then you will have to agree to the terms and conditions and click "next" several times
-until you get to a radio button.
+Then you will have to agree to the terms and conditions and click "Next" several times
+until you get to a radio button. Note that during these steps, you shouldn't change any
+of the default settings.
 
 ![3_installation.png](3_installation.png) ![4_installation.png](4_installation.png)
 ![5_installation.png](5_installation.png) ![6_installation.png](6_installation.png)
 
-Once you get to the radio button, select all the options and click on "install".
+Once you get to the radio button, select all the options and click on "Install".
 
 ![7_installation_path.png](7_installation_path.png)
 
-Wait until the installation is complete and finalize it by clicking "next" and "finish".
+Wait until the installation is complete and finalize it by clicking "Next" and "Finish".
 
 ![8_installation.png](8_installation.png) ![9_installation.png](9_installation.png)
 
-Before you can use mamba, **you need to restart your terminal!**. After the restart you
+Before you can use mamba, **you need to restart your terminal!** After the restart you
 can type `mamba info` to quickly check your installation. If it worked, you will see the
 mamba logo.
 
@@ -79,7 +80,7 @@ terminal and take a while. Do not interrupt it or close the terminal.
 
 ![12_mambaenvcreate.png](12_mambaenvcreate.png)
 
-When environment creation is finished, it will give you the commands to activate the
+When the environment creation is finished, it will give you the commands to activate the
 environment.
 
 ![13_done.png](13_done.png)
@@ -92,6 +93,8 @@ prompt. This is done by typing `cmd` in the console.
 
 ![14_cmd.png](14_cmd.png)
 
-Then you can activate the environment by typing `conda activate epp`
+Then you can activate the environment by typing `conda activate epp`. The console shows
+that the enviroment is active by showing the name of the enviroment in parenthesis
+before the directory you are currently in.
 
 ![15_activate.png](15_activate.png)
