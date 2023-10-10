@@ -97,4 +97,4 @@ Then you can activate the environment by typing `conda activate epp`. The consol
 that the enviroment is active by showing the name of the enviroment in parenthesis
 before the directory you are currently in.
 
-![15_activate.png](15_activate.png)
+![15_activate_epp.png](15_activate_epp.png)
