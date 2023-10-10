@@ -1,6 +1,6 @@
 # Installing Python on Linux
 
-There are many different ways to install the Python language and Python packages. Below
+There are many different ways to install the Python language and Python packages. Below, 
 we provide one way that works well for everything we need in the class. Please stick
 exactly to the instructions unless you know what you are doing and are absolutely sure
 you will never need any help from us.
@@ -11,7 +11,7 @@ according to the instructions.
 
 We will cover the following topics:
 
-1. How to install **mamba**: Mamba is a fast package manager that will install the
+1. How to install **mamba**: Mamba is a fast package manager that will install 
    everything else. We install it via miniforge.
 1. How to create the **course environment**: The course environment is a collection of
    Python packages that we will need for the course.
@@ -33,18 +33,18 @@ Type `bash Miniforge3-Linux-x86_64.sh` and hit enter.
 
 ![2_bash.png](2_bash.png)
 
-Then you will have to hit enter several times more until you get to the license
+Then, you will have to hit enter several times more until you get to the license
 agreement. Type `yes` and hit enter again.
 
 ![3_accept.png](3_accept.png)
 
-Next you can choose the location where miniforge should be installed. This should be a
+Next, you can choose the location where miniforge should be installed. This should be a
 path with no spaces or special characters in it. As long as your username does not
 contain such characters, you should go with the default.
 
 ![4_location.png](4_location.png)
 
-Next you will be asked whether you want to run `conda init`. Type `yes` and hit enter.
+Next, you will be asked whether you want to run `conda init`. Type `yes` and hit enter.
 
 ![5_conda_init.png](5_conda_init.png)
 
@@ -52,8 +52,8 @@ After a while, your screen should look like this.
 
 ![6_done.png](6_done.png)
 
-Before you can use mamba, **you need to restart your terminal!**. After the restart you
-can type `mamba info` quickly check your installation. If it worked, you will see the
+Before you can use mamba, **you need to restart your terminal!**. After the restart, you
+can type `mamba info` to quickly check your installation. If it worked, you will see the
 mamba logo.
 
 ![7_mamba_info.png](7_mamba_info.png)
@@ -63,7 +63,7 @@ mamba logo.
 The course environment is a collection of packages that we need for the class. Some of
 those packages are not included in the standard anaconda distribution.
 
-Later in the course you will learn many benefits of using virtual environments. Until
+Later in the course, you will learn many benefits of using virtual environments. Until
 then, believe us they are a good idea.
 
 You start by downloading the
@@ -75,7 +75,7 @@ download:`course environment <../environment.yml>`
 ```
 
 As before, open your Terminal in the directory where you chose to save the course
-environment. You can use `pwd` to find out where you are and `ls` verify that the file
+environment. You can use `pwd` to find out where you are and `ls` to verify that the file
 is where you expect it to be.
 
 ![8_show.png](8_show.png)
