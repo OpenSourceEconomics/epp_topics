@@ -15,6 +15,8 @@ We will cover the following topics:
    everything else. We install it via Miniforge.
 1. How to create the **course environment**: The course environment is a collection of
    Python packages that we will need for the course.
+1. Troubleshooting: Windows is the most problematic operating system and sometimes
+   requires a few extra steps to get everything working.
 
 ## Installing mamba
 
@@ -96,3 +98,11 @@ that the environment is active by showing the name of the environment in parenth
 before the directory you are currently in.
 
 ![15_activate_epp.png](15_activate_epp.png)
+
+
+## Troubleshooting
+
+- If mamba or conda are not recognized as commands in the powershell, do the following:
+   - open a Powershell as administrator and execute `set-executionpolicy remotesigned`
+   - close and re-open Powershell
+   - execute `conda init`
