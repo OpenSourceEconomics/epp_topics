@@ -102,7 +102,18 @@ before the directory you are currently in.
 
 ## Troubleshooting
 
-- If mamba or conda are not recognized as commands in the powershell, do the following:
-   - open a Powershell as administrator and execute `set-executionpolicy remotesigned`
-   - close and re-open Powershell
-   - execute `conda init`
+If mamba or conda are not recognized as commands in the powershell, do the following:
+
+1. open a Powershell as administrator and execute
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
+
+2. close and re-open Powershell
+
+3. execute
+
+```bash
+conda init
+```
