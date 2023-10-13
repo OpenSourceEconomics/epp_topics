@@ -95,7 +95,13 @@ for c in CHAPTER_NAMES:
         },
     )
 
-for fn in ["_config.yml", "landing-page.md", "ose-logo.png", "references.bib"]:
+for fn in [
+    "_config.yml",
+    "landing-page.md",
+    "ose-logo.png",
+    "references.bib",
+    "_static",
+]:
     all_orig_sources.append(orig := SRC / fn)
     all_site_sources.append(prod := SITE_SOURCE_DIR / fn)
 
@@ -127,6 +133,12 @@ for fn in ["_config.yml", "landing-page.md", "ose-logo.png", "references.bib"]:
                     default_flow_style=False,
                     sort_keys=False,
                 )
+        elif orig.name == "_static":
+            shutil.copytree(
+                orig,
+                prod,
+                dirs_exist_ok=True,
+            )
         else:
             shutil.copy(orig, prod)
 
