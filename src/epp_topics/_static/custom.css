@@ -1,6 +1,10 @@
 /* Set colors for light theme - very light green */
 
 
+[data-theme='light'] .bd-sidebar-secondary {
+    background-color: #EDF8EC !important;
+}
+
 [data-theme='light'] .bd-sidebar-primary {
     background-color: #EDF8EC !important;
 }
@@ -17,6 +21,9 @@
 
 /* Set colors for dark theme - very dark green */
 
+[data-theme='dark'] .bd-sidebar-secondary {
+    background-color: #383E37 !important;
+}
 
 [data-theme='dark'] .bd-sidebar-primary {
     background-color: #383E37 !important;
