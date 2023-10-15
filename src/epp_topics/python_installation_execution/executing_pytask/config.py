@@ -8,5 +8,5 @@ SITE_CONTENTS = {
         "screencast/public/run_1.png",
         "screencast/public/run_2.png",
     ),
-    "built": ("python_basics-executing_pytask.pdf",),
+    "built": ("python_installation_execution-executing_pytask.pdf",),
 }

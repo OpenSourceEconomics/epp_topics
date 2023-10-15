@@ -10,5 +10,5 @@ SITE_CONTENTS = {
         "screencast/public/command_select_interpreter.png",
         "screencast/public/ipynb_file.png",
     ),
-    "built": ("python_basics-executing_notebook_vscode.pdf",),
+    "built": ("python_installation_execution-executing_notebook_vscode.pdf",),
 }

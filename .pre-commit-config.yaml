@@ -45,8 +45,7 @@ repos:
     rev: v0.0.291
     hooks:
       - id: ruff
-      #   args:
-      #     - --verbose
+        args: [--ignore=PLR2004]
   - repo: https://github.com/kynan/nbstripout
     rev: 0.6.1
     hooks:

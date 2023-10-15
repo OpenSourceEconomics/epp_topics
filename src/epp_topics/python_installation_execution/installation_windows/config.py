@@ -18,8 +18,11 @@ SITE_CONTENTS = {
         "11_show.png",
         "12_mambaenvcreate.png",
         "13_done.png",
-        "14_cmd.png",
-        "15_activate_epp.png",
+        "14_activate_epp.png",
+        "15_conda_info.png",
+        "16_execution_policy.png",
+        "17_conda_init.png",
+        "18_cmd.png",
     ),
     "built": (
         # "screencast slides etc.",

@@ -9,5 +9,5 @@ SITE_CONTENTS = {
         "screencast/public/notebook.png",
         "screencast/public/starting_page.png",
     ),
-    "built": ("python_basics-executing_notebook_browser.pdf",),
+    "built": ("python_installation_execution-executing_notebook_browser.pdf",),
 }
