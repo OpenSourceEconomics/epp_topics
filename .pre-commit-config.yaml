@@ -45,8 +45,6 @@ repos:
     rev: v0.0.291
     hooks:
       - id: ruff
-      #   args:
-      #     - --verbose
   - repo: https://github.com/kynan/nbstripout
     rev: 0.6.1
     hooks:
@@ -68,7 +66,7 @@ repos:
       - id: mdformat
         additional_dependencies: [mdformat-myst, mdformat-black]
         args: [--wrap, '88']
-        exclude: slides.md
+        exclude: slides.md|instructions.md
   - repo: https://github.com/asottile/setup-cfg-fmt
     rev: v2.4.0
     hooks:

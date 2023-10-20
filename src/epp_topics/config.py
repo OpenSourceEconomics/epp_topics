@@ -14,6 +14,7 @@ CHAPTER_NAMES = [
     "background",
     "tools",
     "git",
+    "python_installation_execution",
     "python_basics",
     "pandas",
     "projects",
