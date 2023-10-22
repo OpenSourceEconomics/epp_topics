@@ -29,11 +29,15 @@ from epp_topics.python_installation_execution.installation_mac import (
 from epp_topics.python_installation_execution.installation_windows import (
     SITE_CONTENTS as INSTALLATION_WINDOWS,
 )
+from epp_topics.python_installation_execution.installation_windows import (
+    SITE_CONTENTS as INSTALLATION_WSL,
+)
 
 TOPICS = [
     INSTALLATION_LINUX,
     INSTALLATION_MAC,
     INSTALLATION_WINDOWS,
+    INSTALLATION_WSL,
     EXECUTING_NOTEBOOK_BROWSER,
     EXECUTING_NOTEBOOK_VSCODE,
     EXECUTING_PY_SHELL,
