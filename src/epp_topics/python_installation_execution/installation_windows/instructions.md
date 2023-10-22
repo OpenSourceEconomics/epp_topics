@@ -18,6 +18,14 @@ We will cover the following topics:
 1. Troubleshooting: Windows is the most problematic operating system and sometimes
    requires a few extra steps to get everything working.
 
+Finally, if you have worked with Windows before and are not a big fan of the
+issues that come with its shell and sometimes with its compatibility with Python, you can
+check out the WSL installation guide in this course. This guide
+is an alternative to installing Python on Windows, and it will allow you to use a Linux
+distribution to run your Python code using a Virtual Machine. We recommend this approach
+to those of you who are already a bit "tech-savy" and are familiar with working with
+shells and conda environments.
+
 ## Installing mamba
 
 1. Go to
@@ -115,18 +123,15 @@ Follow this section's instructions if mamba or conda are not recognized as comma
 
 To fix this you will need to activate conda in the powershell through the conda prompt.
 
-1. First, open the windows search and search for "conda prompt".
-
-   ![]()
-
-   After opening the conda prompt you need to type:
+1. First, open the windows search and search for "conda prompt". Open the conda prompt.
+   After opening the conda prompt type:
       ```bash
       conda init powershell
       ```
 
 1. After this command finishes running, you can close the Conda prompt, open PowerShell
-(by opening Terminal) and try activating the environment with
-```conda activate epp_topics``` again, as described above.
+   (by opening Terminal) and try activating the environment with
+   ```conda activate epp_topics``` again, as described above.
 
 ## Troubleshooting 2
 
@@ -137,7 +142,7 @@ PS in the Terminal line).
 
 You can check if this is the issue you are experiencing by typing conda info.
 
-|[]()
+![21_conda_empty.png](21_conda_empty.png)
 
 If you get the same output as above, and your active environment reads none as above,
 then do the following.
