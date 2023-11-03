@@ -29,7 +29,7 @@ from epp_topics.python_installation_execution.installation_mac import (
 from epp_topics.python_installation_execution.installation_windows import (
     SITE_CONTENTS as INSTALLATION_WINDOWS,
 )
-from epp_topics.python_installation_execution.installation_windows import (
+from epp_topics.python_installation_execution.installation_wsl import (
     SITE_CONTENTS as INSTALLATION_WSL,
 )
 
