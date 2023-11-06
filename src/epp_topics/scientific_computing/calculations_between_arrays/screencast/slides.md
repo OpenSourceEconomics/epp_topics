@@ -20,7 +20,7 @@ defaults:
 
 # Scientific Computing
 
-### Mathematical functions
+### Calculations between arrays
 
 <br/>
 

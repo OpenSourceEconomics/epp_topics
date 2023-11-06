@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("scientific_computing-math_functions.pdf",),
+    "built": ("scientific_computing-calculations_on_arrays.pdf",),
 }
