@@ -20,7 +20,7 @@ defaults:
 
 # Scientific Computing
 
-### Vectorization and broadcasting
+### Broadcasting
 
 <br/>
 

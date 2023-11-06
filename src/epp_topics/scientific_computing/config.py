@@ -1,6 +1,9 @@
 """Definitions of source files for the current chapter."""
 import itertools
 
+from epp_topics.scientific_computing.broadcasting import (
+    SITE_CONTENTS as BROADCASTING,
+)
 from epp_topics.scientific_computing.calculations_between_arrays import (
     SITE_CONTENTS as CALCULATIONS_BETWEEN_ARRAYS,
 )
@@ -12,9 +15,6 @@ from epp_topics.scientific_computing.creating_arrays import (
 )
 from epp_topics.scientific_computing.indexing import SITE_CONTENTS as INDEXING
 from epp_topics.scientific_computing.randomness import SITE_CONTENTS as RANDOMNESS
-from epp_topics.scientific_computing.vectorization_and_broadcasting import (
-    SITE_CONTENTS as VECTORIZATION_AND_BROADCASTING,
-)
 from epp_topics.scientific_computing.what_is_numpy import SITE_CONTENTS as WHAT_IS_NUMPY
 from epp_topics.scientific_computing.what_is_scipy import SITE_CONTENTS as WHAT_IS_SCIPY
 
@@ -25,7 +25,7 @@ TOPICS = [
     CALCULATIONS_ON_ARRAYS,
     CALCULATIONS_BETWEEN_ARRAYS,
     RANDOMNESS,
-    VECTORIZATION_AND_BROADCASTING,
+    BROADCASTING,
     WHAT_IS_SCIPY,
 ]
 
