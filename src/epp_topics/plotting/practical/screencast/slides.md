@@ -29,7 +29,24 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Some Content
+# Why we use plotly in class
 
-- First bullet
-- Second bullet
+- Interactive plots work out of the box
+- Supports all relevant output formats:
+    - Interactive dashboards
+    - HTML
+    - static image formats
+- Also available in R and Julia
+
+
+---
+
+# Windows Issues
+
+- On some windows computers, the static export gets stuck
+- A workaround is to install and old version of kaleido
+
+```txt
+pip install kaleido==0.1.0.post1
+```
+- You need to do this after activating your environment!
