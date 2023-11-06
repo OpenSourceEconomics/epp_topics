@@ -2,9 +2,11 @@
 import itertools
 
 from epp_topics.plotting.background import SITE_CONTENTS as BACKGROUND
+from epp_topics.plotting.practical import SITE_CONTENTS as PRACTICAL
 
 TOPICS = [
     BACKGROUND,
+    PRACTICAL,
 ]
 
 
