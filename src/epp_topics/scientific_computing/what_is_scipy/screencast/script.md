@@ -1,1 +1,0 @@
-# Script: What is scipy?

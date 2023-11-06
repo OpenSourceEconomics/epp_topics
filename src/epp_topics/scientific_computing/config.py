@@ -16,7 +16,6 @@ from epp_topics.scientific_computing.creating_arrays import (
 from epp_topics.scientific_computing.indexing import SITE_CONTENTS as INDEXING
 from epp_topics.scientific_computing.randomness import SITE_CONTENTS as RANDOMNESS
 from epp_topics.scientific_computing.what_is_numpy import SITE_CONTENTS as WHAT_IS_NUMPY
-from epp_topics.scientific_computing.what_is_scipy import SITE_CONTENTS as WHAT_IS_SCIPY
 
 TOPICS = [
     WHAT_IS_NUMPY,
@@ -26,7 +25,6 @@ TOPICS = [
     CALCULATIONS_BETWEEN_ARRAYS,
     RANDOMNESS,
     BROADCASTING,
-    WHAT_IS_SCIPY,
 ]
 
 
