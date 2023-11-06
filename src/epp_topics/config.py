@@ -20,6 +20,7 @@ CHAPTER_NAMES = [
     "projects",
     "software_engineering",
     "texts",
+    "scientific_computing",
 ]
 
 
