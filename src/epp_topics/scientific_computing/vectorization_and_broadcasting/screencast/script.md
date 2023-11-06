@@ -1,0 +1,1 @@
+# Script: Vectorization and broadcasting
