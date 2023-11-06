@@ -29,7 +29,91 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Some Content
+# Two types of multiplication
 
-- First bullet
-- Second bullet
+<div class="flex gap-10">
+<div>
+
+```python
+>>> a = np.arange(4).reshape(2, 2)
+>>> b = np.linspace(0.1, 0.4, 4).reshape(2, 2)
+>>> b
+array([[0.1, 0.2],
+       [0.3, 0.4]])
+```
+
+```python
+>>> a * b
+array([[0. , 0.2],
+       [0.6, 1.2]])
+```
+
+```python
+>>> a @ b
+array([[0.3, 0.4],
+       [1.1, 1.6]])
+```
+
+```python
+>>> a.dot(b)
+array([[0.3, 0.4],
+       [1.1, 1.6]])
+```
+
+</div>
+<div>
+
+- `*` means elementwise multiplication
+- `@` and `.dot` mean matrix multiplication
+- Both generalize to high dimensions
+- They have different requirements on array shapes
+
+</div>
+</div>
+
+
+---
+layout: center
+---
+
+# Other operations between arrays
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+```python
+>>> a = np.arange(3)
+>>> b = np.ones(3)
+>>> a + b
+array([1., 2., 3.])
+```
+
+```python
+>>> a - b
+array([-1.,  0.,  1.])
+```
+
+```python
+>>> a / b
+array([0., 1., 2.])
+```
+
+```python
+>>> b / a
+array([inf, 1. , 0.5])
+```
+
+```python
+>>> a ** 2
+array([0, 1, 4])
+```
+
+</div>
+<div>
+
+- Addition, subtraction and division work as expected
+- Exponentiation uses `**`
+- Division by zero does not raise an error
+
+</div>
+</div>
