@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("plotting-background.pdf",),
+    "built": ("plotting-goals_workflow.pdf",),
 }

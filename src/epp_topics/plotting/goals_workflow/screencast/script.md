@@ -1,4 +1,4 @@
-# Script: Plotting background
+# Script: Goals and Workflow
 
 ## Typical Goals of Plotting
 
@@ -20,9 +20,12 @@
 
 ## Workflow
 
-- Sketching: Work out some details before worrying about syntax
--
+### 1. — 3.: goals setting
 
-## Example
+- As always in programming (or most areas of life): Make sure that you have a clear goal
+  and general feasibility in mind before worrying about precise details
+- In particular, use sketching to work out some details before worrying about syntax
 
-- Switch to "paper"
+### 4. — 6.: Implementation
+
+- Ofc, in case of exploratory plots, ending at 4. might be enough

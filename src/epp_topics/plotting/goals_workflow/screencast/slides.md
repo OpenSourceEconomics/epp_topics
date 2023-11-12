@@ -20,7 +20,8 @@ defaults:
 
 # Plotting
 
-### Background
+### Goals and Workflow
+
 
 <br/>
 
@@ -61,18 +62,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Workflow
 
-- Think: What question should the plot answer?
-- Sketch the plot on paper
-- Find a similar plot in the documentation of your plotting library
-- Make a quick plot to see if your ideas work
-- Make it pretty
-- Make sure the plot is self-explanatory (ask someone else)
-
----
-
-# Example
-
-- How does life expectancy develop ...
-  - ... over time since 1950?
-  - ... in different countries (Americas, Europe)?
-- Start by thinking about type of plot
+1. Think: What question should the plot answer? What type of information should it
+   convey?
+1. Sketch the plot on paper
+1. Find a similar plot in the documentation of your plotting library
+1. Make a quick plot to see if your ideas work
+1. Make it pretty
+1. Make sure the plot is self-explanatory (ask someone else)

@@ -1,12 +1,9 @@
 """Definitions of source files for the current chapter."""
 
 SITE_CONTENTS = {
-    "pages": (
-        "objectives_materials.ipynb",
-        "plotting_example.ipynb",
-    ),
+    "pages": ("objectives_materials.ipynb",),
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("plotting-practical.pdf",),
+    "built": ("plotting-why_plotly_prerequisites.pdf",),
 }
