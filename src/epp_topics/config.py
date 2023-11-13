@@ -17,10 +17,11 @@ CHAPTER_NAMES = [
     "python_installation_execution",
     "python_basics",
     "pandas",
+    "scientific_computing",
     "projects",
     "software_engineering",
     "texts",
-    "scientific_computing",
+    "plotting",
 ]
 
 
