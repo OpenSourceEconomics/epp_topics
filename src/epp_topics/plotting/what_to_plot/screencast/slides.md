@@ -29,6 +29,22 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# Reading list
+
+- [Calling Bullshit](https://www.callingbullshit.org/) (Carl Bergstrom &
+  Jevin West), Chapter 7
+- [How Charts Lie](http://www.thefunctionalart.com/p/reviews.html) (Alberto Cairo).
+- [Better Data
+  Visualizations](https://policyviz.com/pv_books/better-data-visualizations-a-guide-for-scholars-researchers-and-wonks/)
+  (Jonathan Schwabish)
+- [The Functional Art](http://www.thefunctionalart.com/p/about-book.html) (Alberto
+  Cairo)
+- [Show Me the Numbers](http://www.perceptualedge.com/library.php) (Stephen
+  Few)
+
+
+---
+
 # Data types (Schwabish)
 
 - Categorical

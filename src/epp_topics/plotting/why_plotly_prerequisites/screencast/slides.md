@@ -29,6 +29,19 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# Python plotting landscape
+
+Static plots:
+- matplotlib
+- seaborn
+
+Interactive plots:
+- vega-altair
+- bokeh
+- plotly
+
+---
+
 # Why we use plotly
 
 - Interactive plots work out of the box
