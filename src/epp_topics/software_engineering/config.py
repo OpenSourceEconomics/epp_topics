@@ -1,6 +1,9 @@
 """Definitions of source files for the current chapter."""
 import itertools
 
+from epp_topics.software_engineering.catching_errors import (
+    SITE_CONTENTS as CATCHING_ERRORS,
+)
 from epp_topics.software_engineering.idea_of_testing import (
     SITE_CONTENTS as IDEA_OF_TESTING,
 )
@@ -11,6 +14,9 @@ from epp_topics.software_engineering.pure_functions import (
 from epp_topics.software_engineering.pytest_error_handling import (
     SITE_CONTENTS as PYTEST_ERROR_HANDLING,
 )
+from epp_topics.software_engineering.raising_errors import (
+    SITE_CONTENTS as RAISING_ERRORS,
+)
 from epp_topics.software_engineering.reuse_test_code import (
     SITE_CONTENTS as REUSE_TEST_CODE,
 )
@@ -20,6 +26,9 @@ from epp_topics.software_engineering.what_and_how_to_test import (
 )
 from epp_topics.software_engineering.what_does_pytest_do import (
     SITE_CONTENTS as WHAT_DOES_PYTEST_DO,
+)
+from epp_topics.software_engineering.why_error_handling import (
+    SITE_CONTENTS as WHY_ERROR_HANDLING,
 )
 from epp_topics.software_engineering.writing_simple_pytests import (
     SITE_CONTENTS as WRITING_SIMPLE_PYTESTS,
@@ -35,6 +44,9 @@ TOPICS = [
     PYTEST_ERROR_HANDLING,
     WHAT_AND_HOW_TO_TEST,
     REUSE_TEST_CODE,
+    WHY_ERROR_HANDLING,
+    RAISING_ERRORS,
+    CATCHING_ERRORS,
 ]
 
 
