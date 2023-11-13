@@ -3,10 +3,10 @@
 SITE_CONTENTS = {
     "pages": (
         "objectives_materials.ipynb",
-        "plotting_example.ipynb",
+        "graph_objects_example.ipynb",
     ),
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("plotting-quick_plots_px.pdf",),
+    "built": ("plotting-graph_objects.pdf",),
 }

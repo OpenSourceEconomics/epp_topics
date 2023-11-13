@@ -20,7 +20,7 @@ defaults:
 
 # Plotting
 
-### Practical aspects of plotting with plotly
+### Customise plots created with plotly express
 
 <br/>
 
@@ -41,4 +41,5 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - Life expectancy over time in Europe and Americas
 - Trend for each country
+- Make plot easier to read
 - Highlight Poland and Canada
