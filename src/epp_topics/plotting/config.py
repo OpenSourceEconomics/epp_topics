@@ -3,7 +3,7 @@ import itertools
 
 from epp_topics.plotting.goals_workflow import SITE_CONTENTS as GOALS_WORKFLOW
 from epp_topics.plotting.graph_objects import SITE_CONTENTS as GRAPH_OBJECTS
-from epp_topics.plotting.quick_plots_px import SITE_CONTENTS as QUICK_PLOTS_PX
+from epp_topics.plotting.quick_plots import SITE_CONTENTS as QUICK_PLOTS
 from epp_topics.plotting.tweak_px import SITE_CONTENTS as TWEAK_PX
 from epp_topics.plotting.what_to_plot import SITE_CONTENTS as WHAT_TO_PLOT
 from epp_topics.plotting.why_plotly_prerequisites import (
@@ -14,7 +14,7 @@ TOPICS = [
     GOALS_WORKFLOW,
     WHAT_TO_PLOT,
     WHY_PLOTLY_PREREQUISITES,
-    QUICK_PLOTS_PX,
+    QUICK_PLOTS,
     TWEAK_PX,
     GRAPH_OBJECTS,
 ]
