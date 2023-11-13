@@ -8,5 +8,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("plotting-quick_plots_px.pdf",),
+    "built": ("plotting-graph_objects.pdf",),
 }
