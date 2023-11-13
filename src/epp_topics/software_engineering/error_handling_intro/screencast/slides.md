@@ -35,7 +35,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
   - Where did something go wrong?
   - What exactly went wrong?
   - Sometimes: How can you fix it
-- You might also have got some error messages that were not helpful at all
+- You might also have seen some error messages that were not helpful at all
 
 <br/>
 
