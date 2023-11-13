@@ -30,6 +30,9 @@ from epp_topics.software_engineering.what_does_pytest_do import (
 from epp_topics.software_engineering.why_error_handling import (
     SITE_CONTENTS as WHY_ERROR_HANDLING,
 )
+from epp_topics.software_engineering.worked_error_example import (
+    SITE_CONTENTS as WORKED_ERROR_EXAMPLE,
+)
 from epp_topics.software_engineering.writing_simple_pytests import (
     SITE_CONTENTS as WRITING_SIMPLE_PYTESTS,
 )
@@ -46,6 +49,7 @@ TOPICS = [
     REUSE_TEST_CODE,
     WHY_ERROR_HANDLING,
     RAISING_ERRORS,
+    WORKED_ERROR_EXAMPLE,
     CATCHING_ERRORS,
 ]
 
