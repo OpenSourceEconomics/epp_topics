@@ -4,6 +4,9 @@ import itertools
 from epp_topics.software_engineering.catching_errors import (
     SITE_CONTENTS as CATCHING_ERRORS,
 )
+from epp_topics.software_engineering.error_handling_intro import (
+    SITE_CONTENTS as WHY_ERROR_HANDLING,
+)
 from epp_topics.software_engineering.idea_of_testing import (
     SITE_CONTENTS as IDEA_OF_TESTING,
 )
@@ -26,9 +29,6 @@ from epp_topics.software_engineering.what_and_how_to_test import (
 )
 from epp_topics.software_engineering.what_does_pytest_do import (
     SITE_CONTENTS as WHAT_DOES_PYTEST_DO,
-)
-from epp_topics.software_engineering.why_error_handling import (
-    SITE_CONTENTS as WHY_ERROR_HANDLING,
 )
 from epp_topics.software_engineering.worked_error_example import (
     SITE_CONTENTS as WORKED_ERROR_EXAMPLE,

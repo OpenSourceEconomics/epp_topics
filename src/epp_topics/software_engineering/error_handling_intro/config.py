@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("software_engineering-why_error_handling.pdf",),
+    "built": ("software_engineering-error_handling_intro.pdf",),
 }

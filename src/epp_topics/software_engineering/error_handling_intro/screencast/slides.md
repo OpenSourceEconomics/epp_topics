@@ -20,7 +20,7 @@ defaults:
 
 # Software engineering
 
-### Why and where to raise errors
+### Error handling introduction
 
 <br/>
 
