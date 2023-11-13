@@ -29,7 +29,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# What is numpy
+# What is numpy?
 
 - Library providing:
   - Multidimensional arrays
@@ -80,10 +80,10 @@ dtype('float64')
 # Why are calculations on arrays fast?
 
 1. Homogeneous datatype:
-  - The datatype of all array elements is known
-  - Numpy can get same performance as statically type languages
+   - The datatype of all array elements is known
+   - Numpy can get same performance as statically type languages
 2. Contiguous memory layout:
-  - All array elements are physically stored next to each other in memory
-  - This can create enormous performance gains!
+   - All array elements are physically stored next to each other in memory
+   - This can create enormous performance gains!
 
 This holds for any language!

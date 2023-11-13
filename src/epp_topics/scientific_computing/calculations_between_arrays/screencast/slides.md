@@ -100,20 +100,21 @@ array([0., 1., 2.])
 
 ```python
 >>> b / a
+RuntimeWarning: divide by zero encountered in divide
 array([inf, 1. , 0.5])
 ```
 
 ```python
->>> a ** 2
-array([0, 1, 4])
+>>> (b * 2) ** a
+array([1., 2., 4.])
 ```
 
 </div>
 <div>
 
 - Addition, subtraction and division work as expected
-- Exponentiation uses `**`
 - Division by zero does not raise an error
+- Exponentiation uses `**`
 
 </div>
 </div>

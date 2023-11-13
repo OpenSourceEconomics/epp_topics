@@ -26,7 +26,7 @@ I would say the following:
 
 - No programming language can reach the physical performance limit of your processor if
   it does not know types or data is not stored contiguously.
-- Pure Python loops over arrays will also not fast
+- Pure Python loops over arrays will also not be fast
 - Using built-in numpy functions or using modern Python compilers together with numpy
   arrays will be about as fast as compiled languages. Optimized Python can definitely be
   faster than Julia, Fortran and other code written by economists.

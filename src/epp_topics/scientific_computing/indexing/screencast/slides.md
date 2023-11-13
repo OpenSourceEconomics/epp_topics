@@ -30,12 +30,12 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# What is indexing
+# What is indexing?
 
-- Remember: we can select elements of a list using something like `list[1: 3]`
-- Numpy uses the same syntax `arr[1: 3]`
+- Remember: we can select elements of a list using something like `list[1:3]`
+- Numpy uses the same syntax `arr[1:3]`
 - Numpy generalizes it in several ways:
-  - Indexing into mutli-dimensional arrays
+  - Indexing into multi-dimensional arrays
   - Boolean indexing
 
 ---
@@ -57,7 +57,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 ```
 
 ```python
->>> a[1: 3]
+>>> a[1:3]
 array([1, 2])
 ```
 ```python
@@ -85,7 +85,7 @@ array([0, 2, 4])
 - Single elements are not returned as array
 - Slices include lower bound and exclude upper bound
 - Lower or upper bound can be omitted
-- Last example: boolean indexing
+- Last example: Boolean indexing
 
 
 </div>
