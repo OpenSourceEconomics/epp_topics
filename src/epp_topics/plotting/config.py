@@ -2,13 +2,13 @@
 import itertools
 
 from epp_topics.plotting.goals_workflow import SITE_CONTENTS as GOALS_WORKFLOW
-from epp_topics.plotting.plotly_practice import SITE_CONTENTS as PLOTLY_PRACTICE
+from epp_topics.plotting.quick_plots_px import SITE_CONTENTS as QUICK_PLOTS_PX
 from epp_topics.plotting.what_to_plot import SITE_CONTENTS as WHAT_TO_PLOT
 from epp_topics.plotting.why_plotly_prerequisites import (
     SITE_CONTENTS as WHY_PLOTLY_PREREQUISITES,
 )
 
-TOPICS = [GOALS_WORKFLOW, WHAT_TO_PLOT, WHY_PLOTLY_PREREQUISITES, PLOTLY_PRACTICE]
+TOPICS = [GOALS_WORKFLOW, WHAT_TO_PLOT, WHY_PLOTLY_PREREQUISITES, QUICK_PLOTS_PX]
 
 
 SITE_CONTENTS = {
