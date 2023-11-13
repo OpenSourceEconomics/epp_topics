@@ -1,45 +1,26 @@
-# Script: Plotting practical
+# Script: Practical aspects of plotting with plotly
 
 ## Plot entire data
 
-- Start with:
+- Start with slides
+- Then Chromium, https://plotly.com/python open
+- check gallery and click on line charts, go to second cell
+- Then notebook, click through first cells
+- Note that line takes same keyword arguments as backend
 
-```py
-px.line(
-    all_countries,
-    x="year",
-    y="lifeExp",
-    title='Life Expectancy by Continent and Country',
-)
-```
+## Facet cols
 
-- add `color="country"` only later
+- Copy pandas backend stuff, convert to `px.line`
+- Back to Chromium, look for facet cols
+- Copy from there, replace by continent
 
-## Creating subplots by facet columns
+## Overall appearance
 
-- Copy from previous cell, insert
-
-```py
-facet_col="continent",
-```
-
-- Show interactivity by clicking on countries.
-
-## Restrict data to Canada and Poland
-
-- Move towards publication-style
-- Copy first cell again
-
-## Changing overall appearance
-
-- Copy from previous cell, insert
-
-```py
-    # some templates: "plotly", "plotly_dark", "ggplot2", "seaborn", "simple_white"
-    template="plotly_dark",
-```
+- Presentation mode: Larger font, thicker lines, no axes
+- Removing legend would make sense here
+- Go to Chromium, look for "Customizing Subplot Figure Titles"
 
 ## Graph objects
 
-- For publication-level graphs often not enough to use out-of-the-box functionality
-- Purpose: Show these exist, idea of what you can do with them
+- Goal: Highlight Poland and Canada
+- Just go through stuff slowly

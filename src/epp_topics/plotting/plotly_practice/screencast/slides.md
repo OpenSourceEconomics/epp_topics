@@ -34,3 +34,11 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - As Pandas backend
 - High-level interface: `plotly.express` (`px`)
 - Low-level interface: `plotly.graph_objects` (`go`)
+
+---
+
+# What to plot?
+
+- Life expectancy over time in Europe and Americas
+- Trend for each country
+- Highlight Poland and Canada

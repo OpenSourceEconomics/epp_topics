@@ -58,7 +58,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Some rough guidelines
+# Some (too) simple recipes
 
 - Raw data (continuous): Scatterplots
 - Fractions of categorical / discrete variables: Bar charts, potentially stacked
