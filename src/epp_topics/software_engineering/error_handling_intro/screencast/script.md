@@ -4,11 +4,6 @@ This screencast has the following goals
 
 - Motivate why good error handling is important
 - Show the running example
-- Make them think about which errors to handle
-
-I thought about splitting it and adding more details for each part but I can't possibly
-make them watch more than three screencasts on error handling and I think they still
-have a reasonable length.
 
 ## Motivation
 
