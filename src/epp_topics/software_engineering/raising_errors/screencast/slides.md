@@ -20,7 +20,7 @@ defaults:
 
 # Software engineering
 
-### How to raise errors
+### How to raise errors?
 
 <br/>
 
@@ -135,7 +135,7 @@ def _fail_if_list_of_wrong_types(data):
 
 - If you have multiple errors, it is annoying to solve them one by one
 - If possible, collect multiple errors before raising
-- Don't go to far!
+- Don't go too far!
 
 
 </div>

@@ -1,1 +1,1 @@
-# Script: Which errors to handle
+# Script: Which errors to handle?

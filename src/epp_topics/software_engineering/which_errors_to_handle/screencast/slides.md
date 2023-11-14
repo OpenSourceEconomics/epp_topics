@@ -20,12 +20,41 @@ defaults:
 
 # Software engineering
 
-### Which errors to handle
+### Which errors to handle?
 
 <br/>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
+
+---
+
+# Reminder of Example
+
+
+```python
+def create_markdown_table(data):
+    """Create a markdown table from a list of dictionaries or a dictionary of lists.
+
+    """
+    if isinstance(data, dict):
+        lod = convert_dol_to_lod(data)
+    else:
+        lod = data
+
+    keys = list(lod[0])
+
+    lines = [
+        _create_header(keys),
+        _create_separator(len(keys)),
+    ]
+
+    for row in lod:
+        lines.append(_create_data_row(row))
+
+    return "\n".join(lines)
+```
+
 
 ---
 
@@ -37,7 +66,7 @@ handling
 - So what could go wrong with `data`?
   - `data` is neither a list nor a dict
   - `data` is a dict but contains values that are not lists
-  - `data` is a dict of list but the list have unequal length
+  - `data` is a dict of lists but the lists have different lengths
   - `data` is a list, but contains entries that are not dicts
   - `data` is a list of dicts but the dicts have different keys
 
@@ -52,13 +81,13 @@ handling
 
 ---
 
-# Where to handle errors in the example
+# Where to handle errors in the example?
 
 - in `create_markdown_table`
   - `data` is neither a list nor a dict
 - in `convert_dol_to_lod`:
   - `data` is a dict but contains values that are not lists
-  - `data` is a dict of list but the list have unequal length
-- in a function that also gets called in `convert_lod_to_dol`
+  - `data` is a dict of lists but the lists have different lengths
+- in `create_markdown_table`, branch of if-statement that gets called if data is a list:
   - `data` is a list, but contains entries that are not dicts
   - `data` is a list of dicts but the dicts have different keys

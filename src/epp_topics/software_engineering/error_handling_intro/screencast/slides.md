@@ -20,7 +20,7 @@ defaults:
 
 # Software engineering
 
-### Error handling introduction
+### Introduction to error handling
 
 <br/>
 
@@ -39,7 +39,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <br/>
 
-In this section, you will learn how to add great error handling to your code
+Goal: Learn how to add great error handling to your code
 
 
 ---
@@ -51,12 +51,12 @@ In this section, you will learn how to add great error handling to your code
 
 ```python
 def create_markdown_table(data):
-    """Create a markdown table from a list
-    of dictionaries or dictionary of lists.
+    """Create a markdown table from a list of
+    dictionaries or a dictionary of lists.
 
     """
     if isinstance(data, dict):
-        lod = convert_dol_to_lod(data):
+        lod = convert_dol_to_lod(data)
     else:
         lod = data
 

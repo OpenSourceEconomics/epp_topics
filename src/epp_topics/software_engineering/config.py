@@ -2,7 +2,7 @@
 import itertools
 
 from epp_topics.software_engineering.error_handling_intro import (
-    SITE_CONTENTS as WHY_ERROR_HANDLING,
+    SITE_CONTENTS as ERROR_HANDLING_INTRO,
 )
 from epp_topics.software_engineering.idea_of_testing import (
     SITE_CONTENTS as IDEA_OF_TESTING,
@@ -47,7 +47,7 @@ TOPICS = [
     PYTEST_ERROR_HANDLING,
     WHAT_AND_HOW_TO_TEST,
     REUSE_TEST_CODE,
-    WHY_ERROR_HANDLING,
+    ERROR_HANDLING_INTRO,
     WHICH_ERRORS_TO_HANDLE,
     RAISING_ERRORS,
     WORKED_ERROR_EXAMPLE,

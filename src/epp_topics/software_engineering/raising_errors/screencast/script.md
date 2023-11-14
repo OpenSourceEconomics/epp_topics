@@ -1,4 +1,4 @@
-# Script: How to raise errors
+# Script: How to raise errors?
 
 ## Raising a built-in exception
 
