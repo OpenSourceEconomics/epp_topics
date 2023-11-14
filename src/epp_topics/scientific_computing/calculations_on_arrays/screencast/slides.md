@@ -31,7 +31,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Mathematical functions
 
-<div class="grid grid-cols-2 gap-4">
+<div class="flex gap-12">
 <div>
 
 ```python
@@ -77,23 +77,24 @@ array([0.84147098, 0.99749499, 0.90929743])
 
 ```python
 >>> a = np.array([[1, 2], [3, 4]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+```
+
+```python
 >>> a.mean()
 2.5
 ```
 
 ```python
->>> a.prod()
-24
+>>> a.std()
+1.118033988749895
 ```
 
 ```python
 >>> a.sum()
 10
-```
-
-```python
->>> a.std()
-1.118033988749895
 ```
 
 ```python

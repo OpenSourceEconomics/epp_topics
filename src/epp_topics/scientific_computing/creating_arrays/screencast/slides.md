@@ -42,8 +42,8 @@ array([1, 2, 3, 4])
 Nested list
 ```python
 >>> np.array([[1, 2], [3, 4])
-array([[1. , 2. ],
-       [3, 4. ]])
+array([[1, 2],
+       [3, 4]])
 ```
 Mixed dtypes in list
 ```python
@@ -183,7 +183,7 @@ array([[1, 1],
 </div>
 <div>
 
-- Repeat duplicates elements n times
+- `repeat` duplicates elements n times
 - Without axis, result is flattened
 - Versatile together with reshaping
 - Tip for complex cases:

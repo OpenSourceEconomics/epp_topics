@@ -43,7 +43,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Creating random numbers
 
 
-<div class="grid grid-cols-2 gap-4">
+<div class="flex gap-12">
 <div>
 
 ```python

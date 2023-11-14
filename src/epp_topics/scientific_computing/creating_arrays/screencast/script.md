@@ -6,8 +6,8 @@ Mention that creating arrays is very important for creating test inputs for func
 
 - `np.ones_like(a, ...)` Return an array of ones with the same shape and type as a given
   array
-- `np.full(shape, fill_value, ...)`\[source\] Return a new array of given shape and
-  type, filled with fill_value
+- `np.full(shape, fill_value, ...)` Return a new array of given shape and type, filled
+  with fill_value
 
 ## Reshaping
 
