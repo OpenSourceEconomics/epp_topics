@@ -26,10 +26,3 @@ defaults:
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
-
----
-
-# Some Content
-
-- First bullet
-- Second bullet
