@@ -22,6 +22,7 @@ CHAPTER_NAMES = [
     "software_engineering",
     "texts",
     "plotting",
+    "debugging",
 ]
 
 
