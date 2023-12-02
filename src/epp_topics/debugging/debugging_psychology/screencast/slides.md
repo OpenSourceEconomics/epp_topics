@@ -20,7 +20,7 @@ defaults:
 
 # Debugging
 
-### Psychology of debugging
+### (Armchair) Psychology of debugging
 
 <br/>
 
@@ -33,13 +33,13 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 
 > Tracebacks are long and not always helpful, so most people have the urge to skip
-> them. Similarly, it takes a lot of effort to thoroughly read code line by line
+> them. Similarly, it takes a lot of effort to thoroughly read code line by line.
 
 <br/>
 
 - Read tracebacks until you
-  - Know in which line the error ocurred
-  - Have found the type of error that ocurred
+  - Know in which line (of your code) the error occurred
+  - Have found the type of error that occurred
   - Have read the message at the end of the traceback
 - When you located a bug to less than 30 lines of code
   - Read every line and explain to someone what it does
@@ -49,13 +49,14 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # The urge to just run it again
 
-> When code does not run, there is a tendency to just execute it again
+> When code does not run, there is a tendency to just execute it again.
 
 <br/>
 
 - Computers are deterministic
 - If you run the same code twice, it produces the same result
-- If it does not runs the first time but it runs the second time, you have a way bigger problem than before!
+- If it does not run the first time but it runs the second time, you have a way bigger
+  problem than you thought!
 
 
 ---
@@ -75,8 +76,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # The urge to try out things
 
-> Errors are stressful, we want them to go away. So there is a tendency to make a
-> any changes that could fix errors.
+> Errors are stressful, we want them to go away. So there is a tendency to make a any
+> changes that could fix errors.
 
 <br/>
 
@@ -88,12 +89,14 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # The urge to blame libraries
 
-> We thought our code was correct, so there is a tendency to blame problems on
-> python itself, libraries or library versions
+> We thought our code was correct, so there is a tendency to blame problems on Python
+> itself, libraries, or library versions
 
 <br/>
 
-- Most libraries we use are well tested and written by better programmers than you are
-- Some are used so much that any bug would have found by someone else first
+- Most libraries we use are
+  - well tested
+  - written by far by better programmers than us
+- Many used so much that any bug would have already been found by someone else
 - Until you have a lot of evidence to the contrary, assume libraries are correct
 - If you find a bug in a library, report it to the authors!

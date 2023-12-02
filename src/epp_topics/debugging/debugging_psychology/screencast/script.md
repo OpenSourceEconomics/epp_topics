@@ -1,4 +1,4 @@
-# Script: Psychology of debugging
+# Script: (Armchair) Psychology of debugging
 
 I like Agan's rules and think they cover most of what I will cover here to some extent.
 The idea of this screencast is to paint more vivid pictures and help students to

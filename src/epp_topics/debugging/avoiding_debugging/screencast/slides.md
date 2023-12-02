@@ -29,6 +29,21 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# How editors avoid debugging
+
+- Code highlighting shows differences between
+  - variables / functions
+  - built-in statements
+  - string literals
+  - comments
+- Syntax checkers flag
+  - spelling errors
+  - undefined variables
+  - syntax errors
+
+
+---
+
 # How unit tests avoid debugging
 
 - If your function is thoroughly tested:
@@ -42,7 +57,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# How error handling can avoid debugging
+# How error handling avoids debugging
 
 - If your function does thorough error handling
   - It will complain when called with invalid inputs
@@ -56,7 +71,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # How readability avoids debugging
 
 - If you write readable modular code
-  - All functions have a clear purpose, so it is easy to see whether they do what they should
+  - All functions have a clear purpose, so it is easy to see whether they do what they
+    should
   - Variable names are informative about content
   - You can easily simulate in your head what the code does
 - Problem:
