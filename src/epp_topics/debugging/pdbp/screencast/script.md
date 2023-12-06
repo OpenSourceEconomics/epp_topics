@@ -1,4 +1,4 @@
-# Script: Using the pdbp debugger
+# Script: Using the Pdb+ debugger
 
 ## Setting a breakpoint
 

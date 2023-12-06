@@ -20,7 +20,7 @@ defaults:
 
 # Debugging
 
-### Using the pdbp debugger
+### Using the Pdb+ debugger
 
 <br/>
 
@@ -79,6 +79,7 @@ def cobb_douglas(x1, x2, gamma1, gamma2, a):
 | `s`      | Execute the next **s**tep                       |
 | `c`      | **c**ontinue until the next breakpoint          |
 | `u`      | Go one frame **u**p (go backwards through code) |
+| `d`      | Go **d**own one frame (go forward through code) |
 | `exit`   | Stop the debugging (also `ctrl + d`)            |
 
 
