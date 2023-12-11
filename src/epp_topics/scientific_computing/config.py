@@ -23,9 +23,6 @@ from epp_topics.scientific_computing.jax_intro import (
 from epp_topics.scientific_computing.optimization_algorithms import (
     SITE_CONTENTS as OPTIMIZATION_ALGORITHMS,
 )
-from epp_topics.scientific_computing.optimization_guidelines import (
-    SITE_CONTENTS as OPTIMIZATION_GUIDELINES,
-)
 from epp_topics.scientific_computing.optimization_histories import (
     SITE_CONTENTS as OPTIMIZATION_HISTORIES,
 )
@@ -72,7 +69,6 @@ TOPICS = [
     OPTIMIZATION_PROBLEMS,
     OPTIMIZATION_HISTORIES,
     OPTIMIZATION_ALGORITHMS,
-    OPTIMIZATION_GUIDELINES,
     SPEEDUP_INTRO,
     SPEEDUP_MEASURING_TIME,
     SPEEDUP_SNAKEVIZ,
