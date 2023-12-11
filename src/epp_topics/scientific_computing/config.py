@@ -13,6 +13,9 @@ from epp_topics.scientific_computing.calculations_on_arrays import (
 from epp_topics.scientific_computing.creating_arrays import (
     SITE_CONTENTS as CREATING_ARRAYS,
 )
+from epp_topics.scientific_computing.estimagic_features import (
+    SITE_CONTENTS as ESTIMAGIC_FEATURES,
+)
 from epp_topics.scientific_computing.indexing import SITE_CONTENTS as INDEXING
 from epp_topics.scientific_computing.jax_intro import (
     SITE_CONTENTS as JAX_INTRO,
@@ -65,6 +68,7 @@ TOPICS = [
     RANDOMNESS,
     BROADCASTING,
     OPTIMIZATION_INTRO,
+    ESTIMAGIC_FEATURES,
     OPTIMIZATION_PROBLEMS,
     OPTIMIZATION_HISTORIES,
     OPTIMIZATION_ALGORITHMS,
