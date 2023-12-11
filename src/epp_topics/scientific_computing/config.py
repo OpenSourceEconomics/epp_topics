@@ -32,7 +32,7 @@ from epp_topics.scientific_computing.optimization_histories import (
 from epp_topics.scientific_computing.optimization_intro import (
     SITE_CONTENTS as OPTIMIZATION_INTRO,
 )
-from epp_topics.scientific_computing.optimization_problems import (
+from epp_topics.scientific_computing.optimization_mechanics import (
     SITE_CONTENTS as OPTIMIZATION_PROBLEMS,
 )
 from epp_topics.scientific_computing.randomness import SITE_CONTENTS as RANDOMNESS
