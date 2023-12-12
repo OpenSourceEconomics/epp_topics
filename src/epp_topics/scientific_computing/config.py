@@ -33,9 +33,6 @@ from epp_topics.scientific_computing.optimization_mechanics import (
     SITE_CONTENTS as OPTIMIZATION_PROBLEMS,
 )
 from epp_topics.scientific_computing.randomness import SITE_CONTENTS as RANDOMNESS
-from epp_topics.scientific_computing.speedup_arrays import (
-    SITE_CONTENTS as SPEEDUP_ARRAYS,
-)
 from epp_topics.scientific_computing.speedup_intro import (
     SITE_CONTENTS as SPEEDUP_INTRO,
 )
@@ -73,7 +70,6 @@ TOPICS = [
     SPEEDUP_MEASURING_TIME,
     SPEEDUP_SNAKEVIZ,
     SPEEDUP_LINE_PROFILE,
-    SPEEDUP_ARRAYS,
     SPEEDUP_NUMPY,
     SPEEDUP_NUMBA,
     JAX_INTRO,
