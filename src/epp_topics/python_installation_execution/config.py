@@ -2,6 +2,9 @@
 
 import itertools
 
+from epp_topics.python_installation_execution.environments import (
+    SITE_CONTENTS as ENVIRONMENTS,
+)
 from epp_topics.python_installation_execution.executing_notebook_browser import (
     SITE_CONTENTS as EXECUTING_NOTEBOOK_BROWSER,
 )
@@ -40,6 +43,7 @@ TOPICS = [
     EXECUTING_PY_VSCODE,
     EXECUTING_PYTASK,
     EXECUTING_PYTEST,
+    ENVIRONMENTS,
 ]
 
 SITE_CONTENTS = {
