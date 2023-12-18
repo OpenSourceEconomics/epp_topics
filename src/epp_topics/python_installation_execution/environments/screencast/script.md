@@ -1,11 +1,12 @@
-# Script: Environment files
+# Script: Environment files and environments
 
 ## Environment files vs. environments
 
-- Mention:
-  - Adding a package to the environment file will not automatically install it
-  - Let conda/mamba manage your packages and never delete or modify the folder with
-    installed packages yourself
+Mention:
+
+- Adding a package to the environment file will not automatically install it
+- Let conda/mamba manage your packages and never delete or modify the folder with
+  installed packages yourself
 
 ## Anatomy of environment.yml
 
