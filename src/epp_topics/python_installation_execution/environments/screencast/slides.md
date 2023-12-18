@@ -21,10 +21,9 @@ defaults:
 
 # Installation and execution
 
-### Environment files
+### Environment files and environments
 
 <br/>
-
 
 Janoś Gabler and Hans-Martin von Gaudecker
 
@@ -32,27 +31,31 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Environment files vs. environments
 
-- **environment.yml**:
-    - A recipe to create environments
-    - Under version control
-    - Shared with team members
-- **environment**:
-    - A collection of python packages stored on your computer
-    - Independent of other environments you might have
-- You get from environment files to environments by using
+- An **environment.yml** file:
+  - A recipe to create an environment
+  - Under version control
+  - Shared with team members
+- A conda/mamba **environment**:
+  - A collection of Python packages stored on your computer
+  - Independent of other environments you might have
+- You create an environment from an environment file by typing
 
-`mamba env create -f environment.yml`
+  ```
+  mamba env create -f environment.yml
+  ```
 
 ---
 
-# Anatomy of `environment.yml`
+# Anatomy of environment.yml
 
 <div class="flex gap-4">
 <div>
 
 ```yaml
 name: mini-env
-channels: [conda-forge, nodefaults]
+channels:
+  - conda-forge
+  - nodefaults
 dependencies:
   - python==3.11
   - pandas
@@ -63,37 +66,39 @@ dependencies:
 </div>
 <div>
 
-- Name can be anything (not containing spaces)
+- Name can be anything, except that it must not contain spaces
+
 - Channels: You rarely need more than conda-forge
-- Dependencies: List of Python packages and python
+
+- Dependencies: Python, list of Python packages
+
   - Can have equality or inequality constraints on versions
+
   - Only use pip for packages that are not conda/mamba installable
+
 - Environment files should be hand-written and maintained
 
 </div>
 </div>
 
-
 ---
 
-# Dependencies are installed automatically
+# Dependencies installed automatically
 
 <div class="flex gap-4">
 <div>
 
-<br/>
-<br/>
 
 - The mini environment from above will contain the following packages
-- Many are low-level dependencies you don't have to care about
+
+- Most are low-level dependencies you don't have to care about
+
 - Some exact versions are OS specific
+
 - Listing all of them would create a non-portable environment
-
-
 
 </div>
 <div>
-
 ```txt
 _libgcc_mutex    0.1
 _openmp_mutex    4.5
@@ -117,11 +122,9 @@ libzlib          1.2.13
 ncurses          6.4
 ```
 
-
 </div>
 
 <div>
-
 
 ```txt
 numpy            1.26.2
@@ -147,19 +150,22 @@ xz               5.2.6
 
 </div>
 
-
 </div>
-
-
 
 ---
 
 # How to add a package
 
 - Just installing packages into an environment from the shell is not reproducible
+
 - Instead:
+
   - Add the package to `environment.yml`
+
   - Use `mamba env update -f environment.yml`
+
 - If you have any problem:
-  - `mamba env remove --name mini-env`
+
+  - `mamba env remove -n mini-env`
+
   - `mamba env create -f environment.yml`
