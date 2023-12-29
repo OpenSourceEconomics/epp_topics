@@ -18,6 +18,14 @@ We will cover the following topics:
 1. Troubleshooting: Windows is the most problematic operating system and sometimes
    requires a few extra steps to get everything working.
 
+Finally, if you have worked with Windows before and are not a big fan of the
+issues that come with its shell and sometimes with its compatibility with Python, you can
+check out the WSL installation guide in this course. This guide
+is an alternative to installing Python on Windows, and it will allow you to use a Linux
+distribution to run your Python code using a Virtual Machine. We recommend this approach
+to those of you who are already a bit "tech-savy" and are familiar with working with
+shells and conda environments.
+
 ## Installing mamba
 
 1. Go to
@@ -98,48 +106,78 @@ in parenthesis before the directory you are currently in.
 
 ![14_activate_epp.png](14_activate_epp.png)
 
-Additionally, if you execute `conda info`, the report will show that the active environemnt is epp
+Additionally, if you execute `conda info`, the report will show that the active environment is epp
 
 ![15_conda_info.png](15_conda_info.png)
 
+If in the conda info environment you read ```active environment : None```, go to
+Troubleshooting 2 below. If you have other problems activating the environment, check
+the other Troubleshooting sections.
+
 ## Troubleshooting 1
 
-If mamba or conda are not recognized as commands in the powershell, do the following:
+Follow this section's instructions if mamba or conda are not recognized as commands in the
+ powershell, and you get the following error:
 
-1. open a Powershell as administrator by right clicking on the powershell icond and selecting
-"run as administrator".
+![19_not_recognized.png](19_not_recognized.png)
 
-1. execute the following command
+To fix this you will need to activate conda in the powershell through the conda prompt.
 
-   ```bash
-   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-   ```
+1. First, open the windows search and search for "conda prompt". Open the conda prompt.
+   After opening the conda prompt type:
+      ```bash
+      conda init powershell
+      ```
 
-   and select "Yes at all" by entering "T"
-
-   ![16_execution_policy.png](16_execution_policy.png)
-
-1. close and re-open Powershell
-
-
-1. execute
-
-   ```bash
-   conda init
-   ```
-
-   ![17_conda_init.png](17_conda_init.png)
-
-1. close and re-open Powershell
-
-
-Now you can try again the procedure to activate the course environment described above.
+1. After this command finishes running, you can close the Conda prompt, open PowerShell
+   (by opening Terminal) and try activating the environment with
+   ```conda activate epp_topics``` again, as described above.
 
 ## Troubleshooting 2
 
-In case the procedure described in "Troubleshooting 1" above doesn't work and when you
-open the powershell an error message pertaining "profile.ps1" appear, you can activate
-environments following the procedure described below.
+Another potential issue that may present itself is that, despite no error appearing
+after typing ```conda activate epp_topics```, you cannot run .py files, and the
+environment does not appear in the terminal (in should appear in parentheses before
+PS in the Terminal line).
+
+You can check if this is the issue you are experiencing by typing conda info.
+
+![21_conda_empty.png](21_conda_empty.png)
+
+If you get the same output as above, and your active environment reads none as above,
+then do the following.
+
+1. Repeat the same steps as in Troubleshooting 1 above.
+
+1. After you are finished, restart your machine.
+
+## Troubleshooting 3
+
+Sometimes there can be problems with the execution policies of Windows. You may get the
+following error:
+
+![20_exec_policy.png](20_exec_policy.png)
+
+To fix this, we will have to change the execution policy.
+
+1. Open a new terminal as administrator. To open it as administrator you need to right
+click on it and select "Open as administrator".
+
+1. Now write
+   ```bash
+   Set-ExecutionPolicy RemoteSigned
+   ```
+
+1. Finally, close the terminal, open a new one, and try activating conda again
+(as explained in the previous section).
+
+## Troubleshooting 4
+
+In case non of the previous fixes work and you are still unable to use conda from your
+Powershell, you will have to use the command prompt. This is annoying, given that many
+navigation commands such as ls and pwd do not work in this type of terminal. However, if
+nothing else works this is an easy fix.
+
 Note that **you will have to follow this procedure each time you start a new Terminal.**
 
 1. To activate the environments in the powershell you need to first switch to the command
@@ -152,7 +190,3 @@ Note that **you will have to follow this procedure each time you start a new Ter
    environment in parenthesis before the directory you are currently in.
 
    ![14_activate_epp.png](14_activate_epp.png)
-
-1. To prevent the error message pertaining "profile.ps1" to appear every time you
-   open a new terminal, you can follow the directory reported in the error message
-   and delete "profile.ps1".
