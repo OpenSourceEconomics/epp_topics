@@ -3,7 +3,7 @@
 ## Why this Guide
 
 One way to circumvent the problems with Windows Shell and other issues of compatibility
-between Windows and Python is to install on Windows a Virtual Machine (VM) for Linux.
+between Windows and certain Python libraries is to install on Windows a Virtual Machine (VM) for Linux.
 Virtual machines are programs that allow you to run a different operating system (OS)
 than the one you have installed on your computer.
 
@@ -33,7 +33,8 @@ In laymen terms, this means that it is a tool that lets
 you install a Linux distribution on your Windows machine, and run programs through it.
 The advantage of using WSL2 compared to other virtual machines is that it is very easy
 to set up, since it is already built into Windows 10, and it is well integrated with
-VSCode.
+VSCode. If you are interested in why we recommend WSL rather than other
+virtual machines and want to have more info on WSL, you can check [this page](https://learn.microsoft.com/en-us/windows/wsl/faq).
 
 ## Installing WSL2
 
@@ -46,9 +47,9 @@ You can also follow that guide directly if you prefer.
 To install WSL you first need to make sure that you are using Windows 10 or 11. If you
 are, then installing WSL is as easy as opening the terminal and typing:
 
-    ```bash
-    wsl --install
-    ```
+```bash
+wsl --install
+```
 And you will be all set, easy peasy.
 
 ### Choosing a Linux Distribution
@@ -56,16 +57,16 @@ And you will be all set, easy peasy.
 WSL automatically installs Ubuntu as your Linux distribution. If you want to use a
 different distribution, you will have to type:
 
-        ```bash
-        wsl --install -d <distribution name>
-        ```
+```bash
+wsl --install -d <distribution name>
+```
 
 Where `<distribution name>` is the name of the distribution you want to install.
 To see a list of available distributions you can type:
 
-        ```bash
-        wsl --list --online
-        ```
+```bash
+wsl --list --online
+```
 
 In general, we recommend you use Ubuntu, especially if you're not very familiar with the
 Linux ecosystem. Ubuntu is the most popular Linux distribution, and it is the one that
@@ -96,9 +97,13 @@ on the bottom-left corner of the screen:
 and then clicking on ```Connect to WSL``` in the menu that appears. Once you have done
 this, you can navigate folders inside your Linux installation, and open files in VSCode
 as you would normally do in Windows (click on open folder for example and navigate to
-any directory). You can also open a terminal inside VSCode by clicking on the bottom-left:
+any directory). You can also open a terminal inside VSCode by clicking on Terminal on the top bar (or using the appropriate shortcut):
 this will now open a terminal inside your Linux installation, so do not worry if it looks
 different from the Windows terminal.
+
+The default shell for Linux is bash. If you want to use a different shell, you can always
+look up other options online. For example, if you want to use zsh, you can follow the
+instructions for your distribution [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH).
 
 ### Installing Python
 
@@ -116,28 +121,28 @@ will either need to check what processor you have or to run the following
 command in the terminal:
 
 ```bash
-    uname -m
+uname -m
 ```
 
 If you have a x86_64 processor, you will see ```x86_64``` in the output. If you have this
 processor, you can download Miniconda by running the following command:
 
 ```bash
-    wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 ```
 
 If you have an ARM64 processor, you will see ```aarch64``` in the output. If you have this
 just run:
 
 ```bash
-    wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
 ```
 
 If you have problems running wget it may be because you do not have it installed in your
 system. To install it, just run:
 
 ```bash
-    sudo apt install wget
+sudo apt install wget
 ```
 
 and insert your password when prompted.
@@ -146,15 +151,23 @@ Once the download is completed, you will need to install the file you just downl
 do this, be in the same directory in which you downloaded it, and run:
 
 ```bash
-    bash Miniforge3-Linux-x86_64.sh
+bash Miniforge3-Linux-x86_64.sh
 ```
+
+if you have an x86_64 processor, or
+
+```bash
+bash Miniforge3-Linux-aarch64.sh
+```
+
+if you have an ARM64 processor.
 
 Accept the terms of the installation by following the instructions on the screen, and
 once you are finished, check the installation by typing:
 
 ```bash
-    conda init
-    conda activate
+conda init
+conda activate
 ```
 
 ### Installing Git (Optional)
@@ -164,11 +177,13 @@ need to use the terminal to install it in WSL, we want to help you start this by
 having you install the Git software. To do so, just run:
 
 ```bash
-    sudo apt install git
+sudo apt install git
 ```
 
 After the installation there are a few more steps that you will need to run Git, which
-you can check in our Git section in this website.
+you can check in our Git section in this website. Git comes pre-installed on some Linux
+distributions, so you may not need to install it (it will tell you if it is already
+installed when you run the command above).
 
 ### Troubleshooting
 
