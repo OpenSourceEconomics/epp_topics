@@ -12,7 +12,6 @@ dependencies:
   - numba
   - openpyxl
   - pandas >= 2.1
-  - pdbpp
   - pip
   - plotly
   - pre-commit
@@ -37,4 +36,4 @@ dependencies:
   - statsmodels
   - toml
   - xlrd>=1.0
-  - pip: [-e ., kaleido, jupyter-book, pyperclip]
+  - pip: [-e ., kaleido, jupyter-book, pyperclip, pdbp]
