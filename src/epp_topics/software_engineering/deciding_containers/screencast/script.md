@@ -1,15 +1,23 @@
-# Script: When to use custom containers
+# Script: When to use custom containers?
+
+## Running example
+
+- Same as before: Want to record basic data of students in this course: First name, last
+  name, email
+- Now store these data for each run of this course
 
 ## Fixed vs. free fields
 
-- One could argue that in my example "students" also has fixed fields because it is
-  typed in, i.e. fields are known at the time of writing the code. This is just because
-  of the example. In a real application, we would read that data from some file.
+- You know ex ante what data you want a `Student` to look like, hence you can type
+  identifiers (fixed fields)
+- You do not know the names / keys of students in a course when you set up the
+  framework, hence you need the flexibility of free fields (here: string literals, in
+  real world would read in from a file)
 
 ## Immutability
 
-This is mainly for deciding between dataclasses and namedtuples (or a motivation to use
+This is mainly for deciding between dataclasses and NamedTuples (or a motivation to use
 frozen dataclasses).
 
-If one needs a dict (e.g. for very fast lookup or because of free fields), they should
-not use a NamedTuple.
+If you need a dict (e.g. for very fast lookup in large collections or because of free
+fields), you really do not want to use a NamedTuple / dataclass.

@@ -1,4 +1,4 @@
-# Script: functools partial
+# Script: Partialling arguments to functions
 
 ## Example
 
@@ -20,10 +20,10 @@ Two main messages:
    do a lot of the magic in estimagic using partial. Often people would be surprised
    that can do so many things without object oriented programming. But:
 
-- "An object is just a poor man's closure" (famous quote with unknown author)
-- "partial is just the most explicit form of a closure" (me)
+   - "An object is just a poor man's closure" (famous quote with unknown author)
+   - "partial is just the most explicit form of a closure" (me)
 
-2. Partial can be over-used. I have mainly seen it from Tim a while ago, when he used
+1. Partial can be over-used. I have mainly seen it from Tim a while ago, when he used
    partial for almost all function calls just to save a few lines here and there. Then
    the drawback was that there were many different versions of a minimize function and
    it was hard to keep track of them.

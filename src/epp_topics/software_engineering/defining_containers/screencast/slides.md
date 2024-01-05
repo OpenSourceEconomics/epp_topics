@@ -24,7 +24,6 @@ defaults:
 
 <br/>
 
-
 Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
@@ -51,20 +50,17 @@ KeyError: 'frist_name'
 </div>
 <div>
 
-- Typos lead to runtime-errors
+- Typos lead to runtime errors
 - Mutable
 - Hard to document/know which keys should be there
 - No autocomplete for keys
 
-
 </div>
 </div>
-
 
 ---
 
 # NamedTuples
-
 
 <div class="flex gap-12">
 <div>
@@ -95,10 +91,8 @@ KeyError: 'frist_name'
 - Easy to document/know which attributes are there
 - Autocomplete for attributes works
 
-
 </div>
 </div>
-
 
 ---
 
@@ -136,11 +130,16 @@ KeyError: 'frist_name'
 </div>
 </div>
 
-
 ---
 
 # Reminder
 
-- Dicts are awesome!
-- One of the most optimized data structures you can imagine
-- You need to learn when to use which!
+- Dictionaries are awesome! One of the most optimized data structures you can imagine.
+
+- You'll need to learn when to use
+
+  - dicts
+
+  - NamedTuples
+
+  - dataclasses

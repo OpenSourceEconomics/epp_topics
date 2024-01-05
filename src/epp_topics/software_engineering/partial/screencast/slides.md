@@ -20,17 +20,15 @@ defaults:
 
 # Software engineering
 
-### Functools partial
+### Partialling arguments to functions
 
 <br/>
-
 
 Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
 # Example
-
 
 <div class="flex gap-4">
 <div>
@@ -50,6 +48,7 @@ TypeError              Traceback (most recent call last)
 
 TypeError: f() missing 1 required positional argument: 'y'
 ```
+
 ```python
 >>> f_of_x = partial(f, y=3)
 >>> f_of_x(x=3)
@@ -60,31 +59,40 @@ TypeError: f() missing 1 required positional argument: 'y'
 <div>
 
 - `partial` is a higher order function
+
   - takes a function as argument
+
   - returns a new function
+
 - Returned function has fewer arguments
- than original function
-
+  than original function
 
 </div>
 </div>
-
 
 ---
 
 # Mental models
 
 - `partial` lets you add or overwrite default values to arguments
-- `partial` lets you inject data into functions (closure)
+
+- `partial` lets you inject data into functions
+  ([closure](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>))
 - `partial` lets you partially evaluate a function
 
 ---
 
 # Useful applications
 
-- Plotting a mathematical function agains one of its arguments
+
+- Plotting a mathematical function against one of its arguments
+
 - Creating a function that only depends on a parameter vector
+
   - For numerical optimization
+
   - For numerical differentiation
+
 - Keep it in mind as a problem solver!
+
 - Do not over-use it for every function call!

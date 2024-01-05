@@ -20,10 +20,9 @@ defaults:
 
 # Software engineering
 
-### When to use custom containers
+### When to use custom containers?
 
 <br/>
-
 
 Janoś Gabler and Hans-Martin von Gaudecker
 
@@ -63,15 +62,14 @@ Janoś Gabler and Hans-Martin von Gaudecker
   - Use a NamedTuple or dataclass
 - `students` has variable length and keys each year
   - Use a dictionary
-- Fixed vs. free fields is the most important aspect when deciding about data
-structures
+- Fixed vs. free fields is the most important aspect when deciding about data structures
 
 </div>
 </div>
 
 ---
 
-# Immutable or not
+# Immutable or mutable?
 
 > Immutability changes everything (Pat Helland)
 
