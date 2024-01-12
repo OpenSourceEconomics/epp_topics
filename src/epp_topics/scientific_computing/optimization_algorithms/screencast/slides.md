@@ -24,7 +24,6 @@ defaults:
 
 <br/>
 
-
 Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
@@ -32,29 +31,37 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Relevant problem properties
 
 - **Smoothness**: Differentiable? Kinks? Discontinuities? Stochastic?
+
 - **Convexity**: Are there local optima?
+
 - **Goal**: Do you need a global solution? How precise?
+
 - **Size**: 2 parameters? 10? 100? 1000? More?
+
 - **Constraints**: Bounds? Linear constraints? Nonlinear constraints?
+
 - **Structure**: Nonlinear least-squares, Log-likelihood function
 
 $\rightarrow$ Properties guide selection but experimentation is important
+
 $\rightarrow$ Always compare multiple algorithms in a criterion plot
 
 ---
 
 # Try to make your problem simpler
 
-- Get derivatives using automatic differentiation (JAX, pytorch)
-- Make your function faster
-- Make your function more stable
-- Try to make your function smooth
 
+- Get derivatives using automatic differentiation (JAX, pytorch)
+
+- Make your function faster
+
+- Make your function more stable
+
+- Try to make your function smooth
 
 ---
 
 # Choosing local optimizers
-
 
 ```mermaid {theme: 'dark', scale: 0.6}
 graph LR
@@ -74,12 +81,9 @@ graph LR
     G["differentiable?"] -- no --> K["'nlopt_bobyqa', 'nlopt_neldermead', 'neldermead_parallel'"]
 ```
 
-
-
 ---
 
 # Choosing a global approach
-
 
 ```mermaid {theme: 'dark', scale: 0.6}
 graph LR

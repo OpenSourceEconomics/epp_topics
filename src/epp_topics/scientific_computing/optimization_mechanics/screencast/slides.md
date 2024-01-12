@@ -24,7 +24,6 @@ defaults:
 
 <br/>
 
-
 Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
@@ -38,11 +37,11 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 ```python
+import numpy as np
 import estimagic as em
 
 def sphere(x):
-    a, b = x
-    return a ** 2 + b ** 2
+    return (x ** 2).sum()
 
 start_params = np.ones(5)
 
@@ -54,17 +53,22 @@ res = em.minimize(
 
 res.params
 ```
+
 ```txt
-array([ 0., 0, 0., 0., 0.])
+array([0., 0., 0., 0., 0.])
 ```
+
 </div>
 <div>
 
 <br/>
 
 1. Import estimagic
+
 2. Define criterion function
+
 3. Define start params
+
 4. Call minimize
 
 <br/>
@@ -76,7 +80,7 @@ array([ 0., 0, 0., 0., 0.])
 
 ---
 
-# Same problem -- different params
+# Same problem — different params
 
 <br/>
 
@@ -104,8 +108,6 @@ array([ 0., 0, 0., 0., 0.])
 
 # Bounds for parameters
 
-We use the example from the previous slide
-
 <div class="grid grid-cols-2 gap-4">
 <div>
 
@@ -116,6 +118,9 @@ We use the example from the previous slide
 ...     algorithm="scipy_neldermead",
 ...     lower_bounds={"b": 0.5}
 ... )
+```
+
+```python
 >>> res.params
 {'a': 0.,
  'b': 0.5,
@@ -125,14 +130,16 @@ We use the example from the previous slide
  dtype: float64}
 ```
 
-
 </div>
 <div>
 
-- Only need to specify bounds for parameters that need them
-- `upper_bounds` work analogously
-- Can use `np.inf` and `-np.inf` to explicitly specify no bound
+- Extend previous example
 
+- Only need to specify bounds for parameters that need them
+
+- `upper_bounds` work analogously
+
+- Can use `np.inf` and `-np.inf` to explicitly specify no bound
 
 </div>
 </div>
@@ -149,7 +156,7 @@ We use the example from the previous slide
 ```
 
 ```txt
-.0
+0.
 ```
 
 ```python
@@ -176,26 +183,28 @@ True
 'Optimization terminated successfully.'
 ```
 
-
 </div>
 <div>
 
 - You already know res.params
+
 - There are many other useful attributes
-- Result objects can also be plotted
+
+- Elements of results objects can also be plotted
 
 </div>
 </div>
-
 
 <br/>
-
 
 ---
 
 # Documentation of more features
 
-- [How to spcify algorithms and their options](https://estimagic.readthedocs.io/en/stable/how_to_guides/optimization/how_to_specify_algorithm_and_algo_options.html)
+- [How to specify algorithms and their options](https://estimagic.readthedocs.io/en/stable/how_to_guides/optimization/how_to_specify_algorithm_and_algo_options.html)
+
 - [How to use constraints](https://estimagic.readthedocs.io/en/stable/how_to_guides/optimization/how_to_specify_constraints.html)
+
 - [How to do multistart optimization](https://estimagic.readthedocs.io/en/stable/how_to_guides/optimization/how_to_do_multistart_optimizations.html)
+
 - [How to handle errors during optimization](https://estimagic.readthedocs.io/en/stable/how_to_guides/optimization/how_to_handle_errors_during_optimization.html)

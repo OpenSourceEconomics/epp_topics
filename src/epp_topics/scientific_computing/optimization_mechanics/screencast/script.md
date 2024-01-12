@@ -17,7 +17,7 @@ would produce too many or too long screencasts.
   for all problems. Mention that there will be a later screencast on choosing
   optimizers.
 
-## Same problem different params
+## Same problem — different params
 
 - Say that this is a simplified example to focus on mechanics. However, structured
   params formats are extremely useful in practice. Examples:

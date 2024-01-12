@@ -17,9 +17,6 @@ from epp_topics.scientific_computing.estimagic_features import (
     SITE_CONTENTS as ESTIMAGIC_FEATURES,
 )
 from epp_topics.scientific_computing.indexing import SITE_CONTENTS as INDEXING
-from epp_topics.scientific_computing.jax_intro import (
-    SITE_CONTENTS as JAX_INTRO,
-)
 from epp_topics.scientific_computing.optimization_algorithms import (
     SITE_CONTENTS as OPTIMIZATION_ALGORITHMS,
 )
@@ -30,7 +27,7 @@ from epp_topics.scientific_computing.optimization_intro import (
     SITE_CONTENTS as OPTIMIZATION_INTRO,
 )
 from epp_topics.scientific_computing.optimization_mechanics import (
-    SITE_CONTENTS as OPTIMIZATION_PROBLEMS,
+    SITE_CONTENTS as OPTIMIZATION_MECHANICS,
 )
 from epp_topics.scientific_computing.randomness import SITE_CONTENTS as RANDOMNESS
 from epp_topics.scientific_computing.speedup_intro import (
@@ -63,7 +60,7 @@ TOPICS = [
     BROADCASTING,
     OPTIMIZATION_INTRO,
     ESTIMAGIC_FEATURES,
-    OPTIMIZATION_PROBLEMS,
+    OPTIMIZATION_MECHANICS,
     OPTIMIZATION_HISTORIES,
     OPTIMIZATION_ALGORITHMS,
     SPEEDUP_INTRO,
@@ -72,7 +69,7 @@ TOPICS = [
     SPEEDUP_LINE_PROFILE,
     SPEEDUP_NUMPY,
     SPEEDUP_NUMBA,
-    JAX_INTRO,
+    # JAX_INTRO,
 ]
 
 

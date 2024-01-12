@@ -6,10 +6,9 @@
 - Introduce important terminology, where necessary with common synonyms
   - criterion function = objective function: The function to optimize
   - Parameters, params or variables = The numbers to optimize over, often represented as
-    a vector
-  - Bounds = Box constraints: Lower and upper bounds for some or all parameters
   - Constraints: Possibly complex conditions on parameters (e.g. parameters of cobb
-    douglas function must sum up to 1)
+    douglas function must sum up to 1) a vector
+  - Bounds = Box constraints: Lower and upper bounds for some or all parameters
   - Solution: Most of the time we are interested in the argmin not min
 
 ## Application of optimization in economics
@@ -33,4 +32,4 @@ Say that this has implications for the diagnostic tooling we need around optimiz
 
 # Libraries for optimization
 
-- I would not talk much about this slide. No need to sell estimagic. Just say we use it.
+Don't talk much about this slide. No need to sell estimagic. Just say we use it.
