@@ -10,23 +10,21 @@
   - Say that it is a very bad idea to just rewrite an entire project in a different
     language to make it faster. To get really fast, you need to know what you are doing
     in any language
-  - Same language means that we still write Python an call Python libraries. All of
-    Python is implemented in C. A users we don't care if a library is also implemented
-    in C, Rust or something else under the hood.
+  - Same language means that we still write Python and call Python libraries. All of
+    Python is implemented in C. As users we don't care if a library is also implemented
+    in C, Rust, or something else under the hood.
 
 ## Speed can vary within a language
 
-- "It gets really slow if you do not use libraries as intended". Examples:
+- "It gets really slow if you do not use libraries as intended".
 
-  - looping over rows of a pandas DataFrame
-
-- Maybe mention, that it is true that in Python the range of possible speeds is very in
-  Julia it is much smaller and in Fortran it is hard to write slow code (but possible)
-
-- Mention again, that it is a really bad idea to blindly rewrite an application in
-  another language and that they will learn much better ways here.
+  Example: looping over rows of a pandas DataFrame
 
 ## Python can be really fast
+
+- Maybe mention, that it is true that in Python the range of possible speeds is very
+  large. In Julia it is much smaller and in Fortran it is hard to write slow code (but
+  possible)
 
 - Numba is more restrictive than Julia in the sense that you need to write loops over
   arrays (instead of custom classes or similar) but if you do that, you get the same
@@ -36,6 +34,9 @@
   billions to train large models.
 
 - By beating fortran code I mean respy
+
+- Mention again, that it is a really bad idea to blindly rewrite an application in
+  another language and that they will learn much better ways here.
 
 ## Only optimize bottlenecks
 

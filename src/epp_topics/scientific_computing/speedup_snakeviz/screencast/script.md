@@ -16,13 +16,19 @@ the notebook is opened in vscode
   screencast)
 - Run the code until the snakeviz profile is generated
 
-Explain the output: - **First and second row** are always the same and can be ignored -
-**Third row** says that the entire time is spent on executing `array_cobb_douglas`,
-which makes sense since this is all we do - **Fourth row** (hover over it) shows that
-only very little of that time is actually spent in that function and most of it is spent
-into `_cobb_douglas` which we call from `array_cobb_douglas` - Below that level we
-quickly get into numpy internals we don't understand - The white parts means that there
-are no further function calls we could analyze
+Explain the output:
+
+- **First and second row** are always the same and can be ignored
+
+- **Third row** says that the entire time is spent on executing `array_cobb_douglas`,
+  which makes sense since this is all we do
+
+- **Fourth row** (hover over it) shows that only very little of that time is actually
+  spent in that function and most of it is spent into `_cobb_douglas` which we call from
+  `array_cobb_douglas`
+
+  - Below that level we quickly get into numpy internals we don't understand
+  - The white parts means that there are no further function calls we could analyze
 
 Say that here we did not learn all that much from the profile because we only have a
 tiny code snippet. True power shows when we apply snakeviz to large code bases.

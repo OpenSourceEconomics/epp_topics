@@ -9,6 +9,7 @@ dependencies:
   - ipykernel
   - ipywidgets
   - jupyterlab
+  - line_profiler
   - nodejs
   - numba
   - openpyxl
