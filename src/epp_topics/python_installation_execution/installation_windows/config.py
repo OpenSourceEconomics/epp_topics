@@ -23,6 +23,9 @@ SITE_CONTENTS = {
         "16_execution_policy.png",
         "17_conda_init.png",
         "18_cmd.png",
+        "19_not_recognized.png",
+        "20_exec_policy.png",
+        "21_conda_empty.png",
     ),
     "built": (
         # "screencast slides etc.",
