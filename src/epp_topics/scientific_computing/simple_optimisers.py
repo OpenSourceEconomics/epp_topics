@@ -184,23 +184,6 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
     argmin = trust_x_grid[argmin_index]
 
     fig.add_scatter(
-        x=[argmin],
-        y=[partialed(np.array([argmin]))],
-        mode="markers",
-        marker={"size": 12, "color": "red"},
-        name="Approximate next evaluation",
-        marker_symbol="star",
-    )
-    fig.add_scatter(
-        x=[argmin],
-        y=[example_criterion(np.array([argmin]))],
-        mode="markers",
-        marker={"size": 12, "color": "green"},
-        name="True next evaluation",
-        marker_symbol="star",
-    )
-
-    fig.add_scatter(
         x=trust_x_grid,
         y=trust_y_grid,
         mode="lines",
@@ -216,8 +199,36 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
 
     if surrogate_func == taylor_expansion:
         x_values = [x0]
+
+        fig.add_scatter(
+            x=[argmin],
+            y=[partialed(np.array([argmin]))],
+            mode="markers",
+            marker={"size": 12, "color": "red"},
+            name="Approximate next evaluation",
+            marker_symbol="star",
+        )
+        fig.add_scatter(
+            x=[argmin],
+            y=[example_criterion(np.array([argmin]))],
+            mode="markers",
+            marker={"size": 12, "color": "green"},
+            name="True next evaluation",
+            marker_symbol="star",
+        )
     else:
         x_values = [x0 - radius, x0, x0 + radius]
+        # remove x in x_values if it is equal to argmin
+        x_values = [x for x in x_values if x != argmin]
+
+        fig.add_scatter(
+            x=[argmin],
+            y=[partialed(np.array([argmin]))],
+            mode="markers",
+            marker={"size": 12, "color": "red"},
+            name="Next evaluation",
+            marker_symbol="star",
+        )
 
     fig.add_scatter(
         x=x_values,
