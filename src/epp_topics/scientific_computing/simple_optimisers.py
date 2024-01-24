@@ -1,13 +1,18 @@
 import functools
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
+import plotly.express as px
+import plotly.io as pio
 import statsmodels.formula.api as sm
 from scipy.optimize import minimize
 
-sns.set_style("white")
+# set default theme to seaborn for plotly.express
+pio.templates.default = "simple_white"
+# change default size
+pio.templates[pio.templates.default].layout["height"] = 600
+pio.templates[pio.templates.default].layout["width"] = 800
+pio.templates["simple_white"].layout.autosize = False
 
 WEIGHTS = [
     9.003014962148157,
@@ -61,18 +66,57 @@ def _unpack_x(x):
 def plot_function():
     x_grid = np.linspace(0, 20, 100)
     y_grid = [example_criterion(x) for x in x_grid]
-    fig, ax = plt.subplots()
-    sns.lineplot(x=x_grid, y=y_grid, ax=ax)
-    sns.despine()
-    return fig, ax
+    fig = px.line(x=x_grid, y=y_grid)
+    # remove axis names
+    fig.update_xaxes(title_text="")
+    fig.update_yaxes(title_text="")
+    return fig
 
 
 def plot_history(evaluated_points, argmin):
-    """Plot the function and all evaluated points."""
-    fig, ax = plot_function()
-    sns.rugplot(evaluated_points, ax=ax)
-    ax.plot([argmin], [example_criterion(argmin)], marker="*", color="firebrick")
-    return fig, ax
+    _fix_if_argmin_is_in_evaluated_points(evaluated_points, argmin)
+
+    argmin = _check_argmin(argmin)
+
+    x_grid = np.linspace(0, 20, 100)
+    y_grid = [example_criterion(x) for x in x_grid]
+    fig = px.line(x=x_grid, y=y_grid)
+    # remove axis names
+    fig.update_xaxes(title_text="")
+    fig.update_yaxes(title_text="")
+
+    fig.add_scatter(
+        x=[argmin],
+        y=[example_criterion(argmin)],
+        mode="markers",
+        marker={"size": 12, "color": "red"},
+        name="Final evaluation",
+        marker_symbol="star",
+    )
+
+    fig.add_scatter(
+        x=evaluated_points,
+        y=[example_criterion(x) for x in evaluated_points],
+        mode="markers",
+        marker={"size": 4, "color": "black"},
+        name="Evaluations",
+    )
+
+    return fig
+
+
+def _check_argmin(argmin):
+    if isinstance(argmin, np.ndarray):
+        if len(argmin) == 1:
+            argmin = argmin[0]
+        else:
+            raise ValueError("argmin should be a float or a np.ndarray of length 1")
+    return argmin
+
+
+def _fix_if_argmin_is_in_evaluated_points(evaluated_points, argmin):
+    if argmin in evaluated_points:
+        evaluated_points = evaluated_points[:-1]
 
 
 def minimize_with_history(fun, x0, method, jac=None, hess=None):
@@ -96,13 +140,16 @@ def minimize_with_history(fun, x0, method, jac=None, hess=None):
     return res
 
 
-def taylor_expansion(x, x0):
+def taylor_expansion(x, x0, radius):
     """Evaluate taylor expansion around x0 at x."""
     x = _unpack_x(x)
     x0 = _unpack_x(x0)
     f = example_criterion(x0)
     f_prime = example_gradient(x0)
     f_double_prime = example_hessian(x0)
+
+    if radius <= 0:
+        raise ValueError("radius should be positive")
 
     diff = x - x0
     return f + f_prime * diff + f_double_prime * 0.5 * diff**2
@@ -128,7 +175,7 @@ def regression_surrogate(x, x0, radius):
 
 
 def plot_trust_region_algo(x0, radius, surrogate_func):
-    fig, ax = plot_function()
+    fig = plot_function()
     x0 = _unpack_x(x0)
     trust_x_grid = np.linspace(x0 - radius, x0 + radius, 50)
     partialed = functools.partial(surrogate_func, x0=x0, radius=radius)
@@ -136,15 +183,30 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
     argmin_index = np.argmin(trust_y_grid)
     argmin = trust_x_grid[argmin_index]
 
-    ax.plot([argmin], [partialed(np.array([argmin]))], marker="*", color="firebrick")
-    ax.plot(
-        [argmin],
-        [example_criterion(np.array([argmin]))],
-        marker="*",
-        color="green",
+    fig.add_scatter(
+        x=[argmin],
+        y=[partialed(np.array([argmin]))],
+        mode="markers",
+        marker={"size": 12, "color": "red"},
+        name="Approximate next evaluation",
+        marker_symbol="star",
+    )
+    fig.add_scatter(
+        x=[argmin],
+        y=[example_criterion(np.array([argmin]))],
+        mode="markers",
+        marker={"size": 12, "color": "green"},
+        name="True next evaluation",
+        marker_symbol="star",
     )
 
-    sns.lineplot(x=trust_x_grid, y=trust_y_grid, ax=ax)
+    fig.add_scatter(
+        x=trust_x_grid,
+        y=trust_y_grid,
+        mode="lines",
+        name="Surrogate model",
+        line={"color": "darkorange", "width": 2},
+    )
 
     new_x = (
         x0
@@ -157,12 +219,19 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
     else:
         x_values = [x0 - radius, x0, x0 + radius]
 
-    sns.rugplot(x_values, ax=ax)
-    return fig, ax, new_x
+    fig.add_scatter(
+        x=x_values,
+        y=[example_criterion(x) for x in x_values],
+        mode="markers",
+        marker={"size": 4, "color": "black"},
+        name="Initial evaluation",
+    )
+
+    return fig, new_x
 
 
 def plot_direct_search(x0, other):
-    fig, ax = plot_function()
+    fig = plot_function()
     x0 = _unpack_x(x0)
     other = _unpack_x(other)
 
@@ -172,14 +241,30 @@ def plot_direct_search(x0, other):
     argmin_index = np.argmin(evaluations)
     argmin = x_values[argmin_index]
 
-    ax.plot([argmin], [example_criterion(argmin)], marker="*", color="firebrick")
-    sns.rugplot(x_values, ax=ax)
+    x_values = x_values[:argmin_index] + x_values[argmin_index + 1 :]
 
-    return fig, ax, argmin
+    fig.add_scatter(
+        x=[argmin],
+        y=[example_criterion(argmin)],
+        mode="markers",
+        marker={"size": 12, "color": "red"},
+        name="Next evaluation",
+        marker_symbol="star",
+    )
+
+    fig.add_scatter(
+        x=x_values,
+        y=[example_criterion(x) for x in x_values],
+        mode="markers",
+        marker={"size": 4, "color": "black"},
+        name="Initial evaluation",
+    )
+
+    return fig, argmin
 
 
 def plot_line_search(x0):
-    fig, ax = plot_function()
+    fig = plot_function()
     x0 = _unpack_x(x0)
 
     function_value = example_criterion(x0)
@@ -193,7 +278,14 @@ def plot_line_search(x0):
         function_value,
         function_value + 2 * gradient_value,
     ]
-    sns.lineplot(x=gradient_grid, y=gradient_evals, ax=ax)
+    # make it dark orange
+    fig.add_scatter(
+        x=gradient_grid,
+        y=gradient_evals,
+        mode="lines",
+        name="Gradient",
+        line={"color": "darkorange", "width": 2},
+    )
 
     new_value = np.inf
     x_values = [x0]
@@ -205,6 +297,22 @@ def plot_line_search(x0):
         x_values.append(new_x)
         evaluations.append(new_value)
 
-    sns.rugplot(x_values, ax=ax)
-    ax.plot([new_x], [new_value], marker="*", color="firebrick")
-    return fig, ax, new_x
+    # mark the point of the initial evaluation with a circle
+    fig.add_scatter(
+        x=[x0],
+        y=[function_value],
+        mode="markers",
+        marker={"size": 8, "color": "green"},
+        name="Initial point",
+    )
+
+    # mark the point of the next step with a star
+    fig.add_scatter(
+        x=[new_x],
+        y=[new_value],
+        mode="markers",
+        marker={"size": 12, "color": "red"},
+        name="Next initial point",
+        marker_symbol="star",
+    )
+    return fig, new_x
