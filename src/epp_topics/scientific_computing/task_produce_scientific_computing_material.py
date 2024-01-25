@@ -10,10 +10,12 @@ from epp_topics.scientific_computing.simple_optimisers import (
     example_gradient,
     example_hessian,
     minimize_with_history,
+    plot_direct_search,
     plot_function,
     plot_history,
     plot_line_search,
     plot_trust_region_algo,
+    regression_surrogate,
     taylor_expansion,
 )
 
@@ -109,3 +111,75 @@ def task_plots_db_trust_region_real_algo(
         hess=example_hessian,
     )
     plot_history(res.history, res.x).write_image(str(illustration_db_trust_region_path))
+
+
+path_iterations_df_trust_region = [
+    PLOTS_FOLDER / "df_trust_region" / f"iteration_{i}.png" for i in range(6)
+]
+
+
+def task_plots_df_trust_region_iterations(
+    x=START_X,
+    illustration_df_trust_region_path: Annotated[
+        Path,
+        Product,
+    ] = path_iterations_df_trust_region,
+):
+    radius_list = [2, 3, 4, 2, 3, 3]
+
+    for path, radius in zip(
+        illustration_df_trust_region_path,
+        radius_list,
+        strict=True,
+    ):
+        fig, x = plot_trust_region_algo(x, radius, surrogate_func=regression_surrogate)
+        fig.write_image(str(path))
+
+
+def task_plots_df_trust_region_real_algo(
+    x=START_X,
+    illustration_df_trust_region_path: Annotated[Path, Product] = PLOTS_FOLDER
+    / "df_trust_region"
+    / "illustration_df_trust_region_real_algo.png",
+):
+    res = minimize_with_history(
+        example_criterion,
+        x,
+        method="Cobyla",
+    )
+    plot_history(res.history, res.x).write_image(str(illustration_df_trust_region_path))
+
+
+path_iterations_df_direct_search = [
+    PLOTS_FOLDER / "df_direct_search" / f"iteration_{i}.png" for i in range(5)
+]
+
+
+def task_plots_df_direct_search_iterations(
+    x=START_X,
+    illustration_df_direct_search_path: Annotated[
+        Path,
+        Product,
+    ] = path_iterations_df_direct_search,
+):
+    deltas = [-2, 2, 3, 4, 2]
+
+    for path, delta in zip(illustration_df_direct_search_path, deltas, strict=True):
+        fig, x = plot_direct_search(x, x + delta)
+        fig.write_image(str(path))
+
+
+def task_plots_df_direct_search_real_algo(
+    x=START_X,
+    illustration_df_direct_search_path: Annotated[Path, Product] = PLOTS_FOLDER
+    / "df_direct_search"
+    / "illustration_df_direct_search_real_algo.png",
+):
+    res = minimize_with_history(
+        example_criterion,
+        x,
+        method="Nelder-Mead",
+    )
+    plot_history(res.history, res.x).write_image(
+        str(illustration_df_direct_search_path),
+    )
