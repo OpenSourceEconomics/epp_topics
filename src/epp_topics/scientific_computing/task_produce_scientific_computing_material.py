@@ -23,12 +23,12 @@ PLOTS_FOLDER = SITE_SOURCE_DIR / "scientific_computing" / "plots"
 START_X = np.array([2])
 
 
-def task_plots_set_up_grid_search(
+def task_plots_set_up_function_grid_search(
     function_plot_path: Annotated[Path, Product] = PLOTS_FOLDER
-    / "set_up_grid_search"
+    / "set_up_function_grid_search"
     / "function_plot.png",
     history_grid_search_path: Annotated[Path, Product] = PLOTS_FOLDER
-    / "set_up_grid_search"
+    / "set_up_function_grid_search"
     / "history_grid_search.png",
 ):
     plot_function().write_image(str(function_plot_path))
