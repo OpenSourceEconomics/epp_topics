@@ -20,7 +20,7 @@ defaults:
 
 # Scientific Computing
 
-### Grid Search
+### Derivative-Free Trust Region Algorithm(s)
 
 <br/>
 
@@ -29,58 +29,79 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Function Set-up
+# Basic Idea
 
-In these lectures we will use the following function as a target for our
-optimization:
+- Similar to derivative based trust region algorithm.
+- Instead of Taylor expansion, use a surrogate model based on interpolation or regression.
+    - Interpolation: Function is evaluated at exactly as many points as you need to fit the model.
+    - Regression: Function is evaluated at more points than you strictly need. Better for noisy functions.
+    - In general: Evaluation points are spread further out than for numerical derivatives.
+- How the evaluation points are determined is complicated. It is also crucial for the efficiency of the algorithm.
 
-$$
-f(\mathbf{x}) = \sum_{i=1}^n w_i x_i^{\exp_i}
-$$
+---
 
-where $\mathbf{x} = (x_1, \dots, x_n)$ is a vector of length $n$ and
-$\mathbf{w} = (w_1, \dots, w_n)$ and $\mathbf{e} = (\exp_1, \dots, \exp_n)$ are
-vectors of length $n$. Exponentiation is element-wise.
+The following is just an illustration of the principle. The trust region radius is updated manually to simulate a real algorithm.
+
+Note that a real algorithm is quite complex to implement. You should never do that yourself. Leave it to experts unless
+- you are a very good programmer;
+- you have read a few books on optimization algorithms;
+- you have a very special problem that cannot be solved with existing algorithms.
+
+---
+
+# Initial Evaluation
+
+![](../../plots/df_trust_region/iteration_0.png)
+
+---
+
+# Iteration 1
+
+![](../../plots/df_trust_region/iteration_1.png)
 
 
 ---
 
-Set of parameters:
+# Iteration 2
 
-```python
-    WEIGHTS = [
-        9.003014962148157,
-        -3.383000146393776,
-        -0.6037887934635748,
-        1.6984454347036886,
-        -0.9447426232680957,
-        0.2669069434366247,
-        -0.04446368897497234,
-        0.00460781796708519,
-        -0.0003000790127508276,
-        1.1934114174145725e-05,
-        -2.6471293419570505e-07,
-        2.5090819960943964e-09,
-    ]
-    exponents = np.arange(len(WEIGHTS))
-```
-
+![](../../plots/df_trust_region/iteration_2.png)
 
 
 ---
 
-# Grid Search
+# Iteration 3
 
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/set_up_grid_search/function_plot.png)
+![](../../plots/df_trust_region/iteration_3.png)
 
-</div>
-<div>
+---
 
-- Needs bounds on the parameter (0 to 20 in our case)
-- Desired precision determines number of grid points
-- Very feasible in one dimension
+# Iteration 4
+
+![](../../plots/df_trust_region/iteration_4.png)
+
+---
+
+# Iteration 5+
+
+- will continue around here until optimum is reached
+- you get the idea...
 
 
 ---
+
+# Some Remarks
+
+- The fit is generally better than the gradient based trust region algorithm
+- By construction especially at corners of trust region
+- Choose between the two based on computation speed
+    - If you have fast closed form derivatives, use the derivative based algorithm
+    - If you only have numerical derivatives, use this instead
+- Points at which the function has been evaluated before can be re-used to save function evaluations
+- Since no gradient is available, algorithm will continue until trust region radius shrinks to zero
+- It's intuitively very clear how this can work for noisy functions if enough evaluations are used for each surrogate model
+
+---
+
+# A real algorithm: COBYLA
+
+![](../../plots/df_trust_region/illustration_df_trust_region_real_algo.png)

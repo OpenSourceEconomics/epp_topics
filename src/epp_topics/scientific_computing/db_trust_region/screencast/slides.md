@@ -31,8 +31,6 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Basic Idea
 
-### Basic Idea
-
 1. Fix a trust region radius
 2. Construct a Taylor expansion of the function based on function value, gradient, and (approximation to) Hessian
 

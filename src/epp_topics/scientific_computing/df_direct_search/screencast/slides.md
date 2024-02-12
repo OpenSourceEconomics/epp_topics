@@ -20,7 +20,7 @@ defaults:
 
 # Scientific Computing
 
-### Grid Search
+### Derivative Free Direct Search Algorithm(s)
 
 <br/>
 
@@ -29,58 +29,67 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Function Set-up
+# Basic Idea
 
-In these lectures we will use the following function as a target for our
-optimization:
-
-$$
-f(\mathbf{x}) = \sum_{i=1}^n w_i x_i^{\exp_i}
-$$
-
-where $\mathbf{x} = (x_1, \dots, x_n)$ is a vector of length $n$ and
-$\mathbf{w} = (w_1, \dots, w_n)$ and $\mathbf{e} = (\exp_1, \dots, \exp_n)$ are
-vectors of length $n$. Exponentiation is element-wise.
-
+- Explore parameter space around current point systematically and accept the best value
+- Also called pattern search because the points at which the function is evaluated form a pattern
+- Easiest example for one dimensional problems:
+    - Evaluate function at current point and one other point
+    - Switch direction of other point if you got a decrease
+    - Make steps larger after success
+    - Make steps smaller after failure
 
 ---
 
-Set of parameters:
+The following is just an illustration of the principle. The trust region radius is updated manually to simulate a real algorithm.
 
-```python
-    WEIGHTS = [
-        9.003014962148157,
-        -3.383000146393776,
-        -0.6037887934635748,
-        1.6984454347036886,
-        -0.9447426232680957,
-        0.2669069434366247,
-        -0.04446368897497234,
-        0.00460781796708519,
-        -0.0003000790127508276,
-        1.1934114174145725e-05,
-        -2.6471293419570505e-07,
-        2.5090819960943964e-09,
-    ]
-    exponents = np.arange(len(WEIGHTS))
-```
-
-
+Note that a real algorithm is quite complex to implement. You should never do that yourself. Leave it to experts unless
+- you are a very good programmer;
+- you have read a few books on optimization algorithms;
+- you have a very special problem that cannot be solved with existing algorithms.
 
 ---
 
-# Grid Search
+# Initial Evaluation
 
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/set_up_grid_search/function_plot.png)
-
-</div>
-<div>
-
-- Needs bounds on the parameter (0 to 20 in our case)
-- Desired precision determines number of grid points
-- Very feasible in one dimension
-
+![](../../plots/df_direct_search/iteration_0.png)
 
 ---
+
+# Iteration 1
+
+![](../../plots/df_direct_search/iteration_1.png)
+
+---
+
+# Iteration 2
+
+![](../../plots/df_direct_search/iteration_1.png)
+
+---
+
+# Iteration 3
+
+![](../../plots/df_direct_search/iteration_1.png)
+
+---
+
+# Iteration 4
+
+![](../../plots/df_direct_search/iteration_1.png)
+
+---
+
+# Some Remarks
+
+- Adjusting the step size and switching to promising directions is complicated in real algorithms
+- Direct search algorithms only use the information which function value is smallest, not by how much
+- Makes them slow but robust to small amounts of noise
+- It does not help for large amounts of noise
+- Most famous example is the Nelder-Mead algorithm which is widely used, but seldomly the best choice
+
+---
+
+# A real algorithm: Nelder Mead
+
+![](../../plots/df_direct_search/illustration_df_direct_search_real_algo.png)
