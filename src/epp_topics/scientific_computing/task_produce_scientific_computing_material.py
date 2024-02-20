@@ -19,16 +19,20 @@ from epp_topics.scientific_computing.simple_optimisers import (
     taylor_expansion,
 )
 
-PLOTS_FOLDER = SITE_SOURCE_DIR / "scientific_computing" / "plots"
+SCI_COMP = SITE_SOURCE_DIR / "scientific_computing"
 START_X = np.array([2])
 
 
 def task_plots_set_up_function_grid_search(
-    function_plot_path: Annotated[Path, Product] = PLOTS_FOLDER
+    function_plot_path: Annotated[Path, Product] = SCI_COMP
     / "set_up_function_grid_search"
+    / "screencast"
+    / "public"
     / "function_plot.png",
-    history_grid_search_path: Annotated[Path, Product] = PLOTS_FOLDER
+    history_grid_search_path: Annotated[Path, Product] = SCI_COMP
     / "set_up_function_grid_search"
+    / "screencast"
+    / "public"
     / "history_grid_search.png",
 ):
     plot_function().write_image(str(function_plot_path))
@@ -43,7 +47,8 @@ def task_plots_set_up_function_grid_search(
 
 
 path_iterations_db_line_search = [
-    PLOTS_FOLDER / "db_line_search" / f"iteration_{i}.png" for i in range(8)
+    SCI_COMP / "db_line_search" / "screencast" / "public" / f"iteration_{i}.png"
+    for i in range(8)
 ]
 
 
@@ -61,8 +66,10 @@ def task_plots_db_line_search_iterations(
 
 def task_plots_db_line_search_real_algo(
     x=START_X,
-    illustration_db_line_search_path: Annotated[Path, Product] = PLOTS_FOLDER
+    illustration_db_line_search_path: Annotated[Path, Product] = SCI_COMP
     / "db_line_search"
+    / "screencast"
+    / "public"
     / "illustration_db_line_search_real_algo.png",
 ):
     res = minimize_with_history(
@@ -75,7 +82,8 @@ def task_plots_db_line_search_real_algo(
 
 
 path_iterations_db_trust_region = [
-    PLOTS_FOLDER / "db_trust_region" / f"iteration_{i}.png" for i in range(6)
+    SCI_COMP / "db_trust_region" / "screencast" / "public" / f"iteration_{i}.png"
+    for i in range(6)
 ]
 
 
@@ -99,7 +107,9 @@ def task_plots_db_trust_region_iterations(
 
 def task_plots_db_trust_region_real_algo(
     x=START_X,
-    illustration_db_trust_region_path: Annotated[Path, Product] = PLOTS_FOLDER
+    illustration_db_trust_region_path: Annotated[Path, Product] = SCI_COMP
+    / "screencast"
+    / "public"
     / "db_trust_region"
     / "illustration_db_trust_region_real_algo.png",
 ):
@@ -114,7 +124,8 @@ def task_plots_db_trust_region_real_algo(
 
 
 path_iterations_df_trust_region = [
-    PLOTS_FOLDER / "df_trust_region" / f"iteration_{i}.png" for i in range(6)
+    SCI_COMP / "df_trust_region" / "screencast" / "public" / f"iteration_{i}.png"
+    for i in range(6)
 ]
 
 
@@ -138,7 +149,9 @@ def task_plots_df_trust_region_iterations(
 
 def task_plots_df_trust_region_real_algo(
     x=START_X,
-    illustration_df_trust_region_path: Annotated[Path, Product] = PLOTS_FOLDER
+    illustration_df_trust_region_path: Annotated[Path, Product] = SCI_COMP
+    / "screencast"
+    / "public"
     / "df_trust_region"
     / "illustration_df_trust_region_real_algo.png",
 ):
@@ -151,7 +164,8 @@ def task_plots_df_trust_region_real_algo(
 
 
 path_iterations_df_direct_search = [
-    PLOTS_FOLDER / "df_direct_search" / f"iteration_{i}.png" for i in range(5)
+    SCI_COMP / "df_direct_search" / "screencast" / "public" / f"iteration_{i}.png"
+    for i in range(5)
 ]
 
 
@@ -171,8 +185,10 @@ def task_plots_df_direct_search_iterations(
 
 def task_plots_df_direct_search_real_algo(
     x=START_X,
-    illustration_df_direct_search_path: Annotated[Path, Product] = PLOTS_FOLDER
+    illustration_df_direct_search_path: Annotated[Path, Product] = SCI_COMP
     / "df_direct_search"
+    / "screencast"
+    / "public"
     / "illustration_df_direct_search_real_algo.png",
 ):
     res = minimize_with_history(

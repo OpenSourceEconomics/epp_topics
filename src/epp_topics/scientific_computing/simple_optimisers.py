@@ -238,6 +238,17 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
         name="Initial evaluation",
     )
 
+    # put legend above in a line
+    fig.update_layout(
+        legend={
+            "orientation": "h",
+            "yanchor": "bottom",
+            "y": 1.02,
+            "xanchor": "right",
+            "x": 1,
+        },
+    )
+
     return fig, new_x
 
 
@@ -269,6 +280,17 @@ def plot_direct_search(x0, other):
         mode="markers",
         marker={"size": 4, "color": "black"},
         name="Initial evaluation",
+    )
+
+    # put legend above in a line
+    fig.update_layout(
+        legend={
+            "orientation": "h",
+            "yanchor": "bottom",
+            "y": 1.02,
+            "xanchor": "right",
+            "x": 1,
+        },
     )
 
     return fig, argmin
@@ -326,4 +348,16 @@ def plot_line_search(x0):
         name="Next initial point",
         marker_symbol="star",
     )
+
+    # put legend above in a line
+    fig.update_layout(
+        legend={
+            "orientation": "h",
+            "yanchor": "bottom",
+            "y": 1.02,
+            "xanchor": "right",
+            "x": 1,
+        },
+    )
+
     return fig, new_x

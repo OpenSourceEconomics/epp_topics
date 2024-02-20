@@ -69,18 +69,19 @@ Set of parameters:
 
 ---
 
-# Grid Search
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/set_up_grid_search/function_plot.png)
-
-</div>
-<div>
-
-- Needs bounds on the parameter (0 to 20 in our case)
-- Desired precision determines number of grid points
-- Very feasible in one dimension
-
+<img src="function_plot.png" class="rounded" style="width: 90%; height: 90%"/>
 
 ---
+
+# Grid Search
+
+- Grid search is a simple optimization algorithm that searches for the best
+  combination of parameters by evaluating the function at a given set of
+  parameter values.
+- Needs bounds on the parameter (0 to 20 in our case).
+- Desired precision determines number of grid points.
+- Very feasible in one dimension.
+
+---
+
+<img src="history_grid_search.png" class="rounded" style="width: 90%; height: 90%"/>
