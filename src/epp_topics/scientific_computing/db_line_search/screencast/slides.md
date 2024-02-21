@@ -35,10 +35,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 2. Use first derivative to get search direction.
 3. Use approximated second derivative to guess step length.
 4. Use a line search algorithm to see how far to go in the search direction.
-  - Line search stays a 1d problem even with many parameters;
-  - Only solved approximately;
-  - Quite complicated if you really want to understand it;
-  - Most of the time accepts the first guess.
+   - Line search stays a 1d problem even with many parameters;
+   - Only solved approximately;
+   - Quite complicated if you really want to understand it;
+   - Most of the time accepts the first guess.
 5. Accept the new parameter and go back to 1.
 
 ---

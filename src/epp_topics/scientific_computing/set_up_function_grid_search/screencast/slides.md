@@ -38,7 +38,7 @@ $$
 f(\mathbf{x}) = \sum_{i=1}^n w_i x_i^{\exp_i}
 $$
 
-where $\mathbf{x} = (x_1, \dots, x_n)$ is a vector of length $n$ and
+where $\mathbf{x} = (x_1, \dots, x_n)$,
 $\mathbf{w} = (w_1, \dots, w_n)$ and $\mathbf{e} = (\exp_1, \dots, \exp_n)$ are
 vectors of length $n$. Exponentiation is element-wise.
 
