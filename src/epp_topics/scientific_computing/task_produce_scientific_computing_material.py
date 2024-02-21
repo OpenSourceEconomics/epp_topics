@@ -108,9 +108,9 @@ def task_plots_db_trust_region_iterations(
 def task_plots_db_trust_region_real_algo(
     x=START_X,
     illustration_db_trust_region_path: Annotated[Path, Product] = SCI_COMP
+    / "db_trust_region"
     / "screencast"
     / "public"
-    / "db_trust_region"
     / "illustration_db_trust_region_real_algo.png",
 ):
     res = minimize_with_history(
@@ -150,9 +150,9 @@ def task_plots_df_trust_region_iterations(
 def task_plots_df_trust_region_real_algo(
     x=START_X,
     illustration_df_trust_region_path: Annotated[Path, Product] = SCI_COMP
+    / "df_trust_region"
     / "screencast"
     / "public"
-    / "df_trust_region"
     / "illustration_df_trust_region_real_algo.png",
 ):
     res = minimize_with_history(

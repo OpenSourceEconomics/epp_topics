@@ -102,6 +102,16 @@ def plot_history(evaluated_points, argmin):
         name="Evaluations",
     )
 
+    fig.update_layout(
+        legend={
+            "orientation": "h",
+            "yanchor": "bottom",
+            "y": 1.02,
+            "xanchor": "right",
+            "x": 1,
+        },
+    )
+
     return fig
 
 

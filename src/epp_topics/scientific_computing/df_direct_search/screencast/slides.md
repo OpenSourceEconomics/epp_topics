@@ -50,33 +50,37 @@ Note that a real algorithm is quite complex to implement. You should never do th
 
 ---
 
-# Initial Evaluation
+### Initial Evaluation
 
-![](../../plots/df_direct_search/iteration_0.png)
-
----
-
-# Iteration 1
-
-![](../../plots/df_direct_search/iteration_1.png)
+<img src="iteration_0.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 ---
 
-# Iteration 2
+### Iteration 1
 
-![](../../plots/df_direct_search/iteration_1.png)
+<img src="iteration_1.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
----
-
-# Iteration 3
-
-![](../../plots/df_direct_search/iteration_1.png)
 
 ---
 
-# Iteration 4
+### Iteration 2
 
-![](../../plots/df_direct_search/iteration_1.png)
+<img src="iteration_2.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+
+
+---
+
+### Iteration 3
+
+<img src="iteration_3.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+
+
+---
+
+### Iteration 4
+
+<img src="iteration_4.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+
 
 ---
 
@@ -90,6 +94,6 @@ Note that a real algorithm is quite complex to implement. You should never do th
 
 ---
 
-# A real algorithm: Nelder Mead
+### A real algorithm: Nelder Mead
 
-![](../../plots/df_direct_search/illustration_df_direct_search_real_algo.png)
+<img src="illustration_df_direct_search_real_algo.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>

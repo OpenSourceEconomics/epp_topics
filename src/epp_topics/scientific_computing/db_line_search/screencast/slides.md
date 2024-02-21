@@ -35,110 +35,64 @@ Janoś Gabler and Hans-Martin von Gaudecker
 2. Use first derivative to get search direction.
 3. Use approximated second derivative to guess step length.
 4. Use a line search algorithm to see how far to go in the search direction.
-    - Line search stays a 1d problem even with many parameters;
-    - Only solved approximately;
-    - Quite complicated if you really want to understand it;
-    - Most of the time accepts the first guess.
+  - Line search stays a 1d problem even with many parameters;
+  - Only solved approximately;
+  - Quite complicated if you really want to understand it;
+  - Most of the time accepts the first guess.
 5. Accept the new parameter and go back to 1.
 
-
 ---
 
-# DB Line Search: Illustration
+### Initial Evaluation
 
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/db_line_search/iteration_0.png)
-
-</div>
-<div>
-
-- large gradient, low curvature
-- make a big step
-
----
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/db_line_search/iteration_1.png)
-
-</div>
-<div>
-
-
-- large gradient, large curvature
-- make a smaller step
-
----
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/db_line_search/iteration_2.png)
-
-</div>
-<div>
-
-- very small gradient, low curvature
-- make a very small step
-
----
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/db_line_search/iteration_3.png)
-
-</div>
-<div>
-
-- very small gradient, low curvature
-- make another very small step
-
----
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/db_line_search/iteration_4.png)
-
-</div>
-<div>
-
-- medium-sized gradient, low curvature
-- make a larger step again
-
----
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/db_line_search/iteration_5.png)
-
-</div>
-<div>
-
-- medium-sized gradient, larger curvature
-- make a small step
+<img src="iteration_0.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
 
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/db_line_search/iteration_6.png)
+### Iteration 1
 
-</div>
-<div>
+<img src="iteration_1.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
-- reverse direction due to gradient
 
 ---
 
-<div class="grid grid-cols-2 gap-4">
-<div>
-![](../../plots/db_line_search/iteration_7.png)
+### Iteration 2
 
-</div>
-<div>
+<img src="iteration_2.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
-- convergence based on gradient ≈ zero criterion
+
+---
+
+### Iteration 3
+
+<img src="iteration_3.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+
+
+---
+
+### Iteration 4
+
+<img src="iteration_4.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+
+
+---
+
+### Iteration 5
+
+<img src="iteration_5.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+
+---
+
+### Iteration 6
+
+<img src="iteration_6.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+
+---
+
+### Iteration 7
+
+<img src="iteration_7.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 ---
 
@@ -151,6 +105,6 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# A Real Algorithm: L-BFGS-B
+### A Real Algorithm: L-BFGS-B
 
-![](../../plots/db_line_search/illustration_db_line_search_real_algo.png)
+<img src="illustration_db_line_search_real_algo.png" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
