@@ -35,7 +35,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Also called pattern search because the points at which the function is evaluated form a pattern
 - Easiest example for one dimensional problems:
     - Evaluate function at current point and one other point
-    - Switch direction of other point if you got a decrease
+    - Switch direction of other point if you got an increase in function value
     - Make steps larger after success
     - Make steps smaller after failure
 
