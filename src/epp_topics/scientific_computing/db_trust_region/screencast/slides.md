@@ -35,9 +35,9 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 2. Construct a Taylor expansion of the function based on function value, gradient, and (approximation to) Hessian.
 
-   The Taylor expansion:
-   - approximates the function well within trust region if radius is not too large;
-   - is a quadratic function that it easy to optimize.
+    The Taylor expansion:
+    - approximates the function well within trust region if radius is not too large;
+    - is a quadratic function that it easy to optimize.
 
 3. Minimize the Taylor expansion within the trust region.
 
