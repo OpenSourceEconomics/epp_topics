@@ -68,7 +68,6 @@ SITE_CONTENTS = {
     "chapter_title": "Software Engineering",
     "pages": tuple(
         itertools.chain(
-            ("content_objectives.md",),
             *[topic["pages"] for topic in TOPICS],
         ),
     ),
