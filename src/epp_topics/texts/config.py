@@ -22,7 +22,6 @@ SITE_CONTENTS = {
     "chapter_title": "Texts, Typesetting, and Text Data",
     "pages": tuple(
         itertools.chain(
-            ("content_objectives.md",),
             *[topic["pages"] for topic in TOPICS],
         ),
     ),
