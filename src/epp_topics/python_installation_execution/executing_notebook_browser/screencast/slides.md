@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
