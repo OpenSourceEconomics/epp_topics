@@ -16,7 +16,7 @@ classifiers = [
 ]
 authors = [
     { name = "Hans-Martin von Gaudecker", email = "hmgaudecker@gmail.com" },
-    { name = "Janoś Gabler" },
+    { name = "Janoś Gabler", email = "janos.gabler@gmail.com" },
 ]
 [project.readme]
 file = "README.md"
