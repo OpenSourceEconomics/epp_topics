@@ -11,7 +11,7 @@ from pandas.api.types import is_float_dtype
 def get_html(df, scale=0.8):
     """Return html string for a pandas dataframe."""
     assert isinstance(scale, float)
-    assert 0.1 <= scale <= 1  # noqa: PLR2004
+    assert 0.1 <= scale <= 1
     font_percent = f"{int(scale * 100)}%"
 
     df = df.copy(deep=True)

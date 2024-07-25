@@ -1,4 +1,5 @@
 """Definitions of source files for the current chapter."""
+
 import itertools
 
 from epp_topics.debugging.avoiding_debugging import SITE_CONTENTS as AVOIDING_DEBGUGGING

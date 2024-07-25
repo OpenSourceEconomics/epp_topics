@@ -1,4 +1,5 @@
 """Create exercise and solution notebooks for the current subchapter."""
+
 from pathlib import Path
 
 from pybaum import tree_map
