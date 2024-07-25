@@ -1,8 +1,55 @@
-[build-system]
-requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
+[project]
+name = "epp_topics"
+description = "Effective Programming Practices for Economists: Topics"
+requires-python = ">=3.11"
+dependencies = [
+    "pytask"
+]
+dynamic = ["version"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+authors = [
+    { name = "Hans-Martin von Gaudecker", email = "hmgaudecker@gmail.com" },
+    { name = "Janoś Gabler", email = "janos.gabler@gmail.com" },
+]
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
 
-[tool.setuptools_scm]
-write_to = "src/epp_topics/_version.py"
+[project.license]
+text = "CC-BY-NC-SA-4.0"
+
+[project.urls]
+Documentation = "https://github.com/OpenSourceEconomics/epp_topics"
+Github = "https://github.com/OpenSourceEconomics/epp_topics"
+Tracker = "https://github.com/OpenSourceEconomics/epp_topics/issues"
+
+[build-system]
+requires = ["hatchling", "hatch_vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/epp_topics/_version.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = ["tests"]
+only-packages = true
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src"]
+sources = ["src"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.pytask.ini_options]
 paths = ["./src/epp_topics"]
@@ -13,9 +60,13 @@ ignore = [
 
 [tool.ruff]
 target-version = "py311"
-select = ["ALL"]
 fix = true
+line-length = 88
+
+[tool.ruff.lint]
+select = ["ALL"]
 extend-ignore = [
+    "PLR2004",  # Magic value used in comparison
     "S101",  # Use of `assert` detected.
     "ANN",  # Missing type annotations
     "D100",
@@ -40,18 +91,12 @@ extend-ignore = [
     "PERF401", # use a list comprehension
 ]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "src/epp_topics/python_basics/executing_pytest/screencast/example/test_cobb_douglas.py" = ["PLR2004"]
+"**/*.ipynb" = ["B018", "T201", "E402", "PLR2004"]
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "google"
-
-
-[tool.nbqa.config]
-black = "pyproject.toml"
-
-[tool.nbqa.mutate]
-black = 1
 
 
 [tool.pytest.ini_options]

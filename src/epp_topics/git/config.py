@@ -1,4 +1,5 @@
 """Definitions of source files for the current chapter."""
+
 import itertools
 
 from epp_topics.git.branches import SITE_CONTENTS as BRANCHES

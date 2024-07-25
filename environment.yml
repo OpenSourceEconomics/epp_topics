@@ -13,7 +13,7 @@ dependencies:
   - nodejs
   - numba
   - openpyxl
-  - pandas >= 2.1
+  - pandas >= 2.2
   - pip
   - plotly
   - pre-commit

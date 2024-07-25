@@ -1,4 +1,5 @@
 """Definitions of source files for the current chapter."""
+
 import itertools
 
 from epp_topics.plotting.goals_workflow import SITE_CONTENTS as GOALS_WORKFLOW
