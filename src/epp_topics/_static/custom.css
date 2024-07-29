@@ -42,9 +42,3 @@
 html[data-theme=dark] .bd-content div.cell_output .text_html:not(:has(table.dataframe)) {
     background-color: hsl(0, 0%, 7%);
 }
-
-/* Set colors of jupyter quiz container */
-
-.MultipleChoiceQn {
-    background: #528fe4 !important;
-}
