@@ -34,6 +34,10 @@ li {
   margin-bottom: .35rem !important;
 }
 code {
+  font-size: 1.0rem !important;
+}
+
+.slidev-code code {
   font-size: 0.8rem !important;
 }
 
@@ -74,6 +78,7 @@ html.dark {
   table tbody tr:nth-child(odd) {
     background-color: #565656;
   }
+
 }
 
 html:not(.dark) {
@@ -97,6 +102,12 @@ html:not(.dark) {
   }
 
   .slidev-code code {
-    background: white;
+    font-weight: normal !important;
+  }
+
+  code {
+    font-weight: bold !important;
+    background: white !important;
+    color: #0065bd !important;
   }
 }
