@@ -1,0 +1,44 @@
+/* Set colors for light theme tables - very light blues */
+
+[data-theme='light'] .table {
+    border: white !important;
+}
+
+[data-theme='light'] .table thead {
+    --bs-table-bg: hsl(209, 100%, 95%) !important;
+}
+
+[data-theme='light'] .table tbody tr:nth-child(odd) {
+    --bs-table-bg: hsl(209, 100%, 90%) !important;
+}
+
+[data-theme='light'] .table tbody tr:nth-child(even) {
+    --bs-table-bg: hsl(209, 100%, 95%) !important;
+}
+
+/* Set colors for dark theme tables - very dark greys */
+
+
+[data-theme='dark'] .table {
+    border: hsl(0, 0%, 7%) !important;
+}
+
+[data-theme='dark'] .table thead {
+    /* --bs-table-bg: hsl(0, 0%, 5%) !important;
+    */
+    --bs-table-bg: hsl(0, 0%, 12%) !important;
+}
+
+[data-theme='dark'] .table tbody tr:nth-child(odd) {
+    --bs-table-bg: hsl(0, 0%, 17%) !important;
+}
+
+[data-theme='dark'] .table tbody tr:nth-child(even) {
+    --bs-table-bg: hsl(0, 0%, 12%) !important;
+}
+
+/* Set color of quiz for dark thme */
+
+html[data-theme=dark] .bd-content div.cell_output .text_html:not(:has(table.dataframe)) {
+    background-color: hsl(0, 0%, 7%);
+}
