@@ -204,7 +204,7 @@ def test_clean_agreement_scale_known_missings():
 
 # Run pytest
 
-<img src="run_verbose.png" class="rounded" width="550"/>
+<img src="/run_verbose.png" class="rounded" width="550"/>
 
 ---
 

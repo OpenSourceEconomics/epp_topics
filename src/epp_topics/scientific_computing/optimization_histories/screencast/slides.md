@@ -66,7 +66,7 @@ em.criterion_plot(res)
 <div class="grid grid-cols-2 gap-12">
 <div>
 
-<img src="criterion_plot.png" alt="criterion" width="500" style="display: block;"/>
+<img src="/criterion_plot.png" alt="criterion" width="500" style="display: block;"/>
 
 </div>
 <div>
@@ -92,7 +92,7 @@ em.criterion_plot(res, monotone=True)
 
 <div class="grid grid-cols-2 gap-4">
 <div>
-<img src="criterion_plot_monotone.png" alt="criterion" width="500"
+<img src="/criterion_plot_monotone.png" alt="criterion" width="500"
 style="display: block;"/>
 
 </div>
@@ -117,7 +117,7 @@ em.criterion_plot(res, max_evaluations=300)
 
 <div class="grid grid-cols-2 gap-4">
 <div>
-<img src="criterion_plot_max_evaluations.png" alt="criterion" width="500"
+<img src="/criterion_plot_max_evaluations.png" alt="criterion" width="500"
 style="display: block;"/>
 
 </div>
@@ -162,7 +162,7 @@ em.criterion_plot(results, max_evaluations=200)
 </div>
 <div>
 
-<img src="multi_optimization_criterion_plot.svg" class="rounded" width="300"/>
+<img src="/multi_optimization_criterion_plot.svg" class="rounded" width="300"/>
 
 </div>
 </div>

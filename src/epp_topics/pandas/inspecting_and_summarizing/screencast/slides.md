@@ -332,7 +332,7 @@ year
 >>> pd.options.plotting.backend = "plotly"
 >>> df.groupby("year")["life_exp"].mean().plot()
 ```
-<img src="lineplot.png" class="rounded" width="400"/>
+<img src="/lineplot.png" class="rounded" width="400"/>
 
 </div>
 <div>
@@ -356,7 +356,7 @@ year
 >>> df.plot.scatter(x="year", y="life_exp",
                     color="country")
 ```
-<img src="scatterplot.png" class="rounded" width="400"/>
+<img src="/scatterplot.png" class="rounded" width="400"/>
 
 </div>
 <div>

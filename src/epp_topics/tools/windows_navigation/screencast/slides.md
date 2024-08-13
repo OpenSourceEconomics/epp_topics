@@ -78,7 +78,7 @@ graph LR
 ### GUI representation
 
 <center>
-<img src="windows_path_mambaforge.png" width=250>
+<img src="/windows_path_mambaforge.png" width=250>
 </center>
 
 

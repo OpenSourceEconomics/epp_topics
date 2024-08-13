@@ -2,6 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": ("screencast/public/unix_path_mambaforge.png",),
+    "other": (),
     "built": ("tools-unix_navigation.pdf",),
 }

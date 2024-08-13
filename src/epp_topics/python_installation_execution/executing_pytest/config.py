@@ -2,9 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": (
-        "screencast/public/activate_and_info.png",
-        "screencast/public/run.png",
-    ),
+    "other": (),
     "built": ("python_installation_execution-executing_pytest.pdf",),
 }

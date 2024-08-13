@@ -122,7 +122,7 @@ def task_plot_life_expectancy(
 </div>
 <div>
 
-<img src="collect_nodes.png" class="rounded" width="350"/>
+<img src="/collect_nodes.png" class="rounded" width="350"/>
 
 
 </div>
@@ -133,7 +133,7 @@ def task_plot_life_expectancy(
 
 # Run pytask
 
-<img src="run_1.png" class="rounded" width="555"/>
+<img src="/run_1.png" class="rounded" width="555"/>
 
 ---
 

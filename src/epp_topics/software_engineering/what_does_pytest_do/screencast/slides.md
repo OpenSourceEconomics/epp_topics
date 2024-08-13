@@ -182,7 +182,7 @@ def _clean_favorite_language(sr):
 </div>
 <div class="col-span-3">
 
-<img src="collect_only.png" class="rounded" width="500"/>
+<img src="/collect_only.png" class="rounded" width="500"/>
 
 
 </div>
@@ -202,7 +202,7 @@ def _clean_favorite_language(sr):
 </div>
 <div class="col-span-3">
 
-<img src="run.png" class="rounded" width="500"/>
+<img src="/run.png" class="rounded" width="500"/>
 
 </div>
 </div>
@@ -221,7 +221,7 @@ def _clean_favorite_language(sr):
 </div>
 <div class="col-span-3">
 
-<img src="run_verbose.png" class="rounded" width="500"/>
+<img src="/run_verbose.png" class="rounded" width="500"/>
 
 </div>
 </div>
@@ -230,10 +230,10 @@ def _clean_favorite_language(sr):
 
 # Step 3: Inspect failures
 
-<img src="run_failed.png" class="rounded" width="600"/>
+<img src="/run_failed.png" class="rounded" width="600"/>
 
 ---
 
 # Step 3: Inspect failures with pdb
 
-<img src="run_pdb.png" class="rounded" width="600"/>
+<img src="/run_pdb.png" class="rounded" width="600"/>

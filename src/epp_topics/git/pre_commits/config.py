@@ -2,10 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": (
-        "screencast/public/git_status.png",
-        "screencast/public/first_commit.png",
-        "screencast/public/second_commit.png",
-    ),
+    "other": (),
     "built": ("git-pre_commits.pdf",),
 }

@@ -45,7 +45,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # 0. Activate and Info
 
-<img src="activate_and_info.png" class="rounded" width="600"/>
+<img src="/activate_and_info.png" class="rounded" width="600"/>
 
 ---
 
@@ -73,25 +73,25 @@ graph LR
 
 # 1. Start Notebook
 
-<img src="blocked_terminal.png" class="rounded" width="600"/>
+<img src="/blocked_terminal.png" class="rounded" width="600"/>
 
 
 ---
 
 # 2. Landing Page
 
-<img src="starting_page.png" class="rounded" width="600"/>
+<img src="/starting_page.png" class="rounded" width="600"/>
 
 
 ---
 
 # 3. Click on Folder
 
-<img src="folder.png" class="rounded" width="600"/>
+<img src="/folder.png" class="rounded" width="600"/>
 
 
 ---
 
 # 4. Work in the Notebook
 
-<img src="notebook.png" class="rounded" width="600"/>
+<img src="/notebook.png" class="rounded" width="600"/>
