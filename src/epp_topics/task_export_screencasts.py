@@ -1,6 +1,5 @@
 """Create figure for this subchapter's screencast."""
 
-import shutil
 import subprocess
 from pathlib import Path
 from typing import Annotated
@@ -10,7 +9,7 @@ from pytask import Product, task
 from epp_topics.config import SITE_SOURCE_DIR, SRC
 
 
-def find_orig_screencasts():
+def find_screencasts():
     """Find all files matching screencast pattern, except for template chapter."""
     return [
         sc
@@ -19,30 +18,15 @@ def find_orig_screencasts():
     ]
 
 
-for orig_screencast in find_orig_screencasts():
-    orig_dir = orig_screencast.parent
-    screencast_dir = SITE_SOURCE_DIR / orig_dir.relative_to(SRC)
-    screencast_md = screencast_dir / orig_screencast.name
-
+for screencast_md in find_screencasts():
+    orig_dir = screencast_md.parent
     chapter_name = orig_dir.parent.parent.name
     topic_name = orig_dir.parent.name
-    screencast_pdf = screencast_dir.parent / f"{chapter_name}-{topic_name}.pdf"
-
-    @task(id=f"{chapter_name}, {topic_name}")
-    def task_copy_style_css(
-        orig: Path = SRC / "slidev_config" / "style.css",
-        prod: Annotated[Path, Product] = screencast_dir / "style.css",
-    ):
-        """Copy style.css for slidev presentation."""
-        shutil.copy(orig, prod)
-
-    @task(id=f"{chapter_name}, {topic_name}")
-    def task_copy_slides_md(
-        orig: Path = orig_screencast,
-        prod: Annotated[Path, Product] = screencast_md,
-    ):
-        """Copy slides.md for slidev presentation."""
-        shutil.copy(orig, prod)
+    screencast_pdf = (
+        SITE_SOURCE_DIR
+        / orig_dir.parent.relative_to(SRC)
+        / f"{chapter_name}-{topic_name}.pdf"
+    )
 
     @task(id=f"{chapter_name}, {topic_name}")
     def task_export_pdf(
