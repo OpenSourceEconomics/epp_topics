@@ -27,6 +27,7 @@ CHAPTER_NAMES = [
 
 
 SRC = Path(__file__).parent.resolve()
+SLIDES_PDF_DIR = SRC.parent.parent / ".slides_pdf"
 SITE_SOURCE_DIR = SRC.parent.parent / "site_source"
 SITE_DIR = SRC.parent.parent.parent / "effective-programming-practices"
 
