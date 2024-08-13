@@ -2,9 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": (
-        "screencast/public/run_failed.png",
-        "screencast/public/run_fixed.png",
-    ),
+    "other": (),
     "built": ("software_engineering-pytest_error_handling.pdf",),
 }

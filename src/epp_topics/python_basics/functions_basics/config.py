@@ -2,6 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": ("screencast/public/function_anatomy.png",),
+    "other": (),
     "built": ("python_basics-functions_basics.pdf",),
 }

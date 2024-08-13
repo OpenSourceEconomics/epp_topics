@@ -72,7 +72,7 @@ graph LR
 ### GUI representation
 
 <center>
-<img src="unix_path_mambaforge.png" width=450>
+<img src="/unix_path_mambaforge.png" width=450>
 </center>
 
 ### Shell representation

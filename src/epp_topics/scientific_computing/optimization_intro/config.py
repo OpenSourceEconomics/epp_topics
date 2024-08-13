@@ -2,9 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": (
-        # "existing figures etc.",
-        "screencast/public/sphere.png",
-    ),
+    "other": (),
     "built": ("scientific_computing-optimization_intro.pdf",),
 }

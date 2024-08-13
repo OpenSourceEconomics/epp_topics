@@ -2,6 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": ("screencast/public/simple_traceback.png",),
+    "other": (),
     "built": ("python_basics-tracebacks.pdf",),
 }

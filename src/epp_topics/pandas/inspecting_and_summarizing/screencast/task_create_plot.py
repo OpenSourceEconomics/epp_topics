@@ -6,22 +6,10 @@ from epp_topics.config import SITE_SOURCE_DIR
 pd.options.plotting.backend = "plotly"
 
 
-LINEPLOT = (
-    SITE_SOURCE_DIR
-    / "pandas"
-    / "inspecting_and_summarizing"
-    / "screencast"
-    / "public"
-    / "lineplot.png"
-)
+LINEPLOT = SITE_SOURCE_DIR / "pandas" / "inspecting_and_summarizing" / "lineplot.png"
 
 SCATTERPLOT = (
-    SITE_SOURCE_DIR
-    / "pandas"
-    / "inspecting_and_summarizing"
-    / "screencast"
-    / "public"
-    / "scatterplot.png"
+    SITE_SOURCE_DIR / "pandas" / "inspecting_and_summarizing" / "scatterplot.png"
 )
 
 

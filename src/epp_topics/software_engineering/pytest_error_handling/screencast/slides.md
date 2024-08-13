@@ -207,7 +207,7 @@ def test_clean_agreement_scale_invalid_data():
 
 # Run pytest
 
-<img src="run_failed.png" class="rounded" width="550"/>
+<img src="/run_failed.png" class="rounded" width="550"/>
 
 ---
 
@@ -239,4 +239,4 @@ def _clean_agreement_scale(sr):
 
 # Run pytest, again
 
-<img src="run_fixed.png" class="rounded" width="550"/>
+<img src="/run_fixed.png" class="rounded" width="550"/>

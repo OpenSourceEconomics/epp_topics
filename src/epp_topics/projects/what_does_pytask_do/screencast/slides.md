@@ -79,7 +79,7 @@ graph LR
 </div>
 <div>
 
-<img src="collect.png" class="rounded" width="350"/>
+<img src="/collect.png" class="rounded" width="350"/>
 
 
 </div>
@@ -103,7 +103,7 @@ structure (topological sort)
 </div>
 <div>
 
-<img src="collect_nodes.png" class="rounded" width="350"/>
+<img src="/collect_nodes.png" class="rounded" width="350"/>
 
 
 </div>
@@ -131,7 +131,7 @@ graph TD
 </div>
 <div>
 
-<img src="collect_nodes.png" class="rounded" width="350"/>
+<img src="/collect_nodes.png" class="rounded" width="350"/>
 
 </div>
 </div>
@@ -152,16 +152,16 @@ graph TD
 
 # Run for the first time
 
-<img src="run_1.png" class="rounded" width="700"/>
+<img src="/run_1.png" class="rounded" width="700"/>
 
 ---
 
 # Delete plot and run again
 
-<img src="run_2_after_deleting_plot.png" class="rounded" width="700"/>
+<img src="/run_2_after_deleting_plot.png" class="rounded" width="700"/>
 
 ---
 
 # Delete cleaned data and run again
 
-<img src="run_3_after_deleting_data.png" class="rounded" width="700"/>
+<img src="/run_3_after_deleting_data.png" class="rounded" width="700"/>
