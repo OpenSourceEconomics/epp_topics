@@ -1,6 +1,5 @@
 import pandas as pd
 import plotly.express as px
-
 from epp_topics.config import SITE_SOURCE_DIR
 
 pd.options.plotting.backend = "plotly"
