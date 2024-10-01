@@ -131,7 +131,7 @@ this processor, you can download Miniforge by running the following command:
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 ```
 
-If you have an ARM64 processor, you will see ```aarch64``` in the output. If you have this
+If you have an ARM64 processor, you will see `aarch64` in the output. If you have this
 just run:
 
 ```bash
