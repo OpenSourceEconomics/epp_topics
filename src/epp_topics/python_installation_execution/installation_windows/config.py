@@ -26,6 +26,7 @@ SITE_CONTENTS = {
         "19_not_recognized.png",
         "20_exec_policy.png",
         "21_conda_empty.png",
+        "environment.yml",
     ),
     "built": (
         # "screencast slides etc.",
