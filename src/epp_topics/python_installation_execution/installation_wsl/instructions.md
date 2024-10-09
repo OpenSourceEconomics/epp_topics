@@ -115,23 +115,23 @@ a terminal of your linux installation. You can do this either through VSCode, as
 
 ![3_WSL_search.png](3_WSL_search.png)
 
-Once you have opened the terminal, we will need to use it to install Miniconda and mamba.
-First, you need to know whether you have an ARM64 or an x86_64 processor. To do so, you
-will either need to check what processor you have or to run the following
-command in the terminal:
+Once you have opened the terminal, we will need to use it to install mamba (the
+downloaded distribution containing it is called Miniforge). First, you need to know
+whether you have an ARM64 or an x86_64 processor. To do so, you will either need to
+check what processor you have or to run the following command in the terminal:
 
 ```bash
 uname -m
 ```
 
-If you have a x86_64 processor, you will see ```x86_64``` in the output. If you have this
-processor, you can download Miniconda by running the following command:
+If you have a x86_64 processor, you will see `x86_64` in the output. If you have
+this processor, you can download Miniforge by running the following command:
 
 ```bash
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 ```
 
-If you have an ARM64 processor, you will see ```aarch64``` in the output. If you have this
+If you have an ARM64 processor, you will see `aarch64` in the output. If you have this
 just run:
 
 ```bash

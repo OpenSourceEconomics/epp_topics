@@ -74,7 +74,7 @@ then, believe us they are a good idea.
 1. You start by downloading the
 
    ```{eval-rst}
-   :download:`course environment <../environment.yml>`
+   :download:`course environment <environment.yml>`
    ```
 
 1. As before, open your Terminal in the directory where you chose to save the course
