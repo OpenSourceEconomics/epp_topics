@@ -35,7 +35,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - We assume you have installed anaconda and created the course environment
 - Open a shell in the root directory of your project
-    - On Windows, use the anaconda prompt or the powershell
+    - On Windows, use the powershell
     - If conda is not recognized in the powershell, check out this
       [stackoverflow post](https://stackoverflow.com/a/65160772/21900143)
 - Activate the environment using `conda activate epp`
