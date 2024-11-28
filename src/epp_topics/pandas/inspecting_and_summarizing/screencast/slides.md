@@ -332,13 +332,15 @@ year
 >>> pd.options.plotting.backend = "plotly"
 >>> df.groupby("year")["life_exp"].mean().plot()
 ```
-<img src="/lineplot.png" class="rounded" width="400"/>
+<img src="/lineplot.svg" class="rounded" width="400"/>
 
 </div>
 <div>
 
 - Any Series has a `.plot` method
+
 - Any Series has a `.hist` method
+
 - Summary statistics based on groupby return Series which can again be plotted
 
 </div>
@@ -356,13 +358,15 @@ year
 >>> df.plot.scatter(x="year", y="life_exp",
                     color="country")
 ```
-<img src="/scatterplot.png" class="rounded" width="400"/>
+<img src="/scatterplot.svg" class="rounded" width="400"/>
 
 </div>
 <div>
 
 - Any DataFrame has a `.plot` method
+
 - Defaults to line plot, can access `.scatter` and many more
+
 - Notebook gives you interactive plots
 
 </div>

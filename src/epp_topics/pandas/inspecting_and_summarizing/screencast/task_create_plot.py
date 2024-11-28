@@ -1,19 +1,14 @@
+from pathlib import Path
+
 import pandas as pd
 import plotly.express as px
-
-from epp_topics.config import SITE_SOURCE_DIR
+import pytask
 
 pd.options.plotting.backend = "plotly"
 
 
-LINEPLOT = SITE_SOURCE_DIR / "pandas" / "inspecting_and_summarizing" / "lineplot.png"
-
-SCATTERPLOT = (
-    SITE_SOURCE_DIR / "pandas" / "inspecting_and_summarizing" / "scatterplot.png"
-)
-
-
-def task_create_lineplot(produces=LINEPLOT):
+@pytask.mark.try_first
+def task_create_lineplot(produces=Path() / "public" / "lineplot.svg"):
     df = px.data.gapminder()
     df = df.rename(
         columns={
@@ -24,7 +19,8 @@ def task_create_lineplot(produces=LINEPLOT):
     fig.write_image(produces)
 
 
-def task_create_scatterplot(produces=SCATTERPLOT):
+@pytask.mark.try_first
+def task_create_scatterplot(produces=Path() / "public" / "scatterplot.svg"):
     df = px.data.gapminder()
     df = df.rename(
         columns={
