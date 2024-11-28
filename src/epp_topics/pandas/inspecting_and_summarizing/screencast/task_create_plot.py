@@ -15,7 +15,13 @@ def task_create_lineplot(produces=Path() / "public" / "lineplot.svg"):
             "lifeExp": "life_exp",
         },
     )
-    fig = df.groupby("year")["life_exp"].mean().plot(template="plotly_dark")
+    fig = (
+        df.groupby("year")["life_exp"]
+        .mean()
+        .plot(
+            template="presentation"  # "+plotly_dark"
+        )
+    )
     fig.write_image(produces)
 
 
@@ -31,6 +37,6 @@ def task_create_scatterplot(produces=Path() / "public" / "scatterplot.svg"):
         x="year",
         y="life_exp",
         color="country",
-        template="plotly_dark",
+        template="presentation",  # "+plotly_dark"
     )
     fig.write_image(produces)
