@@ -11,7 +11,7 @@ drawings:
 transition: fade
 title: Effective Programming Practices for Economists
 defaults:
-  layout: centerihm nochmal eine Email geschrieben und gef
+  layout: center
 ---
 
 ### Effective Programming Practices for Economists
