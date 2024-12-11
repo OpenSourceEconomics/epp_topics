@@ -82,9 +82,6 @@ defaults:
 
 - Contains only Python packages!
 
----
-
-# Example
 
 ---
 
@@ -95,32 +92,41 @@ defaults:
 <div v-click>
 
 - What about packages that rely on code from other languages (e.g., C, C++)?
-	- This code needs to be compiled before execution
+
+	- For compiled languages the code requires compilation before execution
   - Examples: NumPy, SciPy, pandas, JAX, PyTorch, etc.
 
 </div>
 
 <div v-click>
 
-- Usually: Pre-compile these parts for most relevant platforms (add to Wheels file)
+- Usually: Pre-compile these parts for most relevant platforms
+  
+  - Combine pre-compiled parts with plain Python source in a _"wheel"_
+
+  - Example: `pip install numpy`
 
 </div>
 
-<div v-click>
-
-- `pip install numpy`:
-  - Installs NumPy's plain Python source code as well as the pre-compiled parts, and all
-    of NumPy's dependencies (and their dependencies...)
-  - If no pre-compiled parts are available (e.g., you use a non-standard platform),
-    `pip` will download the complete source code and tries to compile the relevant code
-    (this, however, requires build tools to be available ---for example, a C++ compiler)
-
-</div>
 
 
 ---
 
-# Example
+# Running `pip install numpy`
+
+_(Ignoring dependencies for now.)_
+
+- If wheels are available for your platform, `pip` downloads the wheel and install
+  it.
+  - Plain Python source code and pre-compiled parts installed
+  - Example: [
+numpy-2.2.0-cp313-cp313-musllinux_1_2_x86_64.whl](https://files.pythonhosted.org/packages/5a/3d/d20d24ee313992f0b7e7b9d9eef642d9b545d39d5b91c4a2cc8c98776328/numpy-2.2.0-cp313-cp313-musllinux_1_2_x86_64.whl)
+
+- If no wheels are available for your platform, `pip` downloads the source and tries
+  to compile the relevant code
+  - Requires build tools to be available (e.g., a C++ compiler)
+  - Example: [
+numpy-2.2.0.tar.gz](https://files.pythonhosted.org/packages/47/1b/1d565e0f6e156e1522ab564176b8b29d71e13d8caf003a08768df3d5cec5/numpy-2.2.0.tar.gz)
 
 ---
 
@@ -139,7 +145,7 @@ defaults:
 
   - No problem if that code is written specifically for your package
 
-  - Annoying if you rely on another package that is written in another language
+  - Problematic if not (memory, versions)
 
 </div>
 
@@ -148,13 +154,13 @@ defaults:
 - Sometimes programs require additional libraries to be installed on the system because
   it would be too complicated to include them in the package wheel
   
-  Example: cuda tools for PyTorch, JAX, etc.
+  Example: CUDA toolkit for PyTorch, JAX, etc.
 
 </div>
 
 <div v-click>
 
-- ***Next week we will see how conda and conda-forge solve this problem! (+pixi)***
+- ***[Next week we will see how conda and conda-forge solve this problem! (+pixi)]()***
 
 </div>
 

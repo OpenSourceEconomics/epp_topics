@@ -183,6 +183,16 @@ from package.subpackage.module2 import Variable2
 <div class="grid grid-cols-2 gap-15">
 
 <div>
+
+Want to update `Variable1` to
+
+```python
+Variable1 = "The first variable (updated)"
+```
+
+➡ Example
+
+<div v-click>
 <b>Command</b>
 
 ```console
@@ -195,13 +205,10 @@ $ pip install --help
 ...
 ```
 </div>
+</div>
 
 <div v-click>
 <b>Internally</b>
-
-- **Editable install** (with `--editable`)
-  
-  `pip` copies [the path to the package]() to `"site-packages"`
 
 - **Regular install**
 
@@ -209,15 +216,13 @@ $ pip install --help
   
   This is also what happens when installing from GitHub, PyPI, etc.
 
+- **Editable install** (with `--editable`)
+  
+  `pip` copies [the path to the package]() to `"site-packages"`
 
 </div>
 
 </div>
-
-
----
-
-# Example
 
 
 ---
