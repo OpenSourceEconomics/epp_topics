@@ -11,8 +11,6 @@ drawings:
 transition: fade
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
