@@ -58,12 +58,9 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Does it look like you cared?
 
   - about the project
+
   - about the reader (don't make it too long!)
 
 ---
 
-# Examples
-
-- [optimagic](https://github.com/optimagic-dev/optimagic/)
-
-- some paper
+# Example: [optimagic](https://github.com/optimagic-dev/optimagic/?tab=readme-ov-file#optimagic)
