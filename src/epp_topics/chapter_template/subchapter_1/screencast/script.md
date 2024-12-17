@@ -1,6 +1,5 @@
-# Script: Subchapter Name
+# Script: Writing Readme Files
 
-## First slide
+## Readme.md
 
-- Some bullet point
-- Another bullet point
+- Whatever the situation, very important thing
