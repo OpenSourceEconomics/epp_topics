@@ -8,8 +8,10 @@ from epp_topics.pandas.dataframes_and_series import (
     SITE_CONTENTS as DATAFRAMES_AND_SERIES,
 )
 from epp_topics.pandas.datatypes import SITE_CONTENTS as DATATYPES
-from epp_topics.pandas.functional_fundamentals import SITE_CONTENTS as FUNCTIONAL_FUNDAMENTALS
 from epp_topics.pandas.functional import SITE_CONTENTS as FUNCTIONAL_DATA_MANAGEMENT
+from epp_topics.pandas.functional_fundamentals import (
+    SITE_CONTENTS as FUNCTIONAL_FUNDAMENTALS,
+)
 from epp_topics.pandas.inspecting_and_summarizing import (
     SITE_CONTENTS as INSPECTING_AND_SUMMARIZING,
 )

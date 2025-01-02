@@ -14,10 +14,10 @@ from epp_topics.scientific_computing.calculations_on_arrays import (
 from epp_topics.scientific_computing.creating_arrays import (
     SITE_CONTENTS as CREATING_ARRAYS,
 )
+from epp_topics.scientific_computing.indexing import SITE_CONTENTS as INDEXING
 from epp_topics.scientific_computing.optimagic_features import (
     SITE_CONTENTS as OPTIMAGIC_FEATURES,
 )
-from epp_topics.scientific_computing.indexing import SITE_CONTENTS as INDEXING
 from epp_topics.scientific_computing.optimization_algorithms import (
     SITE_CONTENTS as OPTIMIZATION_ALGORITHMS,
 )
