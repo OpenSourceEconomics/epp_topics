@@ -17,7 +17,7 @@ models.
 Two main messages:
 
 1. Partial is much more powerful than people think, especially for scientific code. We
-   do a lot of the magic in estimagic using partial. Often people would be surprised
+   do a lot of the magic in optimagic using partial. Often people would be surprised
    that can do so many things without object oriented programming. But:
 
    - "An object is just a poor man's closure" (famous quote with unknown author)

@@ -2,6 +2,7 @@
 name: epp
 channels: [conda-forge, nodefaults]
 dependencies:
+  - optimagic
   - estimagic
   - nlopt
   - jupyter

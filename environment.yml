@@ -4,7 +4,7 @@ channels: [conda-forge, nodefaults, conda-forge/label/pytask_rc]
 dependencies:
   - conda-lock
   - deepdiff
-  - estimagic
+  - optimagic
   - gitpython
   - ipykernel
   - ipywidgets

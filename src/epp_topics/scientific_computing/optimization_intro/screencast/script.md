@@ -32,4 +32,4 @@ Say that this has implications for the diagnostic tooling we need around optimiz
 
 # Libraries for optimization
 
-Don't talk much about this slide. No need to sell estimagic. Just say we use it.
+Don't talk much about this slide. No need to sell optimagic. Just say we use it.

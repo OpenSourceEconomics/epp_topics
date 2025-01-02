@@ -60,7 +60,7 @@
 1. Scientific computing
    - Numpy/scipy
    - Optimisation
-   - Estimagic
+   - Optimagic
    - Speedup
 1. Data Science
    - Data Management
