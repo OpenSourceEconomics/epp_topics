@@ -29,7 +29,7 @@ defaults:
 1. Summary of last presentations
    <br>*(only for jour fixe not epp)*
 1. Conda channels
-1. Pixi and Conda
+1. Pixi
 1. Why we recommend conda
 1. How to use Pixi
 
@@ -44,11 +44,11 @@ defaults:
 
 - A package may rely on non-Python dependencies, in which case
 
-  - the pre-compiled dependencies are bundled with the Python source in a Python Wheel (e.g., linalg libraries in NumPy)
+  1. the pre-compiled dependencies are bundled with the Python source in a Python Wheel (e.g., linalg libraries in NumPy)
 
-  - the user must install the dependencies manually (e.g., CUDA for JAX)
+  1. the user must install the dependencies manually (e.g., CUDA for JAX)
 
-  - the source code is compiled during installation
+  1. the source code is compiled during installation
 
 ➡ non-Python dependencies cannot be shared between packages and their versions are not
 guaranteed to be compatible!
@@ -60,7 +60,10 @@ guaranteed to be compatible!
 
 - A channel is a repository of packages (just like PyPI)
 
-- Besides Python many languages can be supported (e.g., R, C++, Fortran, and more)
+- Besides Python, many languages are supported (e.g., R, C++, Fortran, and more)
+
+  ➡ non-Python dependencies can be shared between packages, and a dependency solver can
+  ensure version compatibility
 
 - There are many channels:
 
@@ -68,38 +71,27 @@ guaranteed to be compatible!
 
   - `conda-forge`: A community-driven channel with many packages (recommended)
 
-  - `bioconda`: A channel for bioinformatics packages
+  - `nvidia`: A channel for NVIDIA related packages
+
+  - and many others...
+
 
 
 ---
 
-# Pixi and Conda
+# Pixi
 
 
 - A package, dependency, and environment manager
 
-- Can install all packages
+- Can install packages from any conda channel (and from PyPI)
 - A unified way to install packages and manage separate environments
+- A modern alternative to the conda package manager (or mamba)
 
+- It goes beyond pip by
+  1. Being an environment manager (pip folks require venv or alternatives for this)
+  1. Using a robust dependency solver for consistent, conflict-free installations
 
----
-
-# The Anaconda Distribution
-
-- A curated collection of packages maintained by Anaconda, Inc.
-
-- Distributed with conda, Python, and many scientific libraries
-- Often used in data science to quickly get a working setup
-
-
----
-
-# The conda-forge Channel
-
-- A community-driven collection of recipes for building packages
-
-- Maintains a wide variety of packages and up-to-date versions
-- Compatible with Anaconda and other conda installations
 
 
 ---
@@ -108,7 +100,7 @@ guaranteed to be compatible!
 
 - Conda can manage non-Python dependencies (e.g., compilers, system libraries)
 
-- Conda-forge provides pre-compiled binaries for multiple platforms
+- Conda channel (e.g., conda-forge) provide pre-compiled binaries
 
 - pip relies solely on Python wheels or source code from PyPI
 

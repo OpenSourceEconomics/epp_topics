@@ -42,7 +42,7 @@ defaults:
    instead of
    ```python
    from package.module import Variable
-   ``` 
+   ```
 1. Why do we sometimes write
    ```python
    if __name__ == "__main__":
@@ -173,9 +173,12 @@ from package.subpackage.module2 import Variable2
     Python code into machine code using the [LLVM](https://llvm.org/) compiler
     infrastructure
 
+  - [**XLA**](https://openxla.org/xla): A domain-specific compiler for linear algebra
+    that can be used with machine learning frameworks like PyTorch or JAX
+
   - ...
-  
-  
+
+
 ---
 
 # Editable installs
@@ -213,11 +216,11 @@ $ pip install --help
 - **Regular install**
 
   `pip` copies [the package contents]() to `"site-packages"`
-  
+
   This is also what happens when installing from GitHub, PyPI, etc.
 
 - **Editable install** (with `--editable`)
-  
+
   `pip` copies [the path to the package]() to `"site-packages"`
 
 </div>
