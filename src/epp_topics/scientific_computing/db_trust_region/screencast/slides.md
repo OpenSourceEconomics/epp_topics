@@ -33,15 +33,16 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 1. Fix a trust region radius.
 
-2. Construct a Taylor expansion of the function based on function value, gradient, and (approximation to) Hessian.
+2. Construct a Taylor approximation of the function based on function value, gradient,
+   and (approximation to) the Hessian.
 
-    The Taylor expansion:
-    - approximates the function well within trust region if radius is not too large;
+    The Taylor approximation:
+    - approximates the function well within the trust region if radius is not too large;
     - is a quadratic function that it easy to optimize.
 
-3. Minimize the Taylor expansion within the trust region.
+3. Minimize the Taylor approximation within the trust region.
 
-4. Evaluate function again at the argmin of the Taylor expansion.
+4. Evaluate the function again at the argmin of the Taylor approximation.
 
 ---
 
@@ -52,6 +53,21 @@ Janoś Gabler and Hans-Martin von Gaudecker
 7. Potentially modify the trust region radius (**important and complex step**).
 
 8. Go back to 2.
+
+
+---
+
+# Smaller radii lead to better approximations
+
+- Take any function $f$ that is at least three times continuously differentiable.
+
+- For a step $s$, the Taylor expansion of $f(x + s)$ around $x$ satisfies:
+
+  $f(x + s) = f(x) + \nabla f(x)^\top s + \frac{1}{2} s^\top \nabla^2 f(x) s + o(\|s\|^2)$.
+
+- The step $s$ is bounded by the trust region radius $\Delta$: $\|s\| \leq \Delta$.
+
+- And therefore, as $\Delta$ decreases the approximation error $o(\|s\|^2)$ decreases.
 
 ---
 
@@ -114,7 +130,6 @@ Note that a real algorithm is quite complex to implement. You should never do th
 - At some point it becomes too large and needs to be decreased.
 - From now on the algorithm would converge soon because of a zero gradient.
 - Even when it converges, the trust region radius does not shrink to zero.
-
 
 ---
 
