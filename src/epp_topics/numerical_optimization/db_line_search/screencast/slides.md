@@ -68,54 +68,54 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ### Initial Evaluation
 
-<img src="iteration_0.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_0.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
 
 ### Iteration 1
 
-<img src="iteration_1.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_1.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
 
 ### Iteration 2
 
-<img src="iteration_2.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_2.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
 
 ### Iteration 3
 
-<img src="iteration_3.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_3.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
 
 ### Iteration 4
 
-<img src="iteration_4.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_4.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
 
 ### Iteration 5
 
-<img src="iteration_5.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_5.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 ---
 
 ### Iteration 6
 
-<img src="iteration_6.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_6.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 ---
 
 ### Iteration 7
 
-<img src="iteration_7.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_7.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 ---
 
@@ -132,4 +132,4 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ### A Real Algorithm: L-BFGS-B
 
-<img src="illustration_db_line_search_real_algo.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./illustration_db_line_search_real_algo.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
