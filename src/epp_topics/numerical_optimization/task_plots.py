@@ -7,7 +7,6 @@ from pytask import Product
 from epp_topics.numerical_optimization.simple_optimisers import (
     example_criterion,
     example_gradient,
-    example_hessian,
     minimize_with_history,
     plot_direct_search,
     plot_function,
@@ -22,6 +21,7 @@ START_X = np.array([2])
 
 
 def task_plot_set_up_function(
+    _plots_dep=Path("simple_optimisers.py"),
     function_path: Annotated[Path, Product] = Path()
     / "set_up_function"
     / "screencast"
@@ -79,7 +79,7 @@ def task_plots_db_line_search_real_algo(
     res = minimize_with_history(
         example_criterion,
         x,
-        method="L-BFGS-B",
+        method="nlopt_lbfgsb",
         jac=example_gradient,
     )
     plot_history(res.history, res.x).write_image(str(illustration_db_line_search_path))
@@ -122,9 +122,9 @@ def task_plots_db_trust_region_real_algo(
     res = minimize_with_history(
         example_criterion,
         x,
-        method="trust-ncg",
+        method="fides",
         jac=example_gradient,
-        hess=example_hessian,
+        hess=None,
     )
     plot_history(res.history, res.x).write_image(str(illustration_db_trust_region_path))
 
@@ -166,7 +166,7 @@ def task_plots_df_trust_region_real_algo(
     res = minimize_with_history(
         example_criterion,
         x,
-        method="Cobyla",
+        method="scipy_cobyla",
     )
     plot_history(res.history, res.x).write_image(str(illustration_df_trust_region_path))
 
@@ -204,7 +204,7 @@ def task_plots_df_direct_search_real_algo(
     res = minimize_with_history(
         example_criterion,
         x,
-        method="Nelder-Mead",
+        method="nlopt_neldermead",
     )
     plot_history(res.history, res.x).write_image(
         str(illustration_df_direct_search_path),

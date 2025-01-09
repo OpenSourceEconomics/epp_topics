@@ -130,7 +130,7 @@ def _fix_if_argmin_is_in_evaluated_points(evaluated_points, argmin):
 
 
 def minimize_with_history(fun, x0, method, jac=None, hess=None):
-    """Dumbed down scipy minimize that returns full history.
+    """Dumbed down optimagic.minimize that returns full history.
 
     This is really only meant for illustration in this notebook. In particular,
     the following restrictions apply:
@@ -145,7 +145,7 @@ def minimize_with_history(fun, x0, method, jac=None, hess=None):
         history.append(_unpack_x(x))
         return fun(x)
 
-    res = minimize(wrapped_fun, x0, method=method, jac=jac, hess=hess)
+    res = minimize(wrapped_fun, x0, algorithm=method, jac=jac, hess=hess)
     res.history = history
     return res
 
