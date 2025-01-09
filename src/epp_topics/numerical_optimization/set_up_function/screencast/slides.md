@@ -65,4 +65,4 @@ WEIGHTS = [
 
 ---
 
-<img src="function.svg" class="rounded" style="width: 90%; height: 90%"/>
+<img src="./function.svg" class="rounded" style="width: 90%; height: 90%"/>

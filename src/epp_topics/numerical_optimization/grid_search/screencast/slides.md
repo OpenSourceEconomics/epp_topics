@@ -42,4 +42,4 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-<img src="history.svg" class="rounded" style="width: 90%; height: 90%"/>
+<img src="./history.svg" class="rounded" style="width: 90%; height: 90%"/>

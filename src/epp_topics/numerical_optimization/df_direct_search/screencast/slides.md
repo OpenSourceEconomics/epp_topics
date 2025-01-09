@@ -52,34 +52,34 @@ Note that a real algorithm is quite complex to implement. You should never do th
 
 ### Initial Evaluation
 
-<img src="iteration_0.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_0.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 ---
 
 ### Iteration 1
 
-<img src="iteration_1.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_1.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
 
 ### Iteration 2
 
-<img src="iteration_2.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_2.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
 
 ### Iteration 3
 
-<img src="iteration_3.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_3.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
 
 ### Iteration 4
 
-<img src="iteration_4.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./iteration_4.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
 
 ---
@@ -96,4 +96,4 @@ Note that a real algorithm is quite complex to implement. You should never do th
 
 ### A real algorithm: Nelder Mead
 
-<img src="illustration_df_direct_search_real_algo.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+<img src="./illustration_df_direct_search_real_algo.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
