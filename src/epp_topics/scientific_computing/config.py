@@ -14,6 +14,18 @@ from epp_topics.scientific_computing.calculations_on_arrays import (
 from epp_topics.scientific_computing.creating_arrays import (
     SITE_CONTENTS as CREATING_ARRAYS,
 )
+from epp_topics.scientific_computing.db_line_search import (
+    SITE_CONTENTS as DB_LINE_SEARCH,
+)
+from epp_topics.scientific_computing.db_trust_region import (
+    SITE_CONTENTS as DB_TRUST_REGION,
+)
+from epp_topics.scientific_computing.df_direct_search import (
+    SITE_CONTENTS as DF_DIRECT_SEARCH,
+)
+from epp_topics.scientific_computing.df_trust_region import (
+    SITE_CONTENTS as DF_TRUST_REGION,
+)
 from epp_topics.scientific_computing.indexing import SITE_CONTENTS as INDEXING
 from epp_topics.scientific_computing.optimagic_features import (
     SITE_CONTENTS as OPTIMAGIC_FEATURES,
@@ -48,10 +60,17 @@ from epp_topics.scientific_computing.speedup_numpy import (
 )
 from epp_topics.scientific_computing.speedup_snakeviz import (
     SITE_CONTENTS as SPEEDUP_SNAKEVIZ,
+from epp_topics.scientific_computing.set_up_function_grid_search import (
+    SITE_CONTENTS as SET_UP_FUNCTION_GRID_SEARCH,
 )
 from epp_topics.scientific_computing.what_is_numpy import SITE_CONTENTS as WHAT_IS_NUMPY
 
 TOPICS = [
+    DB_LINE_SEARCH,
+    DB_TRUST_REGION,
+    DF_DIRECT_SEARCH,
+    DF_TRUST_REGION,
+    SET_UP_FUNCTION_GRID_SEARCH,
     WHAT_IS_NUMPY,
     CREATING_ARRAYS,
     INDEXING,
