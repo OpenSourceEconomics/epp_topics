@@ -54,14 +54,15 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # The candidate step
 
-- Pick a search direction $p_k$ (e.g., steepest descent $p_k = - \nabla f(x_k)$)
+- Start at some $x$ (initial point or during iteration)
 
-- Compute an initial step length $\alpha_k^{(0)}$ based on the Hessian
+- Compute the search direction $p$
 
-- Refine the step length using a line search conditions
+  For gradient descent: $p = - f'(x)$
 
-- The candidate step becomes: $x_{k+1} = x_k + \alpha_k \, p_k$
+- The step length $\alpha$ is chosen to minimize $f$ along the direction $p$
 
+- The candidate step $x_c$ is defined as: $x_c = x + \alpha \, p$
 
 
 ---
