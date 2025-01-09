@@ -37,7 +37,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 3. Use approximated second derivative to guess step length.
 
-4. Use a line search algorithm to see how far to go in the search direction.
+4. Use a line search procedure to see how far to go in the search direction.
 
    - Line search stays a 1d problem even with many parameters;
 
@@ -48,6 +48,21 @@ Janoś Gabler and Hans-Martin von Gaudecker
    - Most of the time accepts the first guess.
 
 5. Accept the new parameter and go back to 1.
+
+
+---
+
+# The candidate step
+
+- Pick a search direction $p_k$ (e.g., steepest descent $p_k = - \nabla f(x_k)$)
+
+- Compute an initial step length $\alpha_k^{(0)}$ based on the Hessian
+
+- Refine the step length using a line search conditions
+
+- The candidate step becomes: $x_{k+1} = x_k + \alpha_k \, p_k$
+
+
 
 ---
 

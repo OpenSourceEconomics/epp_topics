@@ -48,6 +48,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 5. Compare expected and actual improvement.
 
+    - Expected improvement is the decrease in the criterion according to the Taylor
+      approximation.
+    - Actual improvement is the decrease in the actual function value.
+
 6. Accept the new parameters if actual improvement is good enough.
 
 7. Potentially modify the trust region radius (**important and complex step**).
@@ -59,7 +63,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Smaller radii lead to better approximations
 
-- Take any function $f$ that is at least three times continuously differentiable.
+- Take any function $f$ that is at least twice times continuously differentiable.
 
 - For a step $s$, the Taylor expansion of $f(x + s)$ around $x$ satisfies:
 
