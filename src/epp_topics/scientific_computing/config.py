@@ -43,6 +43,8 @@ from epp_topics.scientific_computing.optimization_mechanics import (
     SITE_CONTENTS as OPTIMIZATION_MECHANICS,
 )
 from epp_topics.scientific_computing.randomness import SITE_CONTENTS as RANDOMNESS
+from epp_topics.scientific_computing.set_up_function_grid_search import (
+    SITE_CONTENTS as SET_UP_FUNCTION_GRID_SEARCH,
 from epp_topics.scientific_computing.speedup_intro import (
     SITE_CONTENTS as SPEEDUP_INTRO,
 )
