@@ -20,6 +20,7 @@ CHAPTER_NAMES = [
     "software_engineering",
     "pandas",
     "scientific_computing",
+    "numerical_optimization",
     "projects",
     "texts",
     "plotting",

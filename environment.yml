@@ -4,7 +4,6 @@ channels: [conda-forge, nodefaults, conda-forge/label/pytask_rc]
 dependencies:
   - conda-lock
   - deepdiff
-  - optimagic
   - gitpython
   - ipykernel
   - ipywidgets
@@ -13,6 +12,7 @@ dependencies:
   - nodejs
   - numba
   - openpyxl
+  - optimagic
   - pandas >= 2.2
   - pip
   - plotly
