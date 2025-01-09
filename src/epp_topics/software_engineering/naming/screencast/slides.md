@@ -130,6 +130,6 @@ wba = repmat(wb',[ny 1]);
   - they are completely unacceptable if their usage extends over 20 or more lines
 - The length of a function name should be **inversely** proportional to it's scope
   - Functions that are used a lot and well known can have short names
-    - Example: `minimize` in estimagic
+    - Example: `minimize` in optimagic
   - Functions that are used internally and not well known should have descriptive names
     - Example: `convert_list_of_dicts_to_dict_of_lists`

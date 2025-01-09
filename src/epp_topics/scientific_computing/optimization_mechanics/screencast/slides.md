@@ -19,7 +19,7 @@ defaults:
 
 # Scientific Computing
 
-### Using estimagic's minimize and maximize
+### Using optimagic's minimize and maximize
 
 <br/>
 
@@ -37,14 +37,14 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ```python
 import numpy as np
-import estimagic as em
+import optimagic as om
 
 def sphere(x):
     return (x ** 2).sum()
 
 start_params = np.ones(5)
 
-res = em.minimize(
+res = om.minimize(
     criterion=sphere,
     params=start_params,
     algorithm="scipy_lbfgsb",
@@ -62,7 +62,7 @@ array([0., 0., 0., 0., 0.])
 
 <br/>
 
-1. Import estimagic
+1. Import optimagic
 
 2. Define criterion function
 
@@ -89,7 +89,7 @@ array([0., 0., 0., 0., 0.])
 >>> def dict_sphere(x):
 ...     return x["a"] ** 2 + x["b"] ** 2 + (x["c"] ** 2).sum()
 
->>> res = em.minimize(
+>>> res = om.minimize(
 ...     criterion=dict_sphere,
 ...     params=params,
 ...     algorithm="scipy_neldermead",
@@ -111,7 +111,7 @@ array([0., 0., 0., 0., 0.])
 <div>
 
 ```python{5}
->>> res = em.minimize(
+>>> res = om.minimize(
 ...     criterion=dict_sphere,
 ...     params=params,
 ...     algorithm="scipy_neldermead",
@@ -200,10 +200,10 @@ True
 
 # Documentation of more features
 
-- [How to specify algorithms and their options](https://estimagic.readthedocs.io/en/stable/how_to_guides/optimization/how_to_specify_algorithm_and_algo_options.html)
+- [How to specify algorithms and their options](https://optimagic.readthedocs.io/en/latest/how_to/how_to_specify_algorithm_and_algo_options.html)
 
-- [How to use constraints](https://estimagic.readthedocs.io/en/stable/how_to_guides/optimization/how_to_specify_constraints.html)
+- [How to use constraints](https://optimagic.readthedocs.io/en/latest/how_to/how_to_constraints.html)
 
-- [How to do multistart optimization](https://estimagic.readthedocs.io/en/stable/how_to_guides/optimization/how_to_do_multistart_optimizations.html)
+- [How to do multistart optimization](https://optimagic.readthedocs.io/en/latest/how_to/how_to_multistart.html)
 
-- [How to handle errors during optimization](https://estimagic.readthedocs.io/en/stable/how_to_guides/optimization/how_to_handle_errors_during_optimization.html)
+- [How to handle errors during optimization](https://optimagic.readthedocs.io/en/latest/how_to/how_to_errors_during_optimization.html)

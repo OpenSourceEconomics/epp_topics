@@ -95,7 +95,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - All are a bit different
 
-- We will use [estimagic](https://estimagic.readthedocs.io/) to access all of them with
+- We will use [optimagic](https://optimagic.readthedocs.io/) to access all of them with
   a unified interface
 
-- Estimagic is developed by Open Source Economics in Bonn
+- Optimagic is developed by Open Source Economics in Bonn

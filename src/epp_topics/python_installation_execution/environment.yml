@@ -2,13 +2,14 @@
 name: epp
 channels: [conda-forge, nodefaults]
 dependencies:
-  - estimagic
-  - nlopt
   - jupyter
+  - line_profiler
   - matplotlib
+  - nlopt
   - numba
   - numpy
   - openpyxl
+  - optimagic
   - pandas >= 2.1
   - pip
   - plotly
@@ -16,12 +17,11 @@ dependencies:
   - pyarrow >= 13.0
   - pytask >= 0.4
   - pytest
-  - python==3.11
+  - python==3.12
   - scikit-learn
   - scipy
   - seaborn
+  - snakeviz
   - statsmodels
   - toml
-  - line_profiler
-  - snakeviz
   - pip: [kaleido, pdbp]

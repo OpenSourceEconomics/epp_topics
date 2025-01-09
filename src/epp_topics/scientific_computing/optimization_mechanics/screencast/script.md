@@ -1,4 +1,4 @@
-# Script: Using estimagic's minimize and maximize
+# Script: Using optimagic's minimize and maximize
 
 The goal of this screencast is to show the mechanics of using minimize and maximize in a
 few variations. Then we link to the documentation for more details. Any other approach
@@ -13,7 +13,7 @@ would produce too many or too long screencasts.
 
 - Mention that most packages only have minimize -> sign flip
 
-- Estimagic has no defaul optimizer because there simply is no optimizer that works well
+- Optimagic has no defaul optimizer because there simply is no optimizer that works well
   for all problems. Mention that there will be a later screencast on choosing
   optimizers.
 
