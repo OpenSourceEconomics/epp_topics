@@ -63,15 +63,15 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Smaller radii lead to better approximations
 
-- Take any function $f$ that is at least twice times continuously differentiable.
-
 - For a step $s$, the Taylor expansion of $f(x + s)$ around $x$ satisfies:
 
-  $f(x + s) = f(x) + \nabla f(x)^\top s + \frac{1}{2} s^\top \nabla^2 f(x) s + o(\|s\|^2)$.
+  $f(x + s) = f(x) + f'(x)^\top s + \frac{1}{2} s^\top f''(x) s + o(\|s\|^2)$.
 
 - The step $s$ is bounded by the trust region radius $\Delta$: $\|s\| \leq \Delta$.
 
 - And therefore, as $\Delta$ decreases the approximation error $o(\|s\|^2)$ decreases.
+
+- (Holds for any function $f$ that is at least twice times continuously differentiable.)
 
 ---
 
