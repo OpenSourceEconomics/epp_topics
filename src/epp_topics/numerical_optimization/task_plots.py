@@ -143,7 +143,7 @@ def task_plots_df_trust_region_iterations(
         Product,
     ] = path_iterations_df_trust_region,
 ):
-    radius_list = [2, 3, 4, 2, 3, 3]
+    radius_list = [2, 3, 4, 2, 3, 1.5]
 
     for path, radius in zip(
         illustration_df_trust_region_path,
@@ -166,7 +166,7 @@ def task_plots_df_trust_region_real_algo(
     res = minimize_with_history(
         example_criterion,
         x,
-        method="scipy_cobyla",
+        method="nlopt_cobyla",
     )
     plot_history(res.history, res.x).write_image(str(illustration_df_trust_region_path))
 
@@ -185,7 +185,7 @@ def task_plots_df_direct_search_iterations(
         Product,
     ] = path_iterations_df_direct_search,
 ):
-    deltas = [-2, 2, 3, 4, 2]
+    deltas = [-1.5, 2, 3, 4, 2]
 
     for path, delta in zip(illustration_df_direct_search_path, deltas, strict=True):
         fig, x = plot_direct_search(x, x + delta)

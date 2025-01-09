@@ -90,7 +90,7 @@ def plot_history(evaluated_points, argmin):
         x=evaluated_points,
         y=[example_criterion(x) for x in evaluated_points],
         mode="markers",
-        marker={"size": 3, "color": "orange"},
+        marker={"size": 3, "color": "darkorange"},
         name="All evaluations",
     )
 
@@ -111,6 +111,8 @@ def plot_history(evaluated_points, argmin):
             "xanchor": "right",
             "x": 1,
         },
+        xaxis_range=[0, 20],
+        yaxis_range=[-0.4, 9.4],
     )
 
     return fig
@@ -195,6 +197,14 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
     argmin = trust_x_grid[argmin_index]
 
     fig.add_scatter(
+        x=[x0],
+        y=[example_criterion(x0)],
+        mode="markers",
+        marker={"size": 10, "color": "darkorange"},
+        name="Initial evaluation",
+    )
+
+    fig.add_scatter(
         x=trust_x_grid,
         y=trust_y_grid,
         mode="lines",
@@ -209,46 +219,26 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
     )
 
     if surrogate_func == taylor_expansion:
-        x_values = [x0]
-
-        fig.add_scatter(
-            x=[argmin],
-            y=[partialed(np.array([argmin]))],
-            mode="markers",
-            marker={"size": 12, "color": "yellow"},
-            name="Approximate next evaluation",
-            marker_symbol="star",
-        )
-        fig.add_scatter(
-            x=[argmin],
-            y=[example_criterion(np.array([argmin]))],
-            mode="markers",
-            marker={"size": 12, "color": "green"},
-            name="True next evaluation",
-            marker_symbol="star",
-        )
+        name = "Minimum of Taylor approximation"
     else:
-        x_values = [x0 - radius, x0, x0 + radius]
-        # remove x in x_values if it is equal to argmin
-        x_values = [x for x in x_values if x != argmin]
-
-        fig.add_scatter(
-            x=[argmin],
-            y=[partialed(np.array([argmin]))],
-            mode="markers",
-            marker={"size": 12, "color": "yellow"},
-            name="Next evaluation",
-            marker_symbol="star",
-        )
+        name = "Minimum of surrogate model"
 
     fig.add_scatter(
-        x=x_values,
-        y=[example_criterion(x) for x in x_values],
+        x=[argmin],
+        y=[partialed(np.array([argmin]))],
         mode="markers",
-        marker={"size": 3, "color": "orange"},
-        name="Initial evaluation",
+        marker={"size": 12, "color": "orange"},
+        name=name,
+        marker_symbol="star",
     )
-
+    fig.add_scatter(
+        x=[argmin],
+        y=[example_criterion(np.array([argmin]))],
+        mode="markers",
+        marker={"size": 12, "color": "yellow"},
+        name="Actual evaluation",
+        marker_symbol="star",
+    )
     # put legend above in a line
     fig.update_layout(
         legend={
@@ -258,6 +248,8 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
             "xanchor": "right",
             "x": 1,
         },
+        xaxis_range=[0, 20],
+        yaxis_range=[-0.4, 9.4],
     )
 
     return fig, new_x
@@ -280,8 +272,8 @@ def plot_direct_search(x0, other):
         x=x_values,
         y=[example_criterion(x) for x in x_values],
         mode="markers",
-        marker={"size": 3, "color": "orange"},
-        name="Initial evaluation",
+        marker={"size": 6, "color": "darkorange"},
+        name="Candidate evaluation",
     )
 
     fig.add_scatter(
@@ -302,6 +294,8 @@ def plot_direct_search(x0, other):
             "xanchor": "right",
             "x": 1,
         },
+        xaxis_range=[0, 20],
+        yaxis_range=[-0.4, 9.4],
     )
 
     return fig, argmin
@@ -320,7 +314,7 @@ def plot_line_search(x0):
         x=[x0],
         y=[function_value],
         mode="markers",
-        marker={"size": 10, "color": "orange"},
+        marker={"size": 10, "color": "darkorange"},
         name="Initial point",
     )
 
@@ -336,7 +330,7 @@ def plot_line_search(x0):
         y=gradient_evals,
         mode="lines",
         name="Gradient",
-        line={"color": "orange", "width": 2},
+        line={"color": "darkorange", "width": 2},
     )
 
     new_value = np.inf
@@ -368,6 +362,8 @@ def plot_line_search(x0):
             "xanchor": "right",
             "x": 1,
         },
+        xaxis_range=[0, 20],
+        yaxis_range=[-0.4, 9.4],
     )
 
     return fig, new_x

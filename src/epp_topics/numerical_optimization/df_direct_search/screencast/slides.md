@@ -20,7 +20,7 @@ defaults:
 
 # Numerical Optimization
 
-### Derivative Free Direct Search Algorithm(s)
+### Derivative-Free Direct Search Algorithms
 
 <br/>
 
@@ -38,15 +38,6 @@ Janoś Gabler and Hans-Martin von Gaudecker
     - Switch direction of other point if you got an increase in function value
     - Make steps larger after success
     - Make steps smaller after failure
-
----
-
-The following is just an illustration of the principle. The trust region radius is updated manually to simulate a real algorithm.
-
-Note that a real algorithm is quite complex to implement. You should never do that yourself. Leave it to experts unless
-- you are a very good programmer;
-- you have read a few books on optimization algorithms;
-- you have a very special problem that cannot be solved with existing algorithms.
 
 ---
 
@@ -87,10 +78,14 @@ Note that a real algorithm is quite complex to implement. You should never do th
 # Some Remarks
 
 - Adjusting the step size and switching to promising directions is complicated in real algorithms
-- Direct search algorithms only use the information which function value is smallest, not by how much
+- These algorithms only use the information which function value is smallest, not by how much
 - Makes them slow but robust to small amounts of noise
 - It does not help for large amounts of noise
-- Most famous example is the Nelder-Mead algorithm which is widely used, but seldomly the best choice
+- Most famous example is the Nelder-Mead algorithm
+
+  - Very widely used
+
+  - Very seldomly the best choice
 
 ---
 

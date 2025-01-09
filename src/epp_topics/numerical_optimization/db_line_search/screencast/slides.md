@@ -20,7 +20,7 @@ defaults:
 
 # Numerical Optimization
 
-### Derivative-Based (DB) Line Search Algorithm(s)
+### Derivative-Based Line Search Algorithms
 
 <br/>
 
@@ -31,23 +31,17 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Basic Idea
 
-1. Evaluate function at initial point.
+1. Evaluate function at initial point
 
-2. Use first derivative to get search direction.
+2. Use first derivative to get step direction
 
-3. Use approximated second derivative to guess step length.
+3. Pick initial step length based on (approximated) second derivative
 
-4. Use a line search procedure to see how far to go in the search direction.
-
-   - Line search stays a 1d problem even with many parameters;
-
-   - Only solved approximately;
-
-   - Quite complicated if you really want to understand it;
-
-   - Most of the time accepts the first guess.
+4. Pick candidate step based on line search procedure (see next slide)
 
 5. Accept the new parameter and go back to 1.
+
+   *(ignore the case where we don't accept)*
 
 
 ---
@@ -58,11 +52,18 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - Compute the search direction $p$
 
-  For gradient descent: $p = - f'(x)$
+  For gradient descent: $\;\;p = - f'(x)$
 
 - The step length $\alpha$ is chosen to minimize $f$ along the direction $p$
 
-- The candidate step $x_c$ is defined as: $x_c = x + \alpha \, p$
+  - remains a 1d problem even with many parameters
+  - only solved approximately
+  - quite complicated if you really want to understand it
+  - most of the time accepts the first guess
+
+- The candidate step $x_c$ is defined as: $\;\;x_c = x + \alpha \, p$
+
+
 
 
 ---
@@ -124,9 +125,11 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - A big advantage over algorithms you will see later is that this has no tuning parameters.
 
-- Using Hessian for step length is much better than standard gradient descent.
+- Standard gradient descent would always use the same step length — what we showed
+  converges in fewer steps.
 
-- In very high dimensional problems, standard gradient descent can nevertheless be computationally better.
+- Nevertheless, standard gradient descent can be computationally better in very high
+  dimensional problems (Hessian becomes too large!).
 
 
 ---

@@ -20,7 +20,7 @@ defaults:
 
 # Numerical Optimization
 
-### Derivative-Based (DB) Trust Region Algorithm(s)
+### Derivative-Based Trust Region Algorithms
 
 <br/>
 
@@ -31,18 +31,20 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Basic Idea
 
-1. Fix a trust region radius.
+1. Set initial trust region radius.
 
-2. Construct a Taylor approximation of the function based on function value, gradient,
+2. Construct a quadratic Taylor approximation of the function based on function value, gradient,
    and (approximation to) the Hessian.
 
     The Taylor approximation:
-    - approximates the function well within the trust region if radius is not too large;
+
+    - approximates the function well within the trust region if radius is not too large
+
     - is a quadratic function that it easy to optimize.
 
 3. Minimize the Taylor approximation within the trust region.
 
-4. Evaluate the function again at the argmin of the Taylor approximation.
+4. Evaluate the function again at the argument that minimized the Taylor approximation.
 
 ---
 
@@ -54,9 +56,9 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 6. Accept the new parameters if actual improvement is good enough.
 
-7. Potentially modify the trust region radius (**important and complex step**).
+7. Modify the trust region radius (**important and complex step**).
 
-8. Go back to 2.
+8. Construct a new Taylor approximation ...
 
 
 ---
@@ -71,18 +73,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - And therefore, as $\Delta$ decreases the approximation error $o(\|s\|^2)$ decreases.
 
-- (Holds for any function $f$ that is at least twice times continuously differentiable.)
+- (Holds for any function $f$ that is at least twice continuously differentiable.)
 
----
-
-# DB Trust Region: an Illustration
-
-The following is just an illustration of the principle. The trust region radius is updated manually to simulate a real algorithm.
-
-Note that a real algorithm is quite complex to implement. You should never do that yourself. Leave it to experts unless:
-- you are a very good programmer;
-- you have read a few books on optimization algorithms;
-- you have a very special problem that cannot be solved with existing algorithms.
 
 ---
 
@@ -127,16 +119,6 @@ Note that a real algorithm is quite complex to implement. You should never do th
 
 ---
 
-# Some Remarks
-
-- Most of the time, the approximation was not very good but sent us in the right direction.
-- After a successful iteration, the trust region radius is increased.
-- At some point it becomes too large and needs to be decreased.
-- From now on the algorithm would converge soon because of a zero gradient.
-- Even when it converges, the trust region radius does not shrink to zero.
-
----
-
-### A real algorithm: Trust-NCG
+### A real algorithm: fides
 
 <img src="./illustration_db_trust_region_real_algo.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
