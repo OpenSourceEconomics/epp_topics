@@ -45,6 +45,7 @@ from epp_topics.scientific_computing.optimization_mechanics import (
 from epp_topics.scientific_computing.randomness import SITE_CONTENTS as RANDOMNESS
 from epp_topics.scientific_computing.set_up_function_grid_search import (
     SITE_CONTENTS as SET_UP_FUNCTION_GRID_SEARCH,
+)
 from epp_topics.scientific_computing.speedup_intro import (
     SITE_CONTENTS as SPEEDUP_INTRO,
 )
@@ -62,8 +63,6 @@ from epp_topics.scientific_computing.speedup_numpy import (
 )
 from epp_topics.scientific_computing.speedup_snakeviz import (
     SITE_CONTENTS as SPEEDUP_SNAKEVIZ,
-from epp_topics.scientific_computing.set_up_function_grid_search import (
-    SITE_CONTENTS as SET_UP_FUNCTION_GRID_SEARCH,
 )
 from epp_topics.scientific_computing.what_is_numpy import SITE_CONTENTS as WHAT_IS_NUMPY
 
