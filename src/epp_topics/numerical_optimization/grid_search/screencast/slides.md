@@ -28,9 +28,21 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Grid Search
 
-- Grid search is a simple optimization algorithm that searches for the best
-  combination of parameters by evaluating the function at a given set of
-  parameter values.
+- Very simple!
+
+- Fix a grid of parameter values.
+
+- Evaluate the function at each grid point.
+
+- Pick the best.
+
+---
+
+<img src="./history.svg" class="rounded" style="width: 90%; height: 90%"/>
+
+---
+
+# Grid Search: Properties
 
 - Needs bounds on the parameter (0 to 20 in our case).
 
@@ -38,9 +50,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - Very feasible in one dimension.
 
----
-
-<img src="./history.svg" class="rounded" style="width: 90%; height: 90%"/>
+- Else: Curse of dimensionality.
 
 ---
 
