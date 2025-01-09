@@ -3,5 +3,5 @@
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
     "other": (),
-    "built": ("scientific_computing-optimization_intro.pdf",),
+    "built": ("numerical_optimization-optimization_intro.pdf",),
 }

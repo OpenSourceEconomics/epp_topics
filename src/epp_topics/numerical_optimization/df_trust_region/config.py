@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("scientific_computing-df_trust_region.pdf",),
+    "built": ("numerical_optimization-df_trust_region.pdf",),
 }

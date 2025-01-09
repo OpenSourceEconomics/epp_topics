@@ -97,7 +97,7 @@ def plot_history(evaluated_points, argmin):
         x=[argmin],
         y=[example_criterion(argmin)],
         mode="markers",
-        marker={"size": 12, "color": "red"},
+        marker={"size": 12, "color": "yellow"},
         name="Best evaluation",
         marker_symbol="star",
     )
@@ -214,7 +214,7 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
             x=[argmin],
             y=[partialed(np.array([argmin]))],
             mode="markers",
-            marker={"size": 12, "color": "red"},
+            marker={"size": 12, "color": "yellow"},
             name="Approximate next evaluation",
             marker_symbol="star",
         )
@@ -235,7 +235,7 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
             x=[argmin],
             y=[partialed(np.array([argmin]))],
             mode="markers",
-            marker={"size": 12, "color": "red"},
+            marker={"size": 12, "color": "yellow"},
             name="Next evaluation",
             marker_symbol="star",
         )
@@ -244,7 +244,7 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
         x=x_values,
         y=[example_criterion(x) for x in x_values],
         mode="markers",
-        marker={"size": 4, "color": "orange"},
+        marker={"size": 3, "color": "orange"},
         name="Initial evaluation",
     )
 
@@ -279,7 +279,7 @@ def plot_direct_search(x0, other):
         x=x_values,
         y=[example_criterion(x) for x in x_values],
         mode="markers",
-        marker={"size": 4, "color": "orange"},
+        marker={"size": 3, "color": "orange"},
         name="Initial evaluation",
     )
 
@@ -287,7 +287,7 @@ def plot_direct_search(x0, other):
         x=[argmin],
         y=[example_criterion(argmin)],
         mode="markers",
-        marker={"size": 12, "color": "red"},
+        marker={"size": 12, "color": "yellow"},
         name="Next evaluation",
         marker_symbol="star",
     )
@@ -315,19 +315,27 @@ def plot_line_search(x0):
     approx_hessian_value = np.clip(example_hessian(x0), 0.1, np.inf)
     base_step = -1 / approx_hessian_value * gradient_value
 
+    fig.add_scatter(
+        x=[x0],
+        y=[function_value],
+        mode="markers",
+        marker={"size": 10, "color": "orange"},
+        name="Initial point",
+    )
+
     gradient_grid = [x0 - 2, x0, x0 + 2]
     gradient_evals = [
         function_value - 2 * gradient_value,
         function_value,
         function_value + 2 * gradient_value,
     ]
-    # make it dark orange
+
     fig.add_scatter(
         x=gradient_grid,
         y=gradient_evals,
         mode="lines",
         name="Gradient",
-        line={"color": "darkorange", "width": 2},
+        line={"color": "orange", "width": 2},
     )
 
     new_value = np.inf
@@ -340,21 +348,12 @@ def plot_line_search(x0):
         x_values.append(new_x)
         evaluations.append(new_value)
 
-    # mark the point of the initial evaluation with a circle
-    fig.add_scatter(
-        x=[x0],
-        y=[function_value],
-        mode="markers",
-        marker={"size": 8, "color": "green"},
-        name="Initial point",
-    )
-
     # mark the point of the next step with a star
     fig.add_scatter(
         x=[new_x],
         y=[new_value],
         mode="markers",
-        marker={"size": 12, "color": "red"},
+        marker={"size": 12, "color": "yellow"},
         name="Next initial point",
         marker_symbol="star",
     )
