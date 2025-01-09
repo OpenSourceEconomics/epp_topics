@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -11,8 +12,6 @@ transition: fade
 title: Effective Programming Practices for Economists
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists

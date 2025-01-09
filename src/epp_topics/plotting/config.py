@@ -1,4 +1,5 @@
 """Definitions of source files for the current chapter."""
+
 import itertools
 
 from epp_topics.plotting.goals_workflow import SITE_CONTENTS as GOALS_WORKFLOW
@@ -24,7 +25,6 @@ SITE_CONTENTS = {
     "chapter_title": "Plotting",
     "pages": tuple(
         itertools.chain(
-            ("content_objectives.md",),
             *[topic["pages"] for topic in TOPICS],
         ),
     ),

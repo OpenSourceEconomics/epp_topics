@@ -1,4 +1,5 @@
 """Definitions of source files for the current chapter."""
+
 import itertools
 
 from epp_topics.debugging.avoiding_debugging import SITE_CONTENTS as AVOIDING_DEBGUGGING
@@ -26,7 +27,6 @@ SITE_CONTENTS = {
     "chapter_title": "Debugging",
     "pages": tuple(
         itertools.chain(
-            ("content_objectives.md",),
             *[topic["pages"] for topic in TOPICS],
         ),
     ),

@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -11,8 +12,6 @@ transition: fade
 title: Effective Programming Practices for Economists
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
@@ -34,7 +33,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - We assume you have installed anaconda and created the course environment
 - Open a shell in the root directory of your project
-    - On Windows, use the anaconda prompt or the powershell
+    - On Windows, use the powershell
     - If conda is not recognized in the powershell, check out this
       [stackoverflow post](https://stackoverflow.com/a/65160772/21900143)
 - Activate the environment using `conda activate epp`
@@ -45,7 +44,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # 0: Activate and Info
 
-<img src="activate_and_info.png" class="rounded" width="600"/>
+<img src="/activate_and_info.png" class="rounded" width="600"/>
 
 
 ---
@@ -75,4 +74,4 @@ graph LR
 # 1: Execute
 
 
-<img src="run.png" class="rounded" width="600"/>
+<img src="/run.png" class="rounded" width="600"/>

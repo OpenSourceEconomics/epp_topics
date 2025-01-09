@@ -1,6 +1,13 @@
 """Definitions of source files for the current chapter."""
+
 import itertools
 
+from epp_topics.software_engineering.deciding_containers import (
+    SITE_CONTENTS as DECIDING_CONTAINERS,
+)
+from epp_topics.software_engineering.defining_containers import (
+    SITE_CONTENTS as DEFINING_CONTAINERS,
+)
 from epp_topics.software_engineering.error_handling_intro import (
     SITE_CONTENTS as ERROR_HANDLING_INTRO,
 )
@@ -8,6 +15,7 @@ from epp_topics.software_engineering.idea_of_testing import (
     SITE_CONTENTS as IDEA_OF_TESTING,
 )
 from epp_topics.software_engineering.naming import SITE_CONTENTS as NAMING
+from epp_topics.software_engineering.partial import SITE_CONTENTS as PARTIAL
 from epp_topics.software_engineering.pure_functions import (
     SITE_CONTENTS as PURE_FUNCTIONS,
 )
@@ -51,6 +59,9 @@ TOPICS = [
     WHICH_ERRORS_TO_HANDLE,
     RAISING_ERRORS,
     WORKED_ERROR_EXAMPLE,
+    DEFINING_CONTAINERS,
+    DECIDING_CONTAINERS,
+    PARTIAL,
 ]
 
 
@@ -58,7 +69,6 @@ SITE_CONTENTS = {
     "chapter_title": "Software Engineering",
     "pages": tuple(
         itertools.chain(
-            ("content_objectives.md",),
             *[topic["pages"] for topic in TOPICS],
         ),
     ),

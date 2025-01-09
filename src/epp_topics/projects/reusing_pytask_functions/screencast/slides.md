@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -131,7 +132,7 @@ for region in ("Asia", "Europe"):
 </div>
 <div>
 
-<img src="collect_nodes.png" class="rounded" width="350"/>
+<img src="/collect_nodes.png" class="rounded" width="350"/>
 
 
 </div>
@@ -142,13 +143,13 @@ for region in ("Asia", "Europe"):
 
 # Run pytask
 
-<img src="run_1.png" class="rounded" width="555"/>
+<img src="/run_1.png" class="rounded" width="555"/>
 
 ---
 
 # Delete plot and run again
 
-<img src="run_2.png" class="rounded" width="555"/>
+<img src="/run_2.png" class="rounded" width="555"/>
 
 
 ---

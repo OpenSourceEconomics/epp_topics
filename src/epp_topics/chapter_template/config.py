@@ -1,4 +1,5 @@
 """Definitions of source files for the current chapter."""
+
 import itertools
 
 from epp_topics.chapter_template.subchapter_1 import SITE_CONTENTS as SUBCHAPTER_1
@@ -12,7 +13,6 @@ SITE_CONTENTS = {
     "chapter_title": "Python Basics",
     "pages": tuple(
         itertools.chain(
-            ("content_objectives.md",),
             *[topic["pages"] for topic in TOPICS],
         ),
     ),

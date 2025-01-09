@@ -34,6 +34,7 @@ dist
 index.html
 .remote-assets
 components.d.ts
+.slides_pdf
 
 # nonsense
 desktop.ini
@@ -48,4 +49,4 @@ site_*
 
 gapminder.arrow
 
-**/screencast/style.css
+.ipynb_checkpoints/

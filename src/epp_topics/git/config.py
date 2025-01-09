@@ -1,4 +1,5 @@
 """Definitions of source files for the current chapter."""
+
 import itertools
 
 from epp_topics.git.branches import SITE_CONTENTS as BRANCHES
@@ -37,7 +38,6 @@ SITE_CONTENTS = {
     "chapter_title": "Git and Github",
     "pages": tuple(
         itertools.chain(
-            ("content_objectives.md",),
             *[topic["pages"] for topic in TOPICS],
         ),
     ),

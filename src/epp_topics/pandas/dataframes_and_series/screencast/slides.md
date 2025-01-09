@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -38,74 +39,44 @@ Janoś Gabler and Hans-Martin von Gaudecker
 >>> df
 ```
 
-<style type="text/css">
-#T_85d71   {
-  margin: 0;
-  font-family: "Helvetica", "Helvetica", sans-serif;
-  border-collapse: collapse;
-  border: none;
-  font-size: 80%;
-  color: #fff;
-}
-#T_85d71 thead {
-  background-color: #3d3d3d;
-}
-#T_85d71 tbody tr:nth-child(even) {
-  background-color: #3d3d3d;
-}
-#T_85d71 tbody tr:nth-child(odd) {
-  background-color: #565656;
-}
-#T_85d71 td {
-  padding: 0em;
-}
-#T_85d71 th {
-  font-weight: bold;
-  text-align: left;
-  padding: 0em;
-}
-#T_85d71 caption {
-  caption-side: bottom;
-}
-</style>
-<table id="T_85d71">
+<table border="1" class="dataframe">
   <thead>
-    <tr>
-      <th class="blank level0" >&nbsp;</th>
-      <th id="T_85d71_level0_col0" class="col_heading level0 col0" >country</th>
-      <th id="T_85d71_level0_col1" class="col_heading level0 col1" >continent</th>
-      <th id="T_85d71_level0_col2" class="col_heading level0 col2" >year</th>
-      <th id="T_85d71_level0_col3" class="col_heading level0 col3" >life_exp</th>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>continent</th>
+      <th>year</th>
+      <th>life_exp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_85d71_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_85d71_row0_col0" class="data row0 col0" >Cuba</td>
-      <td id="T_85d71_row0_col1" class="data row0 col1" >Americas</td>
-      <td id="T_85d71_row0_col2" class="data row0 col2" >2002</td>
-      <td id="T_85d71_row0_col3" class="data row0 col3" >77.16</td>
+      <th>0</th>
+      <td>Cuba</td>
+      <td>Americas</td>
+      <td>2002</td>
+      <td>77.16</td>
     </tr>
     <tr>
-      <th id="T_85d71_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_85d71_row1_col0" class="data row1 col0" >Cuba</td>
-      <td id="T_85d71_row1_col1" class="data row1 col1" >Americas</td>
-      <td id="T_85d71_row1_col2" class="data row1 col2" >2007</td>
-      <td id="T_85d71_row1_col3" class="data row1 col3" >78.27</td>
+      <th>1</th>
+      <td>Cuba</td>
+      <td>Americas</td>
+      <td>2007</td>
+      <td>78.27</td>
     </tr>
     <tr>
-      <th id="T_85d71_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_85d71_row2_col0" class="data row2 col0" >Spain</td>
-      <td id="T_85d71_row2_col1" class="data row2 col1" >Europe</td>
-      <td id="T_85d71_row2_col2" class="data row2 col2" >2002</td>
-      <td id="T_85d71_row2_col3" class="data row2 col3" >79.78</td>
+      <th>2</th>
+      <td>Spain</td>
+      <td>Europe</td>
+      <td>2002</td>
+      <td>79.78</td>
     </tr>
     <tr>
-      <th id="T_85d71_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_85d71_row3_col0" class="data row3 col0" >Spain</td>
-      <td id="T_85d71_row3_col1" class="data row3 col1" >Europe</td>
-      <td id="T_85d71_row3_col2" class="data row3 col2" >2007</td>
-      <td id="T_85d71_row3_col3" class="data row3 col3" >80.94</td>
+      <th>3</th>
+      <td>Spain</td>
+      <td>Europe</td>
+      <td>2007</td>
+      <td>80.94</td>
     </tr>
   </tbody>
 </table>
@@ -193,55 +164,24 @@ Name: country, dtype: string
 >>> df
 ```
 
-
-<style type="text/css">
-#T_9a526   {
-  margin: 0;
-  font-family: "Helvetica", "Helvetica", sans-serif;
-  border-collapse: collapse;
-  border: none;
-  font-size: 80%;
-  color: #fff;
-}
-#T_9a526 thead {
-  background-color: #3d3d3d;
-}
-#T_9a526 tbody tr:nth-child(even) {
-  background-color: #3d3d3d;
-}
-#T_9a526 tbody tr:nth-child(odd) {
-  background-color: #565656;
-}
-#T_9a526 td {
-  padding: 0em;
-}
-#T_9a526 th {
-  font-weight: bold;
-  text-align: left;
-  padding: 0em;
-}
-#T_9a526 caption {
-  caption-side: bottom;
-}
-</style>
-<table id="T_9a526">
+<table border="1" class="dataframe">
   <thead>
-    <tr>
-      <th class="blank level0" >&nbsp;</th>
-      <th id="T_9a526_level0_col0" class="col_heading level0 col0" >a</th>
-      <th id="T_9a526_level0_col1" class="col_heading level0 col1" >b</th>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_9a526_level0_row0" class="row_heading level0 row0" >c</th>
-      <td id="T_9a526_row0_col0" class="data row0 col0" >1</td>
-      <td id="T_9a526_row0_col1" class="data row0 col1" >bla</td>
+      <th>c</th>
+      <td>1</td>
+      <td>bla</td>
     </tr>
     <tr>
-      <th id="T_9a526_level0_row1" class="row_heading level0 row1" >d</th>
-      <td id="T_9a526_row1_col0" class="data row1 col0" >3</td>
-      <td id="T_9a526_row1_col1" class="data row1 col1" >blubb</td>
+      <th>d</th>
+      <td>3</td>
+      <td>blubb</td>
     </tr>
   </tbody>
 </table>
@@ -299,57 +239,27 @@ We continue using df from before
 >>> df["new_col"] = sr
 ```
 
-<style type="text/css">
-#T_f344e   {
-  margin: 0;
-  font-family: "Helvetica", "Helvetica", sans-serif;
-  border-collapse: collapse;
-  border: none;
-  font-size: 80%;
-  color: #fff;
-}
-#T_f344e thead {
-  background-color: #3d3d3d;
-}
-#T_f344e tbody tr:nth-child(even) {
-  background-color: #3d3d3d;
-}
-#T_f344e tbody tr:nth-child(odd) {
-  background-color: #565656;
-}
-#T_f344e td {
-  padding: 0em;
-}
-#T_f344e th {
-  font-weight: bold;
-  text-align: left;
-  padding: 0em;
-}
-#T_f344e caption {
-  caption-side: bottom;
-}
-</style>
-<table id="T_f344e">
+<table border="1" class="dataframe">
   <thead>
-    <tr>
-      <th class="blank level0" >&nbsp;</th>
-      <th id="T_f344e_level0_col0" class="col_heading level0 col0" >a</th>
-      <th id="T_f344e_level0_col1" class="col_heading level0 col1" >b</th>
-      <th id="T_f344e_level0_col2" class="col_heading level0 col2" >new_col</th>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>new_col</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_f344e_level0_row0" class="row_heading level0 row0" >c</th>
-      <td id="T_f344e_row0_col0" class="data row0 col0" >1</td>
-      <td id="T_f344e_row0_col1" class="data row0 col1" >bla</td>
-      <td id="T_f344e_row0_col2" class="data row0 col2" >3.14</td>
+      <th>c</th>
+      <td>1</td>
+      <td>bla</td>
+      <td>3.14</td>
     </tr>
     <tr>
-      <th id="T_f344e_level0_row1" class="row_heading level0 row1" >d</th>
-      <td id="T_f344e_row1_col0" class="data row1 col0" >3</td>
-      <td id="T_f344e_row1_col1" class="data row1 col1" >blubb</td>
-      <td id="T_f344e_row1_col2" class="data row1 col2" >2.71</td>
+      <th>d</th>
+      <td>3</td>
+      <td>blubb</td>
+      <td>2.71</td>
     </tr>
   </tbody>
 </table>

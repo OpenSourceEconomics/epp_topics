@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -68,7 +69,7 @@ def test_clean_agreement_scale_invalid_data(invalid_input):
 
 # One test function, two tests
 
-<img src="run_parametrized.png" class="rounded" width="650"/>
+<img src="/run_parametrized.png" class="rounded" width="650"/>
 
 
 ---
@@ -76,4 +77,4 @@ def test_clean_agreement_scale_invalid_data(invalid_input):
 # Countercheck fails as it is supposed to
 
 
-<img src="run_fail_for_valid_element.png" class="rounded" width="650"/>
+<img src="/run_fail_for_valid_element.png" class="rounded" width="650"/>

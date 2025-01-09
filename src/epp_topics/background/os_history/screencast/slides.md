@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -10,8 +11,6 @@ drawings:
 transition: fade
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
@@ -46,7 +45,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 <center>
-<img src="vt100.jpg" width=350>
+<img src="/vt100.jpg" width=350>
 </center>
 
 <br/>
@@ -72,7 +71,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 <center>
-<img src="bell-labs.jpg" width=350>
+<img src="/bell-labs.jpg" width=350>
 </center>
 
 </div>
@@ -94,7 +93,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 <center>
-<img src="linus.jpg" width=350>
+<img src="/linus.jpg" width=350>
 </center>
 
 </div>
@@ -119,7 +118,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 <center>
-<img src="stevejobs-next.jpg" width=300>
+<img src="/stevejobs-next.jpg" width=300>
 </center>
 
 </div>
@@ -150,7 +149,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 <center>
-<img src="windows-1-desktop.jpg" width=350>
+<img src="/windows-1-desktop.jpg" width=350>
 </center>
 
 </div>

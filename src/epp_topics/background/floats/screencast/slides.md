@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -10,8 +11,6 @@ drawings:
 transition: fade
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
@@ -41,7 +40,7 @@ layout: two-cols
 ::right::
 
 <center>
-<img src="vt100.jpg" width=350>
+<img src="/vt100.jpg" width=350>
 </center>
 
 <br/>
@@ -62,7 +61,7 @@ layout: two-cols
 ::right::
 
 <center>
-<img src="bell-labs.jpg" width=350>
+<img src="/bell-labs.jpg" width=350>
 </center>
 
 ---
@@ -79,7 +78,7 @@ layout: two-cols
 ::right::
 
 <center>
-<img src="linus.jpg" width=350>
+<img src="/linus.jpg" width=350>
 </center>
 
 
@@ -99,7 +98,7 @@ layout: two-cols
 ::right::
 
 <center>
-<img src="stevejobs-next.jpg" width=350>
+<img src="/stevejobs-next.jpg" width=350>
 </center>
 
 
@@ -125,7 +124,7 @@ layout: two-cols
 ::right::
 
 <center>
-<img src="windows-1-desktop.jpg" width=350>
+<img src="/windows-1-desktop.jpg" width=350>
 </center>
 
 

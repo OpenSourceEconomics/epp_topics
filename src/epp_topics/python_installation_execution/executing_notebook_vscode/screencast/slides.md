@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -11,8 +12,6 @@ transition: fade
 title: Effective Programming Practices for Economists
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
@@ -63,34 +62,34 @@ graph LR
 
 # 1. Open the file
 
-<img src="ipynb_file.png" class="rounded" width="600"/>
+<img src="/ipynb_file.png" class="rounded" width="600"/>
 
 
 ---
 
 # 2. Command palette (ctrl + shift + p)
 
-<img src="command_select_interpreter.png" class="rounded" width="600"/>
+<img src="/command_select_interpreter.png" class="rounded" width="600"/>
 
 
 ---
 
 # 3. Click on "Select another kernel"
 
-<img src="click_on_other.png" class="rounded" width="600"/>
+<img src="/click_on_other.png" class="rounded" width="600"/>
 
 
 ---
 
 # 4. Click on "Python environments"
 
-<img src="click_on_python_environments.png" class="rounded" width="600"/>
+<img src="/click_on_python_environments.png" class="rounded" width="600"/>
 
 ---
 
 # 5. Select the epp environment
 
-<img src="select_epp.png" class="rounded" width="600"/>
+<img src="/select_epp.png" class="rounded" width="600"/>
 
 ---
 class: text-xs

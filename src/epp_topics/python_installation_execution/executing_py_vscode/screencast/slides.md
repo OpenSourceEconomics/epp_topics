@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -11,8 +12,6 @@ transition: fade
 title: Effective Programming Practices for Economists
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
@@ -61,25 +60,25 @@ graph LR
 
 # 1. Open the file
 
-<img src="py_file.png" class="rounded" width="600"/>
+<img src="/py_file.png" class="rounded" width="600"/>
 
 
 ---
 
 # 2. Command palette (ctrl + shift + p)
 
-<img src="command_select_interpreter.png" class="rounded" width="600"/>
+<img src="/command_select_interpreter.png" class="rounded" width="600"/>
 
 
 ---
 
 # 3. Select the epp environment
 
-<img src="selecting_epp_env.png" class="rounded" width="600"/>
+<img src="/selecting_epp_env.png" class="rounded" width="600"/>
 
 
 ---
 
 # 4. Run the file
 
-<img src="click_run.png" class="rounded" width="600"/>
+<img src="/click_run.png" class="rounded" width="600"/>

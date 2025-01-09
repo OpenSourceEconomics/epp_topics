@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -10,8 +11,6 @@ drawings:
 transition: fade
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
@@ -119,17 +118,17 @@ def clean_agreement_scale(sr):
 
 # Git status
 
-<img src="git_status.png" class="rounded" width="700"/>
+<img src="/git_status.png" class="rounded" width="700"/>
 
 ---
 
 # First commit fails
 
-<img src="first_commit.png" class="rounded" width="700"/>
+<img src="/first_commit.png" class="rounded" width="700"/>
 
 
 ---
 
 # Second commit works
 
-<img src="second_commit.png" class="rounded" width="700"/>
+<img src="/second_commit.png" class="rounded" width="700"/>

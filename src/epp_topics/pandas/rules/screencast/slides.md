@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -94,74 +95,44 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div class="flex gap-4">
 <div>
 
-<style type="text/css">
-#T_3b726   {
-  margin: 0;
-  font-family: "Helvetica", "Helvetica", sans-serif;
-  border-collapse: collapse;
-  border: none;
-  font-size: 80%;
-  color: #fff;
-}
-#T_3b726 thead {
-  background-color: #3d3d3d;
-}
-#T_3b726 tbody tr:nth-child(even) {
-  background-color: #3d3d3d;
-}
-#T_3b726 tbody tr:nth-child(odd) {
-  background-color: #565656;
-}
-#T_3b726 td {
-  padding: 0em;
-}
-#T_3b726 th {
-  font-weight: bold;
-  text-align: left;
-  padding: 0em;
-}
-#T_3b726 caption {
-  caption-side: bottom;
-}
-</style>
-<table id="T_3b726">
+<table border="1" class="dataframe">
   <thead>
-    <tr>
-      <th class="blank level0" >&nbsp;</th>
-      <th id="T_3b726_level0_col0" class="col_heading level0 col0" >country</th>
-      <th id="T_3b726_level0_col1" class="col_heading level0 col1" >year</th>
-      <th id="T_3b726_level0_col2" class="col_heading level0 col2" >gdp_per_cap</th>
-      <th id="T_3b726_level0_col3" class="col_heading level0 col3" >pop</th>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>gdp_per_cap</th>
+      <th>pop</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_3b726_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_3b726_row0_col0" class="data row0 col0" >Cuba</td>
-      <td id="T_3b726_row0_col1" class="data row0 col1" >2002</td>
-      <td id="T_3b726_row0_col2" class="data row0 col2" >6340.65</td>
-      <td id="T_3b726_row0_col3" class="data row0 col3" >11226999</td>
+      <th>0</th>
+      <td>Cuba</td>
+      <td>2002</td>
+      <td>6340.65</td>
+      <td>11226999</td>
     </tr>
     <tr>
-      <th id="T_3b726_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_3b726_row1_col0" class="data row1 col0" >Cuba</td>
-      <td id="T_3b726_row1_col1" class="data row1 col1" >2007</td>
-      <td id="T_3b726_row1_col2" class="data row1 col2" >8948.10</td>
-      <td id="T_3b726_row1_col3" class="data row1 col3" >11416987</td>
+      <th>1</th>
+      <td>Cuba</td>
+      <td>2007</td>
+      <td>8948.10</td>
+      <td>11416987</td>
     </tr>
     <tr>
-      <th id="T_3b726_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_3b726_row2_col0" class="data row2 col0" >Spain</td>
-      <td id="T_3b726_row2_col1" class="data row2 col1" >2002</td>
-      <td id="T_3b726_row2_col2" class="data row2 col2" >24835.47</td>
-      <td id="T_3b726_row2_col3" class="data row2 col3" >40152517</td>
+      <th>2</th>
+      <td>Spain</td>
+      <td>2002</td>
+      <td>24835.47</td>
+      <td>40152517</td>
     </tr>
     <tr>
-      <th id="T_3b726_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_3b726_row3_col0" class="data row3 col0" >Spain</td>
-      <td id="T_3b726_row3_col1" class="data row3 col1" >2007</td>
-      <td id="T_3b726_row3_col2" class="data row3 col2" >28821.06</td>
-      <td id="T_3b726_row3_col3" class="data row3 col3" >40448191</td>
+      <th>3</th>
+      <td>Spain</td>
+      <td>2007</td>
+      <td>28821.06</td>
+      <td>40448191</td>
     </tr>
   </tbody>
 </table>
@@ -171,68 +142,37 @@ Janoś Gabler and Hans-Martin von Gaudecker
 </div>
 <div>
 
-
-<style type="text/css">
-#T_85f3a   {
-  margin: 0;
-  font-family: "Helvetica", "Helvetica", sans-serif;
-  border-collapse: collapse;
-  border: none;
-  font-size: 80%;
-  color: #fff;
-}
-#T_85f3a thead {
-  background-color: #3d3d3d;
-}
-#T_85f3a tbody tr:nth-child(even) {
-  background-color: #3d3d3d;
-}
-#T_85f3a tbody tr:nth-child(odd) {
-  background-color: #565656;
-}
-#T_85f3a td {
-  padding: 0em;
-}
-#T_85f3a th {
-  font-weight: bold;
-  text-align: left;
-  padding: 0em;
-}
-#T_85f3a caption {
-  caption-side: bottom;
-}
-</style>
-<table id="T_85f3a">
+<table border="1" class="dataframe">
   <thead>
-    <tr>
-      <th class="blank level0" >&nbsp;</th>
-      <th id="T_85f3a_level0_col0" class="col_heading level0 col0" >gdp_per_cap_2002</th>
-      <th id="T_85f3a_level0_col1" class="col_heading level0 col1" >gdp_per_cap_2007</th>
-      <th id="T_85f3a_level0_col2" class="col_heading level0 col2" >pop_2002</th>
-      <th id="T_85f3a_level0_col3" class="col_heading level0 col3" >pop_2007</th>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gdp_per_cap_2002</th>
+      <th>gdp_per_cap_2007</th>
+      <th>pop_2002</th>
+      <th>pop_2007</th>
     </tr>
     <tr>
-      <th class="index_name level0" >country</th>
-      <th class="blank col0" >&nbsp;</th>
-      <th class="blank col1" >&nbsp;</th>
-      <th class="blank col2" >&nbsp;</th>
-      <th class="blank col3" >&nbsp;</th>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_85f3a_level0_row0" class="row_heading level0 row0" >Cuba</th>
-      <td id="T_85f3a_row0_col0" class="data row0 col0" >6340.65</td>
-      <td id="T_85f3a_row0_col1" class="data row0 col1" >8948.10</td>
-      <td id="T_85f3a_row0_col2" class="data row0 col2" >11226999.00</td>
-      <td id="T_85f3a_row0_col3" class="data row0 col3" >11416987.00</td>
+      <th>Cuba</th>
+      <td>6340.65</td>
+      <td>8948.10</td>
+      <td>11226999.00</td>
+      <td>11416987.00</td>
     </tr>
     <tr>
-      <th id="T_85f3a_level0_row1" class="row_heading level0 row1" >Spain</th>
-      <td id="T_85f3a_row1_col0" class="data row1 col0" >24835.47</td>
-      <td id="T_85f3a_row1_col1" class="data row1 col1" >28821.06</td>
-      <td id="T_85f3a_row1_col2" class="data row1 col2" >40152517.00</td>
-      <td id="T_85f3a_row1_col3" class="data row1 col3" >40448191.00</td>
+      <th>Spain</th>
+      <td>24835.47</td>
+      <td>28821.06</td>
+      <td>40152517.00</td>
+      <td>40448191.00</td>
     </tr>
   </tbody>
 </table>

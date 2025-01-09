@@ -4,14 +4,16 @@ channels: [conda-forge, nodefaults, conda-forge/label/pytask_rc]
 dependencies:
   - conda-lock
   - deepdiff
+  - estimagic
   - gitpython
   - ipykernel
   - ipywidgets
   - jupyterlab
+  - line_profiler
   - nodejs
   - numba
   - openpyxl
-  - pandas >= 2.1
+  - pandas >= 2.2
   - pip
   - plotly
   - pre-commit
@@ -19,7 +21,7 @@ dependencies:
   - pybaum
   - pydata-sphinx-theme>=0.13.3
   - pygraphviz
-  - pytask >= 0.4.0rc3
+  - pytask >= 0.5
   # - pytask-parallel  # Do not use, slidev exports get mixed up.
   - pytest
   - pytest-cov
@@ -36,4 +38,11 @@ dependencies:
   - statsmodels
   - toml
   - xlrd>=1.0
-  - pip: [-e ., kaleido, jupyter-book, pyperclip, pdbp]
+  - pip:
+      - -e .
+      - kaleido
+      - jupyter-book
+      - jupyterquiz
+      - jupytercards
+      - pyperclip
+      - pdbp

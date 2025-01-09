@@ -1,8 +1,55 @@
-[build-system]
-requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
+[project]
+name = "epp_topics"
+description = "Effective Programming Practices for Economists: Topics"
+requires-python = ">=3.11"
+dependencies = [
+    "pytask"
+]
+dynamic = ["version"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+authors = [
+    { name = "Hans-Martin von Gaudecker", email = "hmgaudecker@gmail.com" },
+    { name = "Janoś Gabler", email = "janos.gabler@gmail.com" },
+]
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
 
-[tool.setuptools_scm]
-write_to = "src/epp_topics/_version.py"
+[project.license]
+text = "CC-BY-NC-SA-4.0"
+
+[project.urls]
+Documentation = "https://github.com/OpenSourceEconomics/epp_topics"
+Github = "https://github.com/OpenSourceEconomics/epp_topics"
+Tracker = "https://github.com/OpenSourceEconomics/epp_topics/issues"
+
+[build-system]
+requires = ["hatchling", "hatch_vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/epp_topics/_version.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = ["tests"]
+only-packages = true
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src"]
+sources = ["src"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.pytask.ini_options]
 paths = ["./src/epp_topics"]
@@ -13,45 +60,46 @@ ignore = [
 
 [tool.ruff]
 target-version = "py311"
-select = ["ALL"]
 fix = true
+line-length = 88
+
+[tool.ruff.lint]
+select = ["ALL"]
 extend-ignore = [
-    "S101",  # Use of `assert` detected.
-    "ANN",  # Missing type annotations
-    "D100",
-    "T201",
+    "ANN",  # Missing type annotations.
+    "B008", # Do not perform function calls in argument defaults.
     "B018",
-    "TRY003",
-    "PLR0913",
+    "BLE001",
+    "COM812",  # May cause conflict with ruff's formatter.
+    "D100",
+    "D103", # lots of small functions missing docstrings.
     "EM101",
     "FBT001",
-    "N999", # capitalized module name
-    "S602", # `subprocess` call with `shell=True`
-    "S110",
-    "BLE001",
-    "PD901", # `df` used a lot as example variable name
-    "D103", # lots of small functions missing docstrings
+    "FIX002",  # allow TODOs in the code.
     "INP001", # implicit namespace packages; clashes with our pytask examples.
-    "S301",
+    "ISC001",  # May cause conflict with ruff's formatter.
+    "N999", # Capitalized module name.
     "PD010",
     "PD015",
-    "B008", # Do not perform function calls in argument defaults.
-    "PT011", # catching broad exceptions in tests is just fine
-    "PERF401", # use a list comprehension
+    "PD901", # `df` used a lot as example variable name.
+    "PERF401", # use a list comprehension.
+    "PLR0913",
+    "PLR2004",  # Magic value used in comparison.
+    "PT011", # catching broad exceptions in tests is just fine.
+    "S101",  # Use of `assert` detected.
+    "S110",
+    "S301",
+    "S602", # `subprocess` call with `shell=True`.
+    "T201",
+    "TRY003",
 ]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "src/epp_topics/python_basics/executing_pytest/screencast/example/test_cobb_douglas.py" = ["PLR2004"]
+"**/*.ipynb" = ["B018", "T201", "E402", "PLR2004"]
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "google"
-
-
-[tool.nbqa.config]
-black = "pyproject.toml"
-
-[tool.nbqa.mutate]
-black = 1
 
 
 [tool.pytest.ini_options]

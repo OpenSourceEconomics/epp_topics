@@ -11,18 +11,21 @@ from epp_topics.texts.markdown_syntax import (
 from epp_topics.texts.markup_languages import (
     SITE_CONTENTS as MARKUP_LANGUAGES,
 )
+from epp_topics.texts.writing_readme_files import (
+    SITE_CONTENTS as WRITING_README_FILES,
+)
 
 TOPICS = [
     MARKUP_LANGUAGES,
     MARKDOWN_SYNTAX,
     MARKDOWN_APPLICATIONS,
+    WRITING_README_FILES,
 ]
 
 SITE_CONTENTS = {
     "chapter_title": "Texts, Typesetting, and Text Data",
     "pages": tuple(
         itertools.chain(
-            ("content_objectives.md",),
             *[topic["pages"] for topic in TOPICS],
         ),
     ),

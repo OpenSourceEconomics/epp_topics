@@ -10,7 +10,6 @@ SITE_CONTENTS = {
     "chapter_title": "Some Background",
     "pages": tuple(
         itertools.chain(
-            ("content_objectives.md",),
             OS_HISTORY["pages"],
             GRAPHS["pages"],
             FILE_SYSTEMS["pages"],

@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -116,7 +117,7 @@ def _plot_life_expectancy(df):
 
 # Run pytask
 
-<img src="run_1.png" class="rounded" width="700"/>
+<img src="/run_1.png" class="rounded" width="700"/>
 
 ---
 

@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -10,8 +11,6 @@ drawings:
 transition: fade
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
@@ -90,9 +89,10 @@ graph LR
 ### GUI representation
 
 <center>
-<img src="unix_path_mambaforge.png" width=450>
+<img src="/unix_path_mambaforge.png" width=450>
 </center>
 
+</div>
 </div>
 
 <div v-click>
@@ -176,9 +176,10 @@ graph LR
 ### GUI representation
 
 <center>
-<img src="windows_path_mambaforge.png" width=250>
+<img src="/windows_path_mambaforge.png" width=250>
 </center>
 
+</div>
 </div>
 
 <div v-click>

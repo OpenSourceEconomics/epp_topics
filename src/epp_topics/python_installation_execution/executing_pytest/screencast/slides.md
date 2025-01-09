@@ -1,5 +1,6 @@
 ---
 theme: academic
+coverDate: ""
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -11,8 +12,6 @@ transition: fade
 title: Effective Programming Practices for Economists
 defaults:
   layout: center
-# themeConfig:
-#   paginationPagesDisabled: true
 ---
 
 ### Effective Programming Practices for Economists
@@ -45,7 +44,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # 0: Activate and Info
 
-<img src="activate_and_info.png" class="rounded" width="600"/>
+<img src="/activate_and_info.png" class="rounded" width="600"/>
 
 ---
 
@@ -81,4 +80,4 @@ graph LR
 
 # 1: Execute
 
-<img src="run.png" class="rounded" width="600"/>
+<img src="/run.png" class="rounded" width="600"/>
