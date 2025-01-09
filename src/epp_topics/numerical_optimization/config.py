@@ -14,6 +14,9 @@ from epp_topics.numerical_optimization.df_direct_search import (
 from epp_topics.numerical_optimization.df_trust_region import (
     SITE_CONTENTS as DF_TRUST_REGION,
 )
+from epp_topics.numerical_optimization.example_set_up import (
+    SITE_CONTENTS as EXAMPLE_SET_UP,
+)
 from epp_topics.numerical_optimization.grid_search import (
     SITE_CONTENTS as GRID_SEARCH,
 )
@@ -32,27 +35,24 @@ from epp_topics.numerical_optimization.optimization_intro import (
 from epp_topics.numerical_optimization.optimization_mechanics import (
     SITE_CONTENTS as OPTIMIZATION_MECHANICS,
 )
-from epp_topics.numerical_optimization.set_up_function import (
-    SITE_CONTENTS as SET_UP_FUNCTION,
-)
 
 TOPICS = [
     OPTIMIZATION_INTRO,
     OPTIMIZATION_MECHANICS,
     OPTIMAGIC_OVERVIEW,
     OPTIMIZATION_ALGORITHMS,
-    SET_UP_FUNCTION,
+    OPTIMIZATION_HISTORIES,
+    EXAMPLE_SET_UP,
     GRID_SEARCH,
     DB_LINE_SEARCH,
     DB_TRUST_REGION,
     DF_DIRECT_SEARCH,
     DF_TRUST_REGION,
-    OPTIMIZATION_HISTORIES,
 ]
 
 
 SITE_CONTENTS = {
-    "chapter_title": "Scientific Computing",
+    "chapter_title": "Numerical Optimization",
     "pages": tuple(
         itertools.chain(
             *[topic["pages"] for topic in TOPICS],

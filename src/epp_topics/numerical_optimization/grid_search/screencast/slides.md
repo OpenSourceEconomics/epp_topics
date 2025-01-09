@@ -16,7 +16,7 @@ defaults:
 
 <br/>
 
-# Scientific Computing
+# Numerical Optimization
 
 ### Grid Search
 

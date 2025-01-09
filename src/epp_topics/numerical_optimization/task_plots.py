@@ -20,10 +20,10 @@ from epp_topics.numerical_optimization.simple_optimisers import (
 START_X = np.array([2])
 
 
-def task_plot_set_up_function(
+def task_plot_example_function(
     _plots_dep=Path("simple_optimisers.py"),
     function_path: Annotated[Path, Product] = Path()
-    / "set_up_function"
+    / "example_set_up"
     / "screencast"
     / "public"
     / "function.svg",

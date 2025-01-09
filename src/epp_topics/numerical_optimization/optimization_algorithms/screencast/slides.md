@@ -17,7 +17,7 @@ defaults:
 
 <br/>
 
-# Scientific Computing
+# Numerical Optimization
 
 ### Choosing optimization algorithms
 
@@ -49,7 +49,6 @@ $\rightarrow$ Always compare multiple algorithms in a criterion plot
 
 # Try to make your problem simpler
 
-
 - Get derivatives using automatic differentiation (JAX, pytorch)
 
 - Make your function faster
@@ -62,22 +61,28 @@ $\rightarrow$ Always compare multiple algorithms in a criterion plot
 
 # Choosing local optimizers
 
+Next slide has a practical guide, see [optimagic
+docs](https://optimagic.readthedocs.io/en/latest/how_to/how_to_algorithm_selection.html#how-to-select-a-local-optimizer)
+for more details.
+
+---
+
 ```mermaid {theme: 'dark', scale: 0.6}
 graph LR
     classDef highlight fill:#FF4500;
-    A["Do you have<br/>nonlinear constraints?"] -- yes --> B["differentiable?"]
-    B["differentiable?"] -- yes --> C["'ipopt', 'nlopt_slsqp', 'scipy_trust_constr'"]
-    B["differentiable?"] -- no --> D["'scipy_cobyla', 'nlopt_cobyla'"]
+    A["Do you have<br/>nonlinear<br/>constraints?"] -- yes --> B["differentiable?"]
+    B["Is your objective function differentiable?"] -- yes --> C["ipopt<br/>nlopt_slsqp<br/>scipy_trust_constr"]
+    B["differentiable?"] -- no --> D["scipy_cobyla<br/>nlopt_cobyla"]
 
     A["Do you have<br/>nonlinear constraints?"] -- no --> E["Can you exploit<br/>a least-squares<br/>structure?"]
     E["Can you exploit<br/>a least-squares<br/>structure?"] -- yes --> F["differentiable?"]
     E["Can you exploit<br/>a least-squares<br/>structure?"] -- no --> G["differentiable?"]
 
-    F["differentiable?"] -- yes --> H["'scipy_ls_lm', 'scipy_ls_trf', 'scipy_ls_dogleg'"]
-    F["differentiable?"] -- no --> I["'nag_dflos', 'pounders', 'tao_pounders'"]
+    F["differentiable?"] -- yes --> H["scipy_ls_lm<br/>scipy_ls_trf<br/>scipy_ls_dogbox"]
+    F["differentiable?"] -- no --> I["nag_dflos<br/>pounders<br/>tao_pounders"]
 
-    G["differentiable?"] -- yes --> J["'scipy_lbfgsb', 'fides'"]
-    G["differentiable?"] -- no --> K["'nlopt_bobyqa', 'nlopt_neldermead', 'neldermead_parallel'"]
+    G["differentiable?"] -- yes --> J["scipy_lbfgsb<br/>nlopt_lbfgsb<br/>fides"]
+    G["differentiable?"] -- no --> K["nlopt_bobyqa<br/>nlopt_neldermead<br/>neldermead_parallel"]
 ```
 
 ---
@@ -89,7 +94,7 @@ graph LR
     classDef highlight fill:#FF4500;
     A["Do you have<br/>3 or less<br/>parameters"] -- yes --> B["scipy_brute"]
     A["Do you have<br/>3 or less<br/>parameters"] -- no --> C["Is your function<br/>very rugged with<br/>extremely many<br/>local optima?"]
-    C["Is your function<br/>very rugged with<br/>extremely many<br/>local optima?"] -- yes --> D["'nlopt_direct', 'nlopt_isres', 'pygmo_gaco',<br/>'pygmo_de', other pygmo algorithms"]
+    C["Is your function<br/>very rugged with<br/>extremely many<br/>local optima?"] -- yes --> D["nlopt_direct<br/>nlopt_isres<br/>pygmo_gaco<br/>pygmo_de<br/>other pygmo algorithms"]
     C["Is your function<br/>very rugged with<br/>extremely many<br/>local optima?"] -- no --> E["choose a suitable local optimizer and do multistart"]
 ```
 

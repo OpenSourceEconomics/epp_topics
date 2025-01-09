@@ -17,7 +17,7 @@ defaults:
 
 <br/>
 
-# Scientific Computing
+# Numerical Optimization
 
 ### Visualizing optimizer histories
 
@@ -58,7 +58,7 @@ We assume you have done an optimization and the result is called `res`
 # Criterion plot
 
 ```python
-em.criterion_plot(res)
+om.criterion_plot(res)
 ```
 
 <div class="grid grid-cols-2 gap-12">
@@ -89,7 +89,7 @@ em.criterion_plot(res)
 # Criterion plot
 
 ```python
-em.criterion_plot(res, monotone=True)
+om.criterion_plot(res, monotone=True)
 ```
 
 <div class="grid grid-cols-2 gap-4">
@@ -115,7 +115,7 @@ style="display: block;"/>
 # Criterion plot
 
 ```python
-em.criterion_plot(res, max_evaluations=300)
+om.criterion_plot(res, max_evaluations=300)
 ```
 
 <div class="grid grid-cols-2 gap-4">
@@ -153,13 +153,13 @@ def sphere(x):
 
 results = {}
 for algo in ["scipy_neldermead", "nlopt_neldermead", "fides"]:
-    results[algo] = em.minimize(
+    results[algo] = om.minimize(
         sphere,
         np.arange(10),
         algorithm=algo,
     )
 
-em.criterion_plot(results, max_evaluations=200)
+om.criterion_plot(results, max_evaluations=200)
 ```
 
 </div>

@@ -17,7 +17,7 @@ defaults:
 
 <br/>
 
-# Scientific Computing
+# Numerical Optimization
 
 ### Using optimagic's minimize and maximize
 

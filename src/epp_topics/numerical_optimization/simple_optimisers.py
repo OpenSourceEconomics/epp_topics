@@ -7,12 +7,13 @@ import plotly.io as pio
 import statsmodels.formula.api as sm
 from optimagic import minimize
 
-# set default theme to seaborn for plotly.express
-pio.templates.default = "plotly_dark+presentation"
-# change default size
+# For recording, use plotly_dark+presentation, else just presentation
+template_name = "plotly_dark+presentation"
+
+pio.templates.default = template_name
 pio.templates[pio.templates.default].layout["height"] = 600
 pio.templates[pio.templates.default].layout["width"] = 800
-pio.templates["plotly_dark+presentation"].layout.autosize = False
+pio.templates[template_name].layout.autosize = False
 
 WEIGHTS = [
     9.003014962148157,

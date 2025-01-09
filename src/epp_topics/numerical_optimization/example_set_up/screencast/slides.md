@@ -18,9 +18,9 @@ defaults:
 
 <br/>
 
-# Scientific Computing
+# Numerical Optimization
 
-### Example function & prerequisites
+### Set up of the example
 
 <br/>
 
@@ -29,7 +29,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Function Set-up
+# Function
 
 In these lectures we will use the following function as a target for our
 optimization:
@@ -38,11 +38,12 @@ $$
 f(\mathbf{x}) = \sum_{j=1}^{J} w_j \cdot x^{j-1}
 $$
 
+with $J = 12$.
 
 
 ---
 
-Set of parameters:
+# Weights used
 
 ```python
 WEIGHTS = [

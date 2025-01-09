@@ -18,7 +18,7 @@ defaults:
 
 <br>
 
-# Scientific Computing
+# Numerical Optimization
 
 ### Derivative-Based (DB) Trust Region Algorithm(s)
 

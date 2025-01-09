@@ -17,7 +17,7 @@ defaults:
 
 <br/>
 
-# Scientific Computing
+# Numerical Optimization
 
 ### Introduction to numerical optimization
 

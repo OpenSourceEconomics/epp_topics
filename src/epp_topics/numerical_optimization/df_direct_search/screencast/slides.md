@@ -18,7 +18,7 @@ defaults:
 
 <br/>
 
-# Scientific Computing
+# Numerical Optimization
 
 ### Derivative Free Direct Search Algorithm(s)
 
