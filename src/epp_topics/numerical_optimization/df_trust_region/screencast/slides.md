@@ -89,17 +89,13 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - Within the trust region, the fit is generally better than the gradient based trust region algorithm
 
-- By construction especially at corners of trust region
+- By construction at the boundaries of the trust region for interpolation
 
 - Choose between the two based on computation speed
 
     - If you have fast closed form derivatives, use the derivative based algorithm
 
     - If you only have numerical derivatives, use this instead
-
-- Points at which the function has been evaluated before can be re-used to save function evaluations
-
-- Since no gradient is available, algorithm will continue until trust region radius shrinks to zero
 
 - It's intuitively very clear how this can work for noisy functions if enough evaluations are used for each surrogate model
 
