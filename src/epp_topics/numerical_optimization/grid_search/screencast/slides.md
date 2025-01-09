@@ -22,11 +22,9 @@ defaults:
 
 <br/>
 
-
 Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
-
 
 # Grid Search
 
@@ -43,3 +41,19 @@ Janoś Gabler and Hans-Martin von Gaudecker
 ---
 
 <img src="./history.svg" class="rounded" style="width: 90%; height: 90%"/>
+
+---
+
+# Curse of Dimensionality
+
+- Suppose we have $p > 1$ parameters.
+
+- If we use $n$ grid points in each dimension, we require $n^p$ function evaluations.
+
+- This grows exponentially with $p$, making grid search infeasible in higher dimensions.
+
+- Example:
+  - 5 parameters and 100 grid points per parameter
+  - $100^{5} = 10^{10}$ required function evaluations
+  - Assume one function evaluation takes 1 millisecond
+  - $10^{10}$ milliseconds $\approx$ 115 days
