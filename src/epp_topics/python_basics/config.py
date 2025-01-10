@@ -3,56 +3,56 @@
 import itertools
 
 from epp_topics.python_basics.assignment_and_scalar_types import (
-    SITE_CONTENTS as ASSIGNMENT_AND_SCALAR_TYPES,
+    SITE_CONTENTS as assignment_and_scalar_types,
 )
 from epp_topics.python_basics.comprehensions import (
-    SITE_CONTENTS as COMPREHENSIONS,
+    SITE_CONTENTS as comprehensions,
 )
 from epp_topics.python_basics.dicts import (
-    SITE_CONTENTS as DICTS,
+    SITE_CONTENTS as dicts,
 )
 from epp_topics.python_basics.for_loops import (
-    SITE_CONTENTS as FOR_LOOPS,
+    SITE_CONTENTS as for_loops,
 )
 from epp_topics.python_basics.functions_basics import (
-    SITE_CONTENTS as FUNCTIONS_BASICS,
+    SITE_CONTENTS as functions_basics,
 )
 from epp_topics.python_basics.functions_principles import (
-    SITE_CONTENTS as FUNCTIONS_PRINCIPLES,
+    SITE_CONTENTS as functions_principles,
 )
 from epp_topics.python_basics.if_conditions import (
-    SITE_CONTENTS as IF_CONDITIONS,
+    SITE_CONTENTS as if_conditions,
 )
 from epp_topics.python_basics.importing import (
-    SITE_CONTENTS as IMPORTING,
+    SITE_CONTENTS as importing,
 )
 from epp_topics.python_basics.lists_tuples_sets import (
-    SITE_CONTENTS as LISTS_TUPLES_SETS,
+    SITE_CONTENTS as lists_tuples_sets,
 )
 from epp_topics.python_basics.pathlib import (
-    SITE_CONTENTS as PATHLIB,
+    SITE_CONTENTS as pathlib,
 )
 from epp_topics.python_basics.strings import (
-    SITE_CONTENTS as STRINGS,
+    SITE_CONTENTS as strings,
 )
 from epp_topics.python_basics.tracebacks import (
-    SITE_CONTENTS as TRACEBACKS,
+    SITE_CONTENTS as tracebacks,
 )
 
-TOPICS = [
-    ASSIGNMENT_AND_SCALAR_TYPES,
-    STRINGS,
-    LISTS_TUPLES_SETS,
-    DICTS,
-    FOR_LOOPS,
-    IF_CONDITIONS,
-    COMPREHENSIONS,
-    FUNCTIONS_BASICS,
-    FUNCTIONS_PRINCIPLES,
-    TRACEBACKS,
-    IMPORTING,
-    PATHLIB,
-]
+TOPICS = (
+    assignment_and_scalar_types,
+    strings,
+    lists_tuples_sets,
+    dicts,
+    for_loops,
+    if_conditions,
+    comprehensions,
+    functions_basics,
+    functions_principles,
+    tracebacks,
+    importing,
+    pathlib,
+)
 
 SITE_CONTENTS = {
     "chapter_title": "Python Basics",

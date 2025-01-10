@@ -3,74 +3,54 @@
 import itertools
 
 from epp_topics.scientific_computing.broadcasting import (
-    SITE_CONTENTS as BROADCASTING,
+    SITE_CONTENTS as broadcasting,
 )
 from epp_topics.scientific_computing.calculations_between_arrays import (
-    SITE_CONTENTS as CALCULATIONS_BETWEEN_ARRAYS,
+    SITE_CONTENTS as calculations_between_arrays,
 )
 from epp_topics.scientific_computing.calculations_on_arrays import (
-    SITE_CONTENTS as CALCULATIONS_ON_ARRAYS,
+    SITE_CONTENTS as calculations_on_arrays,
 )
 from epp_topics.scientific_computing.creating_arrays import (
-    SITE_CONTENTS as CREATING_ARRAYS,
+    SITE_CONTENTS as creating_arrays,
 )
-from epp_topics.scientific_computing.estimagic_features import (
-    SITE_CONTENTS as ESTIMAGIC_FEATURES,
-)
-from epp_topics.scientific_computing.indexing import SITE_CONTENTS as INDEXING
-from epp_topics.scientific_computing.optimization_algorithms import (
-    SITE_CONTENTS as OPTIMIZATION_ALGORITHMS,
-)
-from epp_topics.scientific_computing.optimization_histories import (
-    SITE_CONTENTS as OPTIMIZATION_HISTORIES,
-)
-from epp_topics.scientific_computing.optimization_intro import (
-    SITE_CONTENTS as OPTIMIZATION_INTRO,
-)
-from epp_topics.scientific_computing.optimization_mechanics import (
-    SITE_CONTENTS as OPTIMIZATION_MECHANICS,
-)
-from epp_topics.scientific_computing.randomness import SITE_CONTENTS as RANDOMNESS
+from epp_topics.scientific_computing.indexing import SITE_CONTENTS as indexing
+from epp_topics.scientific_computing.randomness import SITE_CONTENTS as randomness
 from epp_topics.scientific_computing.speedup_intro import (
-    SITE_CONTENTS as SPEEDUP_INTRO,
+    SITE_CONTENTS as speedup_intro,
 )
 from epp_topics.scientific_computing.speedup_line_profile import (
-    SITE_CONTENTS as SPEEDUP_LINE_PROFILE,
+    SITE_CONTENTS as speedup_line_profile,
 )
 from epp_topics.scientific_computing.speedup_measuring_time import (
-    SITE_CONTENTS as SPEEDUP_MEASURING_TIME,
+    SITE_CONTENTS as speedup_measuring_time,
 )
 from epp_topics.scientific_computing.speedup_numba import (
-    SITE_CONTENTS as SPEEDUP_NUMBA,
+    SITE_CONTENTS as speedup_numba,
 )
 from epp_topics.scientific_computing.speedup_numpy import (
-    SITE_CONTENTS as SPEEDUP_NUMPY,
+    SITE_CONTENTS as speedup_numpy,
 )
 from epp_topics.scientific_computing.speedup_snakeviz import (
-    SITE_CONTENTS as SPEEDUP_SNAKEVIZ,
+    SITE_CONTENTS as speedup_snakeviz,
 )
-from epp_topics.scientific_computing.what_is_numpy import SITE_CONTENTS as WHAT_IS_NUMPY
+from epp_topics.scientific_computing.what_is_numpy import SITE_CONTENTS as what_is_numpy
 
-TOPICS = [
-    WHAT_IS_NUMPY,
-    CREATING_ARRAYS,
-    INDEXING,
-    CALCULATIONS_ON_ARRAYS,
-    CALCULATIONS_BETWEEN_ARRAYS,
-    RANDOMNESS,
-    BROADCASTING,
-    OPTIMIZATION_INTRO,
-    ESTIMAGIC_FEATURES,
-    OPTIMIZATION_MECHANICS,
-    OPTIMIZATION_HISTORIES,
-    OPTIMIZATION_ALGORITHMS,
-    SPEEDUP_INTRO,
-    SPEEDUP_MEASURING_TIME,
-    SPEEDUP_SNAKEVIZ,
-    SPEEDUP_LINE_PROFILE,
-    SPEEDUP_NUMPY,
-    SPEEDUP_NUMBA,
-]
+TOPICS = (
+    what_is_numpy,
+    creating_arrays,
+    indexing,
+    calculations_on_arrays,
+    calculations_between_arrays,
+    randomness,
+    broadcasting,
+    speedup_intro,
+    speedup_measuring_time,
+    speedup_snakeviz,
+    speedup_line_profile,
+    speedup_numpy,
+    speedup_numba,
+)
 
 
 SITE_CONTENTS = {

@@ -2,37 +2,40 @@
 
 import itertools
 
-from epp_topics.pandas.columns_and_indices import SITE_CONTENTS as COLUMNS_AND_INDICES
-from epp_topics.pandas.creating_variables import SITE_CONTENTS as CREATING_VARIABLES
+from epp_topics.pandas.columns_and_indices import SITE_CONTENTS as columns_and_indices
+from epp_topics.pandas.creating_variables import SITE_CONTENTS as creating_variables
 from epp_topics.pandas.dataframes_and_series import (
-    SITE_CONTENTS as DATAFRAMES_AND_SERIES,
+    SITE_CONTENTS as dataframes_and_series,
 )
-from epp_topics.pandas.datatypes import SITE_CONTENTS as DATATYPES
-from epp_topics.pandas.functional_fundamentals import SITE_CONTENTS as FUNCTIONAL_FUNDAMENTALS
-from epp_topics.pandas.functional import SITE_CONTENTS as FUNCTIONAL_DATA_MANAGEMENT
+from epp_topics.pandas.datatypes import SITE_CONTENTS as datatypes
+from epp_topics.pandas.functional import SITE_CONTENTS as functional_data_management
+from epp_topics.pandas.functional_fundamentals import (
+    SITE_CONTENTS as functional_fundamentals,
+)
 from epp_topics.pandas.inspecting_and_summarizing import (
-    SITE_CONTENTS as INSPECTING_AND_SUMMARIZING,
+    SITE_CONTENTS as inspecting_and_summarizing,
 )
-from epp_topics.pandas.loading_and_saving import SITE_CONTENTS as LOADING_AND_SAVING
-from epp_topics.pandas.merging import SITE_CONTENTS as MERGING
-from epp_topics.pandas.rules import SITE_CONTENTS as RULES
-from epp_topics.pandas.selection import SITE_CONTENTS as SELECTION
-from epp_topics.pandas.what_is_pandas import SITE_CONTENTS as WHAT_IS_PANDAS
+from epp_topics.pandas.loading_and_saving import SITE_CONTENTS as loading_and_saving
+from epp_topics.pandas.merging import SITE_CONTENTS as merging
+from epp_topics.pandas.rules import SITE_CONTENTS as rules
+from epp_topics.pandas.selection import SITE_CONTENTS as selection
+from epp_topics.pandas.what_is_pandas import SITE_CONTENTS as what_is_pandas
 
-TOPICS = [
-    WHAT_IS_PANDAS,
-    DATAFRAMES_AND_SERIES,
-    DATATYPES,
-    LOADING_AND_SAVING,
-    COLUMNS_AND_INDICES,
-    SELECTION,
-    INSPECTING_AND_SUMMARIZING,
-    CREATING_VARIABLES,
-    RULES,
-    MERGING,
-    FUNCTIONAL_FUNDAMENTALS,
-    FUNCTIONAL_DATA_MANAGEMENT,
-]
+TOPICS = (
+    what_is_pandas,
+    dataframes_and_series,
+    datatypes,
+    loading_and_saving,
+    columns_and_indices,
+    selection,
+    inspecting_and_summarizing,
+    creating_variables,
+    rules,
+    merging,
+    functional_fundamentals,
+    functional_data_management,
+)
+
 SITE_CONTENTS = {
     "chapter_title": "Data management with pandas",
     "pages": tuple(

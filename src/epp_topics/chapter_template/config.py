@@ -2,11 +2,9 @@
 
 import itertools
 
-from epp_topics.chapter_template.subchapter_1 import SITE_CONTENTS as SUBCHAPTER_1
+from epp_topics.chapter_template.subchapter_1 import SITE_CONTENTS as subchapter_1
 
-TOPICS = [
-    SUBCHAPTER_1,
-]
+TOPICS = (subchapter_1,)
 
 
 SITE_CONTENTS = {

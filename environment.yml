@@ -1,18 +1,19 @@
 ---
 name: epp_topics
-channels: [conda-forge, nodefaults, conda-forge/label/pytask_rc]
+channels: [conda-forge, nodefaults]
 dependencies:
   - conda-lock
   - deepdiff
-  - estimagic
   - gitpython
   - ipykernel
   - ipywidgets
   - jupyterlab
   - line_profiler
+  - nlopt
   - nodejs
   - numba
   - openpyxl
+  - optimagic
   - pandas >= 2.2
   - pip
   - plotly
@@ -40,6 +41,7 @@ dependencies:
   - xlrd>=1.0
   - pip:
       - -e .
+      - fides>=0.7.4
       - kaleido
       - jupyter-book
       - jupyterquiz

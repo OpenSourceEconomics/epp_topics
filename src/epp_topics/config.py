@@ -16,13 +16,14 @@ CHAPTER_NAMES = [
     "git",
     "python_installation_execution",
     "python_basics",
+    "debugging",
+    "software_engineering",
     "pandas",
     "scientific_computing",
+    "numerical_optimization",
     "projects",
-    "software_engineering",
     "texts",
     "plotting",
-    "debugging",
 ]
 
 
