@@ -143,7 +143,7 @@ def task_plots_df_trust_region_iterations(
         Product,
     ] = path_iterations_df_trust_region,
 ):
-    radius_list = [2, 3, 4, 2, 3, 1.5]
+    radius_list = [2, 3, 4, 2, 1.5, 0.5]
 
     for path, radius in zip(
         illustration_df_trust_region_path,
@@ -185,7 +185,7 @@ def task_plots_df_direct_search_iterations(
         Product,
     ] = path_iterations_df_direct_search,
 ):
-    deltas = [-1.5, 2, 3, 4, 2]
+    deltas = [-1.5, 2, 3, 5.5, 2.8]
 
     for path, delta in zip(illustration_df_direct_search_path, deltas, strict=True):
         fig, x = plot_direct_search(x, x + delta)

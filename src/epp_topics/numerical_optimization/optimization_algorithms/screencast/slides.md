@@ -27,15 +27,28 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# [Steps for choosing an algorithm](https://optimagic.readthedocs.io/en/latest/how_to/how_to_algorithm_selection.html#the-three-steps-for-selecting-algorithms)
+
+<br/>
+
+1. Theory (intro here)
+
+1. Experimentation (histories video)
+
+1. Refine until convergence
+
+---
+
 # Relevant problem properties
 
 - **Smoothness**: Differentiable? Kinks? Discontinuities? Stochastic?
 
 - **Convexity**: Are there local optima?
 
-- **Goal**: Do you need a global solution? How precise?
+- **Goal**: If not convex, do you need a global solution? How precise does a solution
+  need to be?
 
-- **Size**: 2 parameters? 10? 100? 1000? More?
+- **Size**: 2 parameters? 10? 100? 1,000? Millions? Billions?
 
 - **Constraints**: Bounds? Linear constraints? Nonlinear constraints?
 
@@ -55,7 +68,7 @@ $\rightarrow$ Always compare multiple algorithms in a criterion plot
 
 - Make your function more stable
 
-- Try to make your function smooth
+- Make your function smooth
 
 ---
 
@@ -79,7 +92,7 @@ graph LR
     E["Can you exploit<br/>a least-squares<br/>structure?"] -- no --> G["differentiable?"]
 
     F["differentiable?"] -- yes --> H["scipy_ls_lm<br/>scipy_ls_trf<br/>scipy_ls_dogbox"]
-    F["differentiable?"] -- no --> I["nag_dflos<br/>pounders<br/>tao_pounders"]
+    F["differentiable?"] -- no --> I["tranquilo<br/>nag_dflos<br/>pounders"]
 
     G["differentiable?"] -- yes --> J["scipy_lbfgsb<br/>nlopt_lbfgsb<br/>fides"]
     G["differentiable?"] -- no --> K["nlopt_bobyqa<br/>nlopt_neldermead<br/>neldermead_parallel"]

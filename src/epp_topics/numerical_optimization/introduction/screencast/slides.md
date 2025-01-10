@@ -101,20 +101,23 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Outline of this chapter
-
-- This introduction
 - Using optimagic
+
   - Overview
   - Mechanics of minimising/maximising a function
   - Picking algorithms
   - Visualizing histories
+
 - Intuition behind different algorithms
+
   - Example used throughout
   - Grid search methods
   - Derivative-based methods
+
     - Line search
     - Trust region
+
   - Derivative-free methods
+
     - Direct search
     - Trust region

@@ -196,6 +196,11 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
     argmin_index = np.argmin(trust_y_grid)
     argmin = trust_x_grid[argmin_index]
 
+    if surrogate_func == taylor_expansion:
+        name = "Taylor Approximation"
+    else:
+        name = "Surrogate Model"
+
     fig.add_scatter(
         x=[x0],
         y=[example_criterion(x0)],
@@ -208,7 +213,7 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
         x=trust_x_grid,
         y=trust_y_grid,
         mode="lines",
-        name="Surrogate model",
+        name=name,
         line={"color": "darkorange", "width": 2},
     )
 
@@ -218,17 +223,12 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
         else np.array([argmin])
     )
 
-    if surrogate_func == taylor_expansion:
-        name = "Minimum of Taylor approximation"
-    else:
-        name = "Minimum of surrogate model"
-
     fig.add_scatter(
         x=[argmin],
         y=[partialed(np.array([argmin]))],
         mode="markers",
         marker={"size": 12, "color": "orange"},
-        name=name,
+        name=f"Minimum of {name}",
         marker_symbol="star",
     )
     fig.add_scatter(
@@ -239,14 +239,14 @@ def plot_trust_region_algo(x0, radius, surrogate_func):
         name="Actual evaluation",
         marker_symbol="star",
     )
-    # put legend above in a line
     fig.update_layout(
+        width=1000,
         legend={
             "orientation": "h",
-            "yanchor": "bottom",
-            "y": 1.02,
-            "xanchor": "right",
-            "x": 1,
+            "yanchor": "top",
+            "y": 0.9,
+            "xanchor": "left",
+            "x": 1.02,
         },
         xaxis_range=[0, 20],
         yaxis_range=[-0.4, 9.4],

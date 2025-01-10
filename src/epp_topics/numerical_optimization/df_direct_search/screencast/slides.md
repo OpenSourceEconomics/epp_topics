@@ -24,20 +24,25 @@ defaults:
 
 <br/>
 
-
-Janoś Gabler and Hans-Martin von Gaudecker
+Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
-# Basic Idea
+# Basic Idea ([optimagic docs](https://optimagic.readthedocs.io/en/latest/explanation/explanation_of_numerical_optimizers.html#derivative-free-direct-search-algorithms))
 
 - Explore parameter space around current point systematically and accept the best value
+
 - Also called pattern search because the points at which the function is evaluated form a pattern
+
 - Easiest example for one dimensional problems:
-    - Evaluate function at current point and one other point
-    - Switch direction of other point if you got an increase in function value
-    - Make steps larger after success
-    - Make steps smaller after failure
+
+  - Evaluate function at current point and one other point
+
+  - Switch direction of other point if you got an increase in function value
+
+  - Make steps larger after success
+
+  - Make steps smaller after failure
 
 ---
 
@@ -45,12 +50,16 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_0.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Candidate value $>$ initial value $\Rightarrow$ reject, reverse direction
+
+
 ---
 
 ### Iteration 1
 
 <img src="./iteration_1.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Candidate value $<$ initial value $\Rightarrow$ accept, increase step length.
 
 ---
 
@@ -58,6 +67,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_2.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Candidate value $<$ initial value $\Rightarrow$ accept, increase step length.
 
 ---
 
@@ -65,6 +75,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_3.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Candidate value $>$ initial value $\Rightarrow$ reject, decrease step length.
 
 ---
 
@@ -72,6 +83,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_4.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Converge eventually (gets worse in both directions).
 
 ---
 

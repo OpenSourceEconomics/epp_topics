@@ -24,37 +24,33 @@ defaults:
 
 <br/>
 
-
-Janoś Gabler and Hans-Martin von Gaudecker
+Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
-# Basic Idea
+# Basic Idea ([optimagic docs](https://optimagic.readthedocs.io/en/latest/explanation/explanation_of_numerical_optimizers.html#derivative-based-line-search-algorithms))
 
 1. Evaluate function at initial point
 
 2. Use first derivative to get step direction
 
-3. Pick initial step length based on (approximated) second derivative
+3. Guess initial step length based on (approximated) second derivative
 
 4. Pick candidate step based on line search procedure (see next slide)
 
 5. Accept the new parameter and go back to 1.
 
-   *(ignore the case where we don't accept)*
-
+   _(ignore the case where we don't accept)_
 
 ---
 
 # The candidate step
 
-- Start at some $x$ (initial point or during iteration)
-
-- Compute the search direction $p$
+- Compute the search direction $p$ based on some $x$
 
   For gradient descent: $\;\;p = - f'(x)$
 
-- The step length $\alpha$ is chosen to minimize $f$ along the direction $p$
+- Line search: Choose step length $\alpha$ to minimize $f$ along the direction $p$
 
   - remains a 1d problem even with many parameters
   - only solved approximately
@@ -63,15 +59,13 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - The candidate step $x_c$ is defined as: $\;\;x_c = x + \alpha \, p$
 
-
-
-
 ---
 
 ### Initial Evaluation
 
 <img src="./iteration_0.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Large gradient, small curvature → Big step.
 
 ---
 
@@ -79,6 +73,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_1.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Large gradient, large curvature → Small step.
 
 ---
 
@@ -86,6 +81,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_2.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Small gradient, small curvature → Small step.
 
 ---
 
@@ -93,6 +89,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_3.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Small gradient, small curvature → Small step.
 
 ---
 
@@ -100,6 +97,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_4.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Medium-sized gradient, small curvature → Medium-sized step.
 
 ---
 
@@ -107,11 +105,15 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_5.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Small gradient, small curvature → Small step.
+
 ---
 
 ### Iteration 6
 
 <img src="./iteration_6.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+
+Reverse direction because gradient switches sign.
 
 ---
 
@@ -119,18 +121,19 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_7.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Converge because gradient is approximately zero.
+
 ---
 
 # Some Remarks
 
-- A big advantage over algorithms you will see later is that this has no tuning parameters.
+- No tuning parameters: Big advantage over other types of algorithms.
 
 - Standard gradient descent would always use the same step length — what we showed
   converges in fewer steps.
 
 - Nevertheless, standard gradient descent can be computationally better in very high
   dimensional problems (Hessian becomes too large!).
-
 
 ---
 

@@ -24,23 +24,22 @@ defaults:
 
 <br/>
 
-
-Janoś Gabler and Hans-Martin von Gaudecker
+Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
-# Basic Idea
+# Basic Idea ([optimagic docs](https://optimagic.readthedocs.io/en/latest/explanation/explanation_of_numerical_optimizers.html#derivative-based-trust-region-algorithms))
 
 1. Set initial trust region radius.
 
 2. Construct a quadratic Taylor approximation of the function based on function value, gradient,
    and (approximation to) the Hessian.
 
-    The Taylor approximation:
+   The Taylor approximation:
 
-    - approximates the function well within the trust region if radius is not too large
+   - approximates the function well within the trust region if radius is not too large
 
-    - is a quadratic function that it easy to optimize.
+   - is a quadratic function that it easy to optimize.
 
 3. Minimize the Taylor approximation within the trust region.
 
@@ -50,9 +49,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 5. Compare expected and actual improvement.
 
-    - Expected improvement is the decrease in the criterion according to the Taylor
-      approximation.
-    - Actual improvement is the decrease in the actual function value.
+   - Expected improvement is the decrease in the criterion according to the Taylor
+     approximation.
+
+   - Actual improvement is the decrease in the actual function value.
 
 6. Accept the new parameters if actual improvement is good enough.
 
@@ -60,10 +60,9 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 8. Construct a new Taylor approximation ...
 
-
 ---
 
-# Smaller radii lead to better approximations
+# Smaller radii $\Rightarrow$ better approximations
 
 - For a step $s$, the Taylor expansion of $f(x + s)$ around $x$ satisfies:
 
@@ -75,12 +74,13 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - (Holds for any function $f$ that is at least twice continuously differentiable.)
 
-
 ---
 
 ### Initial Evaluation
 
 <img src="./iteration_0.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
+
+Actual improvement $>$ expected improvement $\Rightarrow$ accept, increase trust region radius
 
 ---
 
@@ -88,6 +88,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_1.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Actual improvement $<$ expected improvement, but large $\Rightarrow$ accept, increase radius
 
 ---
 
@@ -95,6 +96,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_2.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Actual improvement negative $\Rightarrow$ reject, decrease radius
 
 ---
 
@@ -102,6 +104,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_3.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Actual improvement $\approx$ expected improvement $\Rightarrow$ accept, increase radius
 
 ---
 
@@ -109,6 +112,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_4.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Actual improvement $\approx$ expected improvement $\Rightarrow$ accept, increase radius
 
 ---
 
@@ -116,6 +120,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <img src="./iteration_5.svg" class="rounded" style="width: 80%; height: 80%; margin: auto"/>
 
+Converge around here because gradient is close to zero.
 
 ---
 

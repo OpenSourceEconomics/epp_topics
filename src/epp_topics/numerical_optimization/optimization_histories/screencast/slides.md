@@ -27,6 +27,18 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# [Steps for choosing an algorithm](https://optimagic.readthedocs.io/en/latest/how_to/how_to_algorithm_selection.html#the-three-steps-for-selecting-algorithms)
+
+<br/>
+
+1. Theory (algorithms video)
+
+1. Experimentation (here)
+
+1. Refine until convergence
+
+---
+
 # Motivation
 
 
@@ -40,9 +52,9 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - But you can compare the performance of optimizers
 
-  - Which one finds the lower function value?
+  - Which one finds the lowest/highest function value?
 
-  - Which one decreases the function more quickly?
+  - Which one leads to the quickest decrease/increase in function values?
 
 - The `criterion_plot` makes this very easy!
 

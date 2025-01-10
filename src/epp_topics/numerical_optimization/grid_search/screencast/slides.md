@@ -22,7 +22,7 @@ defaults:
 
 <br/>
 
-Janoś Gabler and Hans-Martin von Gaudecker
+Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
