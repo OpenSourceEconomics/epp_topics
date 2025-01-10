@@ -3,24 +3,24 @@
 import itertools
 
 from epp_topics.texts.markdown_applications import (
-    SITE_CONTENTS as MARKDOWN_APPLICATIONS,
+    SITE_CONTENTS as markdown_applications,
 )
 from epp_topics.texts.markdown_syntax import (
-    SITE_CONTENTS as MARKDOWN_SYNTAX,
+    SITE_CONTENTS as markdown_syntax,
 )
 from epp_topics.texts.markup_languages import (
-    SITE_CONTENTS as MARKUP_LANGUAGES,
+    SITE_CONTENTS as markup_languages,
 )
 from epp_topics.texts.writing_readme_files import (
-    SITE_CONTENTS as WRITING_README_FILES,
+    SITE_CONTENTS as writing_readme_files,
 )
 
-TOPICS = [
-    MARKUP_LANGUAGES,
-    MARKDOWN_SYNTAX,
-    MARKDOWN_APPLICATIONS,
-    WRITING_README_FILES,
-]
+TOPICS = (
+    markup_languages,
+    markdown_syntax,
+    markdown_applications,
+    writing_readme_files,
+)
 
 SITE_CONTENTS = {
     "chapter_title": "Texts, Typesetting, and Text Data",

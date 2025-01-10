@@ -50,7 +50,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <div>
 
-<img src="/sphere.svg" alt="sphere" width="450" class="center"/>
+<img src="/sphere.png" alt="sphere" width="450" class="center"/>
 
 </div>
 </div>
@@ -90,7 +90,6 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Libraries for optimization
 
-
 - There are many optimization libraries in Python
 
 - All are a bit different
@@ -98,4 +97,24 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - We will use [optimagic](https://optimagic.readthedocs.io/) to access all of them with
   a unified interface
 
-- Optimagic is developed by Open Source Economics in Bonn
+- Optimagic development started in Bonn's Open Source Economics group!
+
+---
+
+# Outline of this chapter
+
+- This introduction
+- Using optimagic
+  - Overview
+  - Mechanics of minimising/maximising a function
+  - Picking algorithms
+  - Visualizing histories
+- Intuition behind different algorithms
+  - Example used throughout
+  - Grid search methods
+  - Derivative-based methods
+    - Line search
+    - Trust region
+  - Derivative-free methods
+    - Direct search
+    - Trust region

@@ -2,31 +2,31 @@
 
 import itertools
 
-from epp_topics.background.file_systems import SITE_CONTENTS as FILE_SYSTEMS
-from epp_topics.background.graphs import SITE_CONTENTS as GRAPHS
-from epp_topics.background.os_history import SITE_CONTENTS as OS_HISTORY
+from epp_topics.background.file_systems import SITE_CONTENTS as file_systems
+from epp_topics.background.graphs import SITE_CONTENTS as graphs
+from epp_topics.background.os_history import SITE_CONTENTS as os_history
+
+TOPICS = (
+    os_history,
+    graphs,
+    file_systems,
+)
 
 SITE_CONTENTS = {
     "chapter_title": "Some Background",
     "pages": tuple(
         itertools.chain(
-            OS_HISTORY["pages"],
-            GRAPHS["pages"],
-            FILE_SYSTEMS["pages"],
+            *[topic["pages"] for topic in TOPICS],
         ),
     ),
     "other": tuple(
         itertools.chain(
-            OS_HISTORY["other"],
-            GRAPHS["other"],
-            FILE_SYSTEMS["other"],
+            *[topic["other"] for topic in TOPICS],
         ),
     ),
     "built": tuple(
         itertools.chain(
-            OS_HISTORY["built"],
-            GRAPHS["built"],
-            FILE_SYSTEMS["built"],
+            *[topic["built"] for topic in TOPICS],
         ),
     ),
 }

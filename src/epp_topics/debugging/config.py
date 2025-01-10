@@ -2,25 +2,25 @@
 
 import itertools
 
-from epp_topics.debugging.avoiding_debugging import SITE_CONTENTS as AVOIDING_DEBGUGGING
-from epp_topics.debugging.debugging_intro import SITE_CONTENTS as DEBUGGING_INTRO
+from epp_topics.debugging.avoiding_debugging import SITE_CONTENTS as avoiding_debgugging
+from epp_topics.debugging.debugging_intro import SITE_CONTENTS as debugging_intro
 from epp_topics.debugging.debugging_psychology import (
-    SITE_CONTENTS as DEBUGGING_PSYCHOLOGY,
+    SITE_CONTENTS as debugging_psychology,
 )
 from epp_topics.debugging.debugging_strategies import (
-    SITE_CONTENTS as DEBUGGING_STRATEGIES,
+    SITE_CONTENTS as debugging_strategies,
 )
-from epp_topics.debugging.gathering_data import SITE_CONTENTS as GATHERING_DATA
-from epp_topics.debugging.pdbp import SITE_CONTENTS as PDBP
+from epp_topics.debugging.gathering_data import SITE_CONTENTS as gathering_data
+from epp_topics.debugging.pdbp import SITE_CONTENTS as pdbp
 
-TOPICS = [
-    DEBUGGING_INTRO,
-    DEBUGGING_STRATEGIES,
-    AVOIDING_DEBGUGGING,
-    DEBUGGING_PSYCHOLOGY,
-    GATHERING_DATA,
-    PDBP,
-]
+TOPICS = (
+    debugging_intro,
+    debugging_strategies,
+    avoiding_debgugging,
+    debugging_psychology,
+    gathering_data,
+    pdbp,
+)
 
 
 SITE_CONTENTS = {

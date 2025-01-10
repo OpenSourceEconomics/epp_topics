@@ -6,7 +6,7 @@ multiple optimizers. The rest shows the mechanics.
 ## Motivation
 
 Say that in practice you should always run at least two optimizers and compare them in a
-criterion plot. Typically much more than that.
+criterion plot. Typically many more than that.
 
 ## Criterion plot for multiple optimizations
 
