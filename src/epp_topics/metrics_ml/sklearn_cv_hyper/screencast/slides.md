@@ -17,14 +17,14 @@ defaults:
 
 <br/>
 
-# Chapter Title
+# Data Analysis in Python
 
-### Subchapter Title
+### Cross-validation and hyperparamters in scikit-learn
 
 <br/>
 
 
-Janoś Gabler and Hans-Martin von Gaudecker
+Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
