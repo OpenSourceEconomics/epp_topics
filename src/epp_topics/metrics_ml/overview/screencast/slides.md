@@ -39,19 +39,47 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 # Metrics stack
 
 - statsmodels
+
 - linearmodels
+
 - specialised
+
   - estimagic
-  - pyblp
+
   - lcm
 
----
-
-# HM: No idea whether this is a sensible distinction -- feel free to change!
-
-# (Simple) ML stack
-
+- ...
 
 ---
 
-# DL stack
+# Basic machine learning stack
+
+- scikit-learn
+
+- xgboost
+
+- sktime
+
+- keras
+
+- pymc
+
+- ...
+
+
+
+---
+
+# Advanced machine learning stack
+
+- jax
+
+- flax
+
+- pytorch
+
+- torchvision
+
+- transformers
+
+- ...
