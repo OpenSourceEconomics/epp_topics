@@ -28,4 +28,12 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
-# Some Content
+# Cross-validaton
+
+- Show `cross_val_score`
+
+---
+
+# Hyperparameter tuning
+
+- Show `GridSearchCV` for Lasso penalty
