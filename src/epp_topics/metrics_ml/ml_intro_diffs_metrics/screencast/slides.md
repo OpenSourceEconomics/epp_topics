@@ -135,3 +135,40 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
   - Model finds patterns in data
 
   - Example: Clustering, dimensionality reduction
+
+
+---
+
+# Overfitting
+
+- Estimating large models on small datasets can lead to overfitting
+
+- Overfitting means:
+
+  - Model can explain the concrete dataset well
+
+  - Model would not work on any other dataset
+
+  - Same reason why we need adjusted $R^2$ in econometrics
+
+  - Need to make sure our model evaluation accounts for overfitting!
+
+---
+
+# Holdout samples
+
+- Split data into training and test dataset
+
+- Fitting and experimentation is only done on training data
+
+- Evaluation is only done on test data
+
+  - Overfitting on training data cannot influence the evaluation
+
+  - Need to avoid leaking any information from test data into model training!
+
+- Typical sizes:
+
+  - 70 to 80 percent for training
+
+  - Rest for validation
