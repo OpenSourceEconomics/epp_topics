@@ -30,13 +30,20 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 # Data ecosystem in Python
 
-- Data mgmt stack
-  - here mostly file-focused
-  - used in industry because plugins for all kinds of data bases etc.
+- pandas
+
+- polars
+
+- Apache arrow and parquet
+
+- DuckDB
+
+- ...
+
 
 ---
 
-# Metrics stack
+# Econometrics stack
 
 - statsmodels
 
@@ -46,7 +53,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
   - estimagic
 
-  - lcm
+  - pyblp
 
 - ...
 
@@ -72,11 +79,11 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 # Advanced machine learning stack
 
-- jax
+- **jax**
 
 - flax
 
-- pytorch
+- **pytorch**
 
 - torchvision
 
