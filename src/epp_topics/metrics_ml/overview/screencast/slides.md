@@ -51,6 +51,8 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 - specialised
 
+  - quantecon
+
   - estimagic
 
   - pyblp

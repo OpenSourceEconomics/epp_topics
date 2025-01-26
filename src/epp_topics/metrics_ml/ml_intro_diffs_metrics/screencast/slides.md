@@ -32,20 +32,26 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-## Econometrics
+**Econometrics**
 
 - Estimate **fundamentally unobservable** parameters and test hypotheses about them
+
 - Cannot test how well it worked
+
 - Focus on justifying assumptions
+
 
 </div>
 <div>
 
-## (Supervised) Machine learning
+**(Supervised) Machine learning**
 
 - Predict observable things
+
 - Can check how well it works
+
 - Focus on experimentation, evaluation and finding out what works
+
 
 </div>
 </div>
@@ -55,9 +61,13 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 # Some implications
 
 - Even though it is tempting, you cannot interpret parameters
+
 - Can be creative in combining simple models into complex ones
+
 - Rapid progress and development of new models
+
 - Programming skills matter more
+
 
 ---
 
@@ -65,10 +75,15 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 <div>
 
 - Very good paper!
+
 - Difference of ML and Econometrics
+
 - Overview of ML methods
+
 - What we can(not) learn with ML
+
 - List of potential applications in econ
+
 
 </div>
 <div>
@@ -80,29 +95,43 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
-## laout: center
-
-# Supervised vs un-supervised learning
-
-- **supervised learning**
-  - Training data contains labeled examples of the task to solve
-  - Model generalizes this to unseen data
-  - Example: Regression, classification
-- **unsupervised learning**
-  - Training with label free data
-  - Model finds patterns in data
-  - Example: Clustering, dimensionality reduction
-- **self-supervised learning**: Middle ground we discuss later
-
----
-
 # Terminology
 
 - **feature, attribute**: x-variable, independent variable
+
 - **target**: y-variable, dependent variable
-- **model**: estimator
+
+- **model, algorithm**: model
+
+- **training procedure**: estimation method
+
 - **fitting**: running an estimation
+
 - **classification**: regression with discrete dependent variable
+
 - **logistic regression**: binary or multivariate logit
+
 - **instance**: observation
+
 - **classes**: possible values of a discrete dependent variables
+
+
+---
+
+# Supervised vs unsupervised learning
+
+- **Supervised learning**
+
+  - Training data contains labeled examples of the task to solve
+
+  - Model generalizes this to unseen data
+
+  - Example: Regression, classification
+
+- **Unsupervised learning**
+
+  - Training with label free data
+
+  - Model finds patterns in data
+
+  - Example: Clustering, dimensionality reduction
