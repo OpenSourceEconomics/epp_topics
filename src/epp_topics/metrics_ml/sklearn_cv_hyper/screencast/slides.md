@@ -19,7 +19,7 @@ defaults:
 
 # Data Analysis in Python
 
-### Cross-validation and hyperparamters in scikit-learn
+### Cross-validation and hyperparameter tuning in scikit-learn
 
 <br/>
 
@@ -29,6 +29,3 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 ---
 
 # Some Content
-
-- First bullet
-- Second bullet
