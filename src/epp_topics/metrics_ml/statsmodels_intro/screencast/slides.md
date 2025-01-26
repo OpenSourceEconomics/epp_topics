@@ -35,7 +35,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
     <tr style="text-align: right;">
       <th></th>
       <th>fraction_with_tertiary_education</th>
-      <th>fraction_using_computer_at_work</th>
+      <th>&nbsp;&nbsp;fraction_using_computer_at_work</th>
     </tr>
     <tr>
       <th>country</th>
@@ -121,14 +121,14 @@ model = smf.ols(
 # Model objects
 
 ```python
-[3] model = smf.ols(
-        data=df,
-        formula="fraction_using_computer_at_work ~ fraction_with_tertiary_education",
-    )
-    model
+model = smf.ols(
+    data=df,
+    formula="fraction_using_computer_at_work ~ fraction_with_tertiary_education",
+)
+model
 ```
 ```text
 <statsmodels.regression.linear_model.OLS at 0x7fb56c905250>
 ```
 
-Almost always, the next step is to call the `.fit()` method on the model object.
+- Almost always, the next step is to call the `.fit()` method on the model object.
