@@ -74,3 +74,8 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 - r2 metric
 
 - mean squared error
+
+
+---
+
+# Standard errors vs statsmodels
