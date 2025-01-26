@@ -38,18 +38,18 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 # Model and Results Objects
 
 ```python
-[3] model = smf.ols(
-        data=df,
-        formula="fraction_using_computer_at_work ~ fraction_with_tertiary_education",
-    )
-    model
+model = smf.ols(
+    data=df,
+    formula="fraction_using_computer_at_work ~ fraction_with_tertiary_education",
+)
+model
 ```
 ```text
 <statsmodels.regression.linear_model.OLS at 0x7fb56c905250>
 ```
 ```python
-[4] all_results = model.fit()
-    all_results
+all_results = model.fit()
+all_results
 ```
 ```text
 <statsmodels.regression.linear_model.RegressionResultsWrapper at 0x7f84b22e7490>
@@ -66,7 +66,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 # Summarising Regression Results
 
 ```python
-[5] all_results.summary()
+all_results.summary()
 ```
 
 <table class="simpletable">
@@ -101,7 +101,8 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 # Add Mean Prediction to Data
 
 ```python
-[6] df["predicted"] = all_results.predict(df)
+df["predicted"] = all_results.predict(df)
+df
 ```
 
 <table class="dataframe">
@@ -109,8 +110,8 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
     <tr style="text-align: right;">
       <th></th>
       <th>fraction_with_tertiary_education</th>
-      <th>fraction_using_computer_at_work</th>
-      <th>predicted</th>
+      <th>&nbsp;&nbsp;fraction_using_computer_at_work</th>
+      <th>&nbsp;&nbsp;predicted</th>
     </tr>
     <tr>
       <th>country</th>
@@ -158,8 +159,8 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 # Plot the Regression Line
 
 ```python
-[7] line_fig = df.plot(x="fraction_with_tertiary_education", y="predicted")
-    line_fig.show()
+line_fig = df.plot(x="fraction_with_tertiary_education", y="predicted")
+line_fig.show()
 ```
 
 <img src="line-dark.svg" class="rounded" width="600">
@@ -169,17 +170,17 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 # Add Regression Line to Scatter Plot
 
 ```python
-[8] fig = df.reset_index().plot.scatter(
-        x="fraction_with_tertiary_education",
-        y="fraction_using_computer_at_work",
-        text="country",
-    )
-    # Add the regression line
-    fig.add_traces(line_fig.data)
-    # Nicer formatting
-    fig.update_traces(textposition="top center")
-    fig.update_xaxes(range=(0.15, 0.4))
-    fig.show()
+fig = df.reset_index().plot.scatter(
+    x="fraction_with_tertiary_education",
+    y="fraction_using_computer_at_work",
+    text="country",
+)
+# Add the regression line
+fig.add_traces(line_fig.data)
+# Nicer formatting
+fig.update_traces(textposition="top center")
+fig.update_xaxes(range=(0.15, 0.4))
+fig.show()
 ```
 
 ---
