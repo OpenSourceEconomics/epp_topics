@@ -149,8 +149,45 @@ target = (housing["target"] > np.median(housing["target"])).astype(int)
 
 ---
 
-# Running a Lasso regression in scikit-learn
+# Running Logistic regression in Sklearn
 
+
+<div class="grid grid-cols-[52%_48%] gap-4">
+<div>
+
+```python
+>>> from sklearn.linear_model import LogisticRegression
+>>> model = LogisticRegression(
+...   fit_intercept=True,
+...   penalty=None,
+... )
+>>> model.fit(X_train, y_train)
+>>> y_pred = model.predict(X_test)
+```
+
+```python
+>>> y_pred
+array([0, 0, 1, ..., 1, 0, 0])
+```
+
+```python
+>>> model.score(X_test, y_test)
+0.791343669250646
+```
+
+</div>
+<div>
+
+- Use the `LogisticRegression` classifier from `sklearn` to create the model object
+
+- Fit the model to the _training_ set to estimate the parameters
+
+- Use the `predict()` method to generate predictions
+
+- Use the `score()` method on the _test_ set to assess model quality
+
+</div>
+</div>
 
 
 ---
