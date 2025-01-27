@@ -88,7 +88,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 </div>
 <div>
 
-<img src="/lecture_4/jep.png" class="rounded" width="300" />
+<img src="/jep.png" class="rounded" width="300" />
 
 </div>
 </div>
