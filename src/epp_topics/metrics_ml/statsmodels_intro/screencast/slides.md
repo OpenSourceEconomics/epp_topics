@@ -77,7 +77,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 # Example
 
-<img src="scatter-dark.svg" class="rounded" width="600">
+<img src="/scatter-dark.svg" class="rounded" width="600">
 
 
 ---
