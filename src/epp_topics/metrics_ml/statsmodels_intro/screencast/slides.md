@@ -101,10 +101,10 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 # The formula interface
 
 ```python
-model = smf.ols(
-    data=df,
-    formula="fraction_using_computer_at_work ~ fraction_with_tertiary_education",
-)
+>>> model = smf.ols(
+...    data=df,
+...    formula="fraction_using_computer_at_work ~ fraction_with_tertiary_education",
+... )
 ```
 
 - Use a regression model implemented in `statsmodels.formula.api`
@@ -121,13 +121,11 @@ model = smf.ols(
 # Model objects
 
 ```python
-model = smf.ols(
-    data=df,
-    formula="fraction_using_computer_at_work ~ fraction_with_tertiary_education",
-)
-model
-```
-```text
+>>> model = smf.ols(
+...    data=df,
+...    formula="fraction_using_computer_at_work ~ fraction_with_tertiary_education",
+... )
+>>> model
 <statsmodels.regression.linear_model.OLS at 0x7fb56c905250>
 ```
 
