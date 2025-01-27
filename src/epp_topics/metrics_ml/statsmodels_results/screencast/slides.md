@@ -30,12 +30,15 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 # Example
 
-<img src="scatter-dark.svg" class="rounded" width="600">
+<img src="/scatter-dark.svg" class="rounded" width="600">
 
 
 ---
 
 # Model and Results Objects
+
+<!-- Slide is very full without some negative vertical space. -->
+<div style="margin-top:-1em;">
 
 ```python
 model = smf.ols(
@@ -47,6 +50,11 @@ model
 ```text
 <statsmodels.regression.linear_model.OLS at 0x7fb56c905250>
 ```
+</div>
+
+<!-- Add some spacing after first output for easier distinction between commands. -->
+<div style="margin-top:0.75em;">
+
 ```python
 all_results = model.fit()
 all_results
@@ -54,6 +62,8 @@ all_results
 ```text
 <statsmodels.regression.linear_model.RegressionResultsWrapper at 0x7f84b22e7490>
 ```
+
+</div>
 
 `RegressionResultsWrapper` contains methods and attributes for all results
 - Coefficient estimates
@@ -163,7 +173,7 @@ line_fig = df.plot(x="fraction_with_tertiary_education", y="predicted")
 line_fig.show()
 ```
 
-<img src="line-dark.svg" class="rounded" width="600">
+<img src="/line-dark.svg" class="rounded" width="600">
 
 ---
 
@@ -187,4 +197,4 @@ fig.show()
 
 # Data Points and Regression Line
 
-<img src="scatter-line-dark.svg" class="rounded" width="600">
+<img src="/scatter-line-dark.svg" class="rounded" width="600">
