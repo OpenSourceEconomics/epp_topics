@@ -23,7 +23,6 @@ defaults:
 
 <br/>
 
-
 Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
@@ -34,7 +33,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
   ```python
   from sklearn.datasets import load_diabetes
-  diabets = load_diabetes()
+  diabetes = load_diabetes()
   ```
 
 - Real world datasets can be downloaded using `sklearn.datasets.fetch_*`
@@ -83,6 +82,7 @@ dict_keys(['data', 'target', 'frame', 'target_names', 'feature_names', 'DESCR'])
 >>> housing["target_names"]
 ['MedHouseVal']
 ```
+
 </div>
 Re-define the target as 1 if the value is above the 70th-percentile, 0 otherwise:
 ```python
@@ -97,7 +97,6 @@ Re-define the target as 1 if the value is above the 70th-percentile, 0 otherwise
 <div class="grid grid-cols-[52%_48%] gap-4">
 <div>
 
-
 ```python
 >>> from sklearn.model_selection import train_test_split
 >>> X_train, X_test, y_train, y_test = train_test_split(
@@ -109,18 +108,22 @@ Re-define the target as 1 if the value is above the 70th-percentile, 0 otherwise
 >>> X_train.shape
 (14448, 8)
 ```
+
 ```python
 >>> y_train.shape
 (14448,)
 ```
+
 ```python
 >>> X_test.shape
 (6192, 8)
 ```
+
 ```python
 >>> y_test.shape
 (6192,)
 ```
+
 </div>
 <div>
 
@@ -137,11 +140,11 @@ Re-define the target as 1 if the value is above the 70th-percentile, 0 otherwise
 
 # Basic scikit-learn steps
 
+- Arrange data into a features matrix / target vector, split into training / test sets
+
 - Choose a class of models by importing the appropriate estimator
 
 - Set hyperparameters by instantiating this class
-
-- Arrange data into a features matrix and target vector
 
 - Fit the model to your data by calling the `fit()` method on the model instance
 
@@ -149,11 +152,9 @@ Re-define the target as 1 if the value is above the 70th-percentile, 0 otherwise
 
 - Evaluate the quality of predictions
 
-
 ---
 
 # Running Logistic regression in Sklearn
-
 
 <div class="grid grid-cols-[52%_48%] gap-4">
 <div>
@@ -192,10 +193,8 @@ array([0, 0, 1, ..., 0, 0, 0])
 </div>
 </div>
 
+---
 
----
-layout: center
----
 # Accuracy Score
 
 $$\text{Accuracy} = \frac{1}{N}\sum_{i=1}^N\mathbf{1}\{y_i=\hat{y}_i\}$$
@@ -212,13 +211,11 @@ $$\text{Accuracy} = \frac{1}{N}\sum_{i=1}^N\mathbf{1}\{y_i=\hat{y}_i\}$$
 
 - Disadvantage: Might not be what you care about
 
+---
 
----
-layout: center
----
+## layout: center
 
 # Accuracy with imbalanced data
-
 
 - **Imbalanced data**: Some outcomes occur more frequent than others in the data
 
@@ -226,16 +223,16 @@ layout: center
 
 - Models can "cheat" by predicting majority outcome
 
-- Accurracy would be 98 % but model did not learn anything
+- Accuracy would be 98 % but model did not learn anything
 
 - Will need other scores to discover such problems
 
+---
 
----
-layout: center
----
+## layout: center
 
 # The Confusion Matrix
+
 <div class="grid grid-cols-2 gap-4">
 <div>
 
@@ -246,6 +243,7 @@ layout: center
 ...     y_test, y_pred, normalize="true"
 ... )
 ```
+
 ```python
 >>> labels = ["Below 70th", "Above 70th"]
 >>> confusion = pd.DataFrame(
@@ -259,25 +257,27 @@ Below 70th      0.931839      0.068161
 Above 70th      0.399678      0.600322
 
 ```
+
 </div>
 <div>
 
-- Rows  are the true labels
+- Rows are the true labels
 
 - Columns are the predictions
 
-- The rows always sum to 1
+- Rows sum to 1
 
 - Diagonal elements show the share of correctly classified examples in each category
 
-- Element `["Above 70th", "Below 70th"]`: 39.9678 \% of observations with true
-  label `"Above 70th"` got missclassified as `"Below 70th"`
+- Bottom right element: 40 \% of observations with true
+  label `"Above 70th"` got misclassified as `"Below 70th"`
+
 </div>
 </div>
 
 ---
-layout: center
----
+
+## layout: center
 
 # A note on the different scores
 
@@ -287,13 +287,14 @@ layout: center
 
 - An aggregation strategy converts them into one score for the entire model
 
-- Only some aggregation strategies work for imbalanced data
-
+- Only some aggregation strategies work well for imbalanced data
 
 ---
-layout: center
----
+
+## layout: center
+
 # Precision Score
+
 <div class="grid grid-cols-2 gap-4">
 <div>
 
@@ -311,7 +312,7 @@ $$\text{Precision}_k = \frac{TP_k}{TP_k+FP_k}$$
 - For each class, measures the probability of the predicted positive case
   actually being truly positive ($TP_k$)
 
-- $FP_k$ (*false positive*) is the total number of examples classified as label $k$, but actually from a different class
+- $FP_k$ (_false positive_) is the total number of examples classified as label $k$, but actually from a different class
 
 - Preferred metric when false positive predictions are costly
 
@@ -319,9 +320,11 @@ $$\text{Precision}_k = \frac{TP_k}{TP_k+FP_k}$$
 </div>
 
 ---
-layout: center
----
+
+## layout: center
+
 # Recall Score
+
 <div class="grid grid-cols-2 gap-4">
 <div>
 
@@ -338,16 +341,17 @@ $$\text{Recall}_k = \frac{TP_k}{TP_k+FN_k}$$
 
 - For each class, measures the model's ability to find the positive cases
 
-- $FN_k$ (*false negative*) is the total number of examples actually from class $k$ that were not predicted by the model as such
+- $FN_k$ (_false negative_) is the total number of examples actually from class $k$ that were not predicted by the model as such
 
 </div>
 </div>
 
+---
 
----
-layout: center
----
+## layout: center
+
 # $F_1$ Score
+
 <div class="grid grid-cols-[430px_490px] gap-3">
 <div>
 
@@ -362,7 +366,7 @@ $$F_{1,k} = 2\frac{\text{Precision}_k \cdot \text{Recall}_k}{\text{Precision}_k 
 </div>
 <div>
 
-- $F_1$ score is the *harmonic mean* of precision and recall
+- $F_1$ score is the _harmonic mean_ of precision and recall
 
 - For a given class, there is a trade-off in precision and recall
 
@@ -374,8 +378,9 @@ $$F_{1,k} = 2\frac{\text{Precision}_k \cdot \text{Recall}_k}{\text{Precision}_k 
 </div>
 
 ---
-layout: center
----
+
+## layout: center
+
 # Summary
 
 - Accuracy: share of correct predictions
@@ -386,16 +391,16 @@ layout: center
 
 - $F_1$: Harmonic mean of Precision and Recall
 
+---
 
----
-layout: center
----
+## layout: center
 
 # Scores with imbalanced data
 
 - Same example with 49 students and one professor
 
 - Models can "cheat" by predicting majority outcome
+
   - Accurracy: 98 \%
   - Precision: 98 \% for majority, 0 for minority class
   - Recall: 100 \% for majority, 0 for minority class
@@ -406,12 +411,13 @@ layout: center
 - Unfortunately that is what you get by default in `sklearn` in the binary case
 
 ---
-layout: center
----
+
+## layout: center
+
 # Aggregation Strategies
+
 <div class="grid grid-cols-[40%_60%] gap-4">
 <div>
-
 
 ```python
 >>> precision_score(
@@ -421,6 +427,7 @@ layout: center
 ... )
 0.8177245070078974
 ```
+
 ```python
 >>> precision_score(
 ...   y_test,
@@ -429,6 +436,7 @@ layout: center
 ... )
 0.8282110365957613
 ```
+
 </div>
 <div>
 
@@ -442,13 +450,13 @@ layout: center
 
 - Aggregate $F_1$ score is the harmonic mean of the aggregate precision and recall
 
-
 </div>
 </div>
 
 ---
-layout: center
----
+
+## layout: center
+
 # Sklearn's Classification Report
 
 ```python
@@ -470,8 +478,8 @@ weighted avg       0.83      0.83      0.82      6192
 ```
 
 ---
-layout: center
----
+
+## layout: center
 
 # Example: Report with imbalanced data
 

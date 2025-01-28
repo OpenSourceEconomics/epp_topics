@@ -23,7 +23,6 @@ defaults:
 
 <br/>
 
-
 Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
@@ -44,12 +43,11 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 - Most ML models have one or more parameters that govern the bias variance trade-off
 
-
 ---
 
 # Example: Penalty in a logit model
 
-- Logistic regression is fitted my minimizing a negative log likelihood function
+- Logistic regression is fit by minimizing a negative log likelihood function
 
 - Can augment likelihood by a term that penalizes model complexity
 
@@ -59,12 +57,11 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
   $\theta^\ast = \argmin_\theta \ell(\theta; X, y) + \lambda \cdot p(\theta)$
 
-
 ---
 
 # Different penalties
 
-L1: &nbsp;&nbsp; $p(\theta) = \sum_i |\theta_i|$
+- L1: &nbsp;&nbsp; $p(\theta) = \sum_i |\theta_i|$
 
   - Penalizes all deviations from zero equally
 
@@ -72,16 +69,13 @@ L1: &nbsp;&nbsp; $p(\theta) = \sum_i |\theta_i|$
 
   - Harder numerical optimization, not compatible with all optimizers
 
-L2: &nbsp;&nbsp; $p(\theta) = \sum_i \theta_i^2$
+- L2: &nbsp;&nbsp; $p(\theta) = \sum_i \theta_i^2$
 
-- Penalizes values close to zero very weakly
+  - Penalizes values close to zero very weakly
 
-- Does not induce sparsity
+  - Does not induce sparsity
 
-- Simpler numerical optimization
-
-
-
+  - Simpler numerical optimization
 
 ---
 
@@ -101,7 +95,6 @@ L2: &nbsp;&nbsp; $p(\theta) = \sum_i \theta_i^2$
 
 - Use cross-validation to avoid this
 
-
 ---
 
 # K-fold cross validation
@@ -118,8 +111,6 @@ L2: &nbsp;&nbsp; $p(\theta) = \sum_i \theta_i^2$
 
 - Use actual test set only once in the end to measure model quality
 
-
-
 ---
 
 # Systematic hyperparameter tuning
@@ -133,7 +124,6 @@ L2: &nbsp;&nbsp; $p(\theta) = \sum_i \theta_i^2$
 - Keep model with best performance
 
 - Re-fit best model on entire dataset
-
 
 ---
 
@@ -160,6 +150,7 @@ array([
   0.86396677
 ])
 ```
+
 ```python
 >>> scores.mean()
 0.8519521727205328
@@ -168,17 +159,18 @@ array([
 </div>
 <div>
 
-- Import and create instance as normal
+- Import and create instance as normal, do not call `fit()`
 
-- Do not call `fit()`
+- L2 penalty is default
 
 - Provide data to `cross_val_score`
 
-- `cross_val_score` will call `fit()`
+- `cv` argument specifies number of folds
+
+- `cross_val_score` will call `fit()` repeatedly
 
 </div>
 </div>
-
 
 ---
 
@@ -194,10 +186,10 @@ array([
 
 - Implement in `GridSearchCV`
 
-
 ---
 
 # Grid Search
+
 <div class="grid grid-cols-[50%_50%] gap-3">
 <div>
 
@@ -214,10 +206,12 @@ array([
 ... )
 >>> grid.fit(X_train, y_train)
 ```
+
 ```python
 >>> grid.best_params_
 {'C': 10, 'penalty': 'l1'}
 ```
+
 ```python
 >>> grid.best_estimator_.score(
 ...   X_test,
@@ -225,6 +219,7 @@ array([
 ... )
 0.8430232558139535
 ```
+
 </div>
 <div>
 
