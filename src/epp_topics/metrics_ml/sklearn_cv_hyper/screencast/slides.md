@@ -28,21 +28,21 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
-# The bias variance trade-off
+# The bias-variance trade-off
 
 - Econometrics: Model is correctly specified, want consistency and unbiasedness
 
-- ML: Model is a simplification and some amount of bias is ok
+- Very simple models, e.g. just an intercept and a couple of regressors
 
-- Very simple models, e.g. just an intercept
-
-  - Large bias, Low variance, No overfitting
+  - Large bias, low variance, no overfitting
 
 - Very large models, e.g. including squares, interactions, ...
 
-  - Small bias, High variance, Danger of overfitting
+  - Small bias, high variance, danger of overfitting
 
-- Most machine learning models have one or more parameters that govern the bias variance trade-off
+- ML: Model is a simplification and some amount of bias is ok
+
+- Most ML models have one or more parameters that govern the bias variance trade-off
 
 
 ---

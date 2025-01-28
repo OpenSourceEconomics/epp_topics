@@ -40,7 +40,6 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 - Focus on justifying assumptions
 
-
 </div>
 <div>
 
@@ -51,7 +50,6 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 - Can check how well it works
 
 - Focus on experimentation, evaluation and finding out what works
-
 
 </div>
 </div>
@@ -71,50 +69,19 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
-<div class="grid grid-cols-2 gap-12">
-<div>
-
-- Very good paper!
-
-- Difference of ML and Econometrics
-
-- Overview of ML methods
-
-- What we can(not) learn with ML
-
-- List of potential applications in econ
-
-
-</div>
-<div>
-
-<img src="/jep.png" class="rounded" width="300" />
-
-</div>
-</div>
-
----
-
 # Terminology
 
-- **feature, attribute**: x-variable, independent variable
-
-- **target**: y-variable, dependent variable
-
-- **model, algorithm**: model
-
-- **training procedure**: estimation method
-
-- **fitting**: running an estimation
-
-- **classification**: regression with discrete dependent variable
-
-- **logistic regression**: binary or multivariate logit
-
-- **instance**: observation
-
-- **classes**: possible values of a discrete dependent variables
-
+| Machine Learning    | Econometrics                                      |
+| :------------------ | :------------------------------------------------ |
+| feature, attribute  | x-variable, independent variable                  |
+| target              | y-variable, dependent variable                    |
+| model, algorithm    | model                                             |
+| training procedure  | estimation method                                 |
+| fitting             | running an estimation                             |
+| classification      | regression with discrete dependent variable       |
+| logistic regression | binary or multivariate logit                      |
+| instance            | observation                                       |
+| classes             | possible values of a discrete dependent variables |
 
 ---
 
@@ -136,7 +103,6 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
   - Example: Clustering, dimensionality reduction
 
-
 ---
 
 # Overfitting
@@ -152,6 +118,27 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
   - Same reason why we need adjusted $R^2$ in econometrics
 
   - Need to make sure our model evaluation accounts for overfitting!
+
+- Example: Estimate person fixed effects in short panel
+
+---
+
+# The bias-variance trade-off
+
+- Econometrics: Model is correctly specified, want consistency and unbiasedness
+
+- Very simple models, e.g. just an intercept and a couple of regressors
+
+  - Large bias, low variance, no overfitting
+
+- Very large models, e.g. including squares, interactions, ...
+
+  - Small bias, high variance, danger of overfitting
+
+- ML: Model is a simplification and some amount of bias is ok
+
+- Most ML models have one or more parameters that govern the bias variance trade-off
+
 
 ---
 
@@ -172,3 +159,13 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
   - 70 to 80 percent for training
 
   - Rest for validation
+
+---
+
+# Hyperparameters
+
+- No parameters of the model itself
+
+- Instead: Control behavior of the model algorithm
+
+- E.g., balance bias and variance
