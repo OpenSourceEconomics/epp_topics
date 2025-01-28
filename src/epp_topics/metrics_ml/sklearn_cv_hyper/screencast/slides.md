@@ -29,7 +29,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 # The bias-variance trade-off
 
-- Econometrics: Model is correctly specified, want consistency and unbiasedness
+- For prediction, want to be as close to the values to be predicted as possible
 
 - Very simple models, e.g. just an intercept and a couple of regressors
 
@@ -39,15 +39,13 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
   - Small bias, high variance, danger of overfitting
 
-- ML: Model is a simplification and some amount of bias is ok
-
-- Most ML models have one or more parameters that govern the bias variance trade-off
+- Typically, one or more parameters govern the bias variance trade-off
 
 ---
 
 # Example: Penalty in a logit model
 
-- Logistic regression is fit by minimizing a negative log likelihood function
+- Logistic regression is fit by maximizing a log likelihood function
 
 - Can augment likelihood by a term that penalizes model complexity
 
@@ -101,7 +99,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 - Idea: Split the training data repeatedly into:
 
-  - Data used for actual traning
+  - Data used for actual training
 
   - Data used for evaluation
 
@@ -110,20 +108,6 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 - Keep model that achieves best average score
 
 - Use actual test set only once in the end to measure model quality
-
----
-
-# Systematic hyperparameter tuning
-
-- Specify a combination of hyperparameters we want to try
-
-  - Example: Different penalty weightings $\lambda$ in penalized Logit
-
-- Calculate cross validation score for each set of parameters
-
-- Keep model with best performance
-
-- Re-fit best model on entire dataset
 
 ---
 
