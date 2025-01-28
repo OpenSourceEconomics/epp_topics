@@ -24,6 +24,7 @@ CHAPTER_NAMES = [
     "projects",
     "texts",
     "plotting",
+    "metrics_ml",
 ]
 
 

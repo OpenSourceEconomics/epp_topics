@@ -54,13 +54,24 @@ table caption {
 }
 
 table td {
-  padding: 0em !important;
+  padding: 0.25em !important;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
 }
 
 table th {
   font-weight: bold !important;
-  text-align: left !important;
-  padding: 0em !important;
+  text-align: right !important;
+  padding: 0.25em !important;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+table code {
+  font-size: 1rem !important;
+  background: transparent !important;
+  padding-left: 0em !important;
+  padding-right: 0em !important;
 }
 
 
