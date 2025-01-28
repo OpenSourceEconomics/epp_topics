@@ -17,7 +17,7 @@ defaults:
 
 <br/>
 
-# Some Chapter
+# Chapter Title
 
 ### Subchapter Title
 
