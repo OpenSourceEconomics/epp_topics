@@ -23,62 +23,25 @@ defaults:
 
 <br/>
 
-
 Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
 # Example
 
-<table class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>fraction_with_tertiary_education</th>
-      <th>&nbsp;&nbsp;fraction_using_computer_at_work</th>
-    </tr>
-    <tr>
-      <th>country</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Slovak Republic</th>
-      <td style="text-align: right;">0.172</td>
-      <td style="text-align: right;">0.534</td>
-    </tr>
-    <tr>
-      <th>Austria</th>
-      <td style="text-align: right;">0.206</td>
-      <td style="text-align: right;">0.737</td>
-    </tr>
-    <tr>
-      <th>Germany</th>
-      <td style="text-align: right;">0.314</td>
-      <td style="text-align: right;">0.712</td>
-    </tr>
-    <tr>
-      <th>United Kingdom</th>
-      <td style="text-align: right;">0.371</td>
-      <td style="text-align: right;">0.754</td>
-    </tr>
-    <tr>
-      <th>Norway</th>
-      <td style="text-align: right;">0.380</td>
-      <td style="text-align: right;">0.842</td>
-    </tr>
-  </tbody>
-</table>
-
+| country         | fraction_with_tertiary_education | fraction_using_computer_at_work |
+| :-------------- | -------------------------------: | ------------------------------: |
+| Slovak Republic |                            0.172 |                           0.534 |
+| Austria         |                            0.206 |                           0.737 |
+| Germany         |                            0.314 |                           0.712 |
+| United Kingdom  |                            0.371 |                           0.754 |
+| Norway          |                             0.38 |                           0.842 |
 
 ---
 
 # Example
 
-<img src="/scatter-dark.svg" class="rounded" width="600">
-
+<img src="/scatter.svg" class="rounded" width="600">
 
 ---
 
@@ -107,13 +70,35 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 ... )
 ```
 
+<br/>
+
 - Use a regression model implemented in `statsmodels.formula.api`
+
 - `data` is a dataframe, `formula` is a string
+
 - Separate left-hand side and right-hand by `~`
+
+---
+
+# The formula interface
+
+```python
+>>> model = smf.ols(
+...    data=df,
+...    formula="fraction_using_computer_at_work ~ fraction_with_tertiary_education",
+... )
+```
+
+<br/>
+
 - Intercept is implicit for OLS
+
 - Right hand-side can contain lots of mathematical expressions
+
   - `+`, `**`, `*`, `:` for sums, powers, interactions
+
   - `C()` for categorical variables
+
   - `np.log()` for logarithms (and any similar functions)
 
 ---
@@ -129,4 +114,8 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 <statsmodels.regression.linear_model.OLS at 0x7fb56c905250>
 ```
 
-- Almost always, the next step is to call the `.fit()` method on the model object.
+<br/>
+
+- Almost always, the next step is to call the `.fit()`
+
+  method on the model object.

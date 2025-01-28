@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("metrics_ml-subchapter_1.pdf",),
+    "built": ("metrics_ml-overview.pdf",),
 }
