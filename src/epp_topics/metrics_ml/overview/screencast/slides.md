@@ -34,7 +34,9 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 - polars
 
-- Apache arrow and parquet
+- pyarrow
+
+- sqlalchemy
 
 - DuckDB
 

@@ -23,15 +23,13 @@ defaults:
 
 <br/>
 
-
 Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
 # Example
 
-<img src="/scatter-dark.svg" class="rounded" width="600">
-
+<img src="/scatter.svg" class="rounded" width="600">
 
 ---
 
@@ -47,12 +45,13 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 ```
 
 ```python
->>> all_results = model.fit()
+>>> all_results = model.fit(cov_type="nonrobust")
 >>> all_results
 <statsmodels.regression.linear_model.RegressionResultsWrapper at 0x7f84b22e7490>
 ```
 
 `RegressionResultsWrapper` contains methods and attributes for all results
+
 - Coefficient estimates
 - Predictions / Residuals
 - Variance-covariance matrix of estimates
@@ -65,6 +64,8 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 ```python
 >>> all_results.summary()
 ```
+
+<br/>
 
 <table class="simpletable">
 <tr>
@@ -92,7 +93,6 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 </tr>
 </table>
 
-
 ---
 
 # Add Mean Prediction to Data
@@ -102,54 +102,15 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 >>> df
 ```
 
-<table class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>fraction_with_tertiary_education</th>
-      <th>&nbsp;&nbsp;fraction_using_computer_at_work</th>
-      <th>&nbsp;&nbsp;predicted</th>
-    </tr>
-    <tr>
-      <th>country</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Slovak Republic</th>
-      <td style="text-align: right;">0.172</td>
-      <td style="text-align: right;">0.534</td>
-      <td style="text-align: right;">0.607</td>
-    </tr>
-    <tr>
-      <th>Austria</th>
-      <td style="text-align: right;">0.206</td>
-      <td style="text-align: right;">0.737</td>
-      <td style="text-align: right;">0.638</td>
-    </tr>
-    <tr>
-      <th>Germany</th>
-      <td style="text-align: right;">0.314</td>
-      <td style="text-align: right;">0.712</td>
-      <td style="text-align: right;">0.740</td>
-    </tr>
-    <tr>
-      <th>United Kingdom</th>
-      <td style="text-align: right;">0.371</td>
-      <td style="text-align: right;">0.754</td>
-      <td style="text-align: right;">0.793</td>
-    </tr>
-    <tr>
-      <th>Norway</th>
-      <td style="text-align: right;">0.380</td>
-      <td style="text-align: right;">0.842</td>
-      <td style="text-align: right;">0.802</td>
-    </tr>
-  </tbody>
-</table>
+<br/>
+
+| country         | fraction_with_tertiary_education | fraction_using_computer_at_work | predicted |
+| :-------------- | -------------------------------: | ------------------------------: | --------: |
+| Slovak Republic |                            0.172 |                           0.534 |     0.606 |
+| Austria         |                            0.206 |                           0.737 |     0.638 |
+| Germany         |                            0.314 |                           0.712 |      0.74 |
+| United Kingdom  |                            0.371 |                           0.754 |     0.793 |
+| Norway          |                             0.38 |                           0.842 |     0.802 |
 
 ---
 
@@ -160,7 +121,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 >>> line_fig.show()
 ```
 
-<img src="/line-dark.svg" class="rounded" width="600">
+<img src="/line.svg" class="rounded" width="500">
 
 ---
 
@@ -175,7 +136,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 >>> # Add the regression line
 >>> fig.add_traces(line_fig.data)
 >>> # Nicer formatting
->>> fig.update_traces(textposition="top center")
+>>> fig.update_traces(textposition="bottom center")
 >>> fig.update_xaxes(range=(0.15, 0.4))
 >>> fig.show()
 ```
@@ -184,4 +145,4 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 # Data Points and Regression Line
 
-<img src="/scatter-line-dark.svg" class="rounded" width="600">
+<img src="/scatter-line.svg" class="rounded" width="600">
