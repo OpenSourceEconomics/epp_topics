@@ -1,7 +1,7 @@
 [project]
 name = "epp_topics"
 description = "Effective Programming Practices for Economists: Topics"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = [
     "pytask"
 ]
@@ -51,6 +51,59 @@ source = "vcs"
 [tool.hatch.metadata]
 allow-direct-references = true
 
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.dependencies]
+deepdiff = "*"
+gitpython = "*"
+ipykernel = "*"
+ipywidgets = "*"
+jupyterlab = "*"
+line_profiler = "*"
+nlopt = "*"
+nodejs = "*"
+numba = "*"
+openpyxl = "*"
+optimagic = "*"
+pandas = ">=2.2"
+pip = "*"
+plotly = "*"
+pre-commit = "*"
+pyarrow = ">=19.0"
+pybaum = "*"
+pydata-sphinx-theme = ">=0.13.3"
+pygraphviz = "*"
+pytask = ">=0.5"
+pytest = "*"
+pytest-cov = "*"
+pytest-xdist = "*"
+python = "~=3.13"
+pyyaml = "*"
+scikit-learn = "*"
+setuptools_scm = "*"
+snakeviz = "*"
+sphinx = "*"
+sphinx-automodapi = "*"
+sphinx-copybutton = "*"
+sphinxcontrib-mermaid = "*"
+statsmodels = "*"
+toml = "*"
+xlrd = ">=1.0"
+
+
+[tool.pixi.pypi-dependencies]
+epp_topics = { path = ".", editable = true }
+fides = ">=0.7.4"
+jupyter-book = "*"
+jupytercards = "*"
+jupyterquiz = "*"
+kaleido = "*"
+pdbp = "*"
+pyperclip = "*"
+
 [tool.pytask.ini_options]
 paths = ["./src/epp_topics"]
 ignore = [
@@ -59,7 +112,7 @@ ignore = [
 ]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py313"
 fix = true
 line-length = 88
 
