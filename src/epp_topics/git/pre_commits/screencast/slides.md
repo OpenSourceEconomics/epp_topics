@@ -43,9 +43,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Activating pre-commit hooks
 
+- Open a terminal
 - Install the `pre_commit` python package
-  - `conda install pre_commit`
-- Open a terminal in the root of your repository
+  - `pixi global install pre-commit`
+- Change directory to the root of your repository
 - Execute `pre-commit install`
 
 Just needs to be done once after cloning the repository

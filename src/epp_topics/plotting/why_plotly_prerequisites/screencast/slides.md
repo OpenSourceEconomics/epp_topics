@@ -75,6 +75,5 @@ Interactive plots:
 - Install an old version of kaleido via pip:
 
 ```bash
-$ conda activate [your_env]
-$ pip install kaleido==0.1.0.post1
+$ pixi add --pypi kaleido==0.1.0.post1
 ```
