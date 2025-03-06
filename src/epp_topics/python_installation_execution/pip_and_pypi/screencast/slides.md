@@ -154,13 +154,13 @@ numpy-2.2.0.tar.gz](https://files.pythonhosted.org/packages/47/1b/1d565e0f6e156e
 - Sometimes programs require additional libraries to be installed on the system because
   it would be too complicated to include them in the package wheel
 
-  Example: CUDA toolkit for PyTorch, JAX, etc.
+  Example: CUDA toolkit for JAX, PyTorch, etc.
 
 </div>
 
 <div v-click>
 
-- ***[Next week we will see how conda and conda-forge solve this problem! (+pixi)]()***
+- ***[Next session: How do conda and conda-forge solve this problem!]()***
 
 </div>
 

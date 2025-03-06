@@ -1,0 +1,29 @@
+---
+# Warning: As of 2025, we recommend using pixi instead of conda/mamba.
+# This file is not being actively maintained any more.
+name: epp
+channels: [conda-forge, nodefaults]
+dependencies:
+  - jupyter
+  - line_profiler
+  - matplotlib
+  - nlopt
+  - numba
+  - numpy
+  - openpyxl
+  - optimagic
+  - pandas >= 2.2
+  - pip
+  - plotly
+  - pre-commit
+  - pyarrow >= 13.0
+  - pytask >= 0.5
+  - pytest
+  - python==3.12
+  - scikit-learn
+  - scipy
+  - seaborn
+  - snakeviz
+  - statsmodels
+  - toml
+  - pip: [kaleido, pdbp]

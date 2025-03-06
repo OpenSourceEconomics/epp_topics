@@ -156,6 +156,7 @@ from package.subpackage.module2 import Variable2
 ---
 
 - There is no single Python "compiler"
+
   - Default, [**CPython**](https://github.com/python/cpython): Fast compilation to
     bytecode, which is then executed by "virtual machines" (aka interpreters)
 
@@ -174,7 +175,7 @@ from package.subpackage.module2 import Variable2
     infrastructure
 
   - [**XLA**](https://openxla.org/xla): A domain-specific compiler for linear algebra
-    that can be used with machine learning frameworks like PyTorch or JAX
+    that can be used with machine learning frameworks like JAX or PyTorch
 
   - ...
 

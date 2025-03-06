@@ -100,7 +100,7 @@ for fn in [
     "landing-page.md",
     "ose-logo.png",
     "references.bib",
-    "_static/custom.css",
+    *[str(p.relative_to(SRC)) for p in SRC.glob("_static/*")],
 ]:
     all_orig_sources.append(orig := SRC / fn)
     all_site_sources.append(prod := SITE_SOURCE_DIR / fn)
