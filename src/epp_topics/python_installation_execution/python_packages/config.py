@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("chapter_template-subchapter_1.pdf",),
+    "built": ("python_installation_execution-python_packages.pdf",),
 }

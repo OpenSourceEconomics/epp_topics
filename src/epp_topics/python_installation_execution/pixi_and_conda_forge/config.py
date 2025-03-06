@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("chapter_template-subchapter_1.pdf",),
+    "built": ("python_installation_execution-pixi_and_conda_forge.pdf",),
 }
