@@ -1,4 +1,10 @@
-# Installing Python on Linux
+# Installing Python on Linux (conda/mamba)
+
+```{warning}
+This page is about the **conda** / **mamba** package manager. Since 2025, we recommend
+using **pixi** instead, see the [updated chapter](python-installation-and-execution)
+```
+
 
 There are many different ways to install the Python language and Python packages. Below,
 we provide one way that works well for everything we need in the class. Please stick

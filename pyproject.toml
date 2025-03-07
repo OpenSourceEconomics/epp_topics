@@ -146,11 +146,12 @@ extend-ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"src/epp_topics/python_basics/pathlib/__init__.py" = ["A005"]
-"src/epp_topics/python_basics/executing_pytest/screencast/example/test_cobb_douglas.py" = ["PLR2004"]
 "**/*.ipynb" = ["B018", "T201", "E402", "PLR2004"]
 "**/config.py" = ["N811"]
 "src/epp_topics/metrics_ml/**/objectives_materials.ipynb" = ["ERA001", "E501"]
+"src/epp_topics/python_basics/executing_pytest/screencast/example/test_cobb_douglas.py" = ["PLR2004"]
+"src/epp_topics/python_basics/pathlib/__init__.py" = ["A005"]
+"src/epp_topics/python_installation_execution_via_conda/config.py" = ["E501"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

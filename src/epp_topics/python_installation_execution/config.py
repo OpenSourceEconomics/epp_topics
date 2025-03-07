@@ -17,6 +17,9 @@ from epp_topics.python_installation_execution.executing_pytask import (
 from epp_topics.python_installation_execution.executing_pytest import (
     SITE_CONTENTS as executing_pytest,
 )
+from epp_topics.python_installation_execution.installation_pixi_intro import (
+    SITE_CONTENTS as installation_pixi_intro,
+)
 from epp_topics.python_installation_execution.pip_and_pypi import (
     SITE_CONTENTS as pip_and_pypi,
 )
@@ -26,20 +29,17 @@ from epp_topics.python_installation_execution.pixi_and_conda_forge import (
 from epp_topics.python_installation_execution.pixi_changing_environments import (
     SITE_CONTENTS as pixi_changing_environments,
 )
-from epp_topics.python_installation_execution.pixi_intro import (
-    SITE_CONTENTS as pixi_intro,
-)
 from epp_topics.python_installation_execution.python_packages import (
     SITE_CONTENTS as python_packages,
 )
 
 TOPICS = (
+    installation_pixi_intro,
     executing_py_shell,
     executing_py_vscode,
     executing_notebook_vscode,
     executing_pytask,
     executing_pytest,
-    pixi_intro,
     pixi_changing_environments,
     python_packages,
     pip_and_pypi,

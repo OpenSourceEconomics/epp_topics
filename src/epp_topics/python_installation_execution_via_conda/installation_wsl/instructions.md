@@ -1,4 +1,10 @@
-# Installing Python with Windows Subsystem for Linux (WSL2)
+# Installing Python with Windows Subsystem for Linux (WSL2) (conda/mamba)
+
+```{warning}
+This page is about the **conda** / **mamba** package manager. Since 2025, we recommend
+using **pixi** instead, see the [updated chapter](python-installation-and-execution)
+```
+
 
 ## Why this Guide
 

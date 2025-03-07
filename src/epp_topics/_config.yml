@@ -10,7 +10,8 @@ description: >-
   Background on topics covering Python and reproducible research workflows
 # HTML-specific settings
 html:
-  google_analytics_id: G-JNV9WF0QCS
+  analytics:
+    google_analytics_id: G-JNV9WF0QCS
   home_page_in_navbar: false
   # Add GitHub buttons to your book
   # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -34,11 +35,11 @@ notebook_interface: notebook
 parse:
   myst_enable_extensions:
     - amsmath
-    - html_image
     - colon_fence
     - deflist
     - dollarmath
     - html_admonition
+    - html_image
     - linkify
     - smartquotes
 # Information about where the book exists on the web

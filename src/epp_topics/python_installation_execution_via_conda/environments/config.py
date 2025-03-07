@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("python_installation_execution-environments.pdf",),
+    "built": ("python_installation_execution_via_conda-environments.pdf",),
 }

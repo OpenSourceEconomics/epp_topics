@@ -1208,8 +1208,6 @@ packages:
   depends:
   - python >=3.13,<3.14.0a0
   - python_abi 3.13.* *_cp313
-  arch: x86_64
-  platform: linux
   license: CC-PDDC AND BSD-3-Clause AND BSD-2-Clause AND ZPL-2.1
   purls:
   - pkg:pypi/docutils?source=hash-mapping
@@ -1227,8 +1225,8 @@ packages:
   timestamp: 1648505042260
 - pypi: .
   name: epp-topics
-  version: 0.1.dev180+g89dea0f.d20250306
-  sha256: 5df57ea0b7b28ee567cb8b13b2bce22009436ca3804127f972eb4a9aab33a6d4
+  version: 0.1.dev182+g75088d8.d20250307
+  sha256: 4611a3547cc253763f603b0b0b475ae7e82e86a333fc1b2f794a2e8435c91930
   requires_dist:
   - pytask
   requires_python: '>=3.13'

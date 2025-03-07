@@ -1,5 +1,6 @@
 """Set up the directories with source files for the books."""
 
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -52,7 +53,8 @@ for c in CHAPTER_NAMES:
     ):
         """Create the toc file for the book."""
         index_file.write_text(
-            f"""# {title}
+            f"""({_make_heading_anchor(title)})=
+# {title}
 
 ```{{tableofcontents}}
 ```
@@ -94,6 +96,12 @@ for c in CHAPTER_NAMES:
             ],
         },
     )
+
+
+def _make_heading_anchor(title: str) -> str:
+    out = re.sub(r"[:\(\),]", "", title)
+    return "-".join(out.lower().split())
+
 
 for fn in [
     "_config.yml",

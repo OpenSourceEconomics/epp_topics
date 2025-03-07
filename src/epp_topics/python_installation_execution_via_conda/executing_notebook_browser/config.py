@@ -3,5 +3,7 @@
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
     "other": (),
-    "built": ("python_installation_execution-executing_notebook_browser.pdf",),
+    "built": (
+        "python_installation_execution_via_conda-executing_notebook_browser.pdf",
+    ),
 }

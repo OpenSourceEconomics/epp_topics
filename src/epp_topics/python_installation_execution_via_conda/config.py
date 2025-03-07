@@ -2,37 +2,37 @@
 
 import itertools
 
-from epp_topics.python_installation_execution.environments import (
+from epp_topics.python_installation_execution_via_conda.environments import (
     SITE_CONTENTS as environments,
 )
-from epp_topics.python_installation_execution.executing_notebook_browser import (
+from epp_topics.python_installation_execution_via_conda.executing_notebook_browser import (
     SITE_CONTENTS as executing_notebook_browser,
 )
-from epp_topics.python_installation_execution.executing_notebook_vscode import (
+from epp_topics.python_installation_execution_via_conda.executing_notebook_vscode import (
     SITE_CONTENTS as executing_notebook_vscode,
 )
-from epp_topics.python_installation_execution.executing_py_shell import (
+from epp_topics.python_installation_execution_via_conda.executing_py_shell import (
     SITE_CONTENTS as executing_py_shell,
 )
-from epp_topics.python_installation_execution.executing_py_vscode import (
+from epp_topics.python_installation_execution_via_conda.executing_py_vscode import (
     SITE_CONTENTS as executing_py_vscode,
 )
-from epp_topics.python_installation_execution.executing_pytask import (
+from epp_topics.python_installation_execution_via_conda.executing_pytask import (
     SITE_CONTENTS as executing_pytask,
 )
-from epp_topics.python_installation_execution.executing_pytest import (
+from epp_topics.python_installation_execution_via_conda.executing_pytest import (
     SITE_CONTENTS as executing_pytest,
 )
-from epp_topics.python_installation_execution.installation_linux import (
+from epp_topics.python_installation_execution_via_conda.installation_linux import (
     SITE_CONTENTS as installation_linux,
 )
-from epp_topics.python_installation_execution.installation_mac import (
+from epp_topics.python_installation_execution_via_conda.installation_mac import (
     SITE_CONTENTS as installation_mac,
 )
-from epp_topics.python_installation_execution.installation_windows import (
+from epp_topics.python_installation_execution_via_conda.installation_windows import (
     SITE_CONTENTS as installation_windows,
 )
-from epp_topics.python_installation_execution.installation_wsl import (
+from epp_topics.python_installation_execution_via_conda.installation_wsl import (
     SITE_CONTENTS as installation_wsl,
 )
 
@@ -51,7 +51,7 @@ TOPICS = (
 )
 
 SITE_CONTENTS = {
-    "chapter_title": "Python: Installation and Execution",
+    "chapter_title": "Python: Installation and Execution (via conda)",
     "pages": tuple(
         itertools.chain(
             *[topic["pages"] for topic in TOPICS],

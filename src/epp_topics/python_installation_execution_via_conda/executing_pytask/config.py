@@ -3,5 +3,5 @@
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
     "other": (),
-    "built": ("python_installation_execution-executing_pytask.pdf",),
+    "built": ("python_installation_execution_via_conda-executing_pytask.pdf",),
 }
