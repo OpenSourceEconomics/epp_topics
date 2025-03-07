@@ -2,6 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": ("interpreter_annotated.png",),
+    "other": (),
     "built": ("python_installation_execution-executing_py_vscode.pdf",),
 }
