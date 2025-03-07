@@ -5,5 +5,5 @@ SITE_CONTENTS = {
     "other": (
         # "existing figures etc.",
     ),
-    "built": ("python_installation_execution-pixi_changing_environments.pdf",),
+    "built": ("python_installation_execution-pixi_modifying_environments.pdf",),
 }

@@ -19,7 +19,7 @@ defaults:
 
 # Python Installation and Execution
 
-### Introduction to Pixi
+### Installation and introduction to Pixi
 
 <br/>
 
@@ -41,6 +41,18 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
   → Pixi allows you to create and manage per-project environments
 
+
+---
+
+# Installation
+
+- In your terminal of choice, execute a tiny shell script found here:
+
+  https://pixi.sh/latest/#installation
+
+- Re-start your terminal
+
+- If you have any issues, reach out on the course Zulip!
 
 
 ---
