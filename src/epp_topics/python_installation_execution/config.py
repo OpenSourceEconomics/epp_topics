@@ -5,9 +5,6 @@ import itertools
 from epp_topics.python_installation_execution.executing_notebook_vscode import (
     SITE_CONTENTS as executing_notebook_vscode,
 )
-from epp_topics.python_installation_execution.executing_py_shell import (
-    SITE_CONTENTS as executing_py_shell,
-)
 from epp_topics.python_installation_execution.executing_py_vscode import (
     SITE_CONTENTS as executing_py_vscode,
 )
@@ -17,8 +14,8 @@ from epp_topics.python_installation_execution.executing_pytask import (
 from epp_topics.python_installation_execution.executing_pytest import (
     SITE_CONTENTS as executing_pytest,
 )
-from epp_topics.python_installation_execution.installation_pixi_intro import (
-    SITE_CONTENTS as installation_pixi_intro,
+from epp_topics.python_installation_execution.installation_executing_py_shell import (
+    SITE_CONTENTS as installation_executing_py_shell,
 )
 from epp_topics.python_installation_execution.pip_and_pypi import (
     SITE_CONTENTS as pip_and_pypi,
@@ -34,8 +31,7 @@ from epp_topics.python_installation_execution.python_packages import (
 )
 
 TOPICS = (
-    installation_pixi_intro,
-    executing_py_shell,
+    installation_executing_py_shell,
     executing_py_vscode,
     executing_notebook_vscode,
     executing_pytask,

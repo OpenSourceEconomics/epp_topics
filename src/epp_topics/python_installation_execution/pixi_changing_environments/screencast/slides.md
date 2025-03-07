@@ -59,7 +59,11 @@ numpy = ">=2.2.3"
 
 - Dependencies are tracked in the `[tool.pixi.dependencies]` table
 
-- The dependency table is automatically updated whenever a new dependency is added
+- Will see two ways of changing this:
+
+  - Using `pixi add [package]` in a shell
+
+  - Modifying it directly in `pyproject.toml`
 
 
 </div>
@@ -153,7 +157,7 @@ pandas = ">=2.2.3,<3"
 
   - pandas version 2.2.0: `pandas = "==2.2.0"`
 
-  - most recent version: `pandas = "*"`
+  - most recent version *(that is compatible with other packages)*: `pandas = "*"`
 
 
 ---
@@ -199,6 +203,6 @@ pixi add --pypi pdbp
 
 - The lock file is automatically updated when any dependency is changed
 
-- This ensures reproducibility of the environment
+- This ensures reproducibility of the environment / results
 
 - The lock file **should** be committed to the repository

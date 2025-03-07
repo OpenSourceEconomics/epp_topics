@@ -25,26 +25,20 @@ defaults:
 <br/>
 
 
-Janoś Gabler and Hans-Martin von Gaudecker
+Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
 # Preparation
 
-- We assume you have installed anaconda and created the course environment
-- Open a shell in the root directory of your project
-    - On Windows, use the anaconda prompt or the powershell
-    - If conda is not recognized in the powershell, check out this
-      [stackoverflow post](https://stackoverflow.com/a/65160772/21900143)
-- Activate the environment using `conda activate epp`
-- Confirm the activation worked using `conda info`
+We assume you have:
 
+- Installed pixi
 
----
+- Navigated to the root directory of your project in a shell
 
-# 0: Activate and Info
-
-<img src="/activate_and_info.png" class="rounded" width="600"/>
+- Opened the root directory of your project in VS Code, which contains a
+  `pyproject.toml` file that includes pytask
 
 ---
 
@@ -72,7 +66,7 @@ graph LR
 
 - Our shell is in the `example` directory
 - We want to run all functions that start with `task_` in both `.py` files
-- Command is `pytask`
+- Command is `pixi run pytask`
 
 
 ---
