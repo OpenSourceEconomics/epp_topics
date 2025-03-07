@@ -37,9 +37,8 @@ We assume you have:
 
 - Navigated to the root directory of your project in a shell
 
-- Opened the root directory of your project in VS Code, which contains a
-  `pyproject.toml` file that includes pytest
-
+- The root directory of your contains a `pyproject.toml` file that includes pytest
+  and at least one file expected by pytest
 
 ---
 
@@ -59,8 +58,9 @@ Very useful for automating test execution across an entire project
 ```mermaid {theme: 'dark', scale: 0.8}
 graph LR
     classDef highlight fill:#FF4500;
-    A["example"] --- B["cobb_douglas.py"]
-    A["example"] --- C["test_cobb_douglas.py"]
+    A["example"] --- B["pyproject.toml"]
+    A --- C["cobb_douglas.py"]
+    A --- D["test_cobb_douglas.py"]
 ```
 
 <br/>
@@ -73,6 +73,6 @@ graph LR
 
 ---
 
-# 1: Execute
+# Execute
 
 <img src="/run.png" class="rounded" width="600"/>

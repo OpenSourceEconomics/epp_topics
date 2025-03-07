@@ -37,8 +37,8 @@ We assume you have:
 
 - Navigated to the root directory of your project in a shell
 
-- Opened the root directory of your project in VS Code, which contains a
-  `pyproject.toml` file that includes pytask
+- The root directory of your contains a `pyproject.toml` file that includes pytask
+  and at least one file expected by pytask
 
 ---
 
@@ -58,8 +58,9 @@ Very useful for automating research pipelines
 ```mermaid {theme: 'dark', scale: 0.8}
 graph LR
     classDef highlight fill:#FF4500;
-    A["example"] --- B["task_hello.py"]
-    A["example"] --- C["task_world.py"]
+    A["example"] --- B["pyproject.toml"]
+    A --- C["task_hello.py"]
+    A --- D["task_world.py"]
 ```
 
 <br/>

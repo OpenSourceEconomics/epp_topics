@@ -12,3 +12,5 @@ pdbp = "*"
 
 [tool.pytask.ini_options]
 paths = ["."]
+ignore = [".pixi"]
+pdbcls = "pdbp:Pdb"

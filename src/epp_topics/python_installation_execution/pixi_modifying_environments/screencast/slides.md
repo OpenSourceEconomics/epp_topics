@@ -19,7 +19,7 @@ defaults:
 
 # Python Installation and Execution
 
-### Changing pixi environments
+### Modifying Pixi environments
 
 <br/>
 
@@ -38,7 +38,7 @@ Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 # pyproject.toml
 
 [tool.pixi.project]
-name = "epp"
+name = "toy-project"
 channels = ["conda-forge"]
 platforms = [
   "linux-64",
@@ -118,7 +118,7 @@ $ pixi add pandas
 # pyproject.toml
 
 [tool.pixi.project]
-name = "epp"
+name = "toy-project"
 channels = ["conda-forge"]
 platforms = [
   "linux-64",
@@ -164,16 +164,28 @@ pandas = ">=2.2.3,<3"
 
 # Adding PyPi dependencies
 
-<div class="grid grid-cols-[50%_50%] gap-20">
+<div class="grid grid-cols-[40%_60%] gap-20">
+<div>
+
+```console
+$ pixi add --pypi pdbp
+```
+
+</div>
 <div>
 
 ```toml
 # pyproject.toml
 
 [tool.pixi.project]
-name = "epp"
+name = "toy-project"
 channels = ["conda-forge"]
-platforms = ["..."]
+platforms = [
+  "linux-64",
+  "osx-64",
+  "osx-arm64",
+  "win-64",
+]
 
 [tool.pixi.dependencies]
 python = ">=3.13"
@@ -182,13 +194,6 @@ pandas = ">=2.2.3,<3"
 
 [tool.pixi.pypi-dependencies]
 pdbp = "*"
-```
-
-</div>
-<div>
-
-```console
-pixi add --pypi pdbp
 ```
 
 </div>
