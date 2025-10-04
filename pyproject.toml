@@ -132,7 +132,6 @@ extend-ignore = [
     "N999", # Capitalized module name.
     "PD010",
     "PD015",
-    "PD901", # `df` used a lot as example variable name.
     "PERF401", # use a list comprehension.
     "PLR0913",
     "PLR2004",  # Magic value used in comparison.

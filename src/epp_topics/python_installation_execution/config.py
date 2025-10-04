@@ -17,17 +17,8 @@ from epp_topics.python_installation_execution.executing_pytest import (
 from epp_topics.python_installation_execution.installation_executing_py_shell import (
     SITE_CONTENTS as installation_executing_py_shell,
 )
-from epp_topics.python_installation_execution.pip_and_pypi import (
-    SITE_CONTENTS as pip_and_pypi,
-)
-from epp_topics.python_installation_execution.pixi_and_conda_forge import (
-    SITE_CONTENTS as pixi_and_conda_forge,
-)
 from epp_topics.python_installation_execution.pixi_modifying_environments import (
     SITE_CONTENTS as pixi_modifying_environments,
-)
-from epp_topics.python_installation_execution.python_packages import (
-    SITE_CONTENTS as python_packages,
 )
 
 TOPICS = (
