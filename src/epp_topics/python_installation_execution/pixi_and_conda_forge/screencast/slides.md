@@ -359,12 +359,12 @@ However, from the docs:
 
 - We want to create a single environment:
 
-  - Using Python 3.12
+  - Using Python 3.13
 
   - Which supports an editable install of the project
   - That runs on Windows, MacOS (intel and arm), and Linux
-  - With pandas, plotly, and kaleido
-  - Where the kaleido version on Windows is 0.1.0.post1
+  - With pandas, plotly, kaleido
+
 
 ---
 
@@ -376,10 +376,10 @@ However, from the docs:
   $ pixi init --format pyproject
   ```
 
-- Add Python 3.12
+- Add Python 3.13
 
   ```console
-  $ pixi add python=3.12
+  $ pixi add python=3.13
   ```
 
 ---
@@ -401,21 +401,13 @@ However, from the docs:
 - Add conda-forge packages
 
   ```console
-  $ pixi add pandas plotly
+  $ pixi add pandas plotly python-kaleido
   ```
 
-- Install kaleido version with Windows fix (only for windows)
+- Install Chrome
 
   ```console
-  $ pixi add --pypi --platform win-64 kaleido==0.1.0.post1
-  ```
-
-- Install kaleido from PyPI (for unix)
-
-  ```toml
-  # pyproject.toml
-  [tool.pixi.target.unix.pypi-dependencies]
-  kaleido = ">=0.2"
+  pixi run kaleido_get_chrome
   ```
 
 ---

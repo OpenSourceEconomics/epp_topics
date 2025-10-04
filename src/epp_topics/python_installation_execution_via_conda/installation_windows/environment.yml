@@ -18,10 +18,11 @@ dependencies:
   - pytask >= 0.4
   - pytest
   - python==3.12
+  - python-kaleido >= 1.0
   - scikit-learn
   - scipy
   - seaborn
   - snakeviz
   - statsmodels
   - toml
-  - pip: [kaleido==0.1.0.post1, pdbp]
+  - pip: [pdbp]
