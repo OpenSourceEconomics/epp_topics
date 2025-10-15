@@ -57,4 +57,4 @@ Interactive plots:
 - Interactive plots typically based on JavaScript
 - Rely on browser functionality for static exports
 - Kaleido hides that by installing a browser to export static plots
-- Must run: `kaleido_get_chrome`
+- Must run `plotly_get_chrome` (in pixi environment)
