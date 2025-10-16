@@ -77,6 +77,7 @@ TypeError: f() missing 1 required positional argument: 'y'
 
 - `partial` lets you inject data into functions
   ([closure](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>))
+
 - `partial` lets you partially evaluate a function
 
 ---
