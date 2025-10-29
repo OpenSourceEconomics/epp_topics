@@ -407,7 +407,7 @@ However, from the docs:
 - Install Chrome
 
   ```console
-  pixi run kaleido_get_chrome
+  pixi run plotly_get_chrome
   ```
 
 ---
