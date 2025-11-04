@@ -1300,8 +1300,8 @@ packages:
   timestamp: 1758743520805
 - pypi: ./
   name: epp-topics
-  version: 0.1.dev192+gfbb4e0efe.d20251004
-  sha256: ae8f3b1f0fb8b0c468d42f61bc948cb0633b4d31c3d172970ccc0f5c9137909d
+  version: 0.1.dev204+g0b554ad93.d20251104
+  sha256: 9f13e89680189cfba63ac352048a5135dc1e4c0e2ceb938fcf5a43a369623577
   requires_dist:
   - pytask
   requires_python: '>=3.13'

@@ -52,7 +52,7 @@ source = "vcs"
 allow-direct-references = true
 
 
-[tool.pixi.project]
+[tool.pixi.workspace]
 channels = ["conda-forge"]
 platforms = ["linux-64"]
 
