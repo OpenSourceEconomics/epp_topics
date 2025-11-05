@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Modifying Pixi environments
+title: EPP — Python Installation — Modifying Pixi environments
 defaults:
   layout: center
 ---

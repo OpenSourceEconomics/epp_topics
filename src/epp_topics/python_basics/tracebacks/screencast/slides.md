@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Tracebacks
+title: EPP — Python Basics — Tracebacks
 defaults:
   layout: center
 ---

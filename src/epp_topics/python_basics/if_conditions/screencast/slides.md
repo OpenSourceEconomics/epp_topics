@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — If conditions
+title: EPP — Python Basics — If conditions
 defaults:
   layout: center
 ---

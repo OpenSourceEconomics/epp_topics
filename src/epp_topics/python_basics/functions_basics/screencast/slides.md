@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Defining Functions
+title: EPP — Python Basics — Defining Functions
 defaults:
   layout: center
 ---

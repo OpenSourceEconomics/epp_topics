@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Strings
+title: EPP — Python Basics — Strings
 defaults:
   layout: center
 ---

@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Comprehensions
+title: EPP — Python Basics — Comprehensions
 defaults:
   layout: center
 ---

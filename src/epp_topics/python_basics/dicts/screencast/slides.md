@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Dictionaries
+title: EPP — Python Basics — Dictionaries
 defaults:
   layout: center
 ---

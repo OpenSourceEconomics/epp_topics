@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Executing ".py"-files from the shell
+title: EPP — Python Installation (conda) — Executing ".py"-files from the shell
 defaults:
   layout: center
 ---

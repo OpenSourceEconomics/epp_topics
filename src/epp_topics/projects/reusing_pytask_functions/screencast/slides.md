@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Re-using pytask functions
+title: EPP — Projects — Re-using pytask functions
 defaults:
   layout: center
 ---

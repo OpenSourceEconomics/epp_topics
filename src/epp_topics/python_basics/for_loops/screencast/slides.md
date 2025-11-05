@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — "for" loops
+title: EPP — Python Basics — "for" loops
 defaults:
   layout: center
 ---

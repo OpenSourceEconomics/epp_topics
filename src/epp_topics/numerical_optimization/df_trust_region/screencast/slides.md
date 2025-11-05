@@ -8,7 +8,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Derivative-Free Trust Region Algorithms
+title: EPP — Optimization — Derivative-Free Trust Region Algorithms
 defaults:
   layout: center
 # themeConfig:

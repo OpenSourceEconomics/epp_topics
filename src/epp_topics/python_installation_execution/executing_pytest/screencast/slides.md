@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Running Python code via pytest
+title: EPP — Python Installation — Running Python code via pytest
 defaults:
   layout: center
 ---

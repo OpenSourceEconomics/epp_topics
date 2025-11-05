@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Executing notebooks in VS Code
+title: EPP — Python Installation (conda) — Executing notebooks in VS Code
 defaults:
   layout: center
 ---

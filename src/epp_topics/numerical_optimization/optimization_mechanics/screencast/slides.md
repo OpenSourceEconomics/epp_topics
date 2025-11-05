@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Using optimagic's minimize and maximize
+title: EPP — Optimization — Using optimagic's minimize and maximize
 defaults:
   layout: center
 ---

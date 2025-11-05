@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — DataFrames and Series
+title: EPP — Pandas — DataFrames and Series
 defaults:
   layout: center
 ---

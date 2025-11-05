@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Dealing with complex data structures
+title: EPP — Pandas — Dealing with complex data structures
 defaults:
   layout: center
 ---

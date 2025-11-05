@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — What are the project templates?
+title: EPP — Projects — What are the project templates?
 defaults:
   layout: center
 ---

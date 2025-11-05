@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Creating variables
+title: EPP — Pandas — Creating variables
 defaults:
   layout: center
 ---

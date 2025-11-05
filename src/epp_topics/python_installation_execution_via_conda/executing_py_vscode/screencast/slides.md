@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Executing ".py"-files from VS Code
+title: EPP — Python Installation (conda) — Executing ".py"-files from VS Code
 defaults:
   layout: center
 ---

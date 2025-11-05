@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Using the Pdb+ debugger
+title: EPP — Debugging — Using the Pdb+ debugger
 defaults:
   layout: center
 ---

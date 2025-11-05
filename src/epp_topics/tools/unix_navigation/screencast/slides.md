@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Navigation in the Unix shell
+title: EPP — Tools — Navigation in the Unix shell
 defaults:
   layout: center
 ---

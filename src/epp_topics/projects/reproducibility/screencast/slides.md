@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Definition of reproducibility
+title: EPP — Projects — Definition of reproducibility
 defaults:
   layout: center
 ---

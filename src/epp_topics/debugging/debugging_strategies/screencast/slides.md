@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Strategies for debugging
+title: EPP — Debugging — Strategies for debugging
 defaults:
   layout: center
 ---

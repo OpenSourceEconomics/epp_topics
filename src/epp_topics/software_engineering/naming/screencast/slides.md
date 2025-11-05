@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Naming things
+title: EPP — Software Engineering — Naming things
 defaults:
   layout: center
 ---

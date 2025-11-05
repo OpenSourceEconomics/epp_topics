@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Gathering data efficiently
+title: EPP — Debugging — Gathering data efficiently
 defaults:
   layout: center
 ---

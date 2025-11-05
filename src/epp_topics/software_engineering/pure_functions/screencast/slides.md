@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Pure functions
+title: EPP — Software Engineering — Pure functions
 defaults:
   layout: center
 ---

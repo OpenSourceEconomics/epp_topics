@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Testing code that should raise errors
+title: EPP — Software Engineering — Testing code that should raise errors
 defaults:
   layout: center
 ---

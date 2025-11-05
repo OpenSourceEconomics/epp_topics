@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Array indexing
+title: EPP — Scientific Computing — Array indexing
 defaults:
   layout: center
 ---

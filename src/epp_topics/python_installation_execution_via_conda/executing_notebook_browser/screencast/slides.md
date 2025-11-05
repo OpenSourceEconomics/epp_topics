@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Executing notebooks in a browser
+title: EPP — Python Installation (conda) — Executing notebooks in a browser
 defaults:
   layout: center
 ---

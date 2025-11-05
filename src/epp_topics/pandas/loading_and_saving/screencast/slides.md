@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Loading and saving data
+title: EPP — Pandas — Loading and saving data
 defaults:
   layout: center
 ---

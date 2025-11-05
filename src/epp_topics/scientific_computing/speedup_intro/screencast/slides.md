@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Introduction to making code fast
+title: EPP — Scientific Computing — Introduction to making code fast
 defaults:
   layout: center
 ---

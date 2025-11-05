@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Importing, Namespaces, Modules
+title: EPP — Python Basics — Importing, Namespaces, Modules
 defaults:
   layout: center
 ---

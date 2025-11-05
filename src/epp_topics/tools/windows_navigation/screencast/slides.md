@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Navigation in the Windows shell
+title: EPP — Tools — Navigation in the Windows shell
 defaults:
   layout: center
 ---

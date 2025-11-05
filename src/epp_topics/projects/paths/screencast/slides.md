@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Paths handling in projects
+title: EPP — Projects — Paths handling in projects
 defaults:
   layout: center
 ---

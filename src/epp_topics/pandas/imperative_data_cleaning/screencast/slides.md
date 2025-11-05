@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Imperative data cleaning
+title: EPP — Pandas — Imperative data cleaning
 defaults:
   layout: center
 ---

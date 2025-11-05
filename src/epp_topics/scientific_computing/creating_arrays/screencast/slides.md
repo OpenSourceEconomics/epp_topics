@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Creating arrays
+title: EPP — Scientific Computing — Creating arrays
 defaults:
   layout: center
 ---

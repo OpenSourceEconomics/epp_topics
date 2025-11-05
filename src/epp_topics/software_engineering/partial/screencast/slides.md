@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Partialling arguments to functions
+title: EPP — Software Engineering — Partialling arguments to functions
 defaults:
   layout: center
 ---

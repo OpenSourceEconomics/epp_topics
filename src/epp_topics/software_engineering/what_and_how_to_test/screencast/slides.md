@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — What to test? How to test it?
+title: EPP — Software Engineering — What to test? How to test it?
 defaults:
   layout: center
 ---

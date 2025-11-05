@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — What does pytest do?
+title: EPP — Software Engineering — What does pytest do?
 defaults:
   layout: center
 ---

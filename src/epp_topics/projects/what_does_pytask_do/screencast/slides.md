@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — What does pytask do?
+title: EPP — Projects — What does pytask do?
 defaults:
   layout: center
 ---

@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — The pytask documentation
+title: EPP — Projects — The pytask documentation
 defaults:
   layout: center
 ---

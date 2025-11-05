@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Randomness
+title: EPP — Scientific Computing — Randomness
 defaults:
   layout: center
 ---

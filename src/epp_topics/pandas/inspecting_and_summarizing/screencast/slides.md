@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Inspecting and summarizing data
+title: EPP — Pandas — Inspecting and summarizing data
 defaults:
   layout: center
 ---

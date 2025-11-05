@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Introduction and Overview
+title: EPP — Git — Introduction and Overview
 defaults:
   layout: center
 ---

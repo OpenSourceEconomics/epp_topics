@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Writing (py)tasks with multiple outputs
+title: EPP — Projects — Writing (py)tasks with multiple outputs
 defaults:
   layout: center
 ---

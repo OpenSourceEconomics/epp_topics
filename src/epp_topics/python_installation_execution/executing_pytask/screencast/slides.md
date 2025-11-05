@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Running Python code via pytask
+title: EPP — Python Installation — Running Python code via pytask
 defaults:
   layout: center
 ---

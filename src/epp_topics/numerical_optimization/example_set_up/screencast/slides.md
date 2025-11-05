@@ -8,7 +8,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Set up of the example
+title: EPP — Optimization — Set up of the example
 defaults:
   layout: center
 # themeConfig:

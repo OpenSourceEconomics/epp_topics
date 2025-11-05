@@ -8,7 +8,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Derivative-Free Direct Search Algorithms
+title: EPP — Optimization — Derivative-Free Direct Search Algorithms
 defaults:
   layout: center
 # themeConfig:

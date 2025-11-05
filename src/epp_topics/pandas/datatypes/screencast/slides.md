@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Data types
+title: EPP — Pandas — Data types
 defaults:
   layout: center
 ---

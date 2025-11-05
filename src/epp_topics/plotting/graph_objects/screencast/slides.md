@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Working with graph objects
+title: EPP — Plotting — Working with graph objects
 defaults:
   layout: center
 ---

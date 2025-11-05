@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Goals and Workflow
+title: EPP — Plotting — Goals and Workflow
 defaults:
   layout: center
 ---

@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Markdown syntax
+title: EPP — Texts — Markdown syntax
 defaults:
   layout: center
 ---

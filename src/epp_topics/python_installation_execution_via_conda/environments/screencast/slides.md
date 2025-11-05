@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Environment files and environments
+title: EPP — Python Installation (conda) — Environment files and environments
 defaults:
   layout: center
 ---

@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Writing simple (py)tasks
+title: EPP — Projects — Writing simple (py)tasks
 defaults:
   layout: center
 ---

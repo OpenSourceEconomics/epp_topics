@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Merging datasets
+title: EPP — Pandas — Merging datasets
 defaults:
   layout: center
 ---

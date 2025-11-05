@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Why use shells today?
+title: EPP — Tools — Why use shells today?
 defaults:
   layout: center
 ---

@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Introduction to error handling
+title: EPP — Software Engineering — Introduction to error handling
 defaults:
   layout: center
 ---

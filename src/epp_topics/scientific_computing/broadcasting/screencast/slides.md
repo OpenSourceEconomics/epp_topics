@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Broadcasting
+title: EPP — Scientific Computing — Broadcasting
 defaults:
   layout: center
 ---

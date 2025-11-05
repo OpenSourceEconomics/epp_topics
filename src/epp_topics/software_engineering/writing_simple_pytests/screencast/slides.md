@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Writing simple (py)tests
+title: EPP — Software Engineering — Writing simple (py)tests
 defaults:
   layout: center
 ---

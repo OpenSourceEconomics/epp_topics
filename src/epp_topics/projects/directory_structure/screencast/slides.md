@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Directory structure in the templates
+title: EPP — Projects — Directory structure in the templates
 defaults:
   layout: center
 ---

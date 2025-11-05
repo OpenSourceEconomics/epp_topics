@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Pre-commit hooks
+title: EPP — Git — Pre-commit hooks
 defaults:
   layout: center
 ---

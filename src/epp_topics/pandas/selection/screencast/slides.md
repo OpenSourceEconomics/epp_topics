@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Selecting rows and columns
+title: EPP — Pandas — Selecting rows and columns
 defaults:
   layout: center
 ---

@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Functional data cleaning — Basics
+title: EPP — Pandas — Functional data cleaning — Basics
 defaults:
   layout: center
 ---

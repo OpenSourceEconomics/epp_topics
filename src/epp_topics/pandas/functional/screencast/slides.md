@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Functional data management
+title: EPP — Pandas — Functional data management
 defaults:
   layout: center
 ---

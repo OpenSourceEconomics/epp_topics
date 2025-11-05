@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Cross-validation and hyperparameters in scikit-learn
+title: EPP — Metrics/ML — Cross-validation and hyperparameters in scikit-learn
 defaults:
   layout: center
 ---

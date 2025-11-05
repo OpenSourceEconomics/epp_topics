@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Data cleaning example
+title: EPP — Pandas — Data cleaning example
 defaults:
   layout: center
 ---

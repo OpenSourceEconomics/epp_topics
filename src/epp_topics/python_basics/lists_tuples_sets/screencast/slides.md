@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Lists, tuples and sets
+title: EPP — Python Basics — Lists, tuples and sets
 defaults:
   layout: center
 ---

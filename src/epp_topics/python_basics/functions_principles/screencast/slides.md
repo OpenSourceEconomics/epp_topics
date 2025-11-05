@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Principles for Good Functions
+title: EPP — Python Basics — Principles for Good Functions
 defaults:
   layout: center
 ---

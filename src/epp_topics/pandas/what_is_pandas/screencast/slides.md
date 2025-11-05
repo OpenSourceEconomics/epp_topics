@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — What is (modern) pandas?
+title: EPP — Pandas — What is (modern) pandas?
 defaults:
   layout: center
 ---

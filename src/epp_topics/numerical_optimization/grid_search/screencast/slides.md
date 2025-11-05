@@ -8,7 +8,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Grid Search
+title: EPP — Optimization — Grid Search
 defaults:
   layout: center
 ---

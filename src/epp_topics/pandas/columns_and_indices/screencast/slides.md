@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Setting and renaming columns and indices
+title: EPP — Pandas — Setting and renaming columns and indices
 defaults:
   layout: center
 ---

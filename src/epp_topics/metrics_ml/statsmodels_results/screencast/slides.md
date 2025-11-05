@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Working with statsmodels' results objects
+title: EPP — Metrics/ML — Working with statsmodels' results objects
 defaults:
   layout: center
 ---

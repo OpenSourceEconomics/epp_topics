@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — File paths with pathlib
+title: EPP — Python Basics — File paths with pathlib
 defaults:
   layout: center
 ---

@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Setting up a project
+title: EPP — Projects — Setting up a project
 defaults:
   layout: center
 ---

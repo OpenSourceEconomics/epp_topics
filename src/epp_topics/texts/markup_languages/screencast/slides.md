@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Markup languages
+title: EPP — Texts — Markup languages
 defaults:
   layout: center
 ---

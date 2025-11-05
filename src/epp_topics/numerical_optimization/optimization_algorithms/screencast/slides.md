@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Choosing optimization algorithms
+title: EPP — Optimization — Choosing optimization algorithms
 defaults:
   layout: center
 ---
