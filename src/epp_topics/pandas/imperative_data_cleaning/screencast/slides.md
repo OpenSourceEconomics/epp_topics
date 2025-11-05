@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Imperative data cleaning
+title: EPP — Imperative data cleaning
 defaults:
   layout: center
 ---
