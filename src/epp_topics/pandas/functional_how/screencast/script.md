@@ -1,4 +1,4 @@
-# Script: Functional data cleaning: The Why
+# Script: Functional data cleaning: The How
 
 ## Example
 

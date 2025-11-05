@@ -6,5 +6,5 @@ SITE_CONTENTS = {
         "functional_pandas.ipynb",
     ),
     "other": ("survey.csv",),
-    "built": ("pandas-data_cleaning_example.pdf",),
+    "built": ("pandas-management_definitions_example.pdf",),
 }

@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Pandas — Data cleaning example
+title: EPP — Pandas — Data management — Definitions and example
 defaults:
   layout: center
 ---
@@ -20,12 +20,41 @@ defaults:
 
 # Data management with pandas
 
-### Data cleaning example
+### Data management: Definitions and example
 
 <br>
 
 
 Janoś Gabler and Hans-Martin von Gaudecker
+
+---
+
+# Definitions
+
+- **Data management**: Converting source data to formats your analysis programs need
+
+  - Could include many different datasets
+
+  - These could have a complex internals structure
+
+  - Different datasets could be collected for different levels (e.g., a household survey
+    and county-level unemployment rates from a statistical office)
+
+- **Data cleaning**: Transforming the contents of a single DataFrame to something usable
+
+  - Coding missing values
+
+  - Removing typos from strings
+
+  - Setting proper data types
+
+---
+
+# Roadmap for the chapter
+
+- *(Imperative and)* Functional data cleaning
+
+- Handling complex data structures
 
 ---
 

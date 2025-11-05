@@ -1,4 +1,4 @@
-# Script: Data cleaning example
+# Script: Data management: Definitions and example
 
 ## Introduction
 

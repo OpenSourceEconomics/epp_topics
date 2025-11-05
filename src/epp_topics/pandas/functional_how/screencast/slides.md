@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Pandas — Functional data cleaning — Basics
+title: EPP — Pandas — Functional data cleaning — The How
 defaults:
   layout: center
 ---
@@ -20,7 +20,7 @@ defaults:
 
 # Data management with pandas
 
-### Functional data cleaning: Basics
+### Functional data cleaning: The How
 
 <br>
 
@@ -70,7 +70,7 @@ table th {
 - All variables are strings after running
 
   ```python
-  raw = pd.read_csv("survey.csv")
+  raw_survey = pd.read_csv("survey.csv")
   ```
 
 
@@ -79,29 +79,127 @@ table th {
 
 ---
 
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-# Example
+# Code
 
 ```python
->>> def clean(survey_df):
-...     out = pd.DataFrame(index=survey_df.index)
-...     out["coding_genius"] = convert_to_ordered_cat(survey_df["Q001"])
-...     out["learned_a_lot"] = convert_to_ordered_cat(survey_df["Q002"])
-...     out["favorite_language"] = _clean_favorite_language(survey_df["Q003"])
-...     return out
+def clean_data(raw):
+    df = pd.DataFrame(index=raw.index)
+    df["coding_genius"] = clean_agreement_scale(raw["Q001"])
+    df["learned_a_lot"] = clean_agreement_scale(raw["Q002"])
+    df["favorite_language"] = clean_favorite_language(raw["Q003"])
+    return df
 
->>> df = clean(raw)
+def clean_agreement_scale(sr):
+    sr = sr.replace({"-77": pd.NA, "-99": pd.NA})
+    categories = ["strongly disagree", "disagree", "neutral", "agree", "strongly agree"]
+    dtype = pd.CategoricalDtype(categories=categories, ordered=True)
+    return sr.astype(dtype)
+
+def clean_favorite_language(sr):
+    sr = sr.str.lower().str.strip()
+    sr = sr.replace("ypthon", "python")
+    return sr.astype(pd.CategoricalDtype())
+
+
+raw_survey = pd.read_csv("survey.csv")
+cleaned_survey = clean_data(raw_survey)
 ```
+
+---
+
+# Result
+
+<style>
+table th {
+  text-align: left !important;
+}
+</style>
+
+<div class="flex gap-8">
+<div>
+
+|    | coding_genius     | learned_a_lot   | favorite_language   |
+|---:|:------------------|:----------------|:--------------------|
+|  0 | strongly disagree | agree           | python              |
+|  1 | strongly agree    | strongly agree  | python              |
+|  2 | NaN               | disagree        | r                   |
+|  3 | agree             | NaN             | python              |
+|  4 | NaN               | NaN             | python              |
+|  5 | NaN               | strongly agree  | python              |
+|  6 | neutral           | strongly agree  | python              |
+|  7 | disagree          | agree           | python              |
+|  8 | strongly agree    | NaN             | python              |
+|  9 | agree             | NaN             | python              |
+
 </div>
 <div>
 
-# Rules
 
-- Start with an empty DataFrame for the clean data
+```python
+>>> df.dtypes
+coding_genius     category
+learned_a_lot     category
+favorite_language category
+dtype: object
 
-- Touch every variable in the new dataframe just once.
+>>> df["coding_genius"].cat.categories
+[
+    'strongly disagree',
+    'disagree',
+    'neutral',
+    'agree',
+    'strongly agree'
+]
+
+>>> df["favorite_language"].cat.categories
+['python', 'r']
+```
 
 </div>
 </div>
+
+
+---
+
+# 1. Start with an empty DataFrame
+
+
+```python
+def clean_data(raw):
+    df = pd.DataFrame(index=raw.index)
+    df["coding_genius"] = clean_agreement_scale(raw["Q001"])
+    df["learned_a_lot"] = clean_agreement_scale(raw["Q002"])
+    df["favorite_language"] = clean_favorite_language(raw["Q003"])
+    return df
+```
+
+---
+
+# 2. Touch every variable just once
+
+```python
+def clean_data(raw):
+    df = pd.DataFrame(index=raw.index)
+    df["coding_genius"] = clean_agreement_scale(raw["Q001"])
+    df["learned_a_lot"] = clean_agreement_scale(raw["Q002"])
+    df["favorite_language"] = clean_favorite_language(raw["Q003"])
+    return df
+```
+
+---
+
+# 3. Touch with a pure function
+
+```python
+def clean_agreement_scale(sr):
+    sr = sr.replace({"-77": pd.NA, "-99": pd.NA})
+    categories = ["strongly disagree", "disagree", "neutral", "agree", "strongly agree"]
+    dtype = pd.CategoricalDtype(categories=categories, ordered=True)
+    return sr.astype(dtype)
+
+
+def clean_favorite_language(sr):
+    sr = sr.str.lower().str.strip()
+    sr = sr.replace("ypthon", "python")
+    return sr.astype(pd.CategoricalDtype())
+```

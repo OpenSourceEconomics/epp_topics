@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Pandas — Functional data management
+title: EPP — Pandas — Functional data cleaning — The Why
 defaults:
   layout: center
 ---
@@ -20,7 +20,7 @@ defaults:
 
 # Data management with pandas
 
-### Functional data management
+### Functional data cleaning: The Why
 
 <br>
 
