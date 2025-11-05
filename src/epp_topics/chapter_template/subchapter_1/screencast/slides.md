@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Subchapter Title
 defaults:
   layout: center
 ---

@@ -105,7 +105,7 @@ for var in ["coding_genius", "learned_a_lot"]:
 
 ---
 
-# Cleaning 3: Favourite language
+# Cleaning 3: Favorite language
 
 ```python
 df["favorite_language"] = df["favorite_language"].replace({"-77": pd.NA, "-99": pd.NA})
@@ -187,7 +187,7 @@ new_names = {
 }
 df = df.rename(columns=new_names)
 
-# Clean the two variables with agreement scale
+# Clean the two variables with agreement scales
 for var in ["coding_genius", "learned_a_lot"]:
     df[var] = df[var].replace({"-77": pd.NA, "-99": pd.NA})
     categories = ["strongly disagree", "disagree", "neutral", "agree", "strongly agree"]

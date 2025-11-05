@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Installation and introduction to Pixi
 defaults:
   layout: center
 ---

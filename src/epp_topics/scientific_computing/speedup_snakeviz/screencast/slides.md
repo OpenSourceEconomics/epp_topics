@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Profiling code with snakeviz
 defaults:
   layout: center
 ---

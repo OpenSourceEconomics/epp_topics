@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Python's Data Analysis Ecosystem
 defaults:
   layout: center
 ---

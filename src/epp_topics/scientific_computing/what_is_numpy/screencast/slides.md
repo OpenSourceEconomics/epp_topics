@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — What is numpy?
 defaults:
   layout: center
 ---

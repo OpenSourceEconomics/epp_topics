@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Pip and PyPI
 defaults:
   layout: center
 # themeConfig:

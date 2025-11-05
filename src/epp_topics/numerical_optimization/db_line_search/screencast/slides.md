@@ -8,6 +8,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Derivative-Based Line Search Algorithms
 defaults:
   layout: center
 # themeConfig:

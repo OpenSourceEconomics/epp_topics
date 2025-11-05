@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Why plotly? And some prerequisites.
 defaults:
   layout: center
 ---

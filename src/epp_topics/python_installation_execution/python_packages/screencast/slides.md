@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Python Packages
 defaults:
   layout: center
 # themeConfig:

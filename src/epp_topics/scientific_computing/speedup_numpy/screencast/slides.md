@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Writing fast code with numpy
 defaults:
   layout: center
 ---

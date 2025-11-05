@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Calculations on arrays
 defaults:
   layout: center
 ---

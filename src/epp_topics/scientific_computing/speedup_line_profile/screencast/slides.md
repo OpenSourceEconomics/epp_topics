@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Line profiling
 defaults:
   layout: center
 ---
