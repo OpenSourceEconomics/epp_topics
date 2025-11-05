@@ -2,6 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": (),
-    "built": ("pandas-functional.pdf",),
+    "other": ("survey.csv",),
+    "built": ("pandas-imperative_data_cleaning.pdf",),
 }

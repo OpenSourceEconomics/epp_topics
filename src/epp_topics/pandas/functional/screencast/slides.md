@@ -29,6 +29,44 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# Motivation
+
+- So far we have shown you the mechanics of using pandas
+- Now we talk about general best practices
+  - Can save weeks of work in large projects
+  - Grounded in database research and software engineering
+
+
+---
+
+# 1. Never ever change source data
+
+- **Source data**: Original dataset as downloaded or collected
+- Commit the source data to git and never change it
+- All modified datasets should be stored under different names
+- Modified datasets should not be under version control!
+
+
+---
+
+# 2. Separate data mgm't and analysis
+
+- **Data management**: Converting source data to formats your analysis programs need
+- Separate data management code from analysis code
+- Never modify the content of a variable outside the data management code!
+
+
+---
+
+# How to implement these principles?
+
+- Use a **functional approach** to data management
+- Structure your code with pure functions
+- Each function does one thing and does it well
+- Let's see an example!
+
+---
+
 # Example
 
 consider this hypothetical survey about a programming course

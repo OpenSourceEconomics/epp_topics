@@ -20,7 +20,7 @@ defaults:
 
 # Data management with pandas
 
-### Rules for data management
+### Dealing with complex data structures
 
 <br>
 
@@ -31,34 +31,15 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Motivation
 
-- So far we have shown you the mechanics of using pandas
-- Now we talk about general best practices
-  - Can save weeks of work in large projects
-  - Grounded in database research
+- Real-world data often has complex structure
+- Understanding how to organize data is crucial
+- Proper data organization can save weeks of work
+- These principles come from database research
 
 
 ---
 
-# 1. Never ever change source data
-
-- **Source data**: Original dataset as downloaded or collected
-- Commit the source data to git and never change it
-- All modified datasets should be stored under different names
-- Modified datasets should not be under version control!
-
-
----
-
-# 2. Separate data mgm't and analysis
-
-- **Data management**: Converting source data to formats your analysis programs need
-- Separate data management code from analysis code
-- Never modify the content of a variable outside the data management code!
-
-
----
-
-# 3. Values have no internal structure
+# 1. Values have no internal structure
 
 - a.k.a. the **first normal form**
 - I.e., no need for parsing values before using them
@@ -69,7 +50,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# 4. No redundant information in tables
+# 2. No redundant information in tables
 
 - a.k.a. the **second normal form**
 - In a panel structure: Store time-constant characteristics in a
@@ -82,7 +63,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# 5. No structure in variable names
+# 3. No structure in variable names
 
 - a.k.a. use long format if you can
 - There should not be different variables with similar content referring to different
