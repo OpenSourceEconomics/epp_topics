@@ -15,8 +15,8 @@ from epp_topics.pandas.dataframes_and_series import (
 )
 from epp_topics.pandas.datatypes import SITE_CONTENTS as datatypes
 from epp_topics.pandas.functional import SITE_CONTENTS as functional_data_management
-from epp_topics.pandas.functional_basics import (
-    SITE_CONTENTS as functional_basics,
+from epp_topics.pandas.functional_how import (
+    SITE_CONTENTS as functional_how,
 )
 from epp_topics.pandas.imperative_data_cleaning import (
     SITE_CONTENTS as imperative_data_cleaning,
@@ -40,7 +40,7 @@ TOPICS = (
     creating_variables,
     data_cleaning_example,
     imperative_data_cleaning,
-    functional_basics,
+    functional_how,
     functional_data_management,
     complex_data_structures,
     merging,

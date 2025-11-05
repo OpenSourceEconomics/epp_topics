@@ -101,11 +101,7 @@ table th {
 
 - Start with an empty DataFrame for the clean data
 
-- One pure function (could be identity) per variable (df column).
-
-- Each function returns a new Series
-
-- Avoid state at all costs. I.e., touch every variable just once.
+- Touch every variable in the new dataframe just once.
 
 </div>
 </div>
