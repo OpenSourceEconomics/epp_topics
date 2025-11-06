@@ -29,32 +29,155 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Motivation
+# Three simple rules for data cleaning
 
-- So far we have shown you the mechanics of using pandas
-- Now we talk about general best practices
-  - Can save weeks of work in large projects
-  - Grounded in database research and software engineering
+1. Start with an empty DataFrame
+
+1. Touch every variable just once
+
+1. Touch with a pure function
 
 
 ---
 
-# 1. Never ever change source data
+# Reproducibility & researchers' sanity
+
+1. Pipeline always starts from the original data, which is never modified
+
+2. Must be able to find out quickly what a variable contains
+
+3. Code must be readable at different levels of abstraction
+
+4. There must not be state in any column's contents
+
+5. Data management and analysis should be separated
+
+---
+
+# 1. Pipeline always starts from the original data, which is never modified
 
 - **Source data**: Original dataset as downloaded or collected
-- Commit the source data to git and never change it
+
+- *(Commit the source data to VC and)* never change the source data.
+
 - All modified datasets should be stored under different names
+
 - Modified datasets should not be under version control!
+
+---
+
+# 1. Pipeline always starts from the original data, which is never modified
+
+<br/>
+
+1. **Start with an empty DataFrame**
+
+1. Touch every variable just once
+
+1. **Touch with a pure function**
 
 
 ---
 
-# 2. Separate data mgm't and analysis
+# 2. Quickly find out variable contents
+
+- Debugging (making sense of code and/or results) is hard
+
+- If you need to look in 5 places to understand a variable's contents, you will go insane
+
+---
+
+# 2. Quickly find out variable contents
+
+
+1. Start with an empty DataFrame
+
+1. **Touch every variable just once**
+
+1. **Touch with a pure function**
+
+<br/>
+
+Implies that you will find the correct spot by searching for regex:
+
+```regex
+coding_genius.+ =
+```
+
+(spaces around `=`)
+
+---
+
+# 3. Readability at different levels
+
+- Same as always — also works for data management!
+
+- Highest level: read - manage - write
+
+- Middle level: `clean_agreement_scale`
+
+- Lowest level: `sr.replace({"-77": pd.NA, "-99": pd.NA})`
+
+---
+
+# 3. Readability at different levels
+
+1. Start with an empty DataFrame
+
+1. **Touch every variable just once**
+
+1. **Touch with a pure function**
+
+---
+
+# 4. No state in any column's contents
+
+- Say you made sense of your results after you checked the first place where you touched
+  a variable
+
+- Realize much later it didn't quite make sense
+
+- Only then find out you actually changed the variable midstream
+
+- Put differently, state means you will go insane even more quickly.
+
+---
+
+# 4. No state in any column's contents
+
+
+1. **Start with an empty DataFrame**
+
+1. **Touch every variable just once**
+
+1. **Touch with a pure function**
+
+
+---
+
+# 5. Separate data mgm't and analysis
 
 - **Data management**: Converting source data to formats your analysis programs need
+
 - Separate data management code from analysis code
+
 - Never modify the content of a variable outside the data management code!
 
+
+---
+
+# 5. Separate data mgm't and analysis
+
+Corrollary of 4.
+
+```python
+# Load
+raw_survey = pd.read_csv("../management_definitions_example/survey.csv")
+# Manage / clean up
+cleaned_survey = clean_data(raw_survey)
+# Save
+cleaned_survey.to_feather("survey_cleaned.feather")
+```
 
 ---
 
@@ -65,112 +188,15 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Each function does one thing and does it well
 - Let's see an example!
 
----
-
-# Example
-
-consider this hypothetical survey about a programming course
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-```python
->>> raw = pd.read_csv("survey.csv")
->>> raw
-```
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Q001</th>
-      <th>Q002</th>
-      <th>Q003</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>strongly disagree</td>
-      <td>agree</td>
-      <td>python</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>strongly agree</td>
-      <td>strongly agree</td>
-      <td>Python</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>-77</td>
-      <td>disagree</td>
-      <td>R</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>agree</td>
-      <td>-77</td>
-      <td>Python</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>-99</td>
-      <td>-99</td>
-      <td>Python</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>NaN</td>
-      <td>strongly agree</td>
-      <td>Python</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>neutral</td>
-      <td>strongly agree</td>
-      <td>Python</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>disagree</td>
-      <td>agree</td>
-      <td>python</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>strongly agree</td>
-      <td>-99</td>
-      <td>PYTHON</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>agree</td>
-      <td>-99</td>
-      <td>Ypthon</td>
-    </tr>
-  </tbody>
-</table>
 
 
-</div>
-<div>
 
-<br/>
-<br/>
+Advantages of the functional way
 
-
-From the metadata you know
-
-- Q001: I am a coding genius
-- Q001: I learned a lot
-- Q003: What is your favourite language
-
-<br/>
-
-- -77 not readable
-- -99 no reply
-
-
-</div>
-</div>
+    The function name clearly tell us what is happening in the code, no need for comments
+    Inside each function, sr is a perfectly fine name, so we save a lot of typing and clutter
+    There is no intermediate version of df
+    There is no way of executing this code in the wrong order, even though we can spread the function definitions across many cells
+    We can re-use the code for cleaning agreement variables very easily and wherever we want
+    All of our functions are pure and testable with with tiny examples where we know the correct result
+    The top level function serves as a table of content to what comes next. This is why it is defined before the functions it calls.
