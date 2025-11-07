@@ -29,6 +29,17 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# Three simple rules for cleaning data
+
+1. Start with an empty DataFrame
+
+1. Touch every variable just once
+
+1. Touch with a pure function
+
+
+---
+
 # Survey of course participants
 
 <style>

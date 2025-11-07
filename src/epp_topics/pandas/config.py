@@ -14,7 +14,7 @@ from epp_topics.pandas.datatypes import SITE_CONTENTS as datatypes
 from epp_topics.pandas.functional_how import (
     SITE_CONTENTS as functional_how,
 )
-from epp_topics.pandas.functional_why import SITE_CONTENTS as functional_data_management
+from epp_topics.pandas.functional_why import SITE_CONTENTS as functional_why
 from epp_topics.pandas.imperative_data_cleaning import (
     SITE_CONTENTS as imperative_data_cleaning,
 )
@@ -22,6 +22,9 @@ from epp_topics.pandas.inspecting_and_summarizing import (
     SITE_CONTENTS as inspecting_and_summarizing,
 )
 from epp_topics.pandas.loading_and_saving import SITE_CONTENTS as loading_and_saving
+from epp_topics.pandas.management_advanced import (
+    SITE_CONTENTS as management_advanced,
+)
 from epp_topics.pandas.management_definitions_example import (
     SITE_CONTENTS as management_definitions_example,
 )
@@ -38,12 +41,13 @@ TOPICS = (
     selection,
     inspecting_and_summarizing,
     creating_variables,
+    merging,
     management_definitions_example,
     imperative_data_cleaning,
     functional_how,
-    functional_data_management,
-    complex_data_structures,
-    merging,
+    # functional_why,
+    # complex_data_structures,
+    # management_advanced,
 )
 
 SITE_CONTENTS = {

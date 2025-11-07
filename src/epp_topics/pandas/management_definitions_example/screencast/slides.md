@@ -31,7 +31,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Definitions
 
-- **Data management**: Converting source data to formats your analysis programs need
+- **Data management**: Convert source data to formats your analysis programs need
 
   - Could include many different datasets
 
@@ -40,7 +40,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
   - Different datasets could be collected for different levels (e.g., a household survey
     and county-level unemployment rates from a statistical office)
 
-- **Data cleaning**: Transforming the contents of a single DataFrame to something usable
+- **Data cleaning**: Transform the contents of a table, leaving its structure unchanged
 
   - Coding missing values
 
@@ -50,11 +50,13 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# Roadmap for the chapter
+# Remainder of the chapter
 
 - *(Imperative and)* Functional data cleaning
 
 - Handling complex data structures
+
+- Tips, tricks, and advanced topics
 
 ---
 
