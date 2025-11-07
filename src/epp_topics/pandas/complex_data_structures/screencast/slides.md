@@ -32,9 +32,12 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Motivation
 
 - Real-world data often has complex structure
+
 - Understanding how to organize data is crucial
+
 - Proper data organization can save weeks of work
-- These principles come from database research
+
+- Three principles, which come from database research
 
 
 ---
@@ -42,10 +45,15 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # 1. Values have no internal structure
 
 - a.k.a. the **first normal form**
+
 - I.e., no need for parsing values before using them
+
 - E.g. store first names and last names separately
+
 - Not too often a problem in economic data
+
   - X-digit industrial or educational classifiers
+
   - Store each digit level you need in a separate variable
 
 ---
@@ -53,22 +61,27 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # 2. No redundant information in tables
 
 - a.k.a. the **second normal form**
+
 - In a panel structure: Store time-constant characteristics in a
   separate table
+
 - Violations make things much harder and error-prone:
+
   - Changes to data
+
   - Consistency checks
+
   - Selecting observations
 
 
 ---
 
-# 3. No structure in variable names
+# 3. Variable names have no structure
 
 - a.k.a. use long format if you can
+
 - There should not be different variables with similar content referring to different
   time periods etc.
-- If you need wide format for regressions, still do your data management in long format
 
 
 <br/>
@@ -76,88 +89,27 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div class="flex gap-4">
 <div>
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country</th>
-      <th>year</th>
-      <th>gdp_per_cap</th>
-      <th>pop</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Cuba</td>
-      <td>2002</td>
-      <td>6340.65</td>
-      <td>11226999</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Cuba</td>
-      <td>2007</td>
-      <td>8948.10</td>
-      <td>11416987</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Spain</td>
-      <td>2002</td>
-      <td>24835.47</td>
-      <td>40152517</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Spain</td>
-      <td>2007</td>
-      <td>28821.06</td>
-      <td>40448191</td>
-    </tr>
-  </tbody>
-</table>
+| country   |   year |   gdp_per_cap |      pop |
+|:----------|-------:|--------------:|---------:|
+| Cuba      |   2002 |          6341 | 11226999 |
+| Cuba      |   2007 |          8948 | 11416987 |
+| Spain     |   2002 |         24835 | 40152517 |
+| Spain     |   2007 |         28821 | 40448191 |
+
+<br/>
 
           (long format)
 
 </div>
 <div>
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>gdp_per_cap_2002</th>
-      <th>gdp_per_cap_2007</th>
-      <th>pop_2002</th>
-      <th>pop_2007</th>
-    </tr>
-    <tr>
-      <th>country</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Cuba</th>
-      <td>6340.65</td>
-      <td>8948.10</td>
-      <td>11226999.00</td>
-      <td>11416987.00</td>
-    </tr>
-    <tr>
-      <th>Spain</th>
-      <td>24835.47</td>
-      <td>28821.06</td>
-      <td>40152517.00</td>
-      <td>40448191.00</td>
-    </tr>
-  </tbody>
-</table>
+| country   |   gdp_per_cap_2002 |   gdp_per_cap_2007 |   pop_2002 |   pop_2007 |
+|:----------|-------------------:|-------------------:|-----------:|-----------:|
+| Cuba      |               6341 |               8948 |   11226999 |   11416987 |
+| Spain     |              24835 |              28821 |   40152517 |   40448191 |
 
+<br/>
+<br/>
 <br/>
 
                       (wide format)
@@ -165,3 +117,24 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 </div>
 </div>
+
+
+---
+
+# Complex data structures in practice
+
+1. Do all data cleaning in a collection of tables, each of which satisfies the rules
+
+   - You might get the data like that (different providers, smart providers)
+
+   - You might need to break original data up (time-varying vs time-constant)
+
+2. Store each of these tables in a separate file
+
+3. Merge tables as needed for analysis
+
+   - Could be storing one big table as after data management is done
+
+   - Could be merging tables on the fly
+
+   - DRY!

@@ -83,7 +83,19 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 - Debugging (making sense of code and/or results) is hard
 
-- If you need to look in 5 places to understand a variable's contents, you will go insane
+- If you need to look in 5 places to understand a variable's contents, you will go
+  insane
+
+- Typical case:
+
+  1. Regression results are unexpected
+
+  2. Code seems correct
+
+  3. Need to understand exactly what each variable contains
+
+  Implies that you need to track provenance of each variable from source to what is
+  used in the regression.
 
 ---
 
@@ -176,27 +188,5 @@ raw_survey = pd.read_csv("../management_definitions_example/survey.csv")
 # Manage / clean up
 cleaned_survey = clean_data(raw_survey)
 # Save
-cleaned_survey.to_feather("survey_cleaned.feather")
+cleaned_survey.to_feather("bld/survey_cleaned.feather")
 ```
-
----
-
-# How to implement these principles?
-
-- Use a **functional approach** to data management
-- Structure your code with pure functions
-- Each function does one thing and does it well
-- Let's see an example!
-
-
-
-
-Advantages of the functional way
-
-    The function name clearly tell us what is happening in the code, no need for comments
-    Inside each function, sr is a perfectly fine name, so we save a lot of typing and clutter
-    There is no intermediate version of df
-    There is no way of executing this code in the wrong order, even though we can spread the function definitions across many cells
-    We can re-use the code for cleaning agreement variables very easily and wherever we want
-    All of our functions are pure and testable with with tiny examples where we know the correct result
-    The top level function serves as a table of content to what comes next. This is why it is defined before the functions it calls.

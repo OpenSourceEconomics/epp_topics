@@ -19,7 +19,6 @@
 
 ## No structure in variable names (Long vs wide format)
 
-- Show the table comparison on the slide
-- Explain why long format is preferred for data management
-- Mention that wide format may be needed for specific analyses, but do data management
-  in long format first
+- Explain why long format is preferred for data management: DRY!
+- Wide format may be needed for specific analyses, but do data management in long format
+  first

@@ -103,6 +103,7 @@ def clean_favorite_language(sr):
 
 raw_survey = pd.read_csv("survey.csv")
 cleaned_survey = clean_data(raw_survey)
+cleaned_survey.to_feather("bld/survey_cleaned.feather")
 ```
 
 ---
@@ -203,3 +204,83 @@ def clean_favorite_language(sr):
     sr = sr.replace("ypthon", "python")
     return sr.astype(pd.CategoricalDtype())
 ```
+
+---
+
+# 3. Touch with a pure function
+
+- Sometimes you just need to rename a variable
+
+- Remember that the identity function (doing nothing) is a pure function
+
+- So that would be:
+
+  ```python
+  df["sensible_name"] = raw["sxn3"]
+  ```
+
+---
+
+# Python scripts vs. Jupyter notebooks
+
+<br/>
+
+```python
+def clean_data(raw):
+    df = pd.DataFrame(index=raw.index)
+    df["coding_genius"] = clean_agreement_scale(raw["Q001"])
+    df["learned_a_lot"] = clean_agreement_scale(raw["Q002"])
+    df["favorite_language"] = clean_favorite_language(raw["Q003"])
+    return df
+
+def clean_agreement_scale(sr):
+    ...
+
+def clean_favorite_language(sr):
+    ...
+
+raw_survey = pd.read_csv("survey.csv")
+cleaned_survey = clean_data(raw_survey)
+cleaned_survey.to_feather("bld/survey_cleaned.feather")
+```
+<br/>
+<br/>
+<br/>
+
+
+---
+
+# Python scripts vs. Jupyter notebooks
+
+```python
+df = pd.DataFrame(index=raw.index)
+```
+
+<br/>
+```python
+def clean_agreement_scale(sr):
+    ...
+```
+
+<br/>
+```python
+df["coding_genius"] = clean_agreement_scale(raw["Q001"])
+```
+
+<br/>
+```python
+df["learned_a_lot"] = clean_agreement_scale(raw["Q002"])
+```
+
+<br/>
+```python
+def clean_favorite_language(sr):
+    ...
+```
+
+<br/>
+```python
+df["favorite_language"] = clean_favorite_language(raw["Q003"])
+```
+
+<br/>
