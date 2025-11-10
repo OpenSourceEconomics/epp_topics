@@ -42,11 +42,11 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Reproducibility & researchers' sanity
 
-1. Pipeline always starts from the original data, which is never modified
+1. Code must be readable at different levels of abstraction
 
-2. Must be able to find out quickly what a variable contains
+2. Pipeline always starts from the original data, which is never modified
 
-3. Code must be readable at different levels of abstraction
+3. Must be able to find out quickly what a variable contains
 
 4. There must not be state in any column's contents
 
@@ -54,7 +54,31 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# 1. Pipeline always starts from the original data, which is never modified
+# 1. Readability at different levels
+
+- Same as always — also works for data management!
+
+- Highest level: read - manage - write
+
+- Middle level: `clean_agreement_scale`
+
+- Lowest level: `sr.replace({"-77": pd.NA, "-99": pd.NA})`
+
+---
+
+# 1. Readability at different levels
+
+<br/>
+
+1. Start with an empty DataFrame
+
+1. **Touch every variable just once**
+
+1. **Touch with a pure function**
+
+---
+
+# 2. Pipeline always starts from the original data, which is never modified
 
 - **Source data**: Original dataset as downloaded or collected
 
@@ -66,7 +90,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# 1. Pipeline always starts from the original data, which is never modified
+# 2. Pipeline always starts from the original data, which is never modified
 
 <br/>
 
@@ -77,9 +101,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 1. **Touch with a pure function**
 
 
+
 ---
 
-# 2. Quickly find out variable contents
+# 3. Quickly find out variable contents
 
 - Debugging (making sense of code and/or results) is hard
 
@@ -99,7 +124,10 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
-# 2. Quickly find out variable contents
+# 3. Quickly find out variable contents
+
+
+<br/>
 
 
 1. Start with an empty DataFrame
@@ -120,28 +148,6 @@ coding_genius.+ =
 
 ---
 
-# 3. Readability at different levels
-
-- Same as always — also works for data management!
-
-- Highest level: read - manage - write
-
-- Middle level: `clean_agreement_scale`
-
-- Lowest level: `sr.replace({"-77": pd.NA, "-99": pd.NA})`
-
----
-
-# 3. Readability at different levels
-
-1. Start with an empty DataFrame
-
-1. **Touch every variable just once**
-
-1. **Touch with a pure function**
-
----
-
 # 4. No state in any column's contents
 
 - Say you made sense of your results after you checked the first place where you touched
@@ -157,6 +163,7 @@ coding_genius.+ =
 
 # 4. No state in any column's contents
 
+<br/>
 
 1. **Start with an empty DataFrame**
 

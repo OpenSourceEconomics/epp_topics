@@ -45,9 +45,9 @@ TOPICS = (
     management_definitions_example,
     imperative_data_cleaning,
     functional_how,
-    # functional_why,
-    # complex_data_structures,
-    # management_advanced,
+    functional_why,
+    complex_data_structures,
+    management_advanced,
 )
 
 SITE_CONTENTS = {

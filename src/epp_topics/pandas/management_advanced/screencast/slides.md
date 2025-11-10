@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: EPP — Pandas — Dealing with complex data structures
+title: EPP — Pandas — Data management — Tips, tricks, and advanced topics
 defaults:
   layout: center
 ---
@@ -20,10 +20,9 @@ defaults:
 
 # Data management with pandas
 
-### Dealing with complex data structures
+### Data management: Tips, tricks, and advanced topics
 
 <br>
-
 
 Janoś Gabler and Hans-Martin von Gaudecker
 
@@ -31,137 +30,117 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Motivation
 
-- Real-world data often has complex structure
-- Understanding how to organize data is crucial
-- Proper data organization can save weeks of work
-- These principles come from database research
+- When to select the sample for analysis?
 
+- When to use metadata in a programmatic way?
 
----
+- What to do when combining variables into one?
 
-# 1. Values have no internal structure
-
-- a.k.a. the **first normal form**
-- I.e., no need for parsing values before using them
-- E.g. store first names and last names separately
-- Not too often a problem in economic data
-  - X-digit industrial or educational classifiers
-  - Store each digit level you need in a separate variable
+- What if variables change over time?
 
 ---
 
-# 2. No redundant information in tables
+# Selecting the sample for analysis
 
-- a.k.a. the **second normal form**
-- In a panel structure: Store time-constant characteristics in a
-  separate table
-- Violations make things much harder and error-prone:
-  - Changes to data
-  - Consistency checks
-  - Selecting observations
+- Upfront restrictions you will not even touch in robustness checks: Very beginning or
+  at the end of the data management pipeline
 
+- Other restrictions: Missing values in covariates, robustness checks, etc.
+
+  - Impose at the end of the data management pipeline
+  - Or set up a custom loading function that you always use, which takes the path to the
+    data and the sample definition as arguments
+
+  - Always be explicit!
 
 ---
 
-# 3. No structure in variable names
+# Using metadata programmatically
 
-- a.k.a. use long format if you can
-- There should not be different variables with similar content referring to different
-  time periods etc.
-- If you need wide format for regressions, still do your data management in long format
+<style>
+table th {
+  text-align: left !important;
+}
+</style>
 
+| nlsy_name | readable_name     | label                          |
+| --------- | ----------------- | ------------------------------ |
+| C0000100  | childid           | id code of child               |
+| C0564000  | anxiety_mood      | ch has sud chgs in mood/feelng |
+| C0564100  | anxiety_complain  | ch cmplns no one loves him/her |
+| C0564400  | anxiety_fearful   | ch is too fearful or anxious   |
+| C0565300  | anxiety_worthless | ch feels worthless or inferior |
+| C0565900  | anxiety_sad       | child is unhappy/sad/depressed |
+| C0780800  | anxiety_mood      | ch has sud chgs in mood/feelng |
+| ...       | ...               | ...                            |
 
-<br/>
+Read into DataFrame called `metadata`, with `nlsy_name` as the index.
 
-<div class="flex gap-4">
+---
+
+# Using metadata programmatically
+
+<div class="grid grid-cols-2 gap-4">
 <div>
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country</th>
-      <th>year</th>
-      <th>gdp_per_cap</th>
-      <th>pop</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Cuba</td>
-      <td>2002</td>
-      <td>6340.65</td>
-      <td>11226999</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Cuba</td>
-      <td>2007</td>
-      <td>8948.10</td>
-      <td>11416987</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Spain</td>
-      <td>2002</td>
-      <td>24835.47</td>
-      <td>40152517</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Spain</td>
-      <td>2007</td>
-      <td>28821.06</td>
-      <td>40448191</td>
-    </tr>
-  </tbody>
-</table>
-
-          (long format)
+```python
+bpi_subscale = "anxiety"
+bpi_subscale_items = {
+    new: old
+    for old, new in metadata["readable_name"].items()
+    if new.startswith(f"{bpi_subscale}_")
+}
+for old, new in bpi_subscale_items.items():
+    df[new] = clean_item(raw[old])
+```
 
 </div>
 <div>
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>gdp_per_cap_2002</th>
-      <th>gdp_per_cap_2007</th>
-      <th>pop_2002</th>
-      <th>pop_2007</th>
-    </tr>
-    <tr>
-      <th>country</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Cuba</th>
-      <td>6340.65</td>
-      <td>8948.10</td>
-      <td>11226999.00</td>
-      <td>11416987.00</td>
-    </tr>
-    <tr>
-      <th>Spain</th>
-      <td>24835.47</td>
-      <td>28821.06</td>
-      <td>40152517.00</td>
-      <td>40448191.00</td>
-    </tr>
-  </tbody>
-</table>
-
-<br/>
-
-                      (wide format)
-
+```python
+df["anxiety_mood"] = clean_item(raw["C0564000"])
+df["anxiety_complain"] = clean_item(raw["C0564100"])
+df["anxiety_fearful"] = clean_item(raw["C0564400"])
+df["anxiety_worthless"] = clean_item(raw["C0565300"])
+df["anxiety_sad"] = clean_item(raw["C0565900"])
+df["anxiety_mood"] = clean_item(raw["C0780800"])
+```
 
 </div>
 </div>
+
+---
+
+# How to combine variables into one?
+
+SOEP asks for transfer receipt in
+
+- Person-level data (pl)
+
+- Personal calendar data (pkal)
+
+Would have three variables:
+
+```python
+df["transfer_receipt_pl"]
+df["transfer_receipt_pkal"]
+df["transfer_receipt"]
+```
+
+where the third is obtained by a function taking the first two as arguments
+
+---
+
+# What if variables change over time?
+
+- Panel stability vs. questions that do not yield the expected information (any more)
+
+- End up with changes in variable coding over time
+
+- Two strategies:
+
+  1. One time series variable, harmonize by case distinctions in a single cleaning
+     function
+
+  2. Keep differently-named variables for each time point with a cleaning function each,
+     then combine into one variable (same strategy as in the previous slide)

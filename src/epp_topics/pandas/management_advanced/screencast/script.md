@@ -1,4 +1,4 @@
-# Script: Dealing with complex data structures
+# Script: Data management: Tips, tricks, and advanced topics
 
 ## Motivation
 
