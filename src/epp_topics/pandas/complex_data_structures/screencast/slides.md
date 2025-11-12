@@ -20,7 +20,7 @@ defaults:
 
 # Data management with pandas
 
-### Dealing with complex data structures
+### Managing data with a complex structure
 
 <br>
 
