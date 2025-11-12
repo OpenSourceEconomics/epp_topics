@@ -2,24 +2,16 @@
 
 ## Motivation
 
-- Explain that real-world data often has complex structures
-- These principles help organize data efficiently and avoid errors
+## Selecting the sample for analysis
 
-## Values have no internal structure (First normal form)
+## Using metadata programmatically
 
-- Walk through the concept of atomic values
-- Give examples like storing first and last names separately
-- Mention industrial/educational classifiers
+- Example of metadata (data about the data)
 
-## No redundant information (Second normal form)
+- National Longitudinal Survey of Youth (NLSY)
 
-- Explain why redundant information is problematic
-- Give the panel data example (time-constant vs time-varying characteristics)
-- Discuss the problems that arise from violations
+- Behavioral Problem Index (BPI), anxiety one of 5 subscales
 
-## No structure in variable names (Long vs wide format)
+## What if variables change over time?
 
-- Show the table comparison on the slide
-- Explain why long format is preferred for data management
-- Mention that wide format may be needed for specific analyses, but do data management
-  in long format first
+## How to combine variables into one?
