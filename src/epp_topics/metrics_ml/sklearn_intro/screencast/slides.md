@@ -95,7 +95,7 @@ Re-define the target as 1 if the value is above the 70th-percentile, 0 otherwise
 
 # Train-test splits
 
-<div class="grid grid-cols-[52%_48%] gap-4">o
+<div class="grid grid-cols-[52%_48%] gap-4">
 <div>
 
 ```python
