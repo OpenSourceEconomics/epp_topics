@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Optimization — Introduction to numerical optimization
 defaults:
   layout: center
 ---

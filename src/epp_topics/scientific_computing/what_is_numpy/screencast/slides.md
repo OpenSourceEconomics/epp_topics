@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Scientific Computing — What is numpy?
 defaults:
   layout: center
 ---

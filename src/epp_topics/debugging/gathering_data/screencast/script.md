@@ -45,7 +45,7 @@ The bug is a trailing comma at the end of the cobb douglas function.
 - press n to go over the partial line
 - step into \_create_plotting_data
 - press n a bunch of times until `data` is defined
-- Look at data; confirm by looking at data.dtype and evaluations\[0\]
+- Look at data; confirm by looking at data.dtype and evaluations[0]
 
 ## Summary
 

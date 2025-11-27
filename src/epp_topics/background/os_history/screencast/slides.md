@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Background — A Brief History of Operating Systems
 defaults:
   layout: center
 ---

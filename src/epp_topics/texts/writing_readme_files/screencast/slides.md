@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Texts — Writing Readme Files
 defaults:
   layout: center
 ---

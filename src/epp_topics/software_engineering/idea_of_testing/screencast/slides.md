@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Software Engineering — Idea of unit testing
 defaults:
   layout: center
 ---

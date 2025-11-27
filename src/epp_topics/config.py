@@ -15,6 +15,7 @@ CHAPTER_NAMES = [
     "tools",
     "git",
     "python_installation_execution",
+    "python_installation_execution_via_conda",
     "python_basics",
     "debugging",
     "software_engineering",

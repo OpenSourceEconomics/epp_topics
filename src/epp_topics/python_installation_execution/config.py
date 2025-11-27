@@ -2,17 +2,8 @@
 
 import itertools
 
-from epp_topics.python_installation_execution.environments import (
-    SITE_CONTENTS as environments,
-)
-from epp_topics.python_installation_execution.executing_notebook_browser import (
-    SITE_CONTENTS as executing_notebook_browser,
-)
 from epp_topics.python_installation_execution.executing_notebook_vscode import (
     SITE_CONTENTS as executing_notebook_vscode,
-)
-from epp_topics.python_installation_execution.executing_py_shell import (
-    SITE_CONTENTS as executing_py_shell,
 )
 from epp_topics.python_installation_execution.executing_py_vscode import (
     SITE_CONTENTS as executing_py_vscode,
@@ -23,31 +14,23 @@ from epp_topics.python_installation_execution.executing_pytask import (
 from epp_topics.python_installation_execution.executing_pytest import (
     SITE_CONTENTS as executing_pytest,
 )
-from epp_topics.python_installation_execution.installation_linux import (
-    SITE_CONTENTS as installation_linux,
+from epp_topics.python_installation_execution.installation_executing_py_shell import (
+    SITE_CONTENTS as installation_executing_py_shell,
 )
-from epp_topics.python_installation_execution.installation_mac import (
-    SITE_CONTENTS as installation_mac,
-)
-from epp_topics.python_installation_execution.installation_windows import (
-    SITE_CONTENTS as installation_windows,
-)
-from epp_topics.python_installation_execution.installation_wsl import (
-    SITE_CONTENTS as installation_wsl,
+from epp_topics.python_installation_execution.pixi_modifying_environments import (
+    SITE_CONTENTS as pixi_modifying_environments,
 )
 
 TOPICS = (
-    installation_linux,
-    installation_mac,
-    installation_windows,
-    installation_wsl,
-    executing_notebook_browser,
-    executing_notebook_vscode,
-    executing_py_shell,
+    installation_executing_py_shell,
     executing_py_vscode,
+    executing_notebook_vscode,
     executing_pytask,
     executing_pytest,
-    environments,
+    pixi_modifying_environments,
+    # python_packages,
+    # pip_and_pypi,
+    # pixi_and_conda_forge,
 )
 
 SITE_CONTENTS = {

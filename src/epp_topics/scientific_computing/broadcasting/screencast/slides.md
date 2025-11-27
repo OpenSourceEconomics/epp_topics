@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Scientific Computing — Broadcasting
 defaults:
   layout: center
 ---
@@ -144,12 +145,12 @@ array([[ 4,  5,  6],
        [ 8, 10, 12],
        [12, 15, 18]])
 
->>> a.reshape(1, 3) * b.reshape(3, 1)
-array([[ 4,  8, 12],
-       [ 5, 10, 15],
-       [ 6, 12, 18]])
+>>> a.reshape(3, 1) * b.reshape(1, 3)
+array([[ 4,  5,  6],
+       [ 8, 10, 12],
+       [12, 15, 18]])
 
->>> a * b.reshape(3, 1)
+>>> a.reshape(3, 1) * b
 array([[ 4,  5,  6],
        [ 8, 10, 12],
        [12, 15, 18]])
@@ -163,10 +164,10 @@ array([[ 4,  5,  6],
 
 - Here, broadcasting is used to calculate an outer product without using the `np.outer`
   function
-- `a` is reshaped to a row vector
-- `b` is reshaped to a column vector
+- `a` is reshaped to a column vector
+- `b` is reshaped to a row vector
 - Broadcasting rules apply along both axes!
-- `a` would be implicitly treated as a row vector, too.
+- `b` would be implicitly treated as a row vector, too. (axes are counted from the back)
 
 </div>
 </div>

@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Optimization — Visualizing optimizer histories
 defaults:
   layout: center
 ---

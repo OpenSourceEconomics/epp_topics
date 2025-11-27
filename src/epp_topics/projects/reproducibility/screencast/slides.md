@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Projects — Definition of reproducibility
 defaults:
   layout: center
 ---

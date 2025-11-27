@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Python Installation — Executing notebooks in VS Code
 defaults:
   layout: center
 ---
@@ -24,8 +24,7 @@ defaults:
 
 <br/>
 
-
-Janoś Gabler and Hans-Martin von Gaudecker
+Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
@@ -33,80 +32,93 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 We assume you have:
 
-- Installed anaconda and created the course environment
+- Installed pixi
+
 - Installed VS Code with all relevant Python extensions
-- Opened the root directory of your project in VS Code
+
+- Opened the root directory of your project in VS Code, which contains a
+  `pyproject.toml` file installing the `ipykernel` package
+
+- Ran some pixi command and picked the correct Python interpreter in VS Code (see
+  previous slide deck)
 
 ---
 
 # Example project structure
 
-
 ```mermaid {theme: 'dark', scale: 0.8}
 graph LR
     classDef highlight fill:#FF4500;
-    A["epp_project"] --- B["exercises"]
-    B["exercises"] --- C["exercise_1.ipynb"]
-    B["exercises"] --- D["exercise_2.py"]
-    A["epp_project"] --- E["datasets"]
-    E["datasets"] --- F["data.csv"]
+    A["example"] --- B["pyproject.toml"]
+    A --- C["script.py"]
+    A --- D["notebook.ipynb"]
 ```
 
 <br/>
 
-- The entire directory `epp_project` is opened in VS Code
-- We want to run `exercise_2.ipynb` in VS Code
-
-
----
-
-# 1. Open the file
-
-<img src="/ipynb_file.png" class="rounded" width="600"/>
-
+- The entire directory `example` is opened in VS Code
+- We want to run `notebook.ipynb` in VS Code
 
 ---
 
-# 2. Command palette (ctrl + shift + p)
+# 1. Prerequisites: ipykernel
 
-<img src="/command_select_interpreter.png" class="rounded" width="600"/>
-
-
----
-
-# 3. Click on "Select another kernel"
-
-<img src="/click_on_other.png" class="rounded" width="600"/>
-
+<img src="/0-pyproject-toml-annotated.png" class="rounded" width=600/>
 
 ---
 
-# 4. Click on "Python environments"
+# 2. Prerequisites: Python env picked
 
-<img src="/click_on_python_environments.png" class="rounded" width="600"/>
+<img src="/1-setting-annotated.png" class="rounded" width=600/>
+
+---
+
+# 3. Select kernel
+
+<img src="/2-select-kernel-annotated.png" class="rounded" width=600/>
 
 ---
 
-# 5. Select the epp environment
+# 4. Select Python environment
 
-<img src="/select_epp.png" class="rounded" width="600"/>
+<img src="/3-select-kernel-python-env.png" class="rounded" width=600/>
 
 ---
-class: text-xs
+
+# 5. Select Python environment "default"
+
+<img src="/4-select-kernel-default-env.png" class="rounded" width=600/>
+
+---
+
+# 6. Run cell via shift + enter
+
+<img src="/5-executed-cell-via-shift-enter.png" class="rounded" width=600/>
+
+---
+
+# Important
+
+Whenever you come back to the project, you start directly with the last step
+
+
+---
+class: text-sm
 ---
 
 ### Keyboard shortcuts
 
-| Key combination     | Action                           |
-| ------------------- | -------------------------------- |
-| Ctrl+S              | Save                             |
-| ESC                 | Change the cell mode             |
-| A                   | Add a cell above                 |
-| B                   | Add a cell below                 |
-| J or down arrow key | Change a cell to below           |
-| K or up arrow key   | Change a cell to above           |
-| Ctrl+Enter          | Run the currently selected cell  |
-| dd                  | Delete a selected cell           |
-| z                   | Undo the last change             |
-| M                   | switch the cell type to Markdown |
-| Y                   | switch the cell type to code     |
+| Key combination     | Action                                                    |
+| ------------------- | --------------------------------------------------------- |
+| Ctrl+S              | Save                                                      |
+| ESC                 | Change the cell mode                                      |
+| A                   | Add a cell above                                          |
+| B                   | Add a cell below                                          |
+| J or down arrow key | Change a cell to below                                    |
+| K or up arrow key   | Change a cell to above                                    |
+| Ctrl+Enter          | Run the currently selected cell and stay in that cell     |
+| Shift+Enter         | Run the currently selected cell and move to the next cell |
+| dd                  | Delete a selected cell                                    |
+| z                   | Undo the last change                                      |
+| M                   | switch the cell type to Markdown                          |
+| Y                   | switch the cell type to code                              |

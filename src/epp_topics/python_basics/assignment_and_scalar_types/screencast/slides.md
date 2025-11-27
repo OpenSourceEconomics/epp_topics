@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Python Basics — Assigning variables and built-in scalar types
 defaults:
   layout: center
 ---

@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Plotting — Quick plots with plotly express
 defaults:
   layout: center
 ---

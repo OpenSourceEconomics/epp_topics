@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Pandas — Selecting rows and columns
 defaults:
   layout: center
 ---

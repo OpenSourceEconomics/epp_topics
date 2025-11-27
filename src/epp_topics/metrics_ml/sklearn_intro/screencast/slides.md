@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Metrics/ML — Introduction to scikit-learn
 defaults:
   layout: center
 ---

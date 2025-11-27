@@ -1,5 +1,6 @@
 """Set up the directories with source files for the books."""
 
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -52,7 +53,8 @@ for c in CHAPTER_NAMES:
     ):
         """Create the toc file for the book."""
         index_file.write_text(
-            f"""# {title}
+            f"""({_make_heading_anchor(title)})=
+# {title}
 
 ```{{tableofcontents}}
 ```
@@ -95,12 +97,18 @@ for c in CHAPTER_NAMES:
         },
     )
 
+
+def _make_heading_anchor(title: str) -> str:
+    out = re.sub(r"[:\(\),]", "", title)
+    return "-".join(out.lower().split())
+
+
 for fn in [
     "_config.yml",
     "landing-page.md",
     "ose-logo.png",
     "references.bib",
-    "_static/custom.css",
+    *[str(p.relative_to(SRC)) for p in SRC.glob("_static/*")],
 ]:
     all_orig_sources.append(orig := SRC / fn)
     all_site_sources.append(prod := SITE_SOURCE_DIR / fn)

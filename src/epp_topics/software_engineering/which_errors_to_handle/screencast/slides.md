@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Software Engineering — Which errors to handle?
 defaults:
   layout: center
 ---

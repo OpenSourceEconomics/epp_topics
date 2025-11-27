@@ -1,0 +1,11 @@
+[tool.pixi.project]
+name = "toy-project-notebook"
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[tool.pixi.dependencies]
+ipykernel = "*"
+python = "~=3.13"
+
+[tool.pixi.pypi-dependencies]
+pdbp = "*"

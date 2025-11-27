@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Metrics/ML — Running regressions using statsmodels
 defaults:
   layout: center
 ---

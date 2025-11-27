@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Debugging — (Armchair) Psychology of debugging
 defaults:
   layout: center
 ---

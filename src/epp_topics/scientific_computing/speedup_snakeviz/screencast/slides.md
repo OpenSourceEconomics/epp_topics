@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Scientific Computing — Profiling code with snakeviz
 defaults:
   layout: center
 ---

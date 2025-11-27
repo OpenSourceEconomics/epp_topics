@@ -12,7 +12,7 @@ def _clean_agreement_scale(sr):
         msg = f"Unexpected values in agreement scale: {invalid_values}"
         raise ValueError(msg)
     dtype = pd.CategoricalDtype(categories=categories, ordered=True)
-    return sr.replace({m: pd.NA for m in known_missings}).astype(dtype)
+    return sr.replace(dict.fromkeys(known_missings, pd.NA)).astype(dtype)
 
 
 def _clean_favorite_language(sr):

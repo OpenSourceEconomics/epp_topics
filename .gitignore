@@ -50,3 +50,7 @@ site_*
 gapminder.arrow
 
 .ipynb_checkpoints/
+
+# pixi environments
+.pixi
+*.egg-info

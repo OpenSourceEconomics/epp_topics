@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Python Installation — Running Python code via pytest
 defaults:
   layout: center
 ---
@@ -25,26 +25,20 @@ defaults:
 <br/>
 
 
-Janoś Gabler and Hans-Martin von Gaudecker
+Janoś Gabler, Hans-Martin von Gaudecker, and Tim Mensinger
 
 ---
 
 # Preparation
 
-- We assume you have installed anaconda and created the course environment
-- Open a shell in the root directory of your project
-    - On Windows, use the anaconda prompt or the powershell
-    - If conda is not recognized in the powershell, check out this
-      [stackoverflow post](https://stackoverflow.com/a/65160772/21900143)
-- Activate the environment using `conda activate epp`
-- Confirm the activation worked using `conda info`
+We assume you have:
 
+- Installed pixi
 
----
+- Navigated to the root directory of your project in a shell
 
-# 0: Activate and Info
-
-<img src="/activate_and_info.png" class="rounded" width="600"/>
+- The root directory of your contains a `pyproject.toml` file that includes pytest
+  and at least one file expected by pytest
 
 ---
 
@@ -64,8 +58,9 @@ Very useful for automating test execution across an entire project
 ```mermaid {theme: 'dark', scale: 0.8}
 graph LR
     classDef highlight fill:#FF4500;
-    A["example"] --- B["cobb_douglas.py"]
-    A["example"] --- C["test_cobb_douglas.py"]
+    A["example"] --- B["pyproject.toml"]
+    A --- C["cobb_douglas.py"]
+    A --- D["test_cobb_douglas.py"]
 ```
 
 <br/>
@@ -78,6 +73,6 @@ graph LR
 
 ---
 
-# 1: Execute
+# Execute
 
 <img src="/run.png" class="rounded" width="600"/>

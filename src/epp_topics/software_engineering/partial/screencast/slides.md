@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Software Engineering — Partialling arguments to functions
 defaults:
   layout: center
 ---
@@ -77,6 +78,7 @@ TypeError: f() missing 1 required positional argument: 'y'
 
 - `partial` lets you inject data into functions
   ([closure](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>))
+
 - `partial` lets you partially evaluate a function
 
 ---
