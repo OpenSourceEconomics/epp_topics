@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Plotting — What to plot?
 defaults:
   layout: center
 ---

@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Background — Floating Point Numbers
 defaults:
   layout: center
 ---

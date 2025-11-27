@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Plotting — Why plotly? And a prerequisite
 defaults:
   layout: center
 ---
@@ -19,7 +20,7 @@ defaults:
 
 # Plotting
 
-### Why plotly? And some prerequisites.
+### Why plotly? And a prerequisite
 
 <br/>
 
@@ -44,10 +45,15 @@ Interactive plots:
 # Why we use plotly
 
 - Interactive plots work out of the box
+
 - Supports all relevant output formats:
+
     - Interactive dashboards
+
     - HTML
+
     - static image formats
+
 - Also available in R and Julia
 
 ---
@@ -55,6 +61,9 @@ Interactive plots:
 # Supporting static and interactive plots
 
 - Interactive plots typically based on JavaScript
+
 - Rely on browser functionality for static exports
+
 - Kaleido hides that by installing a browser to export static plots
+
 - Must run `plotly_get_chrome` (in pixi environment: `pixi run plotly_get_chrome`)

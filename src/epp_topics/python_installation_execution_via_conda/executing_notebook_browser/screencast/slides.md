@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Python Installation (conda) — Executing notebooks in a browser
 defaults:
   layout: center
 ---

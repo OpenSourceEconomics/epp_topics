@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Scientific Computing — Calculations between arrays
 defaults:
   layout: center
 ---

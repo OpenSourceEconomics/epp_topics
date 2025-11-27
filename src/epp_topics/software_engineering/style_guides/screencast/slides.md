@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Software Engineering — Style guides
 defaults:
   layout: center
 ---

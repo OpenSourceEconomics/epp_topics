@@ -2,8 +2,6 @@
 
 SITE_CONTENTS = {
     "pages": ("objectives_materials.ipynb",),
-    "other": (
-        # "existing figures etc.",
-    ),
-    "built": ("pandas-rules.pdf",),
+    "other": (),
+    "built": ("pandas-functional_how.pdf",),
 }

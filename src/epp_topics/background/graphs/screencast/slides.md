@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Background — A Primer on Graphs
 defaults:
   layout: center
 ---

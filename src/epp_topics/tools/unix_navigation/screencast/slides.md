@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Tools — Navigation in the Unix shell
 defaults:
   layout: center
 ---

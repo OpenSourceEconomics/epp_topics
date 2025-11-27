@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Metrics/ML — Introduction to Machine Learning
 defaults:
   layout: center
 ---

@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Python Installation — Executing ".py"-files from VS Code
 defaults:
   layout: center
 ---

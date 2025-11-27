@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Python Basics — File paths with pathlib
 defaults:
   layout: center
 ---

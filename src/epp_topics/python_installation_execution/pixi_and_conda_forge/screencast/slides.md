@@ -10,6 +10,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Python Installation — Pixi, conda, and conda-forge
 defaults:
   layout: center
 ---

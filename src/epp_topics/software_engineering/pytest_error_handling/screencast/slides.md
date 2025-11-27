@@ -9,7 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
-title: Effective Programming Practices for Economists
+title: EPP — Software Engineering — Testing code that should raise errors
 defaults:
   layout: center
 ---

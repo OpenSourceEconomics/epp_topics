@@ -9,6 +9,7 @@ info: |
 drawings:
   persist: false
 transition: fade
+title: EPP — Scientific Computing — Line profiling
 defaults:
   layout: center
 ---
