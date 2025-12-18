@@ -10,9 +10,9 @@ Give a brief motivation what the templates help to do:
 
 ## Where to get help (show docs)
 
-[Customising the template for your needs](https://econ-project-templates.readthedocs.io/en/stable/getting_started/index.html#customising-the-template-for-your-needs)
+[Customising the template for your needs](https://econ-project-templates.readthedocs.io/en/stable/customising-the-template/)
 
-## Create a github repo
+## Create a github repogetting_started/index.html#customising-the-template-for-your-needs
 
 - Go to https://github.com/OpenSourceEconomics/econ-project-templates
 - Click on "Use this template"+
