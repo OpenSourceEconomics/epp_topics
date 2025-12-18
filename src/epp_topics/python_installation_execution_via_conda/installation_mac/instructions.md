@@ -27,7 +27,7 @@ you have an Intel processor.
 ## Installing mamba
 
 1. Go to
-   [https://github.com/conda-forge/miniforge#download](https://github.com/conda-forge/miniforge#download)
+   [https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-macos-linux--wsl](https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-macos-linux--wsl)
    and download the **OS X x86_64** version (for Intel processors) or the **OS X arm64**
    version (for Apple processors) of the installer in your Downloads folder.
 
