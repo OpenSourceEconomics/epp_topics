@@ -35,7 +35,7 @@ shells and conda environments.
 ## Installing mamba
 
 1. Go to
-   [https://github.com/conda-forge/miniforge#download](https://github.com/conda-forge/miniforge#download)
+   [https://github.com/conda-forge/miniforge?tab=readme-ov-file#windows](https://github.com/conda-forge/miniforge?tab=readme-ov-file#windows)
    and Download the Windows x86_64 version of the installer in your Downloads folder.
 
    ![0_download](0_download.png)
