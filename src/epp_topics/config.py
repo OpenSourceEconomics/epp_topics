@@ -26,6 +26,7 @@ CHAPTER_NAMES = [
     "texts",
     "plotting",
     "metrics_ml",
+    "type_hints",
 ]
 
 
