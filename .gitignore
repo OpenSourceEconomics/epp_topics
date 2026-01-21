@@ -1,13 +1,13 @@
 # python
 *.egg-info
-*_version.py
 *.pyc
 *__pycache__
+*_version.py
 .mypy_cache
 
 # pytask
-.pytask*.sqlite3
 .pytask
+.pytask*.sqlite3
 
 # bld
 bld*
@@ -26,31 +26,32 @@ bld*
 *.vscode
 
 # slidev
+*.local
+.DS_Store
+.remote-assets
+.slides_pdf
+components.d.ts
+dist
+index.html
 node_modules
 package-lock.json
-.DS_Store
-dist
-*.local
-index.html
-.remote-assets
-components.d.ts
-.slides_pdf
 
 # nonsense
-desktop.ini
 *.bak
 *.tmp
+desktop.ini
 
 # jupyter-book
 site_*
 
+# jupyter
+.ipynb_checkpoints/
+
 # videos
 *.mp4
 
+# data
 gapminder.arrow
-
-.ipynb_checkpoints/
 
 # pixi environments
 .pixi
-*.egg-info
