@@ -33,4 +33,4 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # Getting started
 
-[Getting started page of the documentation](https://econ-project-templates.readthedocs.io/en/stable/getting_started/index.html)
+[Getting started page of the documentation](https://econ-project-templates.readthedocs.io/en/stable/getting_started/)
