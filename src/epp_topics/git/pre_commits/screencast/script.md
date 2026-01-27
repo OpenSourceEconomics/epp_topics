@@ -33,7 +33,7 @@ Just meant to show them where we are
 ## Second commit
 
 - Say that it is important here to use `-am` or re-add the files that have been changed
-  by black during the first commit. Otherwise it won't work.
+  by ruff during the first commit. Otherwise it won't work.
 - Say that if the second commit also fails they need to read the error messages
   carefully. Most likely it is because the need to fix something manually and the
   messages will tell theme where and what.
