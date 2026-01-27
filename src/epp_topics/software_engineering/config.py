@@ -41,9 +41,10 @@ from epp_topics.software_engineering.type_hints_dataclasses import (
 from epp_topics.software_engineering.type_hints_intro import (
     SITE_CONTENTS as type_hints_intro,
 )
-from epp_topics.software_engineering.type_hints_stringly import (
-    SITE_CONTENTS as type_hints_stringly,
-)
+
+# from epp_topics.software_engineering.type_hints_stringly import (
+#     SITE_CONTENTS as type_hints_stringly,
+# )
 from epp_topics.software_engineering.type_hints_syntax import (
     SITE_CONTENTS as type_hints_syntax,
 )
@@ -85,7 +86,7 @@ TOPICS = (
     type_hints_collections,
     type_hints_dataclasses,
     type_hints_advanced,
-    type_hints_stringly,
+    # type_hints_stringly,
 )
 
 SITE_CONTENTS = {
