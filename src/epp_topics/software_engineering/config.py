@@ -29,6 +29,24 @@ from epp_topics.software_engineering.reuse_test_code import (
     SITE_CONTENTS as reuse_test_code,
 )
 from epp_topics.software_engineering.style_guides import SITE_CONTENTS as style_guides
+from epp_topics.software_engineering.type_hints_advanced import (
+    SITE_CONTENTS as type_hints_advanced,
+)
+from epp_topics.software_engineering.type_hints_collections import (
+    SITE_CONTENTS as type_hints_collections,
+)
+from epp_topics.software_engineering.type_hints_dataclasses import (
+    SITE_CONTENTS as type_hints_dataclasses,
+)
+from epp_topics.software_engineering.type_hints_intro import (
+    SITE_CONTENTS as type_hints_intro,
+)
+from epp_topics.software_engineering.type_hints_stringly import (
+    SITE_CONTENTS as type_hints_stringly,
+)
+from epp_topics.software_engineering.type_hints_syntax import (
+    SITE_CONTENTS as type_hints_syntax,
+)
 from epp_topics.software_engineering.what_and_how_to_test import (
     SITE_CONTENTS as what_and_how_to_test,
 )
@@ -62,6 +80,12 @@ TOPICS = (
     defining_containers,
     deciding_containers,
     partial,
+    type_hints_intro,
+    type_hints_syntax,
+    type_hints_collections,
+    type_hints_dataclasses,
+    type_hints_advanced,
+    type_hints_stringly,
 )
 
 SITE_CONTENTS = {
