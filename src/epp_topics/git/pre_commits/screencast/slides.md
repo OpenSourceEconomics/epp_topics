@@ -34,7 +34,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - We saw the importance of following style guides
 - Pre-commit hooks are tools to help you automate style guides
 - Examples of pre-commit hooks are:
-  - The black formatter that automatically formats your code
+  - The ruff formatter that automatically formats your code
   - The ruff linter that tells you about problems and fixes some of them
   - Line-ending fixers for better compatibility across platforms
 - Save a lot of time but have a learning curve
@@ -63,11 +63,12 @@ Just needs to be done once after cloning the repository
 
 ```yaml
 repos:
-  - repo: https://github.com/psf/black
-    rev: 23.9.1
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.11
     hooks:
-      - id: black
-        language_version: python3.11
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
 ```
 
 </div>
@@ -75,7 +76,7 @@ repos:
 
 - Pre-commit hooks are configured in `.pre-commit-config.yaml`
 - Typically inherited from the project templates or copy it from another project
-- Example shows just the black formatter
+- Example shows just the ruff linter and formatter
 
 
 </div>

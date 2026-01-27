@@ -25,7 +25,7 @@ We will cover the following topics:
 ## Installing mamba
 
 Go to
-[https://github.com/conda-forge/miniforge#download](https://github.com/conda-forge/miniforge#download)
+[https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-macos-linux--wsl](https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-macos-linux--wsl)
 and Download the Linux x86_64 version of the installer in your Downloads folder.
 
 ![0_download](0_download.png)

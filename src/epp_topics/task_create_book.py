@@ -46,15 +46,18 @@ for c in CHAPTER_NAMES:
 
         all_orig_sources.append(orig_sources)
 
+    chapter_title = get_chapter_title(c)
+
     @task(id=c)
     def task_create_chapter_toc(
-        title: Annotated[str, PythonNode(value=get_chapter_title(c), hash=True)],
+        title: Annotated[str, PythonNode(value=chapter_title, hash=True)],
         index_file: Annotated[Path, Product] = chapter_index_file,
+        _title: str = chapter_title,  # capture by value for function body
     ):
         """Create the toc file for the book."""
         index_file.write_text(
-            f"""({_make_heading_anchor(title)})=
-# {title}
+            f"""({_make_heading_anchor(_title)})=
+# {_title}
 
 ```{{tableofcontents}}
 ```
