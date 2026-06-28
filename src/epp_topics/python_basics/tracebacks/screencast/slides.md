@@ -97,7 +97,7 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - Select and **copy the full traceback text** — not a screenshot
 - Add one sentence of context: what you were trying to do
 
-```python
+```text
 # Example prompt to the AI:
 """
 I am working on a Cobb-Douglas function exercise.
@@ -122,7 +122,7 @@ Can you explain what went wrong?
 > I'm computing a Cobb-Douglas function. Here is the traceback:
 >
 > `TypeError: unsupported operand type(s) for ** or pow(): 'tuple' and 'float'`
-> `[full text]`
+> `[… rest of traceback]`
 >
 > What went wrong?
 
