@@ -34,7 +34,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 - What are Exceptions and Tracebacks?
 - The Anatomy of a Python Traceback
 - Reading tracebacks
-- Asking for help
+- Using AI to understand errors
+- Asking for human help
 
 
 ---
@@ -90,22 +91,90 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 ---
 
+# First step: Ask an AI
+
+- Got a traceback you can't parse? → Paste it into an AI chatbot (Claude, ChatGPT, …)
+- Select and **copy the full traceback text** — not a screenshot
+- Add one sentence of context: what you were trying to do
+
+```python
+# Example prompt to the AI:
+"""
+I am working on a Cobb-Douglas function exercise.
+Here is the error I got:
+
+TypeError: unsupported operand type(s) for ** or pow(): 'tuple' and 'float'
+[full traceback text]
+
+Can you explain what went wrong?
+"""
+```
+
+---
+
+# What the AI gives you
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+**You paste:**
+
+> I'm computing a Cobb-Douglas function. Here is the traceback:
+>
+> `TypeError: unsupported operand type(s) for ** or pow(): 'tuple' and 'float'`
+> `[full text]`
+>
+> What went wrong?
+
+</div>
+<div>
+
+**AI explains:**
+
+- What the error type means
+- The exact line that caused it
+- Why a tuple appeared where a float was expected
+- How to fix it
+
+→ Often this is enough to solve the problem on your own
+
+</div>
+</div>
+
+---
+
+# When AI doesn't resolve it
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+**Try these first:**
+
+1. Read the AI's explanation carefully
+2. Apply the suggested fix
+3. If a new error appears → paste that traceback too
+
+</div>
+<div>
+
+**Then escalate to human help:**
+
+- Ask on the course chat (Zulip course stream — not DM)
+- Show: what you tried, the AI's explanation, why it didn't work
+- Attach a minimal reproducible example
+
+</div>
+</div>
+
+---
+
 # How not to ask for help
 
 - "I wanted to do the exercise but it does not work"
 - "Python does not work on my computer"
 - "My code does not work, here is a screenshot"
 - Asking via DM on Zulip instead of the course stream
-
----
-
-# What to keep in mind
-
-- We do not remember what task 3 in exercise 5 is
-- We like to see that you tried on your own
-- We like to see that you tried to reduce the amount we have to read
-- We love well formatted, self-contained examples
-
+- Sending a screenshot of the error (to AI or humans) — copy the text instead
 
 ---
 
@@ -144,4 +213,5 @@ def cobb_douglas(labor, capital, alpha):
 cobb_douglas(labor, capital, alpha)
 ```
 
-I attach the entire traceback as `txt` file ...
+I attach the entire traceback as text (copied from the terminal, not a screenshot) ...
+I explain what the AI chatbot suggested and why that did not help.
