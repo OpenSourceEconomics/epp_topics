@@ -32,9 +32,13 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Contents
 
 - What are Exceptions and Tracebacks?
+
 - The Anatomy of a Python Traceback
+
 - Reading tracebacks
+
 - Using AI to understand errors
+
 - Asking for human help
 
 
@@ -43,11 +47,20 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Motivation
 
 - We sometimes told you that you cannot do certain things:
+
   - Example: Can only use hashable objects as dictionary keys
+
 - Now we will discuss what happens if you do it anyways
+
   - Exception: What class of error?
+
   - Traceback: Detailed report that helps you to localize the error
-- Pro tip: Read the traceback!
+
+- Pro tips
+
+  - Read the traceback!
+
+  - Have it translated!
 
 
 ---
@@ -56,6 +69,8 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 <div class="grid grid-cols-2 gap-4">
 <div>
+
+<br/>
 
 ```python
 >>> d = {"a" : 1}
@@ -70,11 +85,17 @@ Janoś Gabler and Hans-Martin von Gaudecker
 <div>
 
 - The code on the left has a problem
+
 - Traceback tells us everything we need:
+
   1. What type of Exception occurred: `TypeError`
+
   2. Where did it occur: In line 2 of `some_file.py`
+
   3. What happened exactly *(used an unhashable type where we must not)*
+
 - Tracebacks can get very long! Read from bottom to top.
+
 - Always look for these three things!
 
 </div>
@@ -85,8 +106,11 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # Common sources of errors
 
 - `ValueError`: Called a function with something invalid
+
 - `KeyError`: Typo in a variable name or a dictionary key
+
 - `TypeError`: Called a function with something that has the wrong type
+
 - `ImportError`: Typo in an import
 
 ---
@@ -94,52 +118,20 @@ Janoś Gabler and Hans-Martin von Gaudecker
 # First step: Ask an AI
 
 - Got a traceback you can't parse? → Paste it into an AI chatbot (Claude, ChatGPT, …)
+
 - Select and **copy the full traceback text** — not a screenshot
+
 - Add one sentence of context: what you were trying to do
 
 ```text
-# Example prompt to the AI:
-"""
-I am working on a Cobb-Douglas function exercise.
+I am working on a Cobb-Douglas function.
+
 Here is the error I got:
 
-TypeError: unsupported operand type(s) for ** or pow(): 'tuple' and 'float'
 [full traceback text]
 
 Can you explain what went wrong?
-"""
 ```
-
----
-
-# What the AI gives you
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-**You paste:**
-
-> I'm computing a Cobb-Douglas function. Here is the traceback:
->
-> `TypeError: unsupported operand type(s) for ** or pow(): 'tuple' and 'float'`
-> `[… rest of traceback]`
->
-> What went wrong?
-
-</div>
-<div>
-
-**AI explains:**
-
-- What the error type means
-- The exact line that caused it
-- Why a tuple appeared where a float was expected
-- How to fix it
-
-→ Often this is enough to solve the problem on your own
-
-</div>
-</div>
 
 ---
 
@@ -151,16 +143,20 @@ Can you explain what went wrong?
 **Try these first:**
 
 1. Read the AI's explanation carefully
+
 2. Apply the suggested fix
-3. If a new error appears → paste that traceback too
+
+3. If a new error appears → repeat
 
 </div>
 <div>
 
-**Then escalate to human help:**
+**Escalate to human help when stuck:**
 
 - Ask on the course chat (Zulip course stream — not DM)
+
 - Show: what you tried, the AI's explanation, why it didn't work
+
 - Attach a minimal reproducible example
 
 </div>
@@ -171,14 +167,18 @@ Can you explain what went wrong?
 # How not to ask for help
 
 - "I wanted to do the exercise but it does not work"
+
 - "Python does not work on my computer"
+
 - "My code does not work, here is a screenshot"
+
 - Asking via DM on Zulip instead of the course stream
-- Sending a screenshot of the error (to AI or humans) — copy the text instead
+
+- Sending a screenshot of the error — copy the text instead
 
 ---
 
-# A better way (for a hypothetical task)
+# A better way
 
 In the task where we should use Python to calculate the output value of a Cobb-Douglas
 production function (assignment 1, exercise 2) the following line:
@@ -213,5 +213,10 @@ def cobb_douglas(labor, capital, alpha):
 cobb_douglas(labor, capital, alpha)
 ```
 
-I attach the entire traceback as text (copied from the terminal, not a screenshot) ...
-I explain what the AI chatbot suggested and why that did not help.
+I attach the entire traceback as text. *(copied from the terminal, not a screenshot)*
+
+My favourite AI chatbot suggested the following:
+
+> ...
+
+but trying that out did not help and I am stuck.
