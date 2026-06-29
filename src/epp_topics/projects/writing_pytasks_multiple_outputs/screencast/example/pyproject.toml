@@ -1,2 +1,2 @@
-[tool.pytask.ini_options]
-paths = [ "." ]
+[tool.pytask]
+ini_options.paths = [ "." ]

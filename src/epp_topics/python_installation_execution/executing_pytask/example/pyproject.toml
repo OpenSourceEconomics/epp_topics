@@ -1,16 +1,12 @@
-[tool.pixi.project]
-name = "toy-project-pytask"
-channels = [ "conda-forge" ]
-platforms = [ "linux-64", "osx-64", "osx-arm64", "win-64" ]
+[tool.pixi]
+dependencies.pytask = "*"
+dependencies.python = "~=3.13"
+project.name = "toy-project-pytask"
+project.channels = [ "conda-forge" ]
+project.platforms = [ "linux-64", "osx-64", "osx-arm64", "win-64" ]
+pypi-dependencies.pdbp = "*"
 
-[tool.pixi.dependencies]
-pytask = "*"
-python = "~=3.13"
-
-[tool.pixi.pypi-dependencies]
-pdbp = "*"
-
-[tool.pytask.ini_options]
-paths = [ "." ]
-ignore = [ ".pixi" ]
-pdbcls = "pdbp:Pdb"
+[tool.pytask]
+ini_options.paths = [ "." ]
+ini_options.ignore = [ ".pixi" ]
+ini_options.pdbcls = "pdbp:Pdb"

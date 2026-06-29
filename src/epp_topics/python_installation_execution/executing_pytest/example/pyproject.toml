@@ -1,14 +1,10 @@
-[tool.pixi.project]
-name = "toy-project-pytest"
-channels = [ "conda-forge" ]
-platforms = [ "linux-64", "osx-64", "osx-arm64", "win-64" ]
+[tool.pytest]
+ini_options.addopts = [ "--pdbcls=pdbp:Pdb" ]
 
-[tool.pixi.dependencies]
-pytest = "*"
-python = "~=3.13"
-
-[tool.pixi.pypi-dependencies]
-pdbp = "*"
-
-[tool.pytest.ini_options]
-addopts = [ "--pdbcls=pdbp:Pdb" ]
+[tool.pixi]
+dependencies.pytest = "*"
+dependencies.python = "~=3.13"
+project.name = "toy-project-pytest"
+project.channels = [ "conda-forge" ]
+project.platforms = [ "linux-64", "osx-64", "osx-arm64", "win-64" ]
+pypi-dependencies.pdbp = "*"
