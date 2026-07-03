@@ -1,7 +1,7 @@
 [project]
 name = "epp_topics"
 description = "Effective Programming Practices for Economists: Topics"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = [
     "pytask"
 ]
@@ -69,9 +69,10 @@ nodejs = "*"
 numba = "*"
 openpyxl = "*"
 optimagic = "*"
-pandas = ">=2.2"
-plotly = "*"
-pre-commit = "*"
+pandas = ">=3"
+plotly = ">=6.1.1"
+python-kaleido = ">=1.3.0"
+prek = "*"
 pyarrow = ">=19.0"
 pybaum = "*"
 pydata-sphinx-theme = ">=0.13.3"
@@ -80,7 +81,7 @@ pytask = ">=0.5"
 pytest = "*"
 pytest-cov = "*"
 pytest-xdist = "*"
-python = "<3.14"
+python = "~=3.14.0"
 pyyaml = "*"
 scikit-learn = "*"
 snakeviz = "*"
@@ -98,7 +99,6 @@ epp_topics = { path = ".", editable = true }
 fides = ">=0.7.4"
 jupytercards = "*"
 jupyterquiz = "*"
-kaleido = "*"
 pdbp = "*"
 pyperclip = "*"
 
@@ -109,8 +109,27 @@ ignore = [
     "src/epp_topics/projects/what_does_pytask_do/screencast/example/",
 ]
 
+[tool.ty]
+src.include = ["src/"]
+# ty resolves third-party imports from this pixi env (the official ty-pre-commit hook
+# runs with `--no-project`, so uv neither creates a `.venv` nor resolves deps). Run
+# `pixi install` once.
+environment.python = ".pixi/envs/default"
+rules.ambiguous-protocol-member = "error"
+rules.deprecated = "error"
+rules.division-by-zero = "error"
+rules.ignore-comment-unknown-rule = "error"
+rules.ineffective-final = "error"
+rules.invalid-enum-member-annotation = "error"
+rules.invalid-ignore-comment = "error"
+rules.invalid-legacy-positional-parameter = "error"
+rules.possibly-missing-submodule = "error"
+rules.redundant-cast = "error"
+rules.unused-awaitable = "error"
+rules.unused-ignore-comment = "error"
+
 [tool.ruff]
-target-version = "py313"
+target-version = "py314"
 fix = true
 line-length = 88
 
