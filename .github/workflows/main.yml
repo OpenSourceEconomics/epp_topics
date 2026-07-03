@@ -1,0 +1,48 @@
+---
+name: main
+# Automatically cancel a previous run.
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: ['*']
+jobs:
+  run-build:
+    name: Build the topic pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+      - uses: prefix-dev/setup-pixi@v0.10.0
+        with:
+          pixi-version: v0.72.0
+          cache: true
+          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+          activate-environment: true
+          frozen: true
+      - name: Install npm packages
+        shell: bash {0}
+        run: pixi run npm install
+      - name: Build
+        shell: bash {0}
+        run: pixi run pytask
+  run-ty:
+    name: Run ty
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+      - uses: prefix-dev/setup-pixi@v0.10.0
+        with:
+          pixi-version: v0.72.0
+          cache: true
+          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+          frozen: true
+      - name: Run ty
+        run: pixi run prek run ty --all-files
+        shell: bash -el {0}
