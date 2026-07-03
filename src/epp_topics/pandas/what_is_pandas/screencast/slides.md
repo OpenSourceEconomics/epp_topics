@@ -121,15 +121,14 @@ Janoś Gabler and Hans-Martin von Gaudecker
 
 # How to use modern pandas
 
-- Install version 2.1 or higher of pandas
+- Install version 3.0 or higher of pandas
 - Install version 13.0 or higher of pyarrow
-- Set some options after import
+
+- Copy-on-Write and the pyarrow-backed string dtype are now on by default, so
+  there are no options left to set
 
 ```python
 import pandas as pd
-
-pd.options.mode.copy_on_write = True
-pd.options.future.infer_string = True
 ```
 
 - When loading datasets, use `engine="pyarrow"` if available
